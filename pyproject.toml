@@ -7,7 +7,12 @@ authors = [
     { name = "Fernando Leon Franco", email = "fernanlee2131@gmail.com" }
 ]
 requires-python = ">=3.14.6"
-dependencies = []
+dependencies = [
+    "duckdb>=1.5.5",
+    "httpx>=0.28.1",
+    "polars>=1.44.1",
+    "pyarrow>=25.0.1",
+]
 
 [project.scripts]
 semestre-vii = "semestre_vii:main"

@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Local databases
+data/*.duckdb
+data/*.duckdb.wal
+
+# macOS
+.DS_Store
