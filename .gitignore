@@ -7,11 +7,12 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
+.venv/
 
-# Local databases
-data/*.duckdb
-data/*.duckdb.wal
+# Runtime data and generated scratch files
+data/
+tmp/
+*.part
 
 # macOS
 .DS_Store
