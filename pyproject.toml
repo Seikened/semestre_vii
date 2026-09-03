@@ -1,7 +1,7 @@
 [project]
 name = "semestre-vii"
 version = "0.1.0"
-description = "Add your description here"
+description = "Código, actividades y utilidades ejecutables del semestre VII"
 readme = "README.md"
 authors = [
     { name = "Fernando Leon Franco", email = "fernanlee2131@gmail.com" }
@@ -15,7 +15,8 @@ dependencies = [
 ]
 
 [project.scripts]
-semestre-vii = "semestre_vii:main"
+semestre-vii = "semestre_vii.__main__:main"
+ecobici = "semestre_vii.mineria_de_datos.actividades.ecobici.__main__:main"
 
 [build-system]
 requires = ["uv_build>=0.12.1,<0.13.0"]

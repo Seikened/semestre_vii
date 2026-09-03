@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from semestre-vii!")
+"""Código ejecutable y actividades del semestre VII."""
