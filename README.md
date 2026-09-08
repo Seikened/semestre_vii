@@ -13,13 +13,14 @@ semestre_vii/
 │       └── actividades/
 │           └── <actividad>/          # una actividad autocontenida
 ├── entregas/                         # PDFs y artefactos finales versionados
-├── data/                             # datasets y bases locales; no se versiona
+├── data/                             # datos por materia; se ignoran por defecto
 ├── tmp/                              # renders y archivos de trabajo; no se versiona
 ├── pyproject.toml                    # dependencias y entrypoints
 └── AGENTS.md                         # reglas de trabajo del repositorio
 ```
 
-Las carpetas `data/` y `tmp/` se crean localmente cuando hacen falta y están ignoradas por Git.
+`data/` se ignora por defecto, excepto los datasets académicos declarados explícitamente, como
+`data/vision_de_maquina/`. `tmp/` siempre contiene archivos locales no versionados.
 
 ## Convención para materias y actividades
 
@@ -54,6 +55,32 @@ uv run python -m semestre_vii.mineria_de_datos.actividades.ecobici --year 2025
 ```
 
 La actividad genera sus datos en `data/ecobici/`; la base DuckDB y los CSV descargados permanecen locales.
+
+## Visión de máquina
+
+`semestre_vii.vision_de_maquina.vision_node` contiene una API Fluent para experimentar con imágenes
+como tensores PyTorch en layout `CHW`.
+
+```python
+from semestre_vii.vision_de_maquina import DATA_DIR
+from semestre_vii.vision_de_maquina.vision_node import VisionNode
+
+resultado = (
+    VisionNode.desde_archivo(DATA_DIR / "golf.BMP")
+    .escala_grises()
+    .transformacion_gamma(0.8)
+    .cuantizar(8)
+    .guardar("tmp/vision/resultado.png")
+)
+```
+
+Cada transformación devuelve un nodo nuevo. El módulo acepta tensores de uno o tres canales con
+`torch.float32` o `torch.float64` y conserva `dtype`, `device` y autograd en las operaciones
+diferenciables.
+
+Las imágenes didácticas compartidas por la materia viven en `data/vision_de_maquina/` y se
+versionan junto con el repositorio. `DATA_DIR` permite localizarlas sin depender del directorio de
+ejecución.
 
 ## Nueva actividad
 

@@ -10,7 +10,9 @@ wheels/
 .venv/
 
 # Runtime data and generated scratch files
-data/
+/data/*
+!/data/vision_de_maquina/
+!/data/vision_de_maquina/**
 tmp/
 *.part
 
