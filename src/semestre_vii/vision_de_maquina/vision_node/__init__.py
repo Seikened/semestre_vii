@@ -1,1 +1,10 @@
+from .frecuencias import EspectroCanal as EspectroCanal
+from .frecuencias import PicoEspectral as PicoEspectral
 from .node import VisionNode as VisionNode
+from .optica import Camara as Camara
+from .optica import Escena as Escena
+from .optica import evaluar_focales as evaluar_focales
+from .optica import focal_ideal as focal_ideal
+from .optica import fov_real as fov_real
+from .optica import magnificacion_a_distancia as magnificacion_a_distancia
+from .optica import medida as medida

@@ -58,3 +58,39 @@ def test_transformaciones_diferenciables_conservan_dtype_y_autograd() -> None:
     assert resultado.device == tensor.device
     assert tensor.grad is not None
     assert torch.isfinite(tensor.grad).all()
+
+
+def test_operadores_aritmeticos_aceptan_nodos_y_escalares() -> None:
+    node = VisionNode(torch.full((1, 2, 2), 0.5), titulo="Base")
+
+    assert torch.equal((node + 0.5).tensor, torch.ones(1, 2, 2))
+    assert torch.equal((1 - node).tensor, torch.full((1, 2, 2), 0.5))
+    assert torch.equal((node * node).tensor, torch.full((1, 2, 2), 0.25))
+    assert torch.equal((node / 0.5).tensor, torch.ones(1, 2, 2))
+    assert torch.equal((-node).tensor, torch.full((1, 2, 2), -0.5))
+
+
+def test_promediar_no_muta_los_nodos_de_entrada() -> None:
+    base = VisionNode(torch.zeros(1, 2, 2))
+    otra = VisionNode(torch.ones(1, 2, 2))
+
+    resultado = base.promediar([otra])
+
+    assert torch.equal(resultado.tensor, torch.full((1, 2, 2), 0.5))
+    assert torch.equal(base.tensor, torch.zeros(1, 2, 2))
+    assert torch.equal(otra.tensor, torch.ones(1, 2, 2))
+
+
+def test_aliases_legacy_y_descripcion_de_api_siguen_disponibles(capsys) -> None:
+    node = VisionNode(torch.zeros(1, 2, 3), title="Prueba")
+
+    tabla = VisionNode.describir_api()
+
+    assert node.title == "Prueba"
+    assert node.channels == 1
+    assert node.height == 2
+    assert node.width == 3
+    assert node.is_grayscale
+    assert "gaussiano" in tabla
+    assert "picos_espectrales" in tabla
+    assert "gaussiano" in capsys.readouterr().out
