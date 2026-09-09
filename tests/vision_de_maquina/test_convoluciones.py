@@ -19,7 +19,7 @@ def test_convoluciones_identidad_conservan_el_tensor() -> None:
 
 
 @pytest.mark.parametrize("metodo", ["suavizar", "piramidal", "gaussiano", "mediana"])
-def test_filtros_establecidos_conservan_shape_y_rango(metodo: str) -> None:
+def test_convoluciones_establecidas_conservan_shape_y_rango(metodo: str) -> None:
     node = VisionNode(torch.rand(3, 9, 9))
 
     resultado = getattr(node, metodo)(3)

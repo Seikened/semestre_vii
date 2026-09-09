@@ -1,3 +1,5 @@
+"""Filtros espaciales basados en vecindarios y convoluciones."""
+
 import math
 from numbers import Real
 

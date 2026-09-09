@@ -1,5 +1,7 @@
 from collections.abc import Sequence
 
+"""Visualizaciones de imágenes y distribuciones de píxeles."""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import torch

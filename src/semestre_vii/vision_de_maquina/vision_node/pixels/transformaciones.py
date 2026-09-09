@@ -1,3 +1,5 @@
+"""Transformaciones puntuales de intensidad y color."""
+
 import math
 from collections.abc import Sequence
 from itertools import pairwise

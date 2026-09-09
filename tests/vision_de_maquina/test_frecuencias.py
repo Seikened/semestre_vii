@@ -2,8 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 
-from semestre_vii.vision_de_maquina.vision_node import VisionNode, graficas_frecuencia
-from semestre_vii.vision_de_maquina.vision_node.frecuencias import analizar_espectros, senales_fila
+from semestre_vii.vision_de_maquina.vision_node import VisionNode
+from semestre_vii.vision_de_maquina.vision_node.signals import graficas
+from semestre_vii.vision_de_maquina.vision_node.signals.frecuencias import (
+    analizar_espectros,
+    senales_fila,
+)
 
 
 def _patron_periodico(size: int = 32) -> torch.Tensor:
@@ -68,7 +72,7 @@ def test_graficas_de_frecuencia_conservan_la_api_fluent() -> None:
 
 
 def test_perfiles_espectrales_alinean_ejes_y_marcan_picos() -> None:
-    figura = graficas_frecuencia.espectro_2d_con_perfiles(
+    figura = graficas.espectro_2d_con_perfiles(
         _patron_periodico(),
         "Patrón",
         n_picos=2,
@@ -90,7 +94,7 @@ def test_perfiles_espectrales_alinean_ejes_y_marcan_picos() -> None:
 
 
 def test_senal_por_canal_incluye_lupa_interactiva() -> None:
-    figura = graficas_frecuencia.senal_por_canal(
+    figura = graficas.senal_por_canal(
         _patron_periodico(),
         "Patrón",
         fila=4,

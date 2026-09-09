@@ -7,10 +7,11 @@ from typing import Self
 import numpy as np
 import torch
 
-from . import filtros, graficas_frecuencia, transformaciones, visualizacion
-from .frecuencias import EspectroCanal, analizar_espectros
 from .io import cargar_imagen, guardar_imagen
-from .transformaciones import PuntosControl
+from .pixels import convoluciones, transformaciones, visualizacion
+from .pixels.transformaciones import PuntosControl
+from .signals import espectros, graficas
+from .signals.frecuencias import EspectroCanal, analizar_espectros
 
 _DTYPES_SOPORTADOS = frozenset({torch.float32, torch.float64})
 _CANALES_SOPORTADOS = frozenset({1, 3})
@@ -213,32 +214,32 @@ class VisionNode:
         *,
         flip_kernel: bool = False,
     ) -> Self:
-        tensor = filtros.convolucion(self.tensor, kernel, flip_kernel=flip_kernel)
+        tensor = convoluciones.convolucion(self.tensor, kernel, flip_kernel=flip_kernel)
         return self._nuevo(tensor)
 
     def convolucion_separable(self, kernel_1d: np.ndarray | torch.Tensor) -> Self:
-        return self._nuevo(filtros.convolucion_separable(self.tensor, kernel_1d))
+        return self._nuevo(convoluciones.convolucion_separable(self.tensor, kernel_1d))
 
     def suavizar(self, size: int = 3) -> Self:
-        return self._nuevo(filtros.suavizar(self.tensor, size))
+        return self._nuevo(convoluciones.suavizar(self.tensor, size))
 
     def piramidal(self, size: int = 3) -> Self:
-        return self._nuevo(filtros.piramidal(self.tensor, size))
+        return self._nuevo(convoluciones.piramidal(self.tensor, size))
 
     def gaussiano(self, size: int = 3, sigma: float | None = None) -> Self:
-        return self._nuevo(filtros.gaussiano(self.tensor, size, sigma))
+        return self._nuevo(convoluciones.gaussiano(self.tensor, size, sigma))
 
     def mediana_cruz(self, size: int = 5) -> Self:
-        return self._nuevo(filtros.mediana_cruz(self.tensor, size))
+        return self._nuevo(convoluciones.mediana_cruz(self.tensor, size))
 
     def mediana(self, size: int = 3) -> Self:
-        return self._nuevo(filtros.mediana(self.tensor, size))
+        return self._nuevo(convoluciones.mediana(self.tensor, size))
 
     def filtro_sigma(self, size: int = 5, sigma: float = 10.0) -> Self:
-        return self._nuevo(filtros.filtro_sigma(self.tensor, size, sigma))
+        return self._nuevo(convoluciones.filtro_sigma(self.tensor, size, sigma))
 
     def filtro_umbral(self, filtrada: Self, umbral: float = 0.15) -> Self:
-        tensor = filtros.filtro_umbral(self.tensor, filtrada.tensor, umbral)
+        tensor = convoluciones.filtro_umbral(self.tensor, filtrada.tensor, umbral)
         return self._nuevo(tensor)
 
     def sal_y_pimienta(
@@ -247,11 +248,11 @@ class VisionNode:
         proporcion_sal: float = 0.5,
         seed: int | None = None,
     ) -> Self:
-        tensor = filtros.sal_y_pimienta(self.tensor, cantidad, proporcion_sal, seed)
+        tensor = convoluciones.sal_y_pimienta(self.tensor, cantidad, proporcion_sal, seed)
         return self._nuevo(tensor)
 
     def ruido_uniforme(self, amplitud: float = 0.1, seed: int | None = None) -> Self:
-        return self._nuevo(filtros.ruido_uniforme(self.tensor, amplitud, seed))
+        return self._nuevo(convoluciones.ruido_uniforme(self.tensor, amplitud, seed))
 
     def laplaciano(
         self,
@@ -260,13 +261,22 @@ class VisionNode:
         valor_absoluto: bool = True,
         crudo: bool = False,
     ) -> Self:
-        tensor = filtros.laplaciano(
+        tensor = convoluciones.laplaciano(
             self.tensor,
             extendido=extendido,
             valor_absoluto=valor_absoluto,
             crudo=crudo,
         )
         return self._nuevo(tensor)
+
+    def pasabajas_ideal(self, corte: float) -> Self:
+        return self._nuevo(espectros.pasabajas_ideal(self.tensor, corte))
+
+    def pasabajas_gaussiano(self, corte: float) -> Self:
+        return self._nuevo(espectros.pasabajas_gaussiano(self.tensor, corte))
+
+    def pasabajas_butterworth(self, corte: float, orden: int = 2) -> Self:
+        return self._nuevo(espectros.pasabajas_butterworth(self.tensor, corte, orden))
 
     def picos_espectrales(
         self,
@@ -329,7 +339,7 @@ class VisionNode:
         excluir_dc: bool = False,
         magnifier: float = 1.0,
     ) -> Self:
-        graficas_frecuencia.senal_por_canal(
+        graficas.senal_por_canal(
             self.tensor,
             self.titulo,
             fila=fila,
@@ -346,7 +356,7 @@ class VisionNode:
         block: bool = False,
         excluir_dc: bool = False,
     ) -> Self:
-        graficas_frecuencia.comparar_fft(
+        graficas.comparar_fft(
             self.tensor,
             comparada.tensor,
             self.titulo,
@@ -358,7 +368,7 @@ class VisionNode:
         return self
 
     def transformada_fourier_2d(self, block: bool = False) -> Self:
-        graficas_frecuencia.transformada_fourier_2d(self.tensor, self.titulo, block=block)
+        graficas.transformada_fourier_2d(self.tensor, self.titulo, block=block)
         return self
 
     def espectro_2d_picos(
@@ -371,7 +381,7 @@ class VisionNode:
         clip_percentil: float = 99.5,
         block: bool = False,
     ) -> Self:
-        graficas_frecuencia.espectro_2d_picos(
+        graficas.espectro_2d_picos(
             self.tensor,
             self.titulo,
             n_picos=n_picos,
@@ -395,7 +405,7 @@ class VisionNode:
         escala_perfiles: str = "lineal",
         block: bool = False,
     ) -> Self:
-        graficas_frecuencia.espectro_2d_con_perfiles(
+        graficas.espectro_2d_con_perfiles(
             self.tensor,
             self.titulo,
             n_picos=n_picos,

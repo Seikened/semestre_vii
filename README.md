@@ -85,12 +85,20 @@ El kit está separado por responsabilidad:
 | --- | --- | --- |
 | `node.py` | Fachada Fluent y operadores aritméticos | PyTorch |
 | `io.py` | Carga y guardado | Torchvision y Pillow |
-| `transformaciones.py` | Color, intensidad, umbrales e histogramas | Kornia y PyTorch |
-| `filtros.py` | Convolución, suavizado, ruido y derivadas | Kornia, SciPy y PyTorch |
-| `frecuencias.py` | FFT y detección de picos | PyTorch y scikit-image |
-| `visualizacion.py` | Imagen, histogramas y reportes | Matplotlib |
-| `graficas_frecuencia.py` | Señales y espectros interactivos | Matplotlib |
+| `pixels/transformaciones.py` | Color, intensidad, umbrales e histogramas | Kornia y PyTorch |
+| `pixels/convoluciones.py` | Convolución, suavizado, ruido y derivadas | Kornia, SciPy y PyTorch |
+| `pixels/visualizacion.py` | Imagen, histogramas y reportes | Matplotlib |
+| `signals/espectros.py` | Transformada 2D y filtros espectrales | PyTorch y Kornia |
+| `signals/frecuencias.py` | FFT y detección de picos | PyTorch y scikit-image |
+| `signals/graficas.py` | Señales y espectros interactivos | Matplotlib |
 | `optica.py` | Focal, FOV, cámara y tablas comparativas | Polars |
+
+Los imports directos también conservan esta frontera:
+
+```python
+from semestre_vii.vision_de_maquina.vision_node.pixels.convoluciones import gaussiano
+from semestre_vii.vision_de_maquina.vision_node.signals.espectros import pasabajas_gaussiano
+```
 
 Además de las transformaciones básicas, están disponibles los ajustes lineales por canal,
 ecualización, filtros box, piramidal, gaussiano y mediana, ruido uniforme y sal y pimienta,

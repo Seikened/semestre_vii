@@ -1,3 +1,5 @@
+"""Señales de filas y detección de picos de frecuencia."""
+
 from dataclasses import dataclass, field
 
 import numpy as np

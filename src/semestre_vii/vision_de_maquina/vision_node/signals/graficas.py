@@ -1,3 +1,5 @@
+"""Gráficas interactivas de señales y espectros."""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
