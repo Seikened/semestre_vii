@@ -1,3 +1,4 @@
+from .espectro import EspectroNode as EspectroNode
 from .node import VisionNode as VisionNode
 from .optica import Camara as Camara
 from .optica import Escena as Escena

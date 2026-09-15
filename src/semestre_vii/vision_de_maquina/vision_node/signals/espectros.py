@@ -13,8 +13,18 @@ def centrar(canal: torch.Tensor) -> torch.Tensor:
 
 
 def transformada_2d(canal: torch.Tensor, *, centrada: bool = False) -> torch.Tensor:
-    entrada = centrar(canal) if centrada else canal
-    return torch.fft.fft2(entrada)
+    espectro = torch.fft.fft2(canal)
+    return torch.fft.fftshift(espectro, dim=(-2, -1)) if centrada else espectro
+
+
+def transformada_centrada(tensor: torch.Tensor) -> torch.Tensor:
+    return torch.fft.fftshift(torch.fft.fft2(tensor), dim=(-2, -1))
+
+
+def inversa_2d(espectro: torch.Tensor, *, centrado: bool = True, valor_absoluto: bool = False) -> torch.Tensor:
+    entrada = torch.fft.ifftshift(espectro, dim=(-2, -1)) if centrado else espectro
+    imagen = torch.fft.ifft2(entrada)
+    return imagen.abs() if valor_absoluto else imagen.real
 
 
 def magnitud_visual(espectro: torch.Tensor, *, logaritmica: bool = True) -> torch.Tensor:
@@ -27,7 +37,7 @@ def magnitud_visual(espectro: torch.Tensor, *, logaritmica: bool = True) -> torc
 def mascara_pasabajas_ideal(tensor: torch.Tensor, corte: float) -> torch.Tensor:
     """ILPF del profesor: H(u,v)=1 si D(u,v)<D0 y 0 en otro caso."""
     _validar_corte(corte)
-    return (_radio(tensor) < corte).to(tensor.dtype)
+    return (_radio(tensor) < corte).to(tensor.real.dtype)
 
 
 def mascara_pasabajas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Tensor:
@@ -37,32 +47,42 @@ def mascara_pasabajas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Ten
     return torch.exp(-radio.square() / (2 * corte**2))
 
 
+def mascara_pasabajas_butterworth(tensor: torch.Tensor, corte: float, orden: int = 2) -> torch.Tensor:
+    """BLPF: H(u,v)=1/(1+(D(u,v)/D0)^(2n))."""
+    _validar_corte(corte)
+    _validar_orden(orden)
+    radio = _radio(tensor)
+    return 1 / (1 + (radio / corte).pow(2 * orden))
+
+
+def aplicar_mascara(espectro: torch.Tensor, mascara: torch.Tensor) -> torch.Tensor:
+    if mascara.shape != espectro.shape[-2:]:
+        raise ValueError("la máscara debe coincidir con alto y ancho del espectro")
+    return espectro * mascara
+
+
 def pasabajas_ideal(tensor: torch.Tensor, corte: float) -> torch.Tensor:
-    return _filtrar(tensor, mascara_pasabajas_ideal(tensor, corte))
+    espectro = transformada_centrada(tensor)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_ideal(tensor, corte))).clamp(0, 1)
 
 
 def pasabajas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Tensor:
-    return _filtrar(tensor, mascara_pasabajas_gaussiano(tensor, corte))
+    espectro = transformada_centrada(tensor)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_gaussiano(tensor, corte))).clamp(0, 1)
 
 
 def pasabajas_butterworth(tensor: torch.Tensor, corte: float, orden: int = 2) -> torch.Tensor:
-    _validar_corte(corte)
-    radio = _radio(tensor)
-    mascara = 1 / (1 + (radio / corte).pow(2 * orden))
-    return _filtrar(tensor, mascara)
-
-
-def _filtrar(tensor: torch.Tensor, mascara: torch.Tensor) -> torch.Tensor:
-    espectro = torch.fft.fftshift(torch.fft.fft2(tensor), dim=(-2, -1))
-    filtrado = torch.fft.ifftshift(espectro * mascara, dim=(-2, -1))
-    return torch.fft.ifft2(filtrado).real.clamp(0, 1)
+    espectro = transformada_centrada(tensor)
+    mascara = mascara_pasabajas_butterworth(tensor, corte, orden)
+    return inversa_2d(aplicar_mascara(espectro, mascara)).clamp(0, 1)
 
 
 def _radio(tensor: torch.Tensor) -> torch.Tensor:
     alto, ancho = tensor.shape[-2:]
+    dtype = tensor.real.dtype if torch.is_complex(tensor) else tensor.dtype
     y, x = torch.meshgrid(
-        torch.arange(alto, dtype=tensor.dtype, device=tensor.device),
-        torch.arange(ancho, dtype=tensor.dtype, device=tensor.device),
+        torch.arange(alto, dtype=dtype, device=tensor.device),
+        torch.arange(ancho, dtype=dtype, device=tensor.device),
         indexing="ij",
     )
     return torch.hypot(y - alto / 2, x - ancho / 2)
@@ -70,4 +90,11 @@ def _radio(tensor: torch.Tensor) -> torch.Tensor:
 
 def _validar_corte(corte: float) -> None:
     if corte <= 0:
-        raise ValueError("La frecuencia de corte D0 debe ser mayor que cero.")
+        raise ValueError("la frecuencia de corte D0 debe ser mayor que cero")
+
+
+def _validar_orden(orden: int) -> None:
+    if not isinstance(orden, int):
+        raise TypeError("el orden de Butterworth debe ser int")
+    if orden < 1:
+        raise ValueError("el orden de Butterworth debe ser mayor o igual que 1")

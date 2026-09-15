@@ -58,9 +58,7 @@ La actividad genera sus datos en `data/ecobici/`; la base DuckDB y los CSV desca
 
 ## Visión de máquina
 
-`semestre_vii.vision_de_maquina.vision_node` contiene una API Fluent para experimentar con imágenes
-como tensores PyTorch en layout `CHW`. Es una fachada delgada: coordina bibliotecas especializadas
-en lugar de volver a implementar sus algoritmos.
+`semestre_vii.vision_de_maquina.vision_node` contiene una API Fluent e inmutable para experimentar con imágenes como tensores PyTorch en layout `CHW`. La superficie pública sigue una filosofía parecida a Polars: se encadenan operaciones sobre objetos de dominio y se cruza a NumPy o PyTorch sólo de forma explícita cuando hace falta.
 
 ```python
 from semestre_vii.vision_de_maquina import DATA_DIR
@@ -75,34 +73,39 @@ resultado = (
 )
 ```
 
-Cada transformación devuelve un nodo nuevo. El módulo acepta tensores de uno o tres canales con
-`torch.float32` o `torch.float64` y conserva `dtype`, `device` y autograd en las operaciones
-diferenciables.
+Cada transformación devuelve un nodo nuevo. El módulo acepta tensores de uno o tres canales con `torch.float32` o `torch.float64` y conserva `dtype`, `device` y autograd en las operaciones diferenciables.
+
+Fourier tiene su propio objeto de dominio. `VisionNode.fft()` produce un `EspectroNode`; los filtros operan sobre ese espectro y `inversa()` regresa a `VisionNode`:
+
+```python
+imagen = VisionNode.desde_archivo(DATA_DIR / "TEXTO.BMP").escala_grises()
+
+filtrada = (
+    imagen
+    .fft()
+    .pasabajas_butterworth(30, orden=2)
+    .inversa(valor_absoluto=True)
+)
+```
+
+Para visualización externa, `to_numpy()` marca explícitamente la frontera hacia NumPy. Los módulos internos (`pixels/` y `signals/`) implementan la matemática y pueden probarse directamente, pero los ejercicios y consumidores normales deben preferir la API fluida.
 
 El kit está separado por responsabilidad:
 
 | Módulo | Responsabilidad | Base principal |
 | --- | --- | --- |
-| `node.py` | Fachada Fluent y operadores aritméticos | PyTorch |
+| `node.py` | Fachada Fluent de imágenes y operadores aritméticos | PyTorch |
+| `espectro.py` | Fachada Fluent del dominio de Fourier | PyTorch |
 | `io.py` | Carga y guardado | Torchvision y Pillow |
 | `pixels/transformaciones.py` | Color, intensidad, umbrales e histogramas | Kornia y PyTorch |
 | `pixels/convoluciones.py` | Convolución, suavizado, ruido y derivadas | Kornia, SciPy y PyTorch |
 | `pixels/visualizacion.py` | Imagen, histogramas y reportes | Matplotlib |
-| `signals/espectros.py` | Transformada 2D y filtros espectrales | PyTorch y Kornia |
+| `signals/espectros.py` | Transformada 2D, máscaras y filtros espectrales | PyTorch y Kornia |
 | `signals/frecuencias.py` | FFT y detección de picos | PyTorch y scikit-image |
 | `signals/graficas.py` | Señales y espectros interactivos | Matplotlib |
 | `optica.py` | Focal, FOV, cámara y tablas comparativas | Polars |
 
-Los imports directos también conservan esta frontera:
-
-```python
-from semestre_vii.vision_de_maquina.vision_node.pixels.convoluciones import gaussiano
-from semestre_vii.vision_de_maquina.vision_node.signals.espectros import pasabajas_gaussiano
-```
-
-Además de las transformaciones básicas, están disponibles los ajustes lineales por canal,
-ecualización, filtros box, piramidal, gaussiano y mediana, ruido uniforme y sal y pimienta,
-Laplaciano, FFT 1D y 2D, análisis de picos espectrales y cálculos de óptica.
+Además de las transformaciones básicas, están disponibles los ajustes lineales por canal, ecualización, filtros box, piramidal, gaussiano y mediana, ruido uniforme y sal y pimienta, Laplaciano, FFT 1D y 2D, análisis de picos espectrales y cálculos de óptica.
 
 ```python
 from semestre_vii.vision_de_maquina.vision_node import Camara, Escena, evaluar_focales
@@ -112,9 +115,7 @@ escena = Escena(fov_ancho_mm=550, fov_alto_mm=350, do_mm=550)
 tabla = evaluar_focales(camara, escena, [6, 8, 12, 25, 35, 50])
 ```
 
-Las imágenes didácticas compartidas por la materia viven en `data/vision_de_maquina/` y se
-versionan junto con el repositorio. `DATA_DIR` permite localizarlas sin depender del directorio de
-ejecución.
+Las imágenes didácticas compartidas por la materia viven en `data/vision_de_maquina/` y se versionan junto con el repositorio. `DATA_DIR` permite localizarlas sin depender del directorio de ejecución.
 
 ## Nueva actividad
 

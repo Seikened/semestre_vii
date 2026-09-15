@@ -7,10 +7,11 @@ from typing import Self
 import numpy as np
 import torch
 
+from .espectro import EspectroNode
 from .io import cargar_imagen, guardar_imagen
 from .pixels import convoluciones, transformaciones, visualizacion
 from .pixels.transformaciones import PuntosControl
-from .signals import espectros, graficas
+from .signals import graficas
 from .signals.frecuencias import EspectroCanal, analizar_espectros
 
 _DTYPES_SOPORTADOS = frozenset({torch.float32, torch.float64})
@@ -107,6 +108,13 @@ class VisionNode:
 
     def min(self) -> float:
         return self.tensor.min().item()
+
+    def to_numpy(self) -> np.ndarray:
+        """Cruza explícitamente la frontera hacia NumPy, al estilo de una API de datos."""
+        tensor = self.tensor.detach().cpu()
+        if self.es_grises:
+            return tensor[0].numpy()
+        return tensor.permute(1, 2, 0).numpy()
 
     def guardar(self, ruta: str | Path) -> Self:
         guardar_imagen(self.tensor, ruta)
@@ -269,14 +277,22 @@ class VisionNode:
         )
         return self._nuevo(tensor)
 
+    def fft(self, *, centrado: bool = True) -> EspectroNode:
+        """Transforma la imagen al dominio de Fourier y devuelve un nodo fluido de espectro."""
+        return EspectroNode.desde_imagen(self, centrado=centrado)
+
+    def fourier(self, *, centrado: bool = True) -> EspectroNode:
+        """Alias descriptivo de :meth:`fft`."""
+        return self.fft(centrado=centrado)
+
     def pasabajas_ideal(self, corte: float) -> Self:
-        return self._nuevo(espectros.pasabajas_ideal(self.tensor, corte))
+        return self.fft().pasabajas_ideal(corte).inversa()
 
     def pasabajas_gaussiano(self, corte: float) -> Self:
-        return self._nuevo(espectros.pasabajas_gaussiano(self.tensor, corte))
+        return self.fft().pasabajas_gaussiano(corte).inversa()
 
     def pasabajas_butterworth(self, corte: float, orden: int = 2) -> Self:
-        return self._nuevo(espectros.pasabajas_butterworth(self.tensor, corte, orden))
+        return self.fft().pasabajas_butterworth(corte, orden).inversa()
 
     def picos_espectrales(
         self,
