@@ -45,11 +45,12 @@ def main(d0: float = 30, orden_butterworth: int = 1, fila: int = 100) -> None:
     eje_senal = figura.add_subplot(rejilla[0, 1])
     eje_tf = figura.add_subplot(rejilla[0, 2])
 
-    eje_imagen.imshow(imagen.to_numpy(), cmap="gray", vmin=0, vmax=1)
+    datos = imagen.to_numpy()
+    eje_imagen.imshow(datos, cmap="gray", vmin=0, vmax=1)
     eje_imagen.set_title("IMGC")
     eje_imagen.axis("off")
 
-    eje_senal.plot(imagen.tensor[0, fila].detach().cpu().numpy())
+    eje_senal.plot(datos[fila])
     eje_senal.set_title(f"IMGC[{fila}, j]")
     eje_senal.set_xlabel("j")
     eje_senal.set_ylabel("Intensidad")
