@@ -24,22 +24,29 @@ def magnitud_visual(espectro: torch.Tensor, *, logaritmica: bool = True) -> torc
     return normalize_min_max(magnitud)
 
 
+def mascara_pasabajas_ideal(tensor: torch.Tensor, corte: float) -> torch.Tensor:
+    """ILPF del profesor: H(u,v)=1 si D(u,v)<D0 y 0 en otro caso."""
+    _validar_corte(corte)
+    return (_radio(tensor) < corte).to(tensor.dtype)
+
+
+def mascara_pasabajas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Tensor:
+    """GLPF del profesor: H(u,v)=exp(-D(u,v)^2 / (2 D0^2))."""
+    _validar_corte(corte)
+    radio = _radio(tensor)
+    return torch.exp(-radio.square() / (2 * corte**2))
+
+
 def pasabajas_ideal(tensor: torch.Tensor, corte: float) -> torch.Tensor:
-    mascara = (_radio(tensor) <= corte).to(tensor.dtype)
-    return _filtrar(tensor, mascara)
+    return _filtrar(tensor, mascara_pasabajas_ideal(tensor, corte))
 
 
 def pasabajas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Tensor:
-    radio = _radio(tensor)
-    mascara = torch.exp(-radio.square() / (2 * corte**2))
-    return _filtrar(tensor, mascara)
+    return _filtrar(tensor, mascara_pasabajas_gaussiano(tensor, corte))
 
 
-def pasabajas_butterworth(
-    tensor: torch.Tensor,
-    corte: float,
-    orden: int = 2,
-) -> torch.Tensor:
+def pasabajas_butterworth(tensor: torch.Tensor, corte: float, orden: int = 2) -> torch.Tensor:
+    _validar_corte(corte)
     radio = _radio(tensor)
     mascara = 1 / (1 + (radio / corte).pow(2 * orden))
     return _filtrar(tensor, mascara)
@@ -58,4 +65,9 @@ def _radio(tensor: torch.Tensor) -> torch.Tensor:
         torch.arange(ancho, dtype=tensor.dtype, device=tensor.device),
         indexing="ij",
     )
-    return torch.hypot(y - alto // 2, x - ancho // 2)
+    return torch.hypot(y - alto / 2, x - ancho / 2)
+
+
+def _validar_corte(corte: float) -> None:
+    if corte <= 0:
+        raise ValueError("La frecuencia de corte D0 debe ser mayor que cero.")
