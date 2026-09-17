@@ -6,6 +6,9 @@ import torch
 from matplotlib.figure import Figure
 from matplotlib.widgets import Slider
 
+from ..grafica import imagen_numpy as _imagen_numpy
+from ..grafica import mapa_imagen as _mapa_imagen
+from ..grafica import presentar as _presentar
 from .frecuencias import EspectroCanal, analizar_espectros, senales_fila
 
 
@@ -333,22 +336,3 @@ def _centrar_lupa(
     radio_y = max(alto / (8 * zoom), 1)
     lupa.set_xlim(centro_x - radio_x, centro_x + radio_x)
     lupa.set_ylim(centro_y + radio_y, centro_y - radio_y)
-
-
-def _imagen_numpy(tensor: torch.Tensor) -> np.ndarray:
-    imagen = tensor.detach().clamp(0.0, 1.0).cpu()
-    if tensor.shape[0] == 1:
-        return imagen.squeeze(0).numpy()
-    return imagen.permute(1, 2, 0).numpy()
-
-
-def _mapa_imagen(tensor: torch.Tensor) -> str | None:
-    return "gray" if tensor.shape[0] == 1 else None
-
-
-def _presentar(figura: Figure, block: bool, *, ajustar: bool = True) -> Figure:
-    if ajustar:
-        figura.tight_layout()
-    if plt.get_backend().lower() != "agg":
-        plt.show(block=block)
-    return figura
