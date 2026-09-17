@@ -30,3 +30,28 @@ def chirp_espacial(
     amplitud = amplitud_inicial + (amplitud_final - amplitud_inicial) * t
     fila = (offset + amplitud * torch.sin(fase)).clamp(0, 1)
     return fila.repeat(size, 1).unsqueeze(0)
+
+
+def chirp_profesor(
+    size: int = 500,
+    *,
+    nivel_dc: float = 127.0,
+    amplitud: float = 30.0,
+    divisor: float = 30.0,
+    device: str | torch.device = "cpu",
+    dtype: torch.dtype = torch.float32,
+) -> torch.Tensor:
+    """Reproduce la señal de clase: 127 + 30 cos[(2π/500)(2j/30)j]."""
+    if size < 2:
+        raise ValueError("size debe ser mayor o igual que 2")
+    if amplitud < 0:
+        raise ValueError("amplitud debe ser mayor o igual que cero")
+    if divisor <= 0:
+        raise ValueError("divisor debe ser mayor que cero")
+    if not torch.empty((), dtype=dtype).is_floating_point():
+        raise TypeError("dtype debe ser de punto flotante")
+
+    j = torch.arange(size, device=device, dtype=dtype)
+    fase = (2 * torch.pi / size) * (2 * j / divisor) * j
+    fila = (nivel_dc + amplitud * torch.cos(fase)) / 255.0
+    return fila.clamp(0, 1).repeat(size, 1).unsqueeze(0)
