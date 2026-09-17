@@ -8,6 +8,8 @@ from semestre_vii.vision_de_maquina.vision_node.signals.espectros import (
     mascara_pasabajas_butterworth,
     mascara_pasabajas_gaussiano,
     mascara_pasabajas_ideal,
+    pasaaltas_gaussiano,
+    pasabajas_gaussiano,
 )
 
 
@@ -61,6 +63,17 @@ def test_mascara_pasaaltas_butterworth_reproduce_formula_de_clase() -> None:
 
     assert mascara[4, 4] == 0
     torch.testing.assert_close(mascara[4, 6], torch.tensor(0.5))
+
+
+def test_pasaaltas_gaussiano_equivale_a_original_menos_pasabajas_y_conserva_negativos() -> None:
+    tensor = torch.zeros((1, 16, 16), dtype=torch.float32)
+    tensor[0, 8, 8] = 1
+
+    pasabajas = pasabajas_gaussiano(tensor, corte=2)
+    pasaaltas = pasaaltas_gaussiano(tensor, corte=2)
+
+    torch.testing.assert_close(pasabajas + pasaaltas, tensor, atol=1e-6, rtol=1e-6)
+    assert pasaaltas.min() < 0
 
 
 @pytest.mark.parametrize("corte", [0, -1])
