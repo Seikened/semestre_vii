@@ -111,13 +111,15 @@ class Grafica:
     def filtro(self, espectro, nombre: str | None = None, *, valor_absoluto: bool = False) -> Self:
         etiqueta = nombre or getattr(espectro, "filtro", None) or "Filtro"
         reconstruida = espectro.inversa(valor_absoluto=valor_absoluto)
+        es_pasaaltas = "HPF" in (getattr(espectro, "filtro", "") or "").upper()
         titulo_reconstruida = f"IFFT {etiqueta}"
-        if reconstruida.min() < 0:
+        if es_pasaaltas:
             titulo_reconstruida += f"\nmin={reconstruida.min():.3g}, max={reconstruida.max():.3g}"
+        rango: RangoImagen = "simetrico" if es_pasaaltas else "unidad"
         return (
             self.mascara(espectro, f"H {etiqueta}")
             .espectro(espectro, "TF · H")
-            .imagen(reconstruida, titulo_reconstruida, rango="auto")
+            .imagen(reconstruida, titulo_reconstruida, rango=rango)
         )
 
     def vacio(self) -> Self:
