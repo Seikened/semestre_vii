@@ -83,6 +83,30 @@ class VisionNode:
         )
         return cls(tensor=tensor, titulo=titulo)
 
+    @classmethod
+    def chirp_profesor(
+        cls,
+        size: int = 500,
+        *,
+        nivel_dc: float = 127.0,
+        amplitud: float = 30.0,
+        divisor: float = 30.0,
+        device: str | torch.device = "cpu",
+        dtype: torch.dtype = torch.float32,
+        titulo: str = "IMG profesor",
+    ) -> Self:
+        """Crea la imagen sintética usando exactamente la fórmula mostrada en clase."""
+        _validar_dtype(dtype)
+        tensor = sinteticas.chirp_profesor(
+            size,
+            nivel_dc=nivel_dc,
+            amplitud=amplitud,
+            divisor=divisor,
+            device=device,
+            dtype=dtype,
+        )
+        return cls(tensor=tensor, titulo=titulo)
+
     @property
     def shape(self) -> tuple[int, int, int]:
         return tuple(self.tensor.shape)
