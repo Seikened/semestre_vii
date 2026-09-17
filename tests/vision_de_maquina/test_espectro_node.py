@@ -36,6 +36,17 @@ def test_filtros_espectrales_se_encadenan_sin_salir_de_la_api() -> None:
     assert filtrado.inversa().shape == (1, 32, 32)
 
 
+def test_ifft_pasaaltas_conserva_valores_negativos_por_defecto() -> None:
+    tensor = torch.zeros((1, 32, 32), dtype=torch.float32)
+    tensor[0, 16, 16] = 1
+    imagen = VisionNode(tensor)
+
+    reconstruida = imagen.fft().pasaaltas_gaussiano(4).inversa()
+
+    assert reconstruida.min() < 0
+    assert reconstruida.max() > 0
+
+
 def test_to_numpy_es_frontera_explicita_para_visualizacion() -> None:
     imagen = _patron(8)
     arreglo = imagen.to_numpy()

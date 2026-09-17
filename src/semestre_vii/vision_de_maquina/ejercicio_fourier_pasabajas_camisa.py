@@ -1,4 +1,4 @@
-"""Transformada de Fourier de una camisa de rayas usando la API fluida."""
+"""Ejercicio Fourier: filtros pasabajas sobre una camisa de rayas."""
 
 from pathlib import Path
 

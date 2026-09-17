@@ -55,6 +55,22 @@ def mascara_pasabajas_butterworth(tensor: torch.Tensor, corte: float, orden: int
     return 1 / (1 + (radio / corte).pow(2 * orden))
 
 
+def mascara_pasaaltas_ideal(tensor: torch.Tensor, corte: float) -> torch.Tensor:
+    """IHPF del profesor: H(u,v)=1 si D(u,v)>D0 y 0 en otro caso."""
+    _validar_corte(corte)
+    return (_radio(tensor) > corte).to(tensor.real.dtype)
+
+
+def mascara_pasaaltas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Tensor:
+    """GHPF: H(u,v)=1-exp(-D(u,v)^2 / (2 D0^2))."""
+    return 1 - mascara_pasabajas_gaussiano(tensor, corte)
+
+
+def mascara_pasaaltas_butterworth(tensor: torch.Tensor, corte: float, orden: int = 2) -> torch.Tensor:
+    """BHPF: H(u,v)=1/(1+(D0/D(u,v))^(2n)), evaluado como 1-BLPF."""
+    return 1 - mascara_pasabajas_butterworth(tensor, corte, orden)
+
+
 def aplicar_mascara(espectro: torch.Tensor, mascara: torch.Tensor) -> torch.Tensor:
     if mascara.shape != espectro.shape[-2:]:
         raise ValueError("la máscara debe coincidir con alto y ancho del espectro")
@@ -63,18 +79,34 @@ def aplicar_mascara(espectro: torch.Tensor, mascara: torch.Tensor) -> torch.Tens
 
 def pasabajas_ideal(tensor: torch.Tensor, corte: float) -> torch.Tensor:
     espectro = transformada_centrada(tensor)
-    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_ideal(tensor, corte))).clamp(0, 1)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_ideal(tensor, corte)))
 
 
 def pasabajas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Tensor:
     espectro = transformada_centrada(tensor)
-    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_gaussiano(tensor, corte))).clamp(0, 1)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_gaussiano(tensor, corte)))
 
 
 def pasabajas_butterworth(tensor: torch.Tensor, corte: float, orden: int = 2) -> torch.Tensor:
     espectro = transformada_centrada(tensor)
     mascara = mascara_pasabajas_butterworth(tensor, corte, orden)
-    return inversa_2d(aplicar_mascara(espectro, mascara)).clamp(0, 1)
+    return inversa_2d(aplicar_mascara(espectro, mascara))
+
+
+def pasaaltas_ideal(tensor: torch.Tensor, corte: float) -> torch.Tensor:
+    espectro = transformada_centrada(tensor)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasaaltas_ideal(tensor, corte)))
+
+
+def pasaaltas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Tensor:
+    espectro = transformada_centrada(tensor)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasaaltas_gaussiano(tensor, corte)))
+
+
+def pasaaltas_butterworth(tensor: torch.Tensor, corte: float, orden: int = 2) -> torch.Tensor:
+    espectro = transformada_centrada(tensor)
+    mascara = mascara_pasaaltas_butterworth(tensor, corte, orden)
+    return inversa_2d(aplicar_mascara(espectro, mascara))
 
 
 def _radio(tensor: torch.Tensor) -> torch.Tensor:

@@ -86,7 +86,20 @@ class EspectroNode:
         mascara = espectros.mascara_pasabajas_butterworth(self.tensor, corte, orden)
         return self._filtrar(mascara, f"BLPF(D0={corte:g}, n={orden})")
 
-    def inversa(self, *, valor_absoluto: bool = False, clip: bool = True) -> "VisionNode":
+    def pasaaltas_ideal(self, corte: float) -> Self:
+        mascara = espectros.mascara_pasaaltas_ideal(self.tensor, corte)
+        return self._filtrar(mascara, f"IHPF(D0={corte:g})")
+
+    def pasaaltas_gaussiano(self, corte: float) -> Self:
+        mascara = espectros.mascara_pasaaltas_gaussiano(self.tensor, corte)
+        return self._filtrar(mascara, f"GHPF(D0={corte:g})")
+
+    def pasaaltas_butterworth(self, corte: float, orden: int = 2) -> Self:
+        mascara = espectros.mascara_pasaaltas_butterworth(self.tensor, corte, orden)
+        return self._filtrar(mascara, f"BHPF(D0={corte:g}, n={orden})")
+
+    def inversa(self, *, valor_absoluto: bool = False, clip: bool = False) -> "VisionNode":
+        """Recupera el dominio espacial sin destruir negativos ni sobreimpulsos por defecto."""
         from .node import VisionNode
 
         tensor = espectros.inversa_2d(self.tensor, centrado=self.centrado, valor_absoluto=valor_absoluto)

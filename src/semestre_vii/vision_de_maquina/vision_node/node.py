@@ -286,13 +286,22 @@ class VisionNode:
         return self.fft(centrado=centrado)
 
     def pasabajas_ideal(self, corte: float) -> Self:
-        return self.fft().pasabajas_ideal(corte).inversa()
+        return self.fft().pasabajas_ideal(corte).inversa(clip=False)
 
     def pasabajas_gaussiano(self, corte: float) -> Self:
-        return self.fft().pasabajas_gaussiano(corte).inversa()
+        return self.fft().pasabajas_gaussiano(corte).inversa(clip=False)
 
     def pasabajas_butterworth(self, corte: float, orden: int = 2) -> Self:
-        return self.fft().pasabajas_butterworth(corte, orden).inversa()
+        return self.fft().pasabajas_butterworth(corte, orden).inversa(clip=False)
+
+    def pasaaltas_ideal(self, corte: float) -> Self:
+        return self.fft().pasaaltas_ideal(corte).inversa(clip=False)
+
+    def pasaaltas_gaussiano(self, corte: float) -> Self:
+        return self.fft().pasaaltas_gaussiano(corte).inversa(clip=False)
+
+    def pasaaltas_butterworth(self, corte: float, orden: int = 2) -> Self:
+        return self.fft().pasaaltas_butterworth(corte, orden).inversa(clip=False)
 
     def picos_espectrales(
         self,
