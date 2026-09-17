@@ -99,6 +99,17 @@ def test_chirp_espacial_es_cuadrado_y_aumenta_su_frecuencia() -> None:
     assert cambios[32:].sum() > cambios[:32].sum()
 
 
+def test_chirp_profesor_reproduce_formula_de_clase() -> None:
+    node = VisionNode.chirp_profesor()
+    j = torch.tensor(15.0)
+    esperado = (127 + 30 * torch.cos((2 * torch.pi / 500) * (2 * j / 30) * j)) / 255
+
+    assert node.shape == (1, 500, 500)
+    torch.testing.assert_close(node.tensor[0, 0, 0], torch.tensor(157 / 255))
+    torch.testing.assert_close(node.tensor[0, 0, 15], esperado)
+    torch.testing.assert_close(node.tensor[0, 0], node.tensor[0, -1])
+
+
 def test_aliases_legacy_y_descripcion_de_api_siguen_disponibles(capsys) -> None:
     node = VisionNode(torch.zeros(1, 2, 3), title="Prueba")
 
