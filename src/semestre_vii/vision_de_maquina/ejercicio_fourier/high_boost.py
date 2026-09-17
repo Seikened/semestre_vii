@@ -16,12 +16,12 @@ def main(d0: float = 30, ganancia: float = 1.0, fila: int | None = None) -> None
     # El desenfoque se modela como un paso bajo gaussiano.
     pasabajas = imagen.pasabajas_gaussiano(d0)
 
-    # Unsharp mask / componente de alta frecuencia:
-    # PA = IMG - PB
+    # Componente de alta frecuencia:
+    # IMG_PA = IMG - IMG_PB
     pasaaltas = imagen - pasabajas
 
     # High Boost:
-    # HB = IMG + k·PA = IMG + k(IMG - PB)
+    # IMG_HB = IMG + k·IMG_PA = IMG + k(IMG - IMG_PB)
     high_boost = imagen + ganancia * pasaaltas
 
     media_pa = pasaaltas.tensor.mean().item()
@@ -34,7 +34,7 @@ def main(d0: float = 30, ganancia: float = 1.0, fila: int | None = None) -> None
             columnas=3,
         )
         .imagen(imagen, "IMG original", rango="unidad")
-        .senal(imagen, fila=fila, titulo=f"Original · fila {fila}")
+        .imagen(high_boost, f"IMG_HB\nmin={minimo_hb:.3f}, max={maximo_hb:.3f}", rango="auto")
         .espectro(imagen.fft(), "TF centrada")
         .imagen(pasabajas, "IMG_PB", rango="unidad")
         .imagen(
@@ -42,29 +42,29 @@ def main(d0: float = 30, ganancia: float = 1.0, fila: int | None = None) -> None
             f"IMG_PA = IMG - IMG_PB\nmedia≈{media_pa:.2e}",
             rango="simetrico",
         )
-        .imagen(
-            high_boost,
-            f"High Boost\nmin={minimo_hb:.3f}, max={maximo_hb:.3f}",
-            rango="auto",
-        )
         .senales(
             (imagen, "Original"),
             (pasabajas, "Paso bajo"),
             fila=fila,
             titulo="Original vs paso bajo",
         )
-        .senales(
-            (pasaaltas, "Paso alto"),
+        .senal(
+            pasaaltas,
             fila=fila,
-            titulo="Detalle de alta frecuencia",
+            titulo="Paso alto / detalle",
             cero=True,
-            ylabel="Detalle",
         )
         .senales(
             (imagen, "Original"),
             (high_boost, "High Boost"),
             fila=fila,
             titulo="Original vs High Boost",
+        )
+        .senales(
+            (pasaaltas, "Paso alto"),
+            (high_boost, "High Boost"),
+            fila=fila,
+            titulo="Detalle vs resultado",
         )
         .mostrar()
     )
