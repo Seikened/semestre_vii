@@ -1,4 +1,4 @@
-"""CLI por etapas; los imports pesados se hacen sólo cuando se necesitan."""
+"""CLI local por etapas; los imports pesados se hacen sólo cuando se necesitan."""
 
 import argparse
 import json
@@ -9,18 +9,21 @@ from .configuracion import directorio
 
 def construir_parser() -> argparse.ArgumentParser:
     base = directorio()
-    raw = base / "roboflow" / "data.yaml"
+    raw = base / "dataset" / "data.yaml"
+    anterior = base / "roboflow" / "data.yaml"
+    if not raw.is_file() and anterior.is_file():
+        raw = anterior  # Compatibilidad con archivos locales ya descargados; no usa el SDK.
     segmentado = base / "segmentado" / "data.yaml"
     preferido = segmentado if segmentado.is_file() else raw
-    parser = argparse.ArgumentParser(description="Proyecto 1: caja asistida con YOLO26-seg.")
+    parser = argparse.ArgumentParser(description="Proyecto 1: caja asistida local con YOLO26-seg, sin API key.")
     comandos = parser.add_subparsers(dest="comando", required=True)
-    descargar = comandos.add_parser("descargar", help="Descargar Mexican Bread v3 desde Roboflow.")
-    descargar.add_argument("--destino", type=Path, default=base / "roboflow")
-    descargar.add_argument("--version", type=int, default=3)
+    importar = comandos.add_parser("importar", help="Importar un ZIP, carpeta o data.yaml desde tu PC.")
+    importar.add_argument("origen", type=Path, help="Ruta local al ZIP, carpeta o data.yaml.")
+    importar.add_argument("--destino", type=Path, default=base / "dataset")
     inspeccionar = comandos.add_parser("inspeccionar", help="Validar etiquetas y contar cajas/polígonos.")
     preparar = comandos.add_parser("preparar", help="Conservar polígonos o proponer máscaras con SAM.")
     revisar = comandos.add_parser("revisar", help="Exportar anotaciones superpuestas para revisión.")
-    entrenar = comandos.add_parser("entrenar", help="Fine-tuning de YOLO26-seg.")
+    entrenar = comandos.add_parser("entrenar", help="Fine-tuning local de YOLO26-seg.")
     evaluar = comandos.add_parser("evaluar", help="mAP de máscaras y errores de conteo/importe.")
     caja = comandos.add_parser("caja", help="Segmentar una foto, video o cámara y estimar el total.")
     comandos.add_parser("precios", help="Mostrar el catálogo ficticio MXN.")
@@ -59,9 +62,11 @@ def main() -> None:
         if args.comando == "precios":
             from .precios import PRECIOS
             print(json.dumps({nombre: f"{precio / 100:.2f} MXN" for nombre, precio in PRECIOS.items()}, indent=2))
-        elif args.comando == "descargar":
-            from .preparacion import descargar
-            print(descargar(args.destino, args.version))
+        elif args.comando == "importar":
+            from .importacion import importar
+            ruta = importar(args.origen, args.destino)
+            print(f"Dataset local importado: {ruta}")
+            print(f'Siguiente: inspeccionar --data "{ruta}" --verificar-fugas')
         elif args.comando == "inspeccionar":
             from .datos import cargar_dataset
             print(json.dumps(cargar_dataset(args.data, args.verificar_fugas).resumen(), indent=2, ensure_ascii=False))
@@ -82,13 +87,11 @@ def main() -> None:
             from .aplicacion import ejecutar
             ejecutar(args.source, args.model, args.device, args.conf, args.imgsz, args.sin_ventana)
     except ModuleNotFoundError as exc:
-        if exc.name == "roboflow":
-            ayuda = "uv run --with roboflow python -m semestre_vii.aprendizaje_automatico_iii.proyecto_1 descargar"
-        else:
-            ayuda = "uv add ultralytics opencv-python pyyaml"
-        parser.exit(2, f"Falta {exc.name}. Ejecuta: {ayuda}\n")
+        parser.exit(2, f"Falta {exc.name}. Ejecuta: uv add ultralytics opencv-python pyyaml\n")
     except (ValueError, OSError, RuntimeError) as exc:
         parser.exit(2, f"Error: {exc}\n")
+    except KeyboardInterrupt:
+        parser.exit(130, "Operación cancelada.\n")
 
 
 if __name__ == "__main__":

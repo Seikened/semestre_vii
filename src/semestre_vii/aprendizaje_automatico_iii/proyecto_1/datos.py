@@ -100,11 +100,21 @@ class Dataset:
         return ruta
 
 
-def cargar_dataset(ruta: Path, verificar_fugas: bool = False) -> Dataset:
+def cargar_dataset(ruta: Path, verificar_fugas: bool = False, *, raiz_permitida: Path | None = None) -> Dataset:
     ruta = ruta.expanduser().resolve()
     if not ruta.is_file():
-        raise FileNotFoundError(f"No existe {ruta}. Descarga el dataset primero o usa --data.")
-    contenido = yaml.safe_load(ruta.read_text(encoding="utf-8"))
+        raise FileNotFoundError(
+            f"No existe {ruta}. Usa importar /ruta/dataset.zip o --data /ruta/data.yaml. "
+            "Las imágenes y etiquetas deben estar en tu PC; no se solicita ninguna API key."
+        )
+    if raiz_permitida is not None:
+        raiz_permitida = raiz_permitida.resolve()
+        if not ruta.is_relative_to(raiz_permitida):
+            raise ValueError("El YAML debe estar dentro del dataset local.")
+    try:
+        contenido = yaml.safe_load(ruta.read_text(encoding="utf-8"))
+    except yaml.YAMLError as exc:
+        raise ValueError("El archivo data.yaml no contiene YAML válido.") from exc
     if not isinstance(contenido, dict):
         raise ValueError("data.yaml debe contener un mapa con names, train y val.")
     nombres = contenido.get("names")
@@ -118,7 +128,10 @@ def cargar_dataset(ruta: Path, verificar_fugas: bool = False) -> Dataset:
         raise ValueError("El catálogo contiene nombres de clase duplicados.")
     if "nc" in contenido and contenido["nc"] != len(nombres):
         raise ValueError("nc no coincide con names.")
-    base = (ruta.parent / contenido.get("path", ".")).resolve()
+    path = contenido.get("path", ".")
+    if not isinstance(path, str):
+        raise ValueError("path debe ser una ruta de texto.")
+    base = (ruta.parent / path).resolve()
     carpetas, muestras, hashes = {}, [], {}
     for split in ("train", "val", "test"):
         valor = contenido.get(split)
@@ -130,8 +143,11 @@ def cargar_dataset(ruta: Path, verificar_fugas: bool = False) -> Dataset:
             raise ValueError("Este proyecto espera una carpeta images por split, no listas ni URLs.")
         carpeta = (base / valor).resolve()
         # Roboflow exporta a veces ../train/images respecto del YAML situado en la raíz.
-        if not carpeta.is_dir() and valor.startswith("../"):
+        fuera = raiz_permitida is not None and not carpeta.is_relative_to(raiz_permitida)
+        if (not carpeta.is_dir() or fuera) and valor.startswith("../"):
             carpeta = (ruta.parent / valor.removeprefix("../")).resolve()
+        if raiz_permitida is not None and not carpeta.is_relative_to(raiz_permitida):
+            raise ValueError(f"El split {split} apunta fuera del dataset local.")
         if not carpeta.is_dir() or carpeta.name != "images":
             raise ValueError(f"No existe una carpeta images válida para {split}: {carpeta}")
         if carpeta in carpetas.values():
@@ -144,6 +160,9 @@ def cargar_dataset(ruta: Path, verificar_fugas: bool = False) -> Dataset:
         for imagen in imagenes:
             relativa = imagen.relative_to(carpeta).with_suffix(".txt")
             etiqueta = carpeta.parent / "labels" / relativa
+            if raiz_permitida is not None:
+                if any(not p.resolve().is_relative_to(raiz_permitida) for p in (imagen, etiqueta)):
+                    raise ValueError("Una imagen o etiqueta apunta fuera del dataset local.")
             if etiqueta in rutas_etiquetas:
                 raise ValueError(f"Varias imágenes comparten una etiqueta: {etiqueta}")
             rutas_etiquetas.add(etiqueta)
@@ -160,5 +179,7 @@ def cargar_dataset(ruta: Path, verificar_fugas: bool = False) -> Dataset:
     manifiesto = ruta.parent / "procedencia.json"
     pseudo = False
     if manifiesto.is_file():
+        if raiz_permitida is not None and not manifiesto.resolve().is_relative_to(raiz_permitida):
+            raise ValueError("La procedencia apunta fuera del dataset local.")
         pseudo = bool(json.loads(manifiesto.read_text(encoding="utf-8")).get("pseudoetiquetas"))
     return Dataset(ruta, tuple(nombres), carpetas, tuple(muestras), pseudo)

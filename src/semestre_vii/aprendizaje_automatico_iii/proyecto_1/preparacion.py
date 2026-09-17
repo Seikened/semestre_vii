@@ -1,9 +1,7 @@
-"""Descarga y preparación: cajas -> propuestas SAM, nunca cajas fingidas como máscaras."""
+"""Preparación local: cajas -> propuestas SAM, nunca cajas fingidas como máscaras."""
 
 from datetime import datetime, timezone
-from getpass import getpass
 import json
-import os
 from pathlib import Path
 import shutil
 from uuid import uuid4
@@ -12,29 +10,6 @@ import yaml
 
 from .configuracion import directorio, dispositivo
 from .datos import cargar_dataset, leer_etiquetas
-
-
-def descargar(destino: Path, version: int = 3) -> Path:
-    from roboflow import Roboflow
-
-    if version < 1:
-        raise ValueError("La versión debe ser positiva.")
-    destino = destino.expanduser().resolve()
-    if destino.exists():
-        raise FileExistsError(f"No se sobrescribe {destino}. Usa otra carpeta con --destino.")
-    clave = os.environ.get("ROBOFLOW_API_KEY") or getpass("Roboflow API key (entrada oculta): ")
-    if not clave.strip():
-        raise ValueError("Falta la API key; también puedes descargar el ZIP manualmente.")
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    # El SDK externo puede lanzar Exception genérica incluyendo URLs con credenciales.
-    try:
-        proyecto = Roboflow(api_key=clave).workspace("jpia").project("mexican-bread")
-        dataset = proyecto.version(version).download("yolov8", location=str(destino))
-    except Exception:
-        raise RuntimeError("Falló la descarga. Revisa acceso, versión y API key en Roboflow.") from None
-    ruta = Path(dataset.location) / "data.yaml"
-    cargar_dataset(ruta)
-    return ruta
 
 
 def preparar(origen: Path, destino: Path, con_sam: bool, device: str = "auto") -> Path:
