@@ -1,6 +1,7 @@
 """Descarga el dataset público Mexican Bread v3 sin guardar credenciales."""
 
 from html import unescape
+from itertools import chain
 from pathlib import Path
 import re
 from urllib.parse import urljoin
@@ -63,7 +64,7 @@ def _descargar_si_zip(cliente: httpx.Client, url: str, destino: Path) -> tuple[b
 
             destino.parent.mkdir(parents=True, exist_ok=True)
             with temporal.open("wb") as archivo:
-                for bloque in (primero, *bloques):
+                for bloque in chain((primero,), bloques):
                     if total + len(bloque) > MAX_DOWNLOAD_BYTES:
                         raise RuntimeError("La descarga excedió el límite de seguridad de 8 GiB.")
                     archivo.write(bloque)
