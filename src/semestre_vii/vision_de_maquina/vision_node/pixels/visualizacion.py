@@ -7,6 +7,9 @@ import numpy as np
 import torch
 from matplotlib.figure import Figure
 
+from ..grafica import imagen_numpy as _imagen_numpy
+from ..grafica import mapa_imagen as _mapa_imagen
+from ..grafica import presentar as _presentar
 from . import transformaciones
 
 _COLORES_RGB = ("red", "green", "blue")
@@ -170,25 +173,7 @@ def _dibujar_histograma_canal(eje, canal: torch.Tensor, nombre: str, color: str)
     eje.legend()
 
 
-def _imagen_numpy(tensor: torch.Tensor) -> np.ndarray:
-    imagen = tensor.detach().clamp(0.0, 1.0).cpu()
-    if tensor.shape[0] == 1:
-        return imagen.squeeze(0).numpy()
-    return imagen.permute(1, 2, 0).numpy()
-
-
-def _mapa_imagen(tensor: torch.Tensor) -> str | None:
-    return "gray" if tensor.shape[0] == 1 else None
-
-
 def _metadatos_canales(tensor: torch.Tensor) -> tuple[tuple[str, ...], tuple[str, ...]]:
     if tensor.shape[0] == 1:
         return ("B/N",), ("black",)
     return _NOMBRES_RGB, _COLORES_RGB
-
-
-def _presentar(figura: Figure, block: bool) -> Figure:
-    figura.tight_layout()
-    if plt.get_backend().lower() != "agg":
-        plt.show(block=block)
-    return figura
