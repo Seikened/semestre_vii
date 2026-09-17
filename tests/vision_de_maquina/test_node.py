@@ -81,6 +81,24 @@ def test_promediar_no_muta_los_nodos_de_entrada() -> None:
     assert torch.equal(otra.tensor, torch.ones(1, 2, 2))
 
 
+def test_chirp_espacial_es_cuadrado_y_aumenta_su_frecuencia() -> None:
+    node = VisionNode.chirp_espacial(
+        size=64,
+        frecuencia_inicial=1,
+        frecuencia_final=12,
+        amplitud_inicial=0.1,
+        amplitud_final=0.4,
+    )
+
+    assert node.shape == (1, 64, 64)
+    torch.testing.assert_close(node.tensor[0, 0], node.tensor[0, -1])
+    assert 0 <= node.min() <= node.max() <= 1
+
+    centrada = node.tensor[0, 0] >= 0.5
+    cambios = centrada[1:] != centrada[:-1]
+    assert cambios[32:].sum() > cambios[:32].sum()
+
+
 def test_aliases_legacy_y_descripcion_de_api_siguen_disponibles(capsys) -> None:
     node = VisionNode(torch.zeros(1, 2, 3), title="Prueba")
 
