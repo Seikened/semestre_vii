@@ -105,7 +105,7 @@ df_edad_promedio = con.sql(
     """
     SELECT
         Ciclo_Estacion_Retiro,
-        ROUND(AVG(Edad_Usuario), ) AS edad_promedio
+        ROUND(AVG(Edad_Usuario), 0) AS edad_promedio
     FROM bicis
     GROUP BY Ciclo_Estacion_Retiro
     ORDER BY edad_promedio DESC
