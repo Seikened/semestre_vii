@@ -7,6 +7,7 @@ import numpy as np
 import torch
 from matplotlib.figure import Figure
 
+from ..grafica import dibujar_imagen
 from ..grafica import imagen_numpy as _imagen_numpy
 from ..grafica import mapa_imagen as _mapa_imagen
 from ..grafica import presentar as _presentar
@@ -18,9 +19,7 @@ _NOMBRES_RGB = ("Rojo", "Verde", "Azul")
 
 def mostrar(tensor: torch.Tensor, titulo: str, *, block: bool = True) -> Figure:
     figura, eje = plt.subplots(figsize=(8, 6))
-    eje.imshow(_imagen_numpy(tensor), cmap=_mapa_imagen(tensor), vmin=0, vmax=1)
-    eje.set_title(titulo)
-    eje.axis("off")
+    dibujar_imagen(eje, tensor, titulo, rango="auto")
     return _presentar(figura, block)
 
 
