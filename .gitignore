@@ -9,10 +9,9 @@ wheels/
 # Virtual environments
 .venv/
 
-# Runtime data and generated scratch files
-/data/*
-!/data/vision_de_maquina/
-!/data/vision_de_maquina/**
+# Heavy datasets and generated artifacts only for Aprendizaje Automático III
+/data/aprendizaje_automatico_iii/
+
 tmp/
 *.part
 
