@@ -4,6 +4,7 @@ from html import unescape
 from pathlib import Path
 import re
 from urllib.parse import urljoin
+from zipfile import is_zipfile
 
 import httpx
 
@@ -33,9 +34,8 @@ def _enlaces_de_descarga(texto: str, base_url: str) -> list[str]:
     encontrados = []
     for url in urls:
         url = url.rstrip("),]}\\")
-        if "/ds/" in url or "/download/" in url:
-            if url not in encontrados:
-                encontrados.append(url)
+        if ("/ds/" in url or "/download/" in url) and url not in encontrados:
+            encontrados.append(url)
     return encontrados
 
 
@@ -48,32 +48,35 @@ def _descargar_si_zip(cliente: httpx.Client, url: str, destino: Path) -> tuple[b
     try:
         with cliente.stream("GET", url) as respuesta:
             respuesta.raise_for_status()
-            for bloque in respuesta.iter_bytes(CHUNK_SIZE):
-                if not bloque:
-                    continue
-                if total == 0 and not bloque.startswith(b"PK"):
-                    texto.extend(bloque[:2 * CHUNK_SIZE])
-                    for extra in respuesta.iter_bytes(CHUNK_SIZE):
-                        if len(texto) >= 2 * CHUNK_SIZE:
-                            break
-                        texto.extend(extra[: 2 * CHUNK_SIZE - len(texto)])
-                    return False, texto.decode("utf-8", errors="ignore")
+            bloques = respuesta.iter_bytes(CHUNK_SIZE)
+            primero = next(bloques, b"")
+            if not primero:
+                return False, ""
 
-                if total + len(bloque) > MAX_DOWNLOAD_BYTES:
-                    raise RuntimeError("La descarga excedió el límite de seguridad de 8 GiB.")
-                if total == 0:
-                    destino.parent.mkdir(parents=True, exist_ok=True)
-                with temporal.open("ab") as archivo:
+            if not primero.startswith(b"PK"):
+                texto.extend(primero[: 2 * CHUNK_SIZE])
+                for bloque in bloques:
+                    if len(texto) >= 2 * CHUNK_SIZE:
+                        break
+                    texto.extend(bloque[: 2 * CHUNK_SIZE - len(texto)])
+                return False, texto.decode("utf-8", errors="ignore")
+
+            destino.parent.mkdir(parents=True, exist_ok=True)
+            with temporal.open("wb") as archivo:
+                for bloque in (primero, *bloques):
+                    if total + len(bloque) > MAX_DOWNLOAD_BYTES:
+                        raise RuntimeError("La descarga excedió el límite de seguridad de 8 GiB.")
                     archivo.write(bloque)
-                total += len(bloque)
-                print(f"\rDescargando dataset: {total / 1024**2:,.1f} MiB", end="", flush=True)
+                    total += len(bloque)
+                    print(f"\rDescargando dataset: {total / 1024**2:,.1f} MiB", end="", flush=True)
     except Exception:
         temporal.unlink(missing_ok=True)
         raise
 
-    if total == 0:
-        return False, ""
     print()
+    if not is_zipfile(temporal):
+        temporal.unlink(missing_ok=True)
+        return False, ""
     temporal.replace(destino)
     return True, ""
 
