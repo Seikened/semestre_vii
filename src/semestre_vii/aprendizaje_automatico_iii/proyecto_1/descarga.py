@@ -1,4 +1,4 @@
-"""Abre Roboflow en el navegador y espera el ZIP descargado localmente."""
+"""Abre Roboflow en el navegador y detecta el ZIP descargado localmente."""
 
 from pathlib import Path
 import os
@@ -38,6 +38,11 @@ def _zips(carpetas: tuple[Path, ...]) -> set[Path]:
     return encontrados
 
 
+def _es_mexican_bread(ruta: Path) -> bool:
+    nombre = ruta.name.casefold()
+    return "mexican" in nombre and "bread" in nombre
+
+
 def _zip_estable(ruta: Path) -> bool:
     if not ruta.is_file():
         return False
@@ -48,11 +53,27 @@ def _zip_estable(ruta: Path) -> bool:
     return ruta.is_file() and ruta.stat().st_size == tamano and is_zipfile(ruta)
 
 
-def esperar_descarga_mexican_bread() -> Path:
-    """Abre la descarga YOLO26 y devuelve el ZIP nuevo cuando el navegador termina."""
-    carpetas = _carpetas_descargas()
-    existentes = _zips(carpetas)
+def _zip_existente(carpetas: tuple[Path, ...]) -> Path | None:
+    candidatos = sorted(
+        (ruta for ruta in _zips(carpetas) if _es_mexican_bread(ruta)),
+        key=lambda ruta: ruta.stat().st_mtime,
+        reverse=True,
+    )
+    for candidato in candidatos:
+        if _zip_estable(candidato):
+            return candidato
+    return None
 
+
+def esperar_descarga_mexican_bread() -> Path:
+    """Reutiliza el ZIP existente o abre la descarga y espera uno nuevo."""
+    carpetas = _carpetas_descargas()
+    existente = _zip_existente(carpetas)
+    if existente is not None:
+        print(f"Dataset ya descargado: {existente}")
+        return existente
+
+    existentes = _zips(carpetas)
     print("No encontré el dataset local.")
     print("Abriendo Mexican Bread v3 en tu navegador...")
     print("En Roboflow elige 'Download zip to computer' y continúa.")
@@ -66,9 +87,9 @@ def esperar_descarga_mexican_bread() -> Path:
     while time.monotonic() < limite:
         nuevos = _zips(carpetas) - existentes
         if nuevos:
-            preferidos = [p for p in nuevos if "mexican" in p.name.casefold() or "bread" in p.name.casefold()]
+            preferidos = [ruta for ruta in nuevos if _es_mexican_bread(ruta)]
             candidatos = preferidos or list(nuevos)
-            candidato = max(candidatos, key=lambda p: p.stat().st_mtime)
+            candidato = max(candidatos, key=lambda ruta: ruta.stat().st_mtime)
             if _zip_estable(candidato):
                 print(f"Dataset descargado: {candidato}")
                 return candidato
