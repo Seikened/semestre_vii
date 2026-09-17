@@ -18,3 +18,11 @@ tmp/
 
 # macOS
 .DS_Store
+
+# Local credentials and downloaded vision checkpoints
+.env
+.env.*
+!.env.example
+*.pt
+*.onnx
+/runs/
