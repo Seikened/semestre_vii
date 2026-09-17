@@ -1,15 +1,15 @@
-"""Primer paso: descarga, importa y prepara Mexican Bread automáticamente."""
+"""Primer paso: consigue, importa y prepara Mexican Bread con una sola ejecución."""
 
 from pathlib import Path
 
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.datos import cargar_dataset
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.descarga import descargar_mexican_bread
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.descarga import esperar_descarga_mexican_bread
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.importacion import importar
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.preparacion import preparar
 
 
-def buscar_o_descargar(entrada: Path) -> tuple[Path, bool]:
+def buscar_o_descargar(entrada: Path) -> Path:
     entrada.mkdir(parents=True, exist_ok=True)
     candidatos = sorted(entrada.glob("*.zip"))
     candidatos += sorted(p for p in entrada.iterdir() if p.is_dir())
@@ -17,10 +17,8 @@ def buscar_o_descargar(entrada: Path) -> tuple[Path, bool]:
     if len(candidatos) > 1:
         raise SystemExit(f"Deja sólo un ZIP o carpeta dentro de {entrada}")
     if candidatos:
-        return candidatos[0], False
-
-    destino = entrada / "mexican-bread-v3-yolo26.zip"
-    return descargar_mexican_bread(destino), True
+        return candidatos[0]
+    return esperar_descarga_mexican_bread()
 
 
 def main() -> None:
@@ -34,11 +32,9 @@ def main() -> None:
         return
 
     if not dataset_yaml.is_file():
-        origen, descargado = buscar_o_descargar(base / "entrada")
+        origen = buscar_o_descargar(base / "entrada")
         print(f"Importando dataset: {origen.name}")
         dataset_yaml = importar(origen, base / "dataset")
-        if descargado:
-            origen.unlink(missing_ok=True)
 
     dataset = cargar_dataset(dataset_yaml, verificar_fugas=True)
     hay_cajas = any(not etiqueta.segmentacion for muestra in dataset.muestras for etiqueta in muestra.etiquetas)
