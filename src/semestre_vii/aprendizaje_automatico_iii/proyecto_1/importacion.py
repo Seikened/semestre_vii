@@ -4,7 +4,7 @@ from pathlib import Path, PurePosixPath
 import shutil
 import stat
 from tempfile import TemporaryDirectory
-from zipfile import BadZipFile, ZipFile
+from zipfile import BadZipFile, ZipFile, ZipInfo
 
 import yaml
 
@@ -25,14 +25,25 @@ def localizar_yaml(origen: Path) -> Path:
     return candidatos[0]
 
 
+def _duplicado_identico(anterior: ZipInfo, nuevo: ZipInfo) -> bool:
+    """Roboflow puede repetir literalmente una entrada dentro del ZIP."""
+    return (
+        anterior.filename == nuevo.filename
+        and anterior.file_size == nuevo.file_size
+        and anterior.CRC == nuevo.CRC
+        and anterior.is_dir() == nuevo.is_dir()
+    )
+
+
 def extraer_zip(origen: Path, destino: Path) -> None:
-    """Rechaza rutas externas, enlaces y ZIPs excesivos antes de extraer archivos."""
+    """Extrae ZIPs seguros y tolera entradas repetidas sólo cuando son idénticas."""
     try:
         with ZipFile(origen) as archivo:
             entradas = archivo.infolist()
             if len(entradas) > MAX_ARCHIVOS or sum(e.file_size for e in entradas) > MAX_BYTES:
                 raise ValueError("ZIP demasiado grande. Usa una carpeta local ya extraída.")
-            nombres = set()
+
+            unicas: dict[str, ZipInfo] = {}
             for entrada in entradas:
                 ruta = PurePosixPath(entrada.filename)
                 tipo = stat.S_IFMT(entrada.external_attr >> 16)
@@ -40,11 +51,16 @@ def extraer_zip(origen: Path, destino: Path) -> None:
                     raise ValueError(f"Ruta insegura dentro del ZIP: {entrada.filename}")
                 if not ruta.parts or tipo not in {0, stat.S_IFREG, stat.S_IFDIR}:
                     raise ValueError("El ZIP contiene enlaces o tipos de archivo no admitidos.")
+
                 clave = str(ruta).casefold()
-                if clave in nombres:
-                    raise ValueError(f"Ruta duplicada dentro del ZIP: {entrada.filename}")
-                nombres.add(clave)
-            for entrada in entradas:
+                anterior = unicas.get(clave)
+                if anterior is not None:
+                    if _duplicado_identico(anterior, entrada):
+                        continue
+                    raise ValueError(f"Ruta duplicada con contenido distinto dentro del ZIP: {entrada.filename}")
+                unicas[clave] = entrada
+
+            for entrada in unicas.values():
                 ruta = PurePosixPath(entrada.filename)
                 if "__MACOSX" in ruta.parts or entrada.is_dir():
                     continue
@@ -92,7 +108,7 @@ def importar(origen: Path, destino: Path) -> Path:
             for archivo in ruta.parent.glob(patron):
                 if archivo.is_file() and archivo.resolve().is_relative_to(ruta.parent.resolve()):
                     shutil.copy2(archivo, listo / archivo.name)
-        contenido = {split: f"{split}/images" for split in datos.carpetas}
+        contenido = {split: f"{split}/images" for split, carpeta in datos.carpetas.items()}
         contenido.update(names=list(datos.nombres), nc=len(datos.nombres))
         (listo / "data.yaml").write_text(yaml.safe_dump(contenido, allow_unicode=True), encoding="utf-8")
         cargar_dataset(listo / "data.yaml", raiz_permitida=listo)
