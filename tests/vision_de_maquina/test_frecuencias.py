@@ -93,6 +93,17 @@ def test_perfiles_espectrales_alinean_ejes_y_marcan_picos() -> None:
     plt.close(figura)
 
 
+def test_senal_por_canal_no_oculta_negativos_de_un_pasaaltas() -> None:
+    imagen = VisionNode.chirp_espacial(size=32, frecuencia_final=8)
+    pasaaltas = imagen.pasaaltas_gaussiano(4)
+
+    figura = graficas.senal_por_canal(pasaaltas.tensor, "Pasaaltas", fila=16, block=False)
+
+    eje_senal = figura.axes[2]
+    assert eje_senal.get_ylim()[0] < 0
+    plt.close(figura)
+
+
 def test_senal_por_canal_incluye_lupa_interactiva() -> None:
     figura = graficas.senal_por_canal(
         _patron_periodico(),

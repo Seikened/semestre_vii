@@ -11,7 +11,7 @@ from .espectro import EspectroNode
 from .io import cargar_imagen, guardar_imagen
 from .pixels import convoluciones, transformaciones, visualizacion
 from .pixels.transformaciones import PuntosControl
-from .signals import graficas
+from .signals import graficas, sinteticas
 from .signals.frecuencias import EspectroCanal, analizar_espectros
 
 _DTYPES_SOPORTADOS = frozenset({torch.float32, torch.float64})
@@ -54,6 +54,34 @@ class VisionNode:
         _validar_dtype(dtype)
         tensor = cargar_imagen(ruta, device=device, dtype=dtype)
         return cls(tensor=tensor, titulo=Path(ruta).name)
+
+    @classmethod
+    def chirp_espacial(
+        cls,
+        size: int = 500,
+        *,
+        frecuencia_inicial: float = 1.0,
+        frecuencia_final: float = 40.0,
+        amplitud_inicial: float = 0.05,
+        amplitud_final: float = 0.45,
+        offset: float = 0.5,
+        device: str | torch.device = "cpu",
+        dtype: torch.dtype = torch.float32,
+        titulo: str = "IMG chirp",
+    ) -> Self:
+        """Crea el patrón chirp cuadrado usado para estudiar filtros en frecuencia."""
+        _validar_dtype(dtype)
+        tensor = sinteticas.chirp_espacial(
+            size,
+            frecuencia_inicial=frecuencia_inicial,
+            frecuencia_final=frecuencia_final,
+            amplitud_inicial=amplitud_inicial,
+            amplitud_final=amplitud_final,
+            offset=offset,
+            device=device,
+            dtype=dtype,
+        )
+        return cls(tensor=tensor, titulo=titulo)
 
     @property
     def shape(self) -> tuple[int, int, int]:

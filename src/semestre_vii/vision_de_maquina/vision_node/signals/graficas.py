@@ -6,6 +6,10 @@ import torch
 from matplotlib.figure import Figure
 from matplotlib.widgets import Slider
 
+from ..grafica import imagen_numpy as _imagen_numpy
+from ..grafica import mapa_imagen as _mapa_imagen
+from ..grafica import presentar as _presentar
+from ..grafica import resolver_rango as _resolver_rango
 from .frecuencias import EspectroCanal, analizar_espectros, senales_fila
 
 
@@ -30,41 +34,36 @@ def senal_por_canal(
     )
     figura.subplots_adjust(bottom=0.12)
     eje_imagen = ejes[0, 0]
-    eje_imagen.imshow(_imagen_numpy(tensor), cmap=_mapa_imagen(tensor), vmin=0, vmax=1)
+    datos_imagen = _imagen_numpy(tensor, clip=tensor.shape[0] != 1)
+    vmin, vmax = _resolver_rango(tensor, "auto") if tensor.shape[0] == 1 else (None, None)
+    eje_imagen.imshow(datos_imagen, cmap=_mapa_imagen(tensor), vmin=vmin, vmax=vmax)
     linea_fila = eje_imagen.axhline(fila, color="yellow", linewidth=1)
     eje_imagen.set_title(titulo)
     eje_imagen.axis("off")
     ejes[0, 1].axis("off")
     lupa = eje_imagen.inset_axes((0.66, 0.62, 0.32, 0.34))
-    lupa.imshow(_imagen_numpy(tensor), cmap=_mapa_imagen(tensor), vmin=0, vmax=1)
+    lupa.imshow(datos_imagen, cmap=_mapa_imagen(tensor), vmin=vmin, vmax=vmax)
     lupa.set_title("Lupa", fontsize=8)
     lupa.set_xticks([])
     lupa.set_yticks([])
     _centrar_lupa(lupa, tensor.shape[2] / 2, tensor.shape[1] / 2, tensor.shape, magnifier)
 
     lineas = []
+    rango_unitario = tensor.min().item() >= 0 and tensor.max().item() <= 1
     for indice, senal in enumerate(senales, start=1):
-        linea_espacial = ejes[indice, 0].plot(
-            senal.intensidades,
-            color=senal.color,
-        )[0]
-        linea_fft = ejes[indice, 1].plot(
-            senal.frecuencias,
-            senal.magnitudes,
-            color=senal.color,
-        )[0]
-        ejes[indice, 0].set(
-            title=f"Señal: {senal.nombre}",
-            xlabel="Columna",
-            ylabel="Intensidad",
-            ylim=(0, 1),
-        )
-        ejes[indice, 1].set(
+        eje_espacial = ejes[indice, 0]
+        eje_fft = ejes[indice, 1]
+        linea_espacial = eje_espacial.plot(senal.intensidades, color=senal.color)[0]
+        linea_fft = eje_fft.plot(senal.frecuencias, senal.magnitudes, color=senal.color)[0]
+        eje_espacial.set(title=f"Señal: {senal.nombre}", xlabel="Columna", ylabel="Intensidad")
+        if rango_unitario:
+            eje_espacial.set_ylim(0, 1)
+        eje_fft.set(
             title=f"FFT: {senal.nombre}",
             xlabel="Frecuencia normalizada",
             ylabel="Magnitud",
         )
-        lineas.append((linea_espacial, linea_fft, ejes[indice, 1]))
+        lineas.append((linea_espacial, eje_espacial, linea_fft, eje_fft))
 
     eje_slider = figura.add_axes((0.18, 0.035, 0.64, 0.025))
     slider = Slider(eje_slider, "Fila", 0, tensor.shape[1] - 1, valinit=fila, valstep=1)
@@ -74,9 +73,12 @@ def senal_por_canal(
         linea_fila.set_ydata([nueva_fila, nueva_fila])
         nuevas_senales = senales_fila(tensor, nueva_fila, excluir_dc=excluir_dc)
         for referencia, senal in zip(lineas, nuevas_senales, strict=True):
-            linea_espacial, linea_fft, eje_fft = referencia
+            linea_espacial, eje_espacial, linea_fft, eje_fft = referencia
             linea_espacial.set_ydata(senal.intensidades)
             linea_fft.set_ydata(senal.magnitudes)
+            if not rango_unitario:
+                eje_espacial.relim()
+                eje_espacial.autoscale_view()
             eje_fft.relim()
             eje_fft.autoscale_view()
         figura.canvas.draw_idle()
@@ -115,7 +117,9 @@ def comparar_fft(
         (titulo, titulo_comparada),
         strict=True,
     ):
-        eje.imshow(_imagen_numpy(imagen), cmap=_mapa_imagen(imagen), vmin=0, vmax=1)
+        datos = _imagen_numpy(imagen, clip=imagen.shape[0] != 1)
+        vmin, vmax = _resolver_rango(imagen, "auto") if imagen.shape[0] == 1 else (None, None)
+        eje.imshow(datos, cmap=_mapa_imagen(imagen), vmin=vmin, vmax=vmax)
         lineas_fila.append(eje.axhline(fila, color="yellow", linewidth=1))
         eje.set_title(nombre)
         eje.axis("off")
@@ -169,7 +173,9 @@ def transformada_fourier_2d(
 ) -> Figure:
     espectros = analizar_espectros(tensor)
     figura, ejes = plt.subplots(1, len(espectros) + 1, figsize=(6 * (len(espectros) + 1), 5))
-    ejes[0].imshow(_imagen_numpy(tensor), cmap=_mapa_imagen(tensor), vmin=0, vmax=1)
+    datos = _imagen_numpy(tensor, clip=tensor.shape[0] != 1)
+    vmin, vmax = _resolver_rango(tensor, "auto") if tensor.shape[0] == 1 else (None, None)
+    ejes[0].imshow(datos, cmap=_mapa_imagen(tensor), vmin=vmin, vmax=vmax)
     ejes[0].set_title(titulo)
     ejes[0].axis("off")
     for eje, espectro in zip(ejes[1:], espectros, strict=True):
@@ -333,22 +339,3 @@ def _centrar_lupa(
     radio_y = max(alto / (8 * zoom), 1)
     lupa.set_xlim(centro_x - radio_x, centro_x + radio_x)
     lupa.set_ylim(centro_y + radio_y, centro_y - radio_y)
-
-
-def _imagen_numpy(tensor: torch.Tensor) -> np.ndarray:
-    imagen = tensor.detach().clamp(0.0, 1.0).cpu()
-    if tensor.shape[0] == 1:
-        return imagen.squeeze(0).numpy()
-    return imagen.permute(1, 2, 0).numpy()
-
-
-def _mapa_imagen(tensor: torch.Tensor) -> str | None:
-    return "gray" if tensor.shape[0] == 1 else None
-
-
-def _presentar(figura: Figure, block: bool, *, ajustar: bool = True) -> Figure:
-    if ajustar:
-        figura.tight_layout()
-    if plt.get_backend().lower() != "agg":
-        plt.show(block=block)
-    return figura
