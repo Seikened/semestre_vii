@@ -2,10 +2,8 @@
 
 from pathlib import Path
 
-import matplotlib.pyplot as plt
-
 from semestre_vii.vision_de_maquina import DATA_DIR
-from semestre_vii.vision_de_maquina.vision_node import VisionNode
+from semestre_vii.vision_de_maquina.vision_node import Grafica, VisionNode
 
 
 def main(ruta: Path = DATA_DIR / "camisa.jpg") -> None:
@@ -15,24 +13,21 @@ def main(ruta: Path = DATA_DIR / "camisa.jpg") -> None:
     espectro = imagen.fft(centrado=False)
     espectro_centrado = imagen.fft()
     corte = min(imagen.alto, imagen.ancho) / 8
-    filtradas = (
-        espectro_centrado.pasabajas_ideal(corte).inversa(),
-        espectro_centrado.pasabajas_gaussiano(corte).inversa(),
-        espectro_centrado.pasabajas_butterworth(corte).inversa(),
-    )
-    paneles = (
-        (espectro.magnitud(logaritmica=False), "|FIMG|"),
-        (espectro.magnitud(), "log(1 + |FIMG|)"),
-        (espectro_centrado.magnitud(), "Espectro centrado"),
-        *zip(filtradas, ("Ideal", "Gaussiano", "Butterworth"), strict=True),
-    )
 
-    _, ejes = plt.subplots(2, 3, figsize=(12, 7), layout="constrained")
-    for eje, (resultado, titulo) in zip(ejes.flat, paneles, strict=True):
-        eje.imshow(resultado.to_numpy(), cmap="gray", vmin=0, vmax=1)
-        eje.set_title(titulo)
-        eje.axis("off")
-    plt.show()
+    ideal = espectro_centrado.pasabajas_ideal(corte).inversa()
+    gaussiano = espectro_centrado.pasabajas_gaussiano(corte).inversa()
+    butterworth = espectro_centrado.pasabajas_butterworth(corte).inversa()
+
+    (
+        Grafica("Fourier · camisa · filtros pasabajas", columnas=3, ancho_panel=4.2, alto_panel=3.5)
+        .espectro(espectro, "|FIMG|", logaritmica=False)
+        .espectro(espectro, "log(1 + |FIMG|)")
+        .espectro(espectro_centrado, "Espectro centrado")
+        .imagen(ideal, "Ideal")
+        .imagen(gaussiano, "Gaussiano")
+        .imagen(butterworth, "Butterworth")
+        .mostrar()
+    )
 
 
 if __name__ == "__main__":
