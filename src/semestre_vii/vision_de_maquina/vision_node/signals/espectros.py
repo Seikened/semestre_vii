@@ -79,34 +79,34 @@ def aplicar_mascara(espectro: torch.Tensor, mascara: torch.Tensor) -> torch.Tens
 
 def pasabajas_ideal(tensor: torch.Tensor, corte: float) -> torch.Tensor:
     espectro = transformada_centrada(tensor)
-    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_ideal(tensor, corte))).clamp(0, 1)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_ideal(tensor, corte)))
 
 
 def pasabajas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Tensor:
     espectro = transformada_centrada(tensor)
-    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_gaussiano(tensor, corte))).clamp(0, 1)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasabajas_gaussiano(tensor, corte)))
 
 
 def pasabajas_butterworth(tensor: torch.Tensor, corte: float, orden: int = 2) -> torch.Tensor:
     espectro = transformada_centrada(tensor)
     mascara = mascara_pasabajas_butterworth(tensor, corte, orden)
-    return inversa_2d(aplicar_mascara(espectro, mascara)).clamp(0, 1)
+    return inversa_2d(aplicar_mascara(espectro, mascara))
 
 
 def pasaaltas_ideal(tensor: torch.Tensor, corte: float) -> torch.Tensor:
     espectro = transformada_centrada(tensor)
-    return inversa_2d(aplicar_mascara(espectro, mascara_pasaaltas_ideal(tensor, corte))).clamp(0, 1)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasaaltas_ideal(tensor, corte)))
 
 
 def pasaaltas_gaussiano(tensor: torch.Tensor, corte: float) -> torch.Tensor:
     espectro = transformada_centrada(tensor)
-    return inversa_2d(aplicar_mascara(espectro, mascara_pasaaltas_gaussiano(tensor, corte))).clamp(0, 1)
+    return inversa_2d(aplicar_mascara(espectro, mascara_pasaaltas_gaussiano(tensor, corte)))
 
 
 def pasaaltas_butterworth(tensor: torch.Tensor, corte: float, orden: int = 2) -> torch.Tensor:
     espectro = transformada_centrada(tensor)
     mascara = mascara_pasaaltas_butterworth(tensor, corte, orden)
-    return inversa_2d(aplicar_mascara(espectro, mascara)).clamp(0, 1)
+    return inversa_2d(aplicar_mascara(espectro, mascara))
 
 
 def _radio(tensor: torch.Tensor) -> torch.Tensor:
