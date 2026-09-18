@@ -3,14 +3,13 @@ import subprocess
 import duckdb
 import polars as pl
 
-from semestre_vii.mineria_de_datos import DATA_DIR
+from semestre_vii.mineria_de_datos.descargar_datos import asegurar
 
 # limpiar
 
 subprocess.run("clear && clear", shell=True, check=False)
 
-path = DATA_DIR / "USA_Housing.csv"
-
+path = asegurar("USA_Housing.csv")
 
 
 
