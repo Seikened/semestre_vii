@@ -19,8 +19,8 @@ Documentación:
 Runners directos del nuevo experimento:
 
 ```text
-download_bread_detector.py
-train_detector.py
+entrenamiento/download_bread_detector.py
+entrenamiento/train_detector.py
 ```
 
 ## Modelo entrenado incluido
@@ -36,10 +36,10 @@ Ese archivo es el **`best.pt`** del fine-tuning de YOLO26s-seg con Mexican Bread
 Para probarlo rápidamente con la primera cámara:
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/run_model.py
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/aplicacion/run.py
 ```
 
-`run_model.py` carga explícitamente el modelo oficial anterior; no depende de `ultimo_modelo.txt` ni de la máquina donde se entrenó.
+`aplicacion/run.py` carga explícitamente el modelo oficial anterior; no depende de `ultimo_modelo.txt` ni de la máquina donde se entrenó.
 
 ## Ejecución local, sin credenciales
 
@@ -53,17 +53,31 @@ Esto no promete una instalación completamente desconectada: `uv` necesita obten
 
 ```text
 proyecto_1/
-├── __main__.py       # CLI por etapas, sin ejecutar nada al importar
-├── configuracion.py  # Rutas y selección CPU / MPS / CUDA
-├── importacion.py    # ZIP, carpeta o YAML local; sin red ni credenciales
-├── datos.py          # YAML, anotaciones, conteos y auditoría
-├── preparacion.py    # Propuestas SAM locales sólo cuando hay cajas
-├── entrenamiento.py # Fine-tuning y evaluación técnica + de negocio
-├── vision.py         # Adaptador de Ultralytics a instancias explícitas
-├── precios.py        # Única fuente de verdad de precios ficticios
-├── cobro.py          # Ticket y estabilidad, sin dependencias de visión
-├── interfaz.py       # Máscaras, desglose y capturas JPG + JSON
-└── aplicacion.py     # Foto, video o cámara; orquestación del recorrido
+├── __main__.py
+├── configuracion.py
+├── aplicacion/
+│   ├── run.py             # Ejecutar foto/video/cámara
+│   ├── runtime.py         # Orquestación de inferencia
+│   ├── interfaz.py        # Visualización y capturas
+│   ├── cobro.py           # Conteo, ticket y estabilidad
+│   └── precios.py         # Precios ficticios
+├── modelo/
+│   └── segmentacion.py    # Adaptador del checkpoint YOLO26-seg actual
+├── entrenamiento/
+│   ├── datos.py
+│   ├── importacion.py
+│   ├── descarga.py
+│   ├── preparacion.py
+│   ├── segmentacion.py
+│   ├── detector.py
+│   ├── prepare_segmentacion.py
+│   ├── train_segmentacion.py
+│   ├── entrenamiento/download_bread_detector.py
+│   └── entrenamiento/train_detector.py
+├── diagnostico/
+│   ├── modelo.py          # Diagnóstico del checkpoint
+│   └── gpu.py             # Diagnóstico CUDA/MPS
+└── docs/
 ```
 
 Los datos originales, derivados, pesos, configuraciones, experimentos y capturas van a `data/aprendizaje_automatico_iii/proyecto_1/`, fuera de `src` y excluidos de Git. Las pruebas están en `tests/proyecto_1/`. No hay base de datos, API web, servicios vacíos ni jerarquías de clases innecesarias.

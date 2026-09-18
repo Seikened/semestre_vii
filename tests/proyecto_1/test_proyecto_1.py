@@ -10,12 +10,14 @@ import numpy as np
 import pytest
 import yaml
 
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import aplicacion, entrenamiento
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import preparacion, vision
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.cobro import Estabilidad, calcular_ticket
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.datos import cargar_dataset, leer_etiquetas
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.interfaz import dibujar, guardar_captura, revisar
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.vision import Instancia, Lectura
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion import runtime as aplicacion
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento import segmentacion as entrenamiento
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento import preparacion
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.modelo import segmentacion as vision
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion.cobro import Estabilidad, calcular_ticket
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import cargar_dataset, leer_etiquetas
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion.interfaz import dibujar, guardar_captura, revisar
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.modelo.segmentacion import Instancia, Lectura
 
 POLIGONO = "0 0.1 0.1 0.8 0.1 0.8 0.8 0.1 0.8\n"
 CAJA = "0 0.5 0.5 0.6 0.6\n"
@@ -347,7 +349,7 @@ def test_preparacion_fallida_limpia_solo_staging(dataset, tmp_path, monkeypatch)
 def test_preprocesar_grayscale_conserva_tres_canales():
     import numpy as np
 
-    from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion import preprocesar
+    from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion.runtime import preprocesar
 
     imagen = np.zeros((8, 8, 3), dtype=np.uint8)
     imagen[:, :, 0] = 25

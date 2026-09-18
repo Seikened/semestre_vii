@@ -1,7 +1,7 @@
 """Entrena YOLO26m-detect con Bread Detector v2."""
 
-from ..configuracion import directorio
-from .detector import (
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.detector import (
     EntrenamientoDetector,
     entrenar_detector,
 )

@@ -2,11 +2,11 @@
 
 from pathlib import Path
 
-from ..configuracion import directorio
-from .datos import cargar_dataset
-from .descarga import esperar_descarga_mexican_bread
-from .importacion import importar
-from .preparacion import preparar
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import cargar_dataset
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.descarga import esperar_descarga_mexican_bread
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.importacion import importar
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.preparacion import preparar
 
 
 def buscar_o_descargar(entrada: Path) -> Path:

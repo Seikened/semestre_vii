@@ -4,8 +4,8 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-from .. import DATA_DIR, MODEL_PATH
-from ..configuracion import dispositivo
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import DATA_DIR, MODEL_PATH
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import dispositivo
 
 SOURCE = DATA_DIR / "concha.jpg"
 DEVICE = "auto"

@@ -15,7 +15,7 @@ def construir_parser() -> argparse.ArgumentParser:
         raw = anterior  # Compatibilidad con archivos locales ya descargados; no usa el SDK.
     segmentado = base / "segmentado" / "data.yaml"
     preferido = segmentado if segmentado.is_file() else raw
-    parser = argparse.ArgumentParser(description="Proyecto 1: caja asistida local con YOLO26-seg, sin API key.")
+    parser = argparse.ArgumentParser(description="Proyecto 1: experimentos locales de reconocimiento de pan con YOLO26.")
     comandos = parser.add_subparsers(dest="comando", required=True)
     importar = comandos.add_parser("importar", help="Importar un ZIP, carpeta o data.yaml desde tu PC.")
     importar.add_argument("origen", type=Path, help="Ruta local al ZIP, carpeta o data.yaml.")
@@ -60,31 +60,31 @@ def main() -> None:
     args = parser.parse_args()
     try:
         if args.comando == "precios":
-            from .precios import PRECIOS
+            from .aplicacion.precios import PRECIOS
             print(json.dumps({nombre: f"{precio / 100:.2f} MXN" for nombre, precio in PRECIOS.items()}, indent=2))
         elif args.comando == "importar":
-            from .importacion import importar
+            from .entrenamiento.importacion import importar
             ruta = importar(args.origen, args.destino)
             print(f"Dataset local importado: {ruta}")
             print(f'Siguiente: inspeccionar --data "{ruta}" --verificar-fugas')
         elif args.comando == "inspeccionar":
-            from .datos import cargar_dataset
+            from .entrenamiento.datos import cargar_dataset
             print(json.dumps(cargar_dataset(args.data, args.verificar_fugas).resumen(), indent=2, ensure_ascii=False))
         elif args.comando == "preparar":
-            from .preparacion import preparar
+            from .entrenamiento.preparacion import preparar
             print(preparar(args.data, args.destino, args.con_sam, args.device))
         elif args.comando == "revisar":
-            from .interfaz import revisar
+            from .aplicacion.interfaz import revisar
             print(revisar(args.data, args.split, args.destino, args.limite))
         elif args.comando == "entrenar":
-            from .entrenamiento import Entrenamiento, entrenar
+            from .entrenamiento.segmentacion import Entrenamiento, entrenar
             config = Entrenamiento(args.tamano, args.epochs, args.batch, args.imgsz, args.device, args.fraction, args.seed)
             print(entrenar(args.data, config, args.aceptar_pseudoetiquetas))
         elif args.comando == "evaluar":
-            from .entrenamiento import evaluar
+            from .entrenamiento.segmentacion import evaluar
             print(evaluar(args.data, args.model, args.split, args.device, args.conf, args.aceptar_pseudoetiquetas))
         elif args.comando == "caja":
-            from .aplicacion import ejecutar
+            from .aplicacion.runtime import ejecutar
             ejecutar(args.source, args.model, args.device, args.conf, args.imgsz, args.sin_ventana)
     except ModuleNotFoundError as exc:
         parser.exit(2, f"Falta {exc.name}. Ejecuta: uv add ultralytics opencv-python pyyaml\n")

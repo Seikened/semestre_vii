@@ -16,4 +16,4 @@ Este directorio conserva las decisiones y resultados del proyecto, no sólo el e
   - Configuración preparada para la GPU de la escuela.
   - Criterios que usaremos para decidir si realmente generaliza.
 
-La regla para los siguientes experimentos es sencilla: **mAP alto en validación no basta**. También se prueban fotos externas, cámara en vivo y escenas sin pan.
+- [Datasets candidatos y decisión experimental](03_datasets_candidatos.md)\n  - Alternativas evaluadas.\n  - Qué aporta cada una.\n  - Por qué Bread Detector es la prueba actual y Mexican Bread queda como especialización.\n\nLa regla para los siguientes experimentos es sencilla: **mAP alto en validación no basta**. También se prueban fotos externas, cámara en vivo y escenas sin pan.

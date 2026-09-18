@@ -75,7 +75,7 @@ uv sync
 ### 1. Descargar e importar Bread Detector
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/download_bread_detector.py
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/entrenamiento/download_bread_detector.py
 ```
 
 Se abrirá Roboflow en el navegador. Elegir **Download zip to computer**. El script detecta el ZIP, lo importa y valida las etiquetas.
@@ -91,7 +91,7 @@ No se versiona en Git.
 ### 2. Entrenar
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/train_detector.py
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/entrenamiento/train_detector.py
 ```
 
 Los runs quedan en:

@@ -1,8 +1,8 @@
 """Prueba rápida del modelo entrenado con cámara, foto o video."""
 
-from .. import DATA_DIR, MODEL_PATH
-from .runtime import ejecutar
-from ..configuracion import dispositivo
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import DATA_DIR, MODEL_PATH
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion.runtime import ejecutar
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import dispositivo
 
 # Cámara en vivo. Para volver a la foto:
 SOURCE = "0"
