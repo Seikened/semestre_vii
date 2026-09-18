@@ -1,15 +1,13 @@
 """Primer paso: consigue, importa y prepara Mexican Bread con una sola ejecución."""
 
-from pathlib import Path
-
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import cargar_dataset
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.descarga import esperar_descarga_mexican_bread
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.importacion import importar
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.descargas import descargar_mexican_bread
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.importacion import importar
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.preparacion import preparar
 
 
-def buscar_o_descargar(entrada: Path) -> Path:
+def buscar_o_descargar(entrada):
     entrada.mkdir(parents=True, exist_ok=True)
     candidatos = sorted(entrada.glob("*.zip"))
     candidatos += sorted(p for p in entrada.iterdir() if p.is_dir())
@@ -18,10 +16,10 @@ def buscar_o_descargar(entrada: Path) -> Path:
         raise SystemExit(f"Deja sólo un ZIP o carpeta dentro de {entrada}")
     if candidatos:
         return candidatos[0]
-    return esperar_descarga_mexican_bread()
+    return descargar_mexican_bread()
 
 
-def main() -> None:
+def main():
     base = directorio()
     dataset_yaml = base / "dataset" / "data.yaml"
     segmentado_yaml = base / "segmentado" / "data.yaml"
@@ -46,7 +44,7 @@ def main() -> None:
 
     salida = preparar(dataset_yaml, base / "segmentado", con_sam=hay_cajas, device="auto")
     print(f"\nDataset preparado:\n{salida}")
-    print("\nSiguiente paso: ejecuta train_model.py")
+    print("\nSiguiente paso: ejecuta entrenamiento/train_segmentacion.py")
 
 
 if __name__ == "__main__":

@@ -12,10 +12,10 @@ IMAGE_SIZE = 640
 DEVICE = "auto"
 
 
-def main() -> None:
+def main():
     data = directorio() / "segmentado" / "data.yaml"
     if not data.is_file():
-        raise SystemExit("Primero ejecuta prepare_dataset.py")
+        raise SystemExit("Primero ejecuta entrenamiento/prepare_segmentacion.py")
 
     dataset = cargar_dataset(data)
     config = Entrenamiento(
@@ -29,7 +29,7 @@ def main() -> None:
     print(f"Entrenando YOLO26{MODEL_SIZE}-seg | device={DEVICE} | epochs={EPOCHS} | batch={BATCH}")
     pesos = entrenar(data, config, aceptar_pseudo=dataset.pseudoetiquetas)
     print(f"\nModelo terminado:\n{pesos}")
-    print("\nSiguiente paso: ejecuta run_model.py")
+    print("\nSiguiente paso: ejecuta app.py")
 
 
 if __name__ == "__main__":

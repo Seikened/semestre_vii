@@ -19,7 +19,7 @@ Documentación:
 Runners directos del nuevo experimento:
 
 ```text
-entrenamiento/download_bread_detector.py
+utils/download_bread_detector.py
 entrenamiento/train_detector.py
 ```
 
@@ -36,14 +36,14 @@ Ese archivo es el **`best.pt`** del fine-tuning de YOLO26s-seg con Mexican Bread
 Para probarlo rápidamente con la primera cámara:
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/aplicacion/run.py
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
 ```
 
-`aplicacion/run.py` carga explícitamente el modelo oficial anterior; no depende de `ultimo_modelo.txt` ni de la máquina donde se entrenó.
+`app.py` carga explícitamente el modelo oficial anterior; no depende de `ultimo_modelo.txt` ni de la máquina donde se entrenó.
 
 ## Ejecución local, sin credenciales
 
-**Se eliminó el descargador y su solicitud de API key.** No existe el comando `descargar`, no se importa el SDK `roboflow` y no hay que instalarlo ni configurar una cuenta dentro del programa. La importación, preparación, entrenamiento e inferencia trabajan con archivos en tu PC; no se utilizan endpoints de predicción o entrenamiento de Roboflow.
+**No se usa el SDK de Roboflow ni API keys.** Las utilidades de descarga sólo abren la página pública en el navegador, esperan el ZIP descargado a tu PC y después lo importan localmente. El entrenamiento y la inferencia siguen siendo locales.
 
 El dataset sigue siendo una entrada necesaria: un enlace no contiene los archivos en tu disco. Obtén una exportación ZIP con imágenes y etiquetas YOLO del dataset de referencia y guárdala en tu PC una vez. Si ya tienes una carpeta exportada, úsala directamente. **Los datasets y artefactos de entrenamiento no están incluidos en Git; el único checkpoint versionado es el modelo final `best.pt` publicado en `models/`.**
 
@@ -55,12 +55,12 @@ Esto no promete una instalación completamente desconectada: `uv` necesita obten
 proyecto_1/
 ├── __main__.py
 ├── configuracion.py
+├── app.py                  # Punto de entrada: esto es lo que se ejecuta
 ├── aplicacion/
-│   ├── run.py             # Ejecutar foto/video/cámara
-│   ├── runtime.py         # Orquestación de inferencia
-│   ├── interfaz.py        # Visualización y capturas
-│   ├── cobro.py           # Conteo, ticket y estabilidad
-│   └── precios.py         # Precios ficticios
+│   ├── runtime.py          # Orquestación de inferencia
+│   ├── interfaz.py         # Visualización y capturas
+│   ├── cobro.py            # Conteo, ticket y estabilidad
+│   └── precios.py          # Precios ficticios
 ├── modelo/
 │   └── segmentacion.py    # Adaptador del checkpoint YOLO26-seg actual
 ├── entrenamiento/
@@ -72,7 +72,7 @@ proyecto_1/
 │   ├── detector.py
 │   ├── prepare_segmentacion.py
 │   ├── train_segmentacion.py
-│   ├── entrenamiento/download_bread_detector.py
+│   ├── utils/download_bread_detector.py
 │   └── entrenamiento/train_detector.py
 ├── diagnostico/
 │   ├── modelo.py          # Diagnóstico del checkpoint

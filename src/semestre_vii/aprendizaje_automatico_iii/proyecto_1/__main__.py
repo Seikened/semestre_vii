@@ -63,7 +63,7 @@ def main() -> None:
             from .aplicacion.precios import PRECIOS
             print(json.dumps({nombre: f"{precio / 100:.2f} MXN" for nombre, precio in PRECIOS.items()}, indent=2))
         elif args.comando == "importar":
-            from .entrenamiento.importacion import importar
+            from .utils.importacion import importar
             ruta = importar(args.origen, args.destino)
             print(f"Dataset local importado: {ruta}")
             print(f'Siguiente: inspeccionar --data "{ruta}" --verificar-fugas')

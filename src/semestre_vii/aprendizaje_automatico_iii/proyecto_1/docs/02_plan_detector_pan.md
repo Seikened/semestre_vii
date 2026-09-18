@@ -75,7 +75,7 @@ uv sync
 ### 1. Descargar e importar Bread Detector
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/entrenamiento/download_bread_detector.py
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/utils/download_bread_detector.py
 ```
 
 Se abrirá Roboflow en el navegador. Elegir **Download zip to computer**. El script detecta el ZIP, lo importa y valida las etiquetas.

@@ -1,8 +1,6 @@
 """Frontera con Ultralytics: traduce sus tensores a instancias del proyecto."""
 
 from dataclasses import dataclass
-from pathlib import Path
-
 from ..aplicacion.cobro import catalogo, normalizar
 from ..configuracion import dispositivo
 from ..aplicacion.precios import PRECIOS
@@ -21,7 +19,7 @@ class Lectura:
     inferencia_ms: float
 
 
-def traducir(resultado) -> Lectura:
+def traducir(resultado):
     cajas, mascaras = resultado.boxes, resultado.masks
     tiempo = float(resultado.speed.get("inference") or 0)
     if cajas is None or len(cajas) == 0:
@@ -42,7 +40,7 @@ def traducir(resultado) -> Lectura:
 class Segmentador:
     """Una sola carga de pesos por sesión; el cobro no depende de esta clase."""
 
-    def __init__(self, pesos: Path, device: str = "auto", conf: float = 0.5, imgsz: int = 640):
+    def __init__(self, pesos, device="auto", conf=0.5, imgsz=640):
         from ultralytics import YOLO
 
         if not pesos.is_file():
@@ -58,7 +56,7 @@ class Segmentador:
             raise ValueError(f"Clases sin precio: {desconocidos}. Revisa pesos y precios.py; no uses COCO.")
         self.device, self.conf, self.imgsz = dispositivo(device), conf, imgsz
 
-    def predecir(self, imagen) -> Lectura:
+    def predecir(self, imagen):
         resultado = self.modelo.predict(
             imagen, device=self.device, conf=self.conf, imgsz=self.imgsz,
             retina_masks=True, max_det=100, verbose=False,

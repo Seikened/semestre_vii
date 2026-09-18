@@ -13,5 +13,5 @@ Este directorio contiene únicamente el modelo final usado para inferencia. Los 
 El consumidor principal es:
 
 ```text
-src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/aplicacion/run.py
+src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
 ```

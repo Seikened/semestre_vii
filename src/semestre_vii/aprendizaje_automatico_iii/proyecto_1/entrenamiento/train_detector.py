@@ -15,11 +15,11 @@ PATIENCE = 25
 MULTI_SCALE = 0.25
 
 
-def main() -> None:
+def main():
     data = directorio() / "datasets" / "bread_detector" / "data.yaml"
 
     if not data.is_file():
-        raise SystemExit("Primero ejecuta download_bread_detector.py")
+        raise SystemExit("Primero ejecuta utils/download_bread_detector.py")
 
     config = EntrenamientoDetector(
         tamano=MODEL_SIZE,

@@ -5,11 +5,11 @@ from pathlib import Path
 from . import MODEL_PATH, PROJECT_DATA_DIR
 
 
-def directorio() -> Path:
+def directorio():
     return PROJECT_DATA_DIR
 
 
-def dispositivo(valor: str = "auto") -> str:
+def dispositivo(valor="auto"):
     import torch
 
     if valor == "auto":
@@ -25,7 +25,7 @@ def dispositivo(valor: str = "auto") -> str:
     return valor
 
 
-def pesos_entrenados(ruta: Path | None = None) -> Path:
+def pesos_entrenados(ruta=None):
     if ruta is None:
         puntero = directorio() / "ultimo_modelo.txt"
         ruta = Path(puntero.read_text(encoding="utf-8").strip()) if puntero.is_file() else MODEL_PATH

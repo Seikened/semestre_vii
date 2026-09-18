@@ -4,17 +4,17 @@ from pathlib import Path, PurePosixPath
 import shutil
 import stat
 from tempfile import TemporaryDirectory
-from zipfile import BadZipFile, ZipFile, ZipInfo
+from zipfile import BadZipFile, ZipFile
 
 import yaml
 
-from .datos import cargar_dataset
+from ..entrenamiento.datos import cargar_dataset
 
 MAX_ARCHIVOS = 100_000
 MAX_BYTES = 20 * 1024**3
 
 
-def localizar_yaml(origen: Path) -> Path:
+def localizar_yaml(origen):
     if origen.is_file() and origen.suffix.lower() in {".yaml", ".yml"}:
         return origen
     if not origen.is_dir():
@@ -25,7 +25,7 @@ def localizar_yaml(origen: Path) -> Path:
     return candidatos[0]
 
 
-def _duplicado_identico(anterior: ZipInfo, nuevo: ZipInfo) -> bool:
+def _duplicado_identico(anterior, nuevo):
     """Roboflow puede repetir literalmente una entrada dentro del ZIP."""
     return (
         anterior.filename == nuevo.filename
@@ -35,7 +35,7 @@ def _duplicado_identico(anterior: ZipInfo, nuevo: ZipInfo) -> bool:
     )
 
 
-def extraer_zip(origen: Path, destino: Path) -> None:
+def extraer_zip(origen, destino):
     """Extrae ZIPs seguros y tolera entradas repetidas sólo cuando son idénticas."""
     try:
         with ZipFile(origen) as archivo:
@@ -43,7 +43,7 @@ def extraer_zip(origen: Path, destino: Path) -> None:
             if len(entradas) > MAX_ARCHIVOS or sum(e.file_size for e in entradas) > MAX_BYTES:
                 raise ValueError("ZIP demasiado grande. Usa una carpeta local ya extraída.")
 
-            unicas: dict[str, ZipInfo] = {}
+            unicas = {}
             for entrada in entradas:
                 ruta = PurePosixPath(entrada.filename)
                 tipo = stat.S_IFMT(entrada.external_attr >> 16)
@@ -72,7 +72,7 @@ def extraer_zip(origen: Path, destino: Path) -> None:
         raise ValueError("El archivo no es un ZIP válido o está dañado.") from exc
 
 
-def importar(origen: Path, destino: Path) -> Path:
+def importar(origen, destino):
     """Copia sólo imágenes, etiquetas y atribución; conserva intacto el origen."""
     origen = origen.expanduser().resolve()
     destino = destino.expanduser().absolute()

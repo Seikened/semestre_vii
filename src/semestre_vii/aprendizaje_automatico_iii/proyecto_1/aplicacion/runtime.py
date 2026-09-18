@@ -12,7 +12,7 @@ from .interfaz import dibujar, guardar_captura
 from ..modelo.segmentacion import Segmentador
 
 
-def preprocesar(imagen, grayscale: bool):
+def preprocesar(imagen, grayscale=False):
     if not grayscale:
         return imagen
 
@@ -20,8 +20,8 @@ def preprocesar(imagen, grayscale: bool):
     return cv2.cvtColor(gris, cv2.COLOR_GRAY2BGR)
 
 
-def ejecutar(source: str | Path, model: Path | None, device: str, conf: float, imgsz: int,
-             sin_ventana: bool = False, grayscale: bool = False) -> None:
+def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
+             sin_ventana=False, grayscale=False):
     source_text = str(source)
     archivo = Path(source).expanduser()
     es_camara = source_text.isdecimal()

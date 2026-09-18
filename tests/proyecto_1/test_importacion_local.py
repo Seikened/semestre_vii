@@ -17,7 +17,8 @@ import pytest
 import yaml
 
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import __main__ as cli
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento import importacion, preparacion
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento import preparacion
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils import importacion
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import cargar_dataset
 
 POLIGONO = "0 0.1 0.1 0.8 0.1 0.8 0.8 0.1 0.8\n"

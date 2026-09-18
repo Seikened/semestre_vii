@@ -1,20 +1,18 @@
-"""Prueba rápida del modelo entrenado con cámara, foto o video."""
+"""Punto de entrada de la aplicación del proyecto."""
 
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import DATA_DIR, MODEL_PATH
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion.runtime import ejecutar
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import dispositivo
 
-# Cámara en vivo. Para volver a la foto:
+# "0" abre la cámara. También puedes usar DATA_DIR / "concha.jpg".
 SOURCE = "0"
-# SOURCE = DATA_DIR / "concha.jpg"
-
 DEVICE = "auto"
 CONFIDENCE = 0.50
 IMAGE_SIZE = 640
 GRAYSCALE = True
 
 
-def main() -> None:
+def main():
     device = dispositivo(DEVICE)
 
     print(f"Modelo: {MODEL_PATH}")

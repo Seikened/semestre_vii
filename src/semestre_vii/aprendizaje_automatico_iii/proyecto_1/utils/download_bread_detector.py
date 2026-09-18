@@ -4,11 +4,11 @@ import json
 
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import cargar_dataset
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.descarga import esperar_descarga_bread_detector
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.importacion import importar
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.descargas import descargar_bread_detector
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.importacion import importar
 
 
-def main() -> None:
+def main():
     destino = directorio() / "datasets" / "bread_detector"
     data = destino / "data.yaml"
 
@@ -25,7 +25,7 @@ def main() -> None:
             "Revisa o elimina esa carpeta incompleta antes de continuar."
         )
 
-    zip_path = esperar_descarga_bread_detector()
+    zip_path = descargar_bread_detector()
     print(f"Importando: {zip_path.name}")
     data = importar(zip_path, destino)
 
@@ -45,7 +45,7 @@ def main() -> None:
     print("\nDataset listo:")
     print(data)
     print(json.dumps(dataset.resumen(), indent=2, ensure_ascii=False))
-    print("\nSiguiente paso: ejecuta train_detector.py")
+    print("\nSiguiente paso: ejecuta entrenamiento/train_detector.py")
 
 
 if __name__ == "__main__":
