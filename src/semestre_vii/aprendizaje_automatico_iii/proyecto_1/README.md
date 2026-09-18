@@ -53,33 +53,36 @@ Esto no promete una instalación completamente desconectada: `uv` necesita obten
 
 ```text
 proyecto_1/
-├── __main__.py
-├── configuracion.py
 ├── app.py                  # Punto de entrada: esto es lo que se ejecuta
+├── __main__.py             # CLI opcional
+├── configuracion.py        # Rutas y selección CPU / MPS / CUDA
 ├── aplicacion/
-│   ├── runtime.py          # Orquestación de inferencia
+│   ├── runtime.py          # Flujo cámara/foto/video → modelo → resultado
 │   ├── interfaz.py         # Visualización y capturas
 │   ├── cobro.py            # Conteo, ticket y estabilidad
 │   └── precios.py          # Precios ficticios
 ├── modelo/
-│   └── segmentacion.py    # Adaptador del checkpoint YOLO26-seg actual
+│   └── segmentacion.py     # Adaptador del checkpoint YOLO26-seg actual
 ├── entrenamiento/
-│   ├── datos.py
-│   ├── importacion.py
-│   ├── descarga.py
-│   ├── preparacion.py
-│   ├── segmentacion.py
-│   ├── detector.py
+│   ├── datos.py            # Lectura/auditoría de datasets YOLO
+│   ├── preparacion.py      # Preparación de segmentación
+│   ├── segmentacion.py     # Entrenamiento/evaluación del experimento 1
+│   ├── detector.py         # Entrenamiento del experimento 2
 │   ├── prepare_segmentacion.py
 │   ├── train_segmentacion.py
-│   ├── utils/download_bread_detector.py
-│   └── entrenamiento/train_detector.py
+│   └── train_detector.py
+├── utils/
+│   ├── descargas.py        # Navegador + detección de ZIP descargado
+│   ├── importacion.py      # ZIP/carpeta → dataset local
+│   └── download_bread_detector.py
 ├── diagnostico/
-│   ├── modelo.py          # Diagnóstico del checkpoint
-│   └── gpu.py             # Diagnóstico CUDA/MPS
+│   ├── modelo.py           # Diagnóstico del checkpoint
+│   └── gpu.py              # Diagnóstico CUDA/MPS
 └── docs/
+    ├── 01_experimento_segmentacion_mexican_bread.md
+    ├── 02_plan_detector_pan.md
+    └── 03_datasets_candidatos.md
 ```
-
 Los datos originales, derivados, pesos, configuraciones, experimentos y capturas van a `data/aprendizaje_automatico_iii/proyecto_1/`, fuera de `src` y excluidos de Git. Las pruebas están en `tests/proyecto_1/`. No hay base de datos, API web, servicios vacíos ni jerarquías de clases innecesarias.
 
 ## Instalación
