@@ -4,6 +4,24 @@
 
 La red aprende **dónde está cada pan y qué clase es**. `precios.py` decide su precio; `cobro.py` calcula `cantidad × precio`. Cambiar un precio no requiere reentrenar. Los precios son ficticios y usan centavos enteros: dos conchas de $12, un bolillo de $5 y una dona de $15 suman **$44 MXN**.
 
+## Modelo entrenado incluido
+
+El modelo final de referencia está versionado en:
+
+```text
+models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt
+```
+
+Ese archivo es el **`best.pt`** del fine-tuning de YOLO26s-seg con Mexican Bread. Los checkpoints temporales de entrenamiento, incluido `last.pt`, permanecen fuera de Git dentro de `data/aprendizaje_automatico_iii/`.
+
+Para probarlo rápidamente con la primera cámara:
+
+```bash
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/run_model.py
+```
+
+`run_model.py` carga explícitamente el modelo oficial anterior; no depende de `ultimo_modelo.txt` ni de la máquina donde se entrenó.
+
 ## Ejecución local, sin credenciales
 
 **Se eliminó el descargador y su solicitud de API key.** No existe el comando `descargar`, no se importa el SDK `roboflow` y no hay que instalarlo ni configurar una cuenta dentro del programa. La importación, preparación, entrenamiento e inferencia trabajan con archivos en tu PC; no se utilizan endpoints de predicción o entrenamiento de Roboflow.
@@ -200,7 +218,7 @@ uv run pytest tests/proyecto_1 -q
 
 `test_importacion_local.py` prueba ZIPs, carpetas, validación, preservación del origen, compatibilidad de rutas y CLI. Bloquea conexiones de red y solicitudes de entrada/credenciales durante las pruebas. Esos casos no requieren YOLO ni SAM.
 
-Las pruebas originales de integración con YOLO, SAM y cámara usan simulaciones explícitas. No sustituyen una ejecución con pesos reales, tus imágenes y tu cámara. El proyecto no incluye `best.pt` entrenado ni métricas de precisión inventadas.
+Las pruebas originales de integración con YOLO, SAM y cámara usan simulaciones explícitas. No sustituyen una ejecución con pesos reales, tus imágenes y tu cámara. El repositorio incluye el `best.pt` final publicado para inferencia; no inventa métricas ni incluye todos los checkpoints de entrenamiento.
 
 ## Fuentes y atribución
 

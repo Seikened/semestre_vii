@@ -9,9 +9,8 @@ wheels/
 # Virtual environments
 .venv/
 
-
-
-# Reconstructable/heavy data for Minería de Datos
+# Heavy/reconstructable project data
+/data/aprendizaje_automatico_iii/
 /data/mineria/2026-01.csv
 /data/ecobici/
 
@@ -21,10 +20,13 @@ tmp/
 # macOS
 .DS_Store
 
-# Local credentials and downloaded vision checkpoints
+# Local credentials
 .env
 .env.*
 !.env.example
 
+# Generated model checkpoints: only the published best model is versioned.
+*.pt
+!/models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt
 *.onnx
 /runs/

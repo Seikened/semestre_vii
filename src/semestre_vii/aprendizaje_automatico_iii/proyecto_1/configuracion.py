@@ -1,17 +1,12 @@
-"""Rutas del repositorio y selección explícita del dispositivo."""
+"""Rutas del proyecto y selección explícita del dispositivo."""
 
 from pathlib import Path
 
-
-def raiz() -> Path:
-    for padre in Path(__file__).resolve().parents:
-        if (padre / "pyproject.toml").is_file():
-            return padre
-    raise RuntimeError("Ejecuta este proyecto desde el checkout de semestre_vii.")
+from . import MODEL_PATH, PROJECT_DATA_DIR
 
 
 def directorio() -> Path:
-    return raiz() / "data" / "aprendizaje_automatico_iii" / "proyecto_1"
+    return PROJECT_DATA_DIR
 
 
 def dispositivo(valor: str = "auto") -> str:
@@ -33,10 +28,12 @@ def dispositivo(valor: str = "auto") -> str:
 def pesos_entrenados(ruta: Path | None = None) -> Path:
     if ruta is None:
         puntero = directorio() / "ultimo_modelo.txt"
-        if not puntero.is_file():
-            raise ValueError("Primero ejecuta entrenar o proporciona --model /ruta/a/best.pt.")
-        ruta = Path(puntero.read_text(encoding="utf-8").strip())
+        ruta = Path(puntero.read_text(encoding="utf-8").strip()) if puntero.is_file() else MODEL_PATH
+
     ruta = ruta.expanduser().resolve()
     if not ruta.is_file():
-        raise FileNotFoundError(f"No existen los pesos: {ruta}")
+        raise FileNotFoundError(
+            f"No existen los pesos: {ruta}. "
+            "Usa el modelo oficial del repo o entrena uno nuevo."
+        )
     return ruta
