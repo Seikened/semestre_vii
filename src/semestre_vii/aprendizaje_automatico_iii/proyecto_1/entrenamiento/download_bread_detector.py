@@ -2,10 +2,10 @@
 
 import json
 
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.datos import cargar_dataset
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.descarga import esperar_descarga_bread_detector
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.importacion import importar
+from ..configuracion import directorio
+from .datos import cargar_dataset
+from .descarga import esperar_descarga_bread_detector
+from .importacion import importar
 
 
 def main() -> None:
@@ -16,7 +16,7 @@ def main() -> None:
         dataset = cargar_dataset(data, verificar_fugas=True)
         print("Bread Detector ya está listo.")
         print(json.dumps(dataset.resumen(), indent=2, ensure_ascii=False))
-        print("\nSiguiente paso: ejecuta train_detector.py")
+        print("\nSiguiente paso: ejecuta entrenamiento/train_detector.py")
         return
 
     if destino.exists():

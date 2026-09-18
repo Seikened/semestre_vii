@@ -8,7 +8,7 @@ from pathlib import Path
 import sys
 from uuid import uuid4
 
-from .configuracion import directorio, dispositivo
+from ..configuracion import directorio, dispositivo
 from .datos import cargar_dataset
 
 

@@ -8,7 +8,7 @@ from uuid import uuid4
 
 import yaml
 
-from .configuracion import directorio, dispositivo
+from ..configuracion import directorio, dispositivo
 from .datos import cargar_dataset, leer_etiquetas
 
 

@@ -9,10 +9,10 @@ from pathlib import Path
 import sys
 from uuid import uuid4
 
-from .cobro import calcular_ticket, normalizar
-from .configuracion import directorio, dispositivo, pesos_entrenados
+from ..aplicacion.cobro import calcular_ticket, normalizar
+from ..configuracion import directorio, dispositivo, pesos_entrenados
 from .datos import cargar_dataset
-from .vision import Segmentador
+from ..modelo.segmentacion import Segmentador
 
 
 @dataclass(frozen=True)

@@ -1,8 +1,8 @@
 """Segundo paso: entrena YOLO26-seg con el dataset preparado."""
 
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.datos import cargar_dataset
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento import Entrenamiento, entrenar
+from ..configuracion import directorio
+from .datos import cargar_dataset
+from .segmentacion import Entrenamiento, entrenar
 
 # Valores simples para el primer entrenamiento. Puedes cambiarlos después.
 MODEL_SIZE = "s"

@@ -2,11 +2,11 @@
 
 from pathlib import Path
 
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.datos import cargar_dataset
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.descarga import esperar_descarga_mexican_bread
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.importacion import importar
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.preparacion import preparar
+from ..configuracion import directorio
+from .datos import cargar_dataset
+from .descarga import esperar_descarga_mexican_bread
+from .importacion import importar
+from .preparacion import preparar
 
 
 def buscar_o_descargar(entrada: Path) -> Path:
@@ -28,7 +28,7 @@ def main() -> None:
 
     if segmentado_yaml.is_file():
         print(f"Dataset ya preparado:\n{segmentado_yaml}")
-        print("\nSiguiente paso: ejecuta train_model.py")
+        print("\nSiguiente paso: ejecuta entrenamiento/train_segmentacion.py")
         return
 
     if not dataset_yaml.is_file():
