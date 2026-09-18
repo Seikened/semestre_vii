@@ -104,3 +104,30 @@ df_top_10 = (
 
 print("Las 10 canciones que más tiempo estuvieron en el top 10:")
 print(df_top_10)
+
+
+# LAS TRES CANCIONES QUE MÁS VECES SE REPITE EL NOMBRE
+
+df_canciones = (
+    df_spotify
+    .group_by("cancion")
+    .agg(pl.len().alias("veces_repetido"))
+    .sort("veces_repetido", descending=True)
+    .head(3)
+)
+
+print("Las 3 canciones que más veces se repiten:")
+print(df_canciones)
+
+# LAS TRES CANCIONES CON MÁS TIEMPO EN EL NÚMERO 1
+
+df_top_uno = (
+    df_spotify
+    .filter(pl.col("posicion_pico") == 1)
+    .sort("semanas_en_pico", descending=True, nulls_last=True)
+    .head(3)
+    .select(["artista", "cancion", "semanas_en_pico"])
+)
+
+print("Las 3 canciones con más tiempo en el número 1:")
+print(df_top_uno)
