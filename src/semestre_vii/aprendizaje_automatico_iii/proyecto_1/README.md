@@ -26,7 +26,7 @@ uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/run_model.py
 
 **Se eliminó el descargador y su solicitud de API key.** No existe el comando `descargar`, no se importa el SDK `roboflow` y no hay que instalarlo ni configurar una cuenta dentro del programa. La importación, preparación, entrenamiento e inferencia trabajan con archivos en tu PC; no se utilizan endpoints de predicción o entrenamiento de Roboflow.
 
-El dataset sigue siendo una entrada necesaria: un enlace no contiene los archivos en tu disco. Obtén una exportación ZIP con imágenes y etiquetas YOLO del dataset de referencia y guárdala en tu PC una vez. Si ya tienes una carpeta exportada, úsala directamente. **Los datos y los pesos entrenados no están incluidos en Git.**
+El dataset sigue siendo una entrada necesaria: un enlace no contiene los archivos en tu disco. Obtén una exportación ZIP con imágenes y etiquetas YOLO del dataset de referencia y guárdala en tu PC una vez. Si ya tienes una carpeta exportada, úsala directamente. **Los datasets y artefactos de entrenamiento no están incluidos en Git; el único checkpoint versionado es el modelo final `best.pt` publicado en `models/`.**
 
 Esto no promete una instalación completamente desconectada: `uv` necesita obtener las dependencias, y Ultralytics puede descargar los pesos iniciales de YOLO/SAM cuando faltan. Esas descargas no son inferencia remota ni requieren la API key eliminada. La cámara, las imágenes y el entrenamiento del proyecto no se envían al servicio Roboflow.
 
