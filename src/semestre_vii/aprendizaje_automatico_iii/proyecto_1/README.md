@@ -4,6 +4,25 @@
 
 La red aprende **dónde está cada pan y qué clase es**. `precios.py` decide su precio; `cobro.py` calcula `cantidad × precio`. Cambiar un precio no requiere reentrenar. Los precios son ficticios y usan centavos enteros: dos conchas de $12, un bolillo de $5 y una dona de $15 suman **$44 MXN**.
 
+## Estado experimental actual
+
+El primer experimento con **YOLO26s-seg + Mexican Bread** se conserva como referencia, pero las pruebas externas mostraron problemas claros de generalización en color, escala y clasificación.
+
+El siguiente experimento preparado es **YOLO26m-detect + Bread Detector v2**. La prioridad ahora es identificar, localizar y contar tipos de pan de forma robusta antes de volver a exigir máscaras exactas.
+
+Documentación:
+
+- [Experimento 1: qué funcionó y qué falló](docs/01_experimento_segmentacion_mexican_bread.md)
+- [Plan 2: entrenamiento de detección](docs/02_plan_detector_pan.md)
+- [Índice de documentación](docs/README.md)
+
+Runners directos del nuevo experimento:
+
+```text
+download_bread_detector.py
+train_detector.py
+```
+
 ## Modelo entrenado incluido
 
 El modelo final de referencia está versionado en:
