@@ -1,9 +1,9 @@
 import polars as pl
 import duckdb
 
-from semestre_vii.mineria_de_datos.descargar_datos import asegurar
+from semestre_vii.mineria_de_datos import DATA_DIR
 
-path = asegurar("USA_Housing.csv")
+path = DATA_DIR / "USA_Housing.csv"
 
 
 
