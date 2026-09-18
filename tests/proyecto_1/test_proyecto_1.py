@@ -342,3 +342,20 @@ def test_preparacion_fallida_limpia_solo_staging(dataset, tmp_path, monkeypatch)
     assert not (tmp_path / "out").exists()
     assert not list(tmp_path.glob("out.incompleto-*"))
     assert dataset.is_file()
+
+
+def test_preprocesar_grayscale_conserva_tres_canales():
+    import numpy as np
+
+    from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion import preprocesar
+
+    imagen = np.zeros((8, 8, 3), dtype=np.uint8)
+    imagen[:, :, 0] = 25
+    imagen[:, :, 1] = 100
+    imagen[:, :, 2] = 200
+
+    resultado = preprocesar(imagen, True)
+
+    assert resultado.shape == imagen.shape
+    assert (resultado[:, :, 0] == resultado[:, :, 1]).all()
+    assert (resultado[:, :, 1] == resultado[:, :, 2]).all()

@@ -4,12 +4,14 @@ from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import DATA_DIR, MODEL_P
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion import ejecutar
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import dispositivo
 
-# "0" = primera cámara. También puedes poner una ruta a una foto o video.
-# SOURCE = "0"
-SOURCE = DATA_DIR / "concha.jpg"
+# Cámara en vivo. Para volver a la foto:
+SOURCE = "0"
+# SOURCE = DATA_DIR / "concha.jpg"
+
 DEVICE = "auto"
 CONFIDENCE = 0.05
 IMAGE_SIZE = 640
+GRAYSCALE = True
 
 
 def main() -> None:
@@ -17,6 +19,7 @@ def main() -> None:
 
     print(f"Modelo: {MODEL_PATH}")
     print(f"Dispositivo: {device}")
+    print(f"Blanco y negro: {GRAYSCALE}")
 
     ejecutar(
         source=SOURCE,
@@ -25,6 +28,7 @@ def main() -> None:
         conf=CONFIDENCE,
         imgsz=IMAGE_SIZE,
         sin_ventana=False,
+        grayscale=GRAYSCALE,
     )
 
 
