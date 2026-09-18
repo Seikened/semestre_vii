@@ -12,11 +12,13 @@ from .interfaz import dibujar, guardar_captura
 from .vision import Segmentador
 
 
-def ejecutar(source: str, model: Path | None, device: str, conf: float, imgsz: int,
+def ejecutar(source: str | Path, model: Path | None, device: str, conf: float, imgsz: int,
              sin_ventana: bool = False) -> None:
+    source_text = str(source)
     archivo = Path(source).expanduser()
-    es_imagen = not source.isdecimal() and archivo.suffix.lower() in EXTENSIONES
-    if not source.isdecimal() and not archivo.is_file():
+    es_camara = source_text.isdecimal()
+    es_imagen = not es_camara and archivo.suffix.lower() in EXTENSIONES
+    if not es_camara and not archivo.is_file():
         raise FileNotFoundError(f"No existe la imagen o el video: {archivo}")
     if sin_ventana and not es_imagen:
         raise ValueError("--sin-ventana admite una foto; cámara/video requieren interfaz interactiva.")
@@ -38,7 +40,7 @@ def ejecutar(source: str, model: Path | None, device: str, conf: float, imgsz: i
             finally:
                 cv2.destroyAllWindows()
         return
-    fuente = int(source) if source.isdecimal() else str(archivo)
+    fuente = int(source_text) if es_camara else str(archivo)
     captura = cv2.VideoCapture(fuente)
     try:
         if not captura.isOpened():
@@ -50,7 +52,7 @@ def ejecutar(source: str, model: Path | None, device: str, conf: float, imgsz: i
             if not pausado:
                 ok, imagen = captura.read()
                 if not ok:
-                    if source.isdecimal() or cuadros == 0:
+                    if es_camara or cuadros == 0:
                         raise RuntimeError("La cámara/video no entregó un fotograma.")
                     break
                 lectura = segmentador.predecir(imagen)
