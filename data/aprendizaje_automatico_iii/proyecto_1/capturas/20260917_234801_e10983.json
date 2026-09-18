@@ -1,0 +1,14 @@
+{
+  "tipo": "estimacion_no_cobro",
+  "moneda": "MXN",
+  "precios": "ficticios",
+  "fecha": "2026-09-18T05:48:01.280049+00:00",
+  "ticket": {
+    "renglones": [],
+    "piezas": 0,
+    "subtotal_conocido_centavos": 0,
+    "total_centavos": 0
+  },
+  "modelo": "/Users/ferleon/Github/PROYECTOS_UNIVERSITARIOS/semestre_vii/models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt",
+  "fuente": "/Users/ferleon/Github/PROYECTOS_UNIVERSITARIOS/semestre_vii/data/aprendizaje_automatico_iii/concha.jpg"
+}

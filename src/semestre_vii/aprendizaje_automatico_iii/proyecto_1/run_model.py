@@ -1,13 +1,14 @@
 """Prueba rápida del modelo entrenado con cámara, foto o video."""
 
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import MODEL_PATH
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import DATA_DIR, MODEL_PATH
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion import ejecutar
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import dispositivo
 
 # "0" = primera cámara. También puedes poner una ruta a una foto o video.
-SOURCE = "0"
+# SOURCE = "0"
+SOURCE = DATA_DIR / "concha.jpg"
 DEVICE = "auto"
-CONFIDENCE = 0.50
+CONFIDENCE = 0.05
 IMAGE_SIZE = 640
 
 

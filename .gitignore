@@ -9,9 +9,6 @@ wheels/
 # Virtual environments
 .venv/
 
-# Heavy/reconstructable project data
-/data/aprendizaje_automatico_iii/
-/data/ecobici/
 
 tmp/
 *.part
@@ -25,7 +22,5 @@ tmp/
 !.env.example
 
 # Generated model checkpoints: only the published best model is versioned.
-*.pt
-!/models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt
 *.onnx
 /runs/
