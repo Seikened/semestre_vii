@@ -9,8 +9,7 @@ wheels/
 # Virtual environments
 .venv/
 
-# Heavy datasets and generated artifacts only for Aprendizaje Automático III
-/data/aprendizaje_automatico_iii/
+
 
 # Reconstructable/heavy data for Minería de Datos
 /data/mineria/2026-01.csv
@@ -26,6 +25,6 @@ tmp/
 .env
 .env.*
 !.env.example
-*.pt
+
 *.onnx
 /runs/
