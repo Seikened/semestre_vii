@@ -10,8 +10,8 @@ import cv2
 import numpy as np
 
 from .cobro import Ticket, calcular_ticket, normalizar
-from .datos import cargar_dataset
-from .vision import Instancia, Lectura
+from ..entrenamiento.datos import cargar_dataset
+from ..modelo.segmentacion import Instancia, Lectura
 
 
 def dinero(centavos: int | None) -> str:

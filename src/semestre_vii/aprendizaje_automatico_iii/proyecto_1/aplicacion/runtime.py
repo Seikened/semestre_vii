@@ -6,10 +6,10 @@ from time import perf_counter
 import cv2
 
 from .cobro import Estabilidad, calcular_ticket
-from .configuracion import directorio, pesos_entrenados
-from .datos import EXTENSIONES
+from ..configuracion import directorio, pesos_entrenados
+from ..entrenamiento.datos import EXTENSIONES
 from .interfaz import dibujar, guardar_captura
-from .vision import Segmentador
+from ..modelo.segmentacion import Segmentador
 
 
 def preprocesar(imagen, grayscale: bool):

@@ -3,9 +3,9 @@
 from dataclasses import dataclass
 from pathlib import Path
 
-from .cobro import catalogo, normalizar
-from .configuracion import dispositivo
-from .precios import PRECIOS
+from ..aplicacion.cobro import catalogo, normalizar
+from ..configuracion import dispositivo
+from ..aplicacion.precios import PRECIOS
 
 
 @dataclass(frozen=True)
