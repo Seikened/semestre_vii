@@ -9,7 +9,7 @@ SOURCE = "0"
 # SOURCE = DATA_DIR / "concha.jpg"
 
 DEVICE = "auto"
-CONFIDENCE = 0.05
+CONFIDENCE = 0.50
 IMAGE_SIZE = 640
 GRAYSCALE = True
 
