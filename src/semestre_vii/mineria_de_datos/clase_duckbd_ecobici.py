@@ -3,12 +3,12 @@ import subprocess
 import duckdb
 import polars as pl
 
-from semestre_vii.mineria_de_datos.descargar_datos import asegurar
+from semestre_vii.mineria_de_datos import DATA_DIR
 
 # Limpiar terminal
 subprocess.run("clear && clear", shell=True, check=False)
 
-path = asegurar("2026-01.csv")
+path = DATA_DIR / "ecobici.csv"
 
 df = pl.read_csv(
     path,
