@@ -244,7 +244,7 @@ def test_app_foto_integrada_con_modelo_simulado(dataset, tmp_path, monkeypatch):
     monkeypatch.setattr(aplicacion, "Segmentador", lambda *args: SimpleNamespace(predecir=lambda imagen: lectura))
     monkeypatch.setattr(aplicacion, "pesos_entrenados", lambda ruta: tmp_path / "best.pt")
     monkeypatch.setattr(aplicacion, "directorio", lambda: tmp_path / "runtime")
-    aplicacion.ejecutar(str(dataset.parent / "test/images/pan.png"), None, "cpu", .5, 640, True)
+    aplicacion.ejecutar(dataset.parent / "test/images/pan.png", None, "cpu", .5, 640, True)
     ruta = next((tmp_path / "runtime/capturas").glob("*.json"))
     assert json.loads(ruta.read_text())["ticket"]["total_centavos"] == 1200
 
