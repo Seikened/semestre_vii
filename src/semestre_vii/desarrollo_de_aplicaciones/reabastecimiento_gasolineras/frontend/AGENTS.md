@@ -1,8 +1,8 @@
-# AGENTS.md — Proyecto 1 Frontend
+# AGENTS.md — Reabastecimiento de Gasolineras · Frontend
 
 Estas reglas complementan el AGENTS.md de la raíz y gobiernan únicamente este directorio.
 
-El frontend del Proyecto 1 adopta la filosofía de ingeniería y experiencia de Sol, adaptada al sistema predictivo de abastecimiento de gasolineras. Se reutilizan principios, no identidad de producto ni código visual específico de Sol.
+El frontend de Reabastecimiento de Gasolineras adopta la filosofía de ingeniería y experiencia de Sol, adaptada al sistema predictivo de abastecimiento de gasolineras. Se reutilizan principios, no identidad de producto ni código visual específico de Sol.
 
 ## Fuentes obligatorias
 
@@ -11,8 +11,12 @@ Antes de modificar frontend, leer:
 1. ../../../../../AGENTS.md
 2. ../README.md
 3. ../docs/README.md
-4. ../docs/01_producto_y_datos.md
-5. ../docs/02_modelos_y_evaluacion.md
+4. ../docs/01_producto_y_alcance.md
+5. ../docs/02_operacion_y_flujos.md
+6. ../docs/03_datos.md
+7. ../docs/04_modelos_y_evaluacion.md
+8. ../docs/05_arquitectura.md
+9. ../docs/06_plan_de_trabajo.md
 
 Cuando aparezca documentación local de arquitectura, diseño, accesibilidad, contratos o identidad, leerla antes de implementar cambios relacionados.
 
@@ -77,7 +81,7 @@ No implementar un sistema de identidad antes de que el producto lo requiera.
 - Cuando exista una librería de componentes adoptada por el proyecto, usarla antes de crear primitives propias.
 - Mantener tokens globales en un único sistema, no repetir colores, spacing o tipografía en cada componente.
 - No copiar interfaces completas de Sol u otros productos. Recuperar principios, flujos neutrales al dominio y aprendizajes de UX.
-- La identidad visual del Proyecto 1 debe surgir de sus propias necesidades.
+- La identidad visual del producto debe surgir de sus propias necesidades.
 - No mezclar decisiones de producto con detalles accidentales de una demo.
 
 ## Datos predictivos en UI

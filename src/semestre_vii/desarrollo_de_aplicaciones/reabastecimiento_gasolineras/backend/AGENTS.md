@@ -1,8 +1,8 @@
-# AGENTS.md — Proyecto 1 Backend
+# AGENTS.md — Reabastecimiento de Gasolineras · Backend
 
 Estas reglas complementan el AGENTS.md de la raíz y gobiernan únicamente este directorio.
 
-El backend del Proyecto 1 adopta la filosofía de ingeniería de Sol, adaptada al sistema predictivo de abastecimiento de gasolineras. La intención es reutilizar sus buenas prácticas, no copiar nombres, dominio ni infraestructura que todavía no existan aquí.
+El backend de Reabastecimiento de Gasolineras adopta la filosofía de ingeniería de Sol, adaptada al sistema predictivo de abastecimiento de gasolineras. La intención es reutilizar sus buenas prácticas, no copiar nombres, dominio ni infraestructura que todavía no existan aquí.
 
 ## Fuentes obligatorias
 
@@ -11,8 +11,12 @@ Antes de modificar backend, leer:
 1. ../../../../../AGENTS.md
 2. ../README.md
 3. ../docs/README.md
-4. ../docs/01_producto_y_datos.md
-5. ../docs/02_modelos_y_evaluacion.md
+4. ../docs/01_producto_y_alcance.md
+5. ../docs/02_operacion_y_flujos.md
+6. ../docs/03_datos.md
+7. ../docs/04_modelos_y_evaluacion.md
+8. ../docs/05_arquitectura.md
+9. ../docs/06_plan_de_trabajo.md
 
 Si aparece documentación de arquitectura, contratos HTTP, persistencia o seguridad dentro del proyecto, pasa a ser fuente obligatoria para el área correspondiente.
 
@@ -157,7 +161,7 @@ Toda regla de negocio, preparación de datos, métrica, split temporal, backtest
 Durante construcción ejecutar primero pruebas focales. Antes de declarar listo el backend, cerrar con los gates aplicables desde la raíz:
 
 ~~~bash
-uv run ruff check src/semestre_vii/desarrollo_de_aplicaciones/proyecto_1 tests/desarrollo_de_aplicaciones
+uv run ruff check src/semestre_vii/desarrollo_de_aplicaciones/reabastecimiento_gasolineras tests/desarrollo_de_aplicaciones
 uv run pytest tests/desarrollo_de_aplicaciones
 uv build
 ~~~
