@@ -17,6 +17,7 @@ Antes de modificar frontend, leer:
 7. ../docs/04_modelos_y_evaluacion.md
 8. ../docs/05_arquitectura.md
 9. ../docs/06_plan_de_trabajo.md
+10. ../docs/07_maquetado_frontend.md
 
 Cuando aparezca documentación local de arquitectura, diseño, accesibilidad, contratos o identidad, leerla antes de implementar cambios relacionados.
 
@@ -51,7 +52,15 @@ Elegir la ubicación del estado por propiedad y ciclo de vida.
 - Estado persistente del dominio: pertenece al backend.
 - No usar local storage o session storage como base de datos de la aplicación.
 
-Si se adopta Nuxt/Vue como en Sol, preferir useFetch, useAsyncData, useState, composables y estado local antes de Pinia. Pinia se introduce cuando exista estado cliente complejo y realmente compartido.
+El baseline actual es Nuxt 4 + Nuxt UI. Preferir useFetch, useAsyncData, useState, composables y estado local antes de Pinia. Pinia se introduce cuando exista estado cliente complejo y realmente compartido.
+
+## Iteración de maqueta
+
+- Esta iteración es frontend-only.
+- No crear `server/api`, endpoints Nitro, persistencia ni autenticación falsa para simular backend.
+- Los datos de demostración deben ser locales, deterministas y estar identificados como mock.
+- Conservar el lenguaje visual y los patrones útiles del Nuxt Dashboard Template, eliminando las superficies que no pertenezcan al dominio.
+- Mantener `LICENSE.nuxt-dashboard` y la atribución correspondiente mientras exista código sustancial derivado de la template.
 
 ## Seguridad e identidad
 
