@@ -1,162 +1,266 @@
 # AGENTS.md — Semestre VII
 
-Este documento define la forma de trabajo del repositorio de semestre VII. Su enfoque principal es **backend, datos, lógica de dominio y procesamiento**, manteniendo frontend como una capa separada que sólo se modifica cuando la capacidad lo requiere explícitamente.
+Este documento define la forma de trabajo para todo el repositorio de Semestre VII.
 
-La prioridad es construir software **mínimo, explícito, verificable, cohesionado y mantenible**. DRY, SOLID, orientación a objetos y arquitecturas sofisticadas son herramientas, no objetivos.
+La prioridad es construir software **mínimo, explícito, verificable, cohesionado y mantenible**. DRY, SOLID, orientación a objetos, patrones y arquitecturas sofisticadas son herramientas; nunca son objetivos por sí mismos.
 
-## 1. Antes de modificar el sistema
+Los AGENTS.md más profundos complementan estas reglas y tienen prioridad dentro de su propio alcance. Una regla local puede especializar la política global, pero no debe debilitar seguridad, trazabilidad, pruebas ni separación de responsabilidades.
 
-Antes de diseñar o implementar un cambio, entender primero el comportamiento existente y revisar las implementaciones relacionadas.
+## Lectura obligatoria
 
-Antes de crear un modelo, DTO, servicio, adapter, utilidad, pipeline, componente o abstracción, comprobar si ya existe una pieza que resuelva total o parcialmente el problema.
+Antes de planificar, implementar o revisar un cambio:
 
-Una implementación nueva debe tener una diferencia funcional o arquitectónica concreta respecto a las existentes. No mantener dos fuentes de verdad para la misma regla.
+1. Leer el README.md de la raíz.
+2. Leer el README.md de la materia y del proyecto afectado cuando existan.
+3. Leer todos los AGENTS.md aplicables desde la raíz hasta el directorio que se modificará.
+4. Revisar implementaciones, pruebas, datos y contratos existentes relacionados con el cambio.
+5. No asumir arquitectura, dependencias o convenciones que el repositorio todavía no tenga.
 
-## 2. Responsabilidad del backend
+AGENTS.md funciona como índice operativo. Los documentos de arquitectura, producto, datos o diseño de cada proyecto son las fuentes de verdad de sus decisiones específicas.
 
-El backend es la **fuente autoritativa** para lógica de dominio, contratos, permisos, estados, persistencia, procesamiento de datos e integraciones confiables.
+## Propiedad por área
 
-Expone capacidades al frontend, agentes u otros consumidores mediante contratos definidos. La presentación, interacción visual y estado puramente de interfaz no pertenecen al backend.
+- Cada materia y proyecto conserva su propio dominio y estructura.
+- Backend posee lógica de dominio, contratos, persistencia, procesamiento, seguridad e integraciones confiables.
+- Frontend posee navegación, presentación, interacción y estado puramente de interfaz.
+- Datos, modelos, notebooks, scripts y artefactos mantienen las fronteras declaradas por cada proyecto.
+- Un agente asignado a un área no modifica otra por conveniencia ni para evitar un contrato.
+- Un cambio transversal requiere alcance explícito y validación de todas las áreas involucradas.
+- Frontend y backend nunca se comunican leyendo directamente persistencia, archivos privados o estado interno del otro.
 
-Frontend y backend nunca deben comunicarse accediendo directamente a la persistencia, archivos privados o estado interno del otro.
+## Filosofía de implementación
 
-Cuando una funcionalidad atraviese ambas áreas, debe existir un contrato explícito y cada lado debe conservar sus responsabilidades. Una limitación del frontend nunca justifica duplicar reglas de dominio fuera del backend.
+- Antes de crear una pieza, inventariar implementaciones existentes.
+- Si se agrega una nueva, su diferencia funcional o arquitectónica debe quedar visible en el diseño, el código o la descripción del pull request.
+- Preferir código pequeño, directo y cohesionado.
+- No crear capas por simetría visual.
+- No crear wrappers, managers, services, repositories, factories o clases sólo para que el diseño parezca más formal.
+- No mantener dos fuentes de verdad para la misma regla.
+- La abstracción debe aparecer después de que exista una necesidad real, no antes.
+- Una clase requiere una razón de estado, invariantes o ciclo de vida.
+- La herencia requiere una relación real de sustitución.
+- Ante dos soluciones funcionalmente equivalentes, elegir la que tenga menos estado, menos duplicación, menos abstracciones, contratos más claros y pruebas más sencillas.
 
-## 3. Diseño y modelado
+## Python
 
-Preferir estructuras simples y directas.
+Python es el lenguaje principal del repositorio para backend, datos, machine learning, visión y automatización.
 
-Una clase requiere una razón concreta relacionada con estado, invariantes o ciclo de vida. La herencia sólo se utiliza cuando existe una relación real de sustitución.
+- Administrar dependencias y entornos con uv.
+- Mantener compatibilidad con la versión declarada en pyproject.toml.
+- Aplicar una filosofía clean-python: legibilidad primero, responsabilidades claras y ausencia de complejidad accidental.
+- Mantener declaraciones compactas y horizontales cuando sigan siendo legibles y Ruff no obligue a partirlas.
+- No agregar __all__ salvo que un módulo se convierta deliberadamente en una librería pública.
+- No usar diccionarios anónimos para representar datos estructurados que crucen fronteras importantes.
+- No esconder incertidumbre de runtime mediante typing estático.
+- Los errores deben fallar de forma explícita y conservar suficiente contexto para diagnóstico sin exponer secretos.
 
-No crear servicios, repositories, managers, wrappers o capas únicamente para que la arquitectura parezca simétrica.
+## Política de tipado Python — alto valor, baja ceremonia
 
-Los datos que cruzan fronteras deben poseer una representación explícita y validada. Usar tipado donde proteja contratos, persistencia, APIs, modelos de datos o comunicación entre módulos, evitando tipos ceremoniales en código interno cuya intención ya sea evidente.
+El tipado existe para **hacer los datos y contratos más fáciles de entender, validar y mantener**. No es una métrica de cobertura.
 
-Los modelos internos no deben convertirse accidentalmente en contratos públicos. Un dato externo se valida al ingresar al sistema y, a partir de ahí, se trabaja con representaciones confiables.
+La meta es:
 
-## 4. Python
+> **Modelar significado, no maquinaria.**
 
-Python es el lenguaje principal del backend.
+Un tipo, modelo o anotación debe aportar al menos una utilidad concreta: claridad semántica, una forma útil de datos, validación real en runtime, automatización consumida por una herramienta o una relación importante entre valores.
 
-Las dependencias y entornos se administran con **`uv`**.
+### Datos simples
 
-Todo código Python debe seguir una filosofía `clean-python`: legibilidad primero, responsabilidades claras, nombres descriptivos y ausencia de complejidad accidental.
+Si el tipo incorporado ya comunica correctamente el dato, usarlo directamente.
 
-No utilizar `__all__` salvo que el proyecto llegue a convertirse explícitamente en una librería pública.
+Preferir str, int, float, datetime, Path, list[str], dict[str, float] y equivalentes cuando expresen el concepto con claridad.
 
-No utilizar diccionarios anónimos para representar información estructurada que cruce fronteras importantes del sistema. Preferir modelos o DTO explícitos para entradas, salidas, persistencia y contratos.
+No envolver valores triviales en clases o modelos que no añadan reglas, validación o significado.
 
-## 5. APIs y contratos
+### Conceptos estructurados
 
-Las respuestas HTTP deben mantener una única estructura compartida. Los endpoints no inventan formas particulares de éxito o error.
+Si una anotación compuesta necesita explicación para entender qué representa, considerar un objeto explícito antes que un alias más complejo.
 
-Cuando exista un contrato Pydantic aprobado, ése es la fuente de verdad para la representación enviada por el backend. Los datos exitosos deben utilizar DTO explícitos y no diccionarios anónimos.
+Nombrar una estructura complicada no equivale a modelarla.
 
-Los errores de aplicación deben transformarse en errores HTTP en una frontera definida. La lógica de dominio no debe conocer detalles innecesarios del framework HTTP.
+### Pydantic
 
-Los códigos de error deben provenir de un catálogo controlado. Los mensajes públicos nunca deben revelar excepciones crudas, secretos, credenciales, consultas internas ni información sensible.
+Usar Pydantic cuando un dato estructurado necesite validación, parsing, coerción, serialización, schemas o invariantes en runtime.
 
-Los identificadores de request sirven para **correlación, observabilidad y soporte**. No representan identidad, autorización ni control de concurrencia.
+Es especialmente apropiado para datos que cruzan fronteras: HTTP, JSON, configuración, usuarios, LLMs, tools, eventos, colas o servicios externos.
 
-Un cambio incompatible en un contrato requiere diseño explícito, versionamiento o estrategia de migración.
+No introducir Pydantic sólo para envolver datos simples.
 
-## 6. Persistencia e integraciones
+### dataclass
 
-La base de datos es responsabilidad del backend y los consumidores externos nunca deben depender directamente de su estructura interna.
+Usar dataclass para conceptos internos con identidad semántica que ya llegan confiables y no necesitan validación sofisticada en runtime.
 
-Cambios importantes en base de datos, autenticación, concurrencia, colas, framework HTTP o infraestructura requieren una necesidad real antes de introducir complejidad adicional.
+### Annotated
 
-Las integraciones externas deben quedar detrás de fronteras claras para evitar que detalles del proveedor contaminen la lógica de dominio. Los adapters traducen entre sistemas; no deben convertirse en una segunda implementación de las reglas del negocio.
+Usar Annotated cuando su metadata active comportamiento real en Pydantic, FastAPI, validadores, serializers, dependency injection o herramientas equivalentes.
 
-Las bases de datos locales, archivos WAL y artefactos de ejecución no se versionan cuando pueden reconstruirse desde el código o la fuente de datos.
+Metadata ignorada es ceremonia.
 
-## 7. Datos, minería y procesamiento
+### Aliases
 
-Los datos originales deben distinguirse de los datos derivados.
+Los aliases deben comprimir significado simple o comportamiento reutilizable, no esconder estructuras profundamente complejas.
 
-Transformaciones, limpieza, normalización, feature engineering, inferencias, predicciones y resultados calculados deben mantener una procedencia comprensible.
+Si el alias oculta una estructura difícil de entender, probablemente falta un modelo.
 
-Cuando sea relevante, separar claramente **hechos, predicciones y recomendaciones**.
+### Funciones
 
-Un modelo estadístico o de machine learning no sustituye automáticamente una regla determinista cuando ésta puede expresarse de forma más simple, verificable y estable.
+No anotar funciones mecánicamente.
 
-Los pipelines deben ser reproducibles y sus etapas deben poseer responsabilidades claras. Evitar transformaciones implícitas difíciles de rastrear.
+Anotar cuando reduzca ambigüedad, documente un contrato importante o active comportamiento real.
 
-Cuando una decisión dependa de datos procesados, debe ser posible identificar suficientemente qué entrada y qué proceso produjeron el resultado.
+Una función interna, pequeña y evidente no necesita typing ceremonial.
 
-## 8. Errores
+### Duck typing
 
-Los errores propios del sistema deben estar centralizados conceptualmente y representar fallos del dominio o de la aplicación, no mensajes improvisados por cada endpoint.
+Resolvers, validators, adapters, handlers, strategies y colaboradores similares pueden definirse por comportamiento.
 
-Los adapters pueden traducir errores externos hacia errores propios. Los endpoints transforman los errores propios hacia el contrato HTTP correspondiente.
+No crear Protocol automáticamente sólo porque existan varias implementaciones.
 
-No capturar excepciones indiscriminadamente para ocultar fallos ni utilizar respuestas exitosas para representar errores.
+Formalizar una interfaz cuando el contrato formal tenga valor propio para la API o el diseño.
 
-## 9. Seguridad e identidad
+### Incertidumbre de runtime
 
-La autorización pertenece al backend y debe validarse en cada operación protegida.
+Los datos externos deben validarse antes de considerarse confiables.
 
-Un botón oculto, middleware visual, ruta bloqueada o estado de frontend **no constituye autorización**.
+cast() no valida nada.
 
-Si existe frontend, access tokens, refresh tokens, credenciales de proveedores y material de seguridad no deben exponerse innecesariamente al estado Vue, Pinia, local storage o session storage.
+Usar isinstance, parsing explícito o model_validate cuando la forma real del dato sea incierta.
 
-Cuando exista un BFF, éste debe validar correctamente sesión y seguridad antes de acceder a recursos protegidos. El cierre, expiración o cambio de sesión debe eliminar el estado asociado cuando corresponda.
+cast() sólo es razonable cuando una librería externa tiene typing incorrecto o incompleto y la validez ya está garantizada por otro mecanismo. Debe quedar localizado y justificado.
 
-## 10. Frontend cuando sea necesario
+### Typing avanzado
 
-El frontend sólo se modifica cuando el alcance de la tarea lo requiera.
+TypeVar, Generic, Protocol, TypedDict y herramientas similares deben ganarse su complejidad.
 
-Es responsable de navegación, presentación, interacción, estado de interfaz y BFF del navegador. No puede definir permisos, transiciones de dominio ni persistencia autoritativa.
+La pregunta correcta es:
 
-Debe consumir los contratos proporcionados por backend en lugar de reconstruir las reglas.
+> ¿Qué información, garantía o relación útil desaparecería si quitáramos este tipo?
 
-Antes de crear UI nueva se reutilizan primero las primitivas y componentes existentes. La implementación visual debe mantener la identidad y patrones del proyecto en lugar de copiar interfaces completas provenientes de otros sistemas.
+Si la respuesta es ninguna, probablemente sobra.
 
-Cuando un cambio requiera frontend y backend, ambos lados se verifican independientemente y además se prueba el flujo integrado.
+### Checkers
 
-## 11. Pruebas y verificación
+Pyright, mypy y herramientas equivalentes pueden detectar errores reales, pero no deben diseñar la arquitectura.
+
+No introducir wrappers, casts, protocolos, jerarquías o aliases únicamente para dejar un checker en verde.
+
+### Tests
+
+Los tipos comunican expectativas. No demuestran comportamiento.
+
+Idempotencia, atomicidad, convergencia, reglas de negocio, transforms, parsers, reducers y modelos deben demostrarse mediante invariantes y pruebas deterministas.
+
+## Datos, ciencia de datos y machine learning
+
+- Distinguir datos originales de datos derivados.
+- Mantener procedencia comprensible de limpieza, normalización, feature engineering, inferencias, predicciones y resultados calculados.
+- Separar hechos, predicciones y recomendaciones cuando sea relevante.
+- Un modelo estadístico o de machine learning no sustituye una regla determinista que pueda expresarse de forma más simple y estable.
+- Los pipelines deben ser reproducibles.
+- Evitar transformaciones implícitas difíciles de rastrear.
+- Semillas, splits, ventanas temporales, métricas y configuración de evaluación deben quedar explícitos cuando afecten reproducibilidad.
+- Nunca evaluar series temporales con particiones que filtren información del futuro.
+- Checkpoints, datasets pesados, caches y artefactos reconstruibles permanecen fuera de Git salvo decisión explícita del proyecto.
+- Los artefactos versionados deben tener propósito académico o de producto claro.
+
+## APIs y contratos
+
+Cuando un proyecto exponga HTTP u otra frontera externa:
+
+- Mantener contratos explícitos y estables.
+- Validar datos al entrar al sistema.
+- No exponer directamente modelos internos como contrato por accidente.
+- No inventar una forma distinta de respuesta en cada endpoint.
+- Transformar errores de aplicación a errores de transporte en una frontera definida.
+- Los mensajes públicos nunca exponen excepciones crudas, secretos, credenciales, queries internas ni detalles sensibles.
+- Un cambio incompatible requiere diseño explícito, versión o estrategia de migración.
+- Los identificadores de request sirven para correlación y soporte; no representan identidad ni autorización.
+
+## Persistencia e integraciones
+
+- La persistencia es una implementación interna del backend.
+- Los consumidores externos no deben depender directamente del esquema físico.
+- Framework HTTP, base de datos, autenticación, colas, concurrencia y servicios externos requieren una necesidad real antes de introducir complejidad.
+- Las integraciones externas deben quedar detrás de fronteras claras.
+- Los adapters traducen entre sistemas; no duplican reglas del dominio.
+- Bases locales, archivos WAL, caches y artefactos de ejecución no se versionan cuando pueden reconstruirse.
+
+## Seguridad
+
+- La autorización pertenece a la frontera confiable y se valida en cada operación protegida.
+- Un botón oculto, middleware visual, ruta bloqueada o estado de frontend no constituye autorización.
+- Tokens, credenciales y secretos no se guardan en código, ejemplos versionados, local storage ni logs.
+- Variables sensibles se documentan por nombre y propósito, nunca por valor real.
+- Toda entrada externa es no confiable hasta validarse.
+- No degradar controles de seguridad para simplificar una práctica académica si el mismo resultado puede lograrse correctamente.
+
+## Frontend
+
+Cuando exista frontend:
+
+- El frontend es dueño de navegación, presentación, interacción y estado de interfaz.
+- No define permisos, transiciones de dominio ni persistencia autoritativa.
+- Consume contratos del backend en vez de reconstruir sus reglas.
+- Antes de crear UI nueva, revisar componentes, primitives, composables, schemas y patrones existentes.
+- Componer antes de copiar.
+- No crear componentes genéricos que sólo añadan flags y complejidad.
+- Modelar explícitamente loading, success, empty, error y recuperación cuando apliquen.
+- Mantener accesibilidad, responsive y consistencia visual como parte de la corrección, no como decoración posterior.
+
+## Errores
+
+- Los errores propios del sistema representan fallos del dominio o de la aplicación, no textos improvisados en cada endpoint.
+- Los adapters traducen errores externos hacia errores propios.
+- La frontera HTTP o UI traduce errores propios a una representación segura y accionable.
+- No capturar Exception indiscriminadamente para ocultar fallos.
+- No representar errores mediante respuestas exitosas.
+- No registrar secretos, tokens ni payloads sensibles.
+
+## Pruebas y verificación
 
 Todo cambio de comportamiento requiere evidencia proporcional.
 
-Las reglas de negocio, validadores, transformaciones y transiciones se prueban unitariamente. Los contratos deben probarse cuando una capacidad atraviese HTTP. Las integraciones deben probarse cuando una capacidad atraviese persistencia o servicios externos.
+- Reglas, validadores, transformaciones y transiciones se prueban unitariamente.
+- Contratos se prueban cuando una capacidad cruza una frontera.
+- Integraciones se prueban cuando el comportamiento cruza persistencia o servicios externos.
+- Los flujos críticos deben cubrir camino exitoso, errores relevantes y casos frontera importantes.
+- No simular la propia regla bajo prueba.
+- No reducir assertions, eliminar pruebas ni debilitar validaciones para conseguir verde.
+- No ejecutar suites completas compulsivamente después de cada archivo; ejecutar pruebas focales durante construcción y cerrar con el gate completo aplicable.
 
-Los recorridos críticos deben probarse como flujo desde su entrada hasta un efecto observable, cubriendo el camino exitoso, errores relevantes, permisos cuando existan y casos frontera importantes.
+Comandos base desde la raíz:
 
-No simular la propia regla que se intenta probar ni reducir assertions, eliminar pruebas o debilitar validaciones únicamente para obtener una suite verde.
-
-Backend:
-
-```bash
+~~~bash
 uv lock --check
+uv run ruff check .
 uv run pytest
 uv build
-```
+~~~
 
-Si el cambio alcanza frontend, ejecutar además sus pruebas, lint, typecheck y build aplicables.
+Si un subproyecto incorpora frontend u otra toolchain, sus comandos de test, lint, typecheck y build se vuelven gates adicionales para cambios que lo afecten.
 
-## 12. Git
+## Git
 
-`master` es la rama de integración del repositorio. Para trabajo significativo, preferir una rama corta y aislada y revisar el cambio antes de integrarlo.
+- main es la rama de integración.
+- No trabajar directamente en main para cambios significativos.
+- Usar ramas cortas y aisladas.
+- Todo cambio relevante entra mediante pull request.
+- Antes de presentar un PR como listo deben pasar las pruebas, validaciones y builds aplicables.
+- No eliminar, omitir ni debilitar checks para conseguir verde.
+- No integrar un cambio mientras su verificación requerida esté pendiente o fallando.
+- Un commit intermedio es un punto de recuperación, no evidencia de verificación.
+- Los agentes pueden preparar ramas, commits y pull requests; Fernando conserva la revisión final y decide el merge.
+- Después del merge, eliminar la rama de trabajo cuando ya no tenga utilidad.
 
-Antes de considerar un cambio terminado deben pasar las pruebas, validaciones y builds aplicables.
+## Ciclo de desarrollo
 
-No eliminar, omitir ni debilitar verificaciones para conseguir un resultado verde.
-
-No promover un cambio defectuoso únicamente porque compile o porque el flujo feliz funcione.
-
-## 13. Ciclo de desarrollo
-
-El trabajo sigue conceptualmente:
+El trabajo sigue:
 
 **requerimientos → diseño → construcción → verificación → integración**
 
-No comenzar construcción relevante sin comprender primero qué debe resolver el sistema. No considerar verificado un cambio sin evidencia.
+No comenzar una construcción relevante sin comprender primero el problema, las restricciones y la arquitectura existente.
 
-Cuando durante implementación o pruebas aparezca nueva información, regresar a diseño o requerimientos si es necesario.
-
-## 14. Regla de decisión
-
-Ante dos soluciones funcionalmente equivalentes, elegir la que tenga **menos estado, menos duplicación, menos abstracciones, contratos más claros, comportamiento más explícito y pruebas más sencillas**.
+Cuando durante implementación o pruebas aparezca información nueva, regresar a diseño o requerimientos si hace falta.
 
 La arquitectura existe para reducir complejidad futura, no para demostrar complejidad presente.
 
@@ -166,11 +270,11 @@ La arquitectura existe para reducir complejidad futura, no para demostrar comple
 
 ## Notas académicas
 
-Las notas académicas se guardan en el vault de Obsidian `traveler`, no dentro de este repositorio.
+Las notas académicas se guardan en el vault de Obsidian traveler, no dentro de este repositorio.
 
-Las materias nuevas se crean dentro de `IBERO 🔴/SEMESTRE_7 7️⃣`, con el nombre de carpeta en mayúsculas y palabras separadas por guiones bajos. Para robótica, usar la carpeta existente `IBERO 🔴/SEMESTRE_7 7️⃣/TEMAS_SELECTOS_DE_ROBOTS_Y_AUTONOMIA`.
+Las materias nuevas se crean dentro de IBERO 🔴/SEMESTRE_7 7️⃣, con el nombre de carpeta en mayúsculas y palabras separadas por guiones bajos. Para robótica, usar la carpeta existente IBERO 🔴/SEMESTRE_7 7️⃣/TEMAS_SELECTOS_DE_ROBOTS_Y_AUTONOMIA.
 
-Todas las notas académicas deben ser Markdown con extensión `.md`. Cada archivo cubre un tema principal y sigue la nomenclatura secuencial `N-Título.md`.
+Todas las notas académicas deben ser Markdown con extensión .md. Cada archivo cubre un tema principal y sigue la nomenclatura secuencial N-Título.md.
 
 Evitar carpetas duplicadas para materias que ya existen. Escribir notas simples, cortas y mínimas: cada concepto debe tener una explicación breve y, cuando ayude, un ejemplo concreto.
 
@@ -186,19 +290,19 @@ Evitar explicaciones largas. La meta es apoyar los apuntes escolares sin convert
 
 ## Documentos de referencia
 
-Cuando Fernando pida añadir un documento como referencia, copiarlo dentro de la bóveda `traveler` y guardarlo en una carpeta `REFERENCIAS` dentro de la materia correspondiente, con un nombre descriptivo y seguro para Obsidian.
+Cuando Fernando pida añadir un documento como referencia, copiarlo dentro de la bóveda traveler y guardarlo en una carpeta REFERENCIAS dentro de la materia correspondiente, con un nombre descriptivo y seguro para Obsidian.
 
-Conservar el archivo original en su ubicación de origen salvo que Fernando pida moverlo. Enlazar el documento desde la nota en curso mediante un wikilink `[[archivo|título visible]]`.
+Conservar el archivo original en su ubicación de origen salvo que Fernando pida moverlo. Enlazar el documento desde la nota en curso mediante un wikilink.
 
 No convertir ni resumir el documento completo salvo que Fernando lo solicite.
 
 ## Actividades
 
-Guardar las actividades en una carpeta `ACTIVIDADES` dentro de la materia correspondiente.
+Guardar las actividades en una carpeta ACTIVIDADES dentro de la materia correspondiente.
 
-Usar la nomenclatura `AAAA-MM-DD - Tipo N - Título.md`, conservando el tipo y número oficiales, por ejemplo `Evidencia 2`.
+Usar la nomenclatura AAAA-MM-DD - Tipo N - Título.md, conservando el tipo y número oficiales.
 
-Antes de crear una actividad, comparar la fecha local de `America/Mexico_City` con la fecha indicada o inferida del documento. Si no coinciden, preguntar cuál fecha debe usarse.
+Antes de crear una actividad, comparar la fecha local de America/Mexico_City con la fecha indicada o inferida del documento. Si no coinciden, aclarar la discrepancia antes de fijar la fecha.
 
 Todas las actividades usan la misma estructura: propósito, instrucciones generales, desarrollo y referencias.
 
