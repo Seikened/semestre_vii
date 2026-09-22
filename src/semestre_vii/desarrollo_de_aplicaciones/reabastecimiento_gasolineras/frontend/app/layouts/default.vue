@@ -72,10 +72,46 @@ const links = [[{
   target: '_blank'
 }]] satisfies NavigationMenuItem[][]
 
+const operationLinks = [{
+  label: 'Resumen operativo',
+  icon: 'i-lucide-layout-dashboard',
+  to: '/operacion',
+  onSelect: () => {
+    open.value = false
+  }
+}, {
+  label: 'Pedidos',
+  icon: 'i-lucide-clipboard-list',
+  to: '/pedidos',
+  badge: '8',
+  onSelect: () => {
+    open.value = false
+  }
+}, {
+  label: 'Estaciones',
+  icon: 'i-lucide-fuel',
+  to: '/estaciones',
+  onSelect: () => {
+    open.value = false
+  }
+}, {
+  label: 'Modelo',
+  icon: 'i-lucide-chart-no-axes-combined',
+  to: '/modelo',
+  onSelect: () => {
+    open.value = false
+  }
+}] satisfies NavigationMenuItem[]
+
+
 const groups = computed(() => [{
   id: 'links',
   label: 'Go to',
   items: links.flat()
+}, {
+  id: 'operation',
+  label: 'Operación',
+  items: operationLinks
 }, {
   id: 'code',
   label: 'Code',
@@ -134,6 +170,16 @@ onMounted(async () => {
         <UNavigationMenu
           :collapsed="collapsed"
           :items="links[0]"
+          orientation="vertical"
+          tooltip
+          popover
+        />
+
+        <USeparator :label="collapsed ? undefined : 'Operación'" class="my-2" />
+
+        <UNavigationMenu
+          :collapsed="collapsed"
+          :items="operationLinks"
           orientation="vertical"
           tooltip
           popover
