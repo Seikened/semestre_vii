@@ -58,3 +58,46 @@ export interface Range {
   start: Date
   end: Date
 }
+
+export type FuelOrderDecision = 'accepted' | 'modified' | 'manual'
+export type FuelOrderStatus = 'pending' | 'reviewing' | 'approved'
+
+export interface FuelOrder {
+  id: string
+  station: string
+  stationId: string
+  week: string
+  product: string
+  recommendedLiters: number
+  requestedLiters: number
+  decision: FuelOrderDecision
+  status: FuelOrderStatus
+  createdAt: string
+  note: string
+}
+
+export type FuelStationStatus = 'stable' | 'attention'
+
+export interface FuelStation {
+  id: string
+  name: string
+  region: string
+  manager: string
+  lastClose: string
+  wape: number
+  status: FuelStationStatus
+}
+
+export interface ForecastPoint {
+  week: string
+  actual: number
+  forecast: number
+}
+
+export interface ModelCandidate {
+  name: string
+  family: string
+  wape: string
+  bias: string
+  status: 'baseline' | 'candidate' | 'pending'
+}
