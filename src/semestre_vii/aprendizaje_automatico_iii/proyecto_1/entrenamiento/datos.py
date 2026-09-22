@@ -100,6 +100,44 @@ class Dataset:
         return ruta
 
 
+def eliminar_fugas_entre_splits(
+    ruta: Path,
+    *,
+    raiz_permitida: Path | None = None,
+) -> dict[str, int]:
+    """Elimina copias idénticas entre splits, conservando train > val > test."""
+    dataset = cargar_dataset(
+        ruta,
+        verificar_fugas=False,
+        raiz_permitida=raiz_permitida,
+    )
+    hashes: dict[str, str] = {}
+    eliminadas = Counter()
+
+    for split in ("train", "val", "test"):
+        carpeta = dataset.carpetas.get(split)
+        if carpeta is None:
+            continue
+
+        for muestra in (m for m in dataset.muestras if m.split == split):
+            huella = sha256(muestra.imagen.read_bytes()).hexdigest()
+            anterior = hashes.get(huella)
+
+            if anterior is None:
+                hashes[huella] = split
+                continue
+            if anterior == split:
+                continue
+
+            relativa = muestra.imagen.relative_to(carpeta)
+            etiqueta = carpeta.parent / "labels" / relativa.with_suffix(".txt")
+            muestra.imagen.unlink()
+            etiqueta.unlink()
+            eliminadas[split] += 1
+
+    return dict(eliminadas)
+
+
 def cargar_dataset(ruta: Path, verificar_fugas: bool = False, *, raiz_permitida: Path | None = None) -> Dataset:
     ruta = ruta.expanduser().resolve()
     if not ruta.is_file():

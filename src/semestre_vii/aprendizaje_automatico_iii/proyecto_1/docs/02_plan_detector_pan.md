@@ -35,6 +35,7 @@ No lo tratamos como dataset perfecto:
 
 - La versión 2 fue preprocesada con stretch a 256×256.
 - Tiene augmentations generadas por Roboflow.
+- El export puede contener imágenes idénticas repetidas entre splits; el downloader las audita y elimina sólo de la copia local importada, conservando prioridad `train > val > test`.
 - Validation y test son relativamente pequeños.
 - No contiene nuestras clases mexicanas principales.
 - Todavía necesitaremos pruebas externas y escenas negativas propias.

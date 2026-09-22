@@ -19,7 +19,10 @@ import yaml
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import __main__ as cli
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento import preparacion
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils import importacion
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import cargar_dataset
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import (
+    cargar_dataset,
+    eliminar_fugas_entre_splits,
+)
 
 POLIGONO = "0 0.1 0.1 0.8 0.1 0.8 0.8 0.1 0.8\n"
 CAJA = "0 0.5 0.5 0.6 0.6\n"
@@ -76,6 +79,27 @@ def test_importa_datos_reales_sin_red(dataset_local, tmp_path, tipo):
     assert not list(tmp_path.glob(".importacion-*"))
     shutil.rmtree(dataset_local)
     assert len(cargar_dataset(salida).muestras) == 3  # No depende del ZIP, temporal ni origen.
+
+
+def test_limpia_fugas_entre_splits_sin_tocar_origen(dataset_local, tmp_path):
+    valido = dataset_local / "valid"
+    shutil.copy2(valido / "images/pan.png", valido / "images/unico.png")
+    shutil.copy2(valido / "labels/pan.txt", valido / "labels/unico.txt")
+    shutil.copy2(dataset_local / "train/images/pan.png", valido / "images/pan.png")
+
+    salida = importacion.importar(dataset_local, tmp_path / "dataset")
+
+    with pytest.raises(ValueError, match="Imagen duplicada entre train y val"):
+        cargar_dataset(salida, verificar_fugas=True)
+
+    eliminadas = eliminar_fugas_entre_splits(salida, raiz_permitida=salida.parent)
+
+    assert eliminadas == {"val": 1}
+    assert not (salida.parent / "val/images/pan.png").exists()
+    assert not (salida.parent / "val/labels/pan.txt").exists()
+    assert (salida.parent / "val/images/unico.png").is_file()
+    assert (dataset_local / "valid/images/pan.png").is_file()
+    assert len(cargar_dataset(salida, verificar_fugas=True).muestras) == 3
 
 
 def test_conserva_cajas_y_negativos(dataset_local, tmp_path):

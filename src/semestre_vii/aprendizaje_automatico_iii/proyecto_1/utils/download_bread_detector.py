@@ -3,9 +3,25 @@
 import json
 
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import cargar_dataset
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import (
+    cargar_dataset,
+    eliminar_fugas_entre_splits,
+)
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.descargas import descargar_bread_detector
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.importacion import importar
+
+
+def _cargar_sin_fugas(data):
+    raiz = data.parent
+    eliminadas = eliminar_fugas_entre_splits(data, raiz_permitida=raiz)
+
+    if eliminadas:
+        total = sum(eliminadas.values())
+        detalle = ", ".join(f"{split}={cantidad}" for split, cantidad in eliminadas.items())
+        print(f"Se limpiaron {total} imagen(es) duplicadas entre splits ({detalle}).")
+        print("Se conserva la primera copia con prioridad train > val > test.")
+
+    return cargar_dataset(data, verificar_fugas=True, raiz_permitida=raiz)
 
 
 def main():
@@ -13,7 +29,7 @@ def main():
     data = destino / "data.yaml"
 
     if data.is_file():
-        dataset = cargar_dataset(data, verificar_fugas=True)
+        dataset = _cargar_sin_fugas(data)
         print("Bread Detector ya está listo.")
         print(json.dumps(dataset.resumen(), indent=2, ensure_ascii=False))
         print("\nSiguiente paso: ejecuta entrenamiento/train_detector.py")
@@ -29,7 +45,7 @@ def main():
     print(f"Importando: {zip_path.name}")
     data = importar(zip_path, destino)
 
-    dataset = cargar_dataset(data, verificar_fugas=True)
+    dataset = _cargar_sin_fugas(data)
     poligonos = sum(
         etiqueta.segmentacion
         for muestra in dataset.muestras
