@@ -1,37 +1,60 @@
-export type OrderDecision = 'accepted' | 'modified' | 'manual'
-export type OrderStatus = 'pending' | 'reviewing' | 'approved'
-export type StationStatus = 'ok' | 'attention'
+import type { AvatarProps } from '@nuxt/ui'
 
-export interface Order {
-  id: string
-  station: string
-  product: string
-  week: string
-  recommendedLiters: number
-  requestedLiters: number
-  decision: OrderDecision
-  status: OrderStatus
-}
+export type UserStatus = 'subscribed' | 'unsubscribed' | 'bounced'
+export type SaleStatus = 'paid' | 'failed' | 'refunded'
 
-export interface Station {
-  id: string
+export interface User {
+  id: number
   name: string
-  region: string
-  manager: string
-  lastClose: string
-  wape: number
-  status: StationStatus
+  email: string
+  avatar?: AvatarProps
+  status: UserStatus
+  location: string
 }
 
-export interface ForecastPoint {
-  week: string
-  actual: number
-  forecast: number
+export interface Mail {
+  id: number
+  unread?: boolean
+  from: User
+  subject: string
+  body: string
+  date: string
 }
 
-export interface ModelCandidate {
+export interface Member {
   name: string
-  family: string
-  wape: string
-  status: 'baseline' | 'candidate' | 'pending'
+  username: string
+  role: 'member' | 'owner'
+  avatar: AvatarProps
+}
+
+export interface Stat {
+  title: string
+  icon: string
+  value: number | string
+  variation: number
+  formatter?: (value: number) => string
+}
+
+export interface Sale {
+  id: string
+  date: string
+  status: SaleStatus
+  email: string
+  amount: number
+}
+
+export interface Notification {
+  id: number
+  unread?: boolean
+  sender: User
+  body: string
+  date: string
+}
+
+export type Period = 'daily' | 'weekly' | 'monthly'
+
+export interface Range {
+  start: Date
+  end: Date
 }
