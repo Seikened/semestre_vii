@@ -5,53 +5,47 @@ defineProps<{
   collapsed?: boolean
 }>()
 
-const teams = ref([{
-  label: 'Nuxt',
-  avatar: {
-    src: 'https://github.com/nuxt.png',
-    alt: 'Nuxt'
-  }
-}, {
-  label: 'NuxtHub',
-  avatar: {
-    src: 'https://github.com/nuxt-hub.png',
-    alt: 'NuxtHub'
-  }
-}, {
-  label: 'NuxtLabs',
-  avatar: {
-    src: 'https://github.com/nuxtlabs.png',
-    alt: 'NuxtLabs'
-  }
-}])
-const selectedTeam = ref(teams.value[0])
+type ViewMode = 'administration' | 'request'
 
-const items = computed<DropdownMenuItem[][]>(() => {
-  return [teams.value.map(team => ({
-    ...team,
-    onSelect() {
-      selectedTeam.value = team
-    }
-  })), [{
-    label: 'Create team',
-    icon: 'i-lucide-circle-plus'
-  }, {
-    label: 'Manage teams',
-    icon: 'i-lucide-cog'
-  }]]
-})
+const modes = [{
+  value: 'administration' as const,
+  label: 'Administración',
+  icon: 'i-lucide-layout-dashboard'
+}, {
+  value: 'request' as const,
+  label: 'Solicitud',
+  icon: 'i-lucide-file-plus-2'
+}]
+
+const selectedMode = useState<ViewMode>('reabastecimiento-view-mode', () => 'administration')
+
+const currentMode = computed(() => modes.find(mode => mode.value === selectedMode.value) ?? modes[0])
+
+const items = computed<DropdownMenuItem[][]>(() => [[{
+  type: 'label',
+  label: 'Modo de vista'
+}], modes.map(mode => ({
+  label: mode.label,
+  icon: mode.icon,
+  type: 'checkbox' as const,
+  checked: selectedMode.value === mode.value,
+  onSelect(event: Event) {
+    event.preventDefault()
+    selectedMode.value = mode.value
+  }
+}))])
 </script>
 
 <template>
   <UDropdownMenu
     :items="items"
     :content="{ align: 'center', collisionPadding: 12 }"
-    :ui="{ content: collapsed ? 'w-40' : 'w-(--reka-dropdown-menu-trigger-width)' }"
+    :ui="{ content: collapsed ? 'w-44' : 'w-(--reka-dropdown-menu-trigger-width)' }"
   >
     <UButton
       v-bind="{
-        ...selectedTeam,
-        label: collapsed ? undefined : selectedTeam?.label,
+        label: collapsed ? undefined : currentMode.label,
+        icon: currentMode.icon,
         trailingIcon: collapsed ? undefined : 'i-lucide-chevrons-up-down'
       }"
       color="neutral"

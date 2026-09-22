@@ -1,34 +1,10 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
 
-const route = useRoute()
 const toast = useToast()
-
 const open = ref(false)
 
-const links = [[{
-  label: 'Home',
-  icon: 'i-lucide-house',
-  to: '/',
-  onSelect: () => {
-    open.value = false
-  }
-}, {
-  label: 'Inbox',
-  icon: 'i-lucide-inbox',
-  to: '/inbox',
-  badge: '4',
-  onSelect: () => {
-    open.value = false
-  }
-}, {
-  label: 'Customers',
-  icon: 'i-lucide-users',
-  to: '/customers',
-  onSelect: () => {
-    open.value = false
-  }
-}, {
+const settingsLinks = [{
   label: 'Settings',
   to: '/settings',
   icon: 'i-lucide-settings',
@@ -60,68 +36,12 @@ const links = [[{
       open.value = false
     }
   }]
-}], [{
-  label: 'Feedback',
-  icon: 'i-lucide-message-circle',
-  to: 'https://github.com/nuxt-ui-templates/dashboard',
-  target: '_blank'
-}, {
-  label: 'Help & Support',
-  icon: 'i-lucide-info',
-  to: 'https://github.com/nuxt-ui-templates/dashboard',
-  target: '_blank'
-}]] satisfies NavigationMenuItem[][]
-
-const operationLinks = [{
-  label: 'Resumen operativo',
-  icon: 'i-lucide-layout-dashboard',
-  to: '/operacion',
-  onSelect: () => {
-    open.value = false
-  }
-}, {
-  label: 'Pedidos',
-  icon: 'i-lucide-clipboard-list',
-  to: '/pedidos',
-  badge: '8',
-  onSelect: () => {
-    open.value = false
-  }
-}, {
-  label: 'Estaciones',
-  icon: 'i-lucide-fuel',
-  to: '/estaciones',
-  onSelect: () => {
-    open.value = false
-  }
-}, {
-  label: 'Modelo',
-  icon: 'i-lucide-chart-no-axes-combined',
-  to: '/modelo',
-  onSelect: () => {
-    open.value = false
-  }
 }] satisfies NavigationMenuItem[]
 
-
 const groups = computed(() => [{
-  id: 'links',
+  id: 'settings',
   label: 'Go to',
-  items: links.flat()
-}, {
-  id: 'operation',
-  label: 'Operación',
-  items: operationLinks
-}, {
-  id: 'code',
-  label: 'Code',
-  items: [{
-    id: 'source',
-    label: 'View page source',
-    icon: 'i-simple-icons-github',
-    to: `https://github.com/nuxt-ui-templates/dashboard/blob/main/app/pages${route.path === '/' ? '/index' : route.path}.vue`,
-    target: '_blank'
-  }]
+  items: settingsLinks
 }])
 
 onMounted(async () => {
@@ -169,28 +89,10 @@ onMounted(async () => {
 
         <UNavigationMenu
           :collapsed="collapsed"
-          :items="links[0]"
+          :items="settingsLinks"
           orientation="vertical"
           tooltip
           popover
-        />
-
-        <USeparator :label="collapsed ? undefined : 'Operación'" class="my-2" />
-
-        <UNavigationMenu
-          :collapsed="collapsed"
-          :items="operationLinks"
-          orientation="vertical"
-          tooltip
-          popover
-        />
-
-        <UNavigationMenu
-          :collapsed="collapsed"
-          :items="links[1]"
-          orientation="vertical"
-          tooltip
-          class="mt-auto"
         />
       </template>
 
