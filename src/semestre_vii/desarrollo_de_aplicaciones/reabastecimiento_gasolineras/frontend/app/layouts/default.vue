@@ -4,6 +4,37 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 const toast = useToast()
 const open = ref(false)
 
+const operationLinks = [{
+  label: 'Resumen operativo',
+  icon: 'i-lucide-layout-dashboard',
+  to: '/operacion',
+  onSelect: () => {
+    open.value = false
+  }
+}, {
+  label: 'Pedidos',
+  icon: 'i-lucide-clipboard-list',
+  to: '/pedidos',
+  badge: '8',
+  onSelect: () => {
+    open.value = false
+  }
+}, {
+  label: 'Estaciones',
+  icon: 'i-lucide-fuel',
+  to: '/estaciones',
+  onSelect: () => {
+    open.value = false
+  }
+}, {
+  label: 'Modelo',
+  icon: 'i-lucide-chart-no-axes-combined',
+  to: '/modelo',
+  onSelect: () => {
+    open.value = false
+  }
+}] satisfies NavigationMenuItem[]
+
 const settingsLinks = [{
   label: 'Settings',
   to: '/settings',
@@ -39,8 +70,12 @@ const settingsLinks = [{
 }] satisfies NavigationMenuItem[]
 
 const groups = computed(() => [{
+  id: 'operation',
+  label: 'Operación',
+  items: operationLinks
+}, {
   id: 'settings',
-  label: 'Go to',
+  label: 'Settings',
   items: settingsLinks
 }])
 
@@ -86,6 +121,16 @@ onMounted(async () => {
 
       <template #default="{ collapsed }">
         <UDashboardSearchButton :collapsed="collapsed" class="bg-transparent ring-default" />
+
+        <UNavigationMenu
+          :collapsed="collapsed"
+          :items="operationLinks"
+          orientation="vertical"
+          tooltip
+          popover
+        />
+
+        <USeparator class="my-2" />
 
         <UNavigationMenu
           :collapsed="collapsed"
