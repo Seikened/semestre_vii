@@ -48,49 +48,29 @@ useSeoMeta({
         orientation="horizontal"
       >
         <UBadge color="warning" variant="subtle">
-          Pedido en preparación
+          Operación en curso
         </UBadge>
       </UPageCard>
 
-      <div class="grid gap-4 lg:grid-cols-2">
-        <UPageCard
-          title="Nuevo pedido"
-          description="Prepara el suministro de la próxima semana."
-          icon="i-lucide-file-plus-2"
-          to="/solicitud/pedido"
-          variant="soft"
-          highlight
-          highlight-color="primary"
-        >
-          <template #footer>
-            <UButton
-              to="/solicitud/pedido"
-              label="Preparar pedido"
-              trailing-icon="i-lucide-arrow-right"
-              color="neutral"
-              variant="ghost"
-            />
-          </template>
-        </UPageCard>
-
-        <UPageCard
-          title="Cierre semanal"
-          description="Registra el resultado real de la semana."
-          icon="i-lucide-clipboard-check"
-          to="/solicitud/cierre"
-          variant="subtle"
-        >
-          <template #footer>
-            <UButton
-              to="/solicitud/cierre"
-              label="Registrar cierre"
-              trailing-icon="i-lucide-arrow-right"
-              color="neutral"
-              variant="ghost"
-            />
-          </template>
-        </UPageCard>
-      </div>
+      <UPageCard
+        title="Operación semanal"
+        description="Prepara el pedido o registra el cierre desde la misma vista."
+        icon="i-lucide-calendar-sync"
+        to="/solicitud/semanal"
+        variant="soft"
+        highlight
+        highlight-color="primary"
+      >
+        <template #footer>
+          <UButton
+            to="/solicitud/semanal"
+            label="Abrir operación"
+            trailing-icon="i-lucide-arrow-right"
+            color="neutral"
+            variant="ghost"
+          />
+        </template>
+      </UPageCard>
 
       <UCard title="Pedido actual">
         <div class="divide-y divide-default">
