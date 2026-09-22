@@ -1,4 +1,4 @@
-import type { ForecastPoint, FuelOrder, FuelStation, ModelCandidate } from '~/types'
+import type { ForecastPoint, FuelOrder, FuelStation, ModelCandidate, StationAccount, StationModelMetric } from '~/types'
 
 export const fuelOrders: FuelOrder[] = [
   { id: 'PED-1048', station: 'León Centro 01', stationId: 'GAS-001', week: '2026-W39', product: 'Regular', recommendedLiters: 21800, requestedLiters: 22000, decision: 'accepted', status: 'pending', createdAt: '2026-09-21T16:18:00-06:00', note: 'Cierre semanal completo. La sucursal mantuvo la recomendación casi sin cambios.' },
@@ -42,4 +42,22 @@ export const modelCandidates: ModelCandidate[] = [
   { name: 'Lagged GBM', family: 'Tabular', wape: '9.6 %', bias: '-0.8 %', status: 'candidate' },
   { name: 'Chronos-2', family: 'Foundation model', wape: '—', bias: '—', status: 'pending' },
   { name: 'TimesFM-3', family: 'Foundation model', wape: '—', bias: '—', status: 'pending' }
+]
+
+export const stationAccounts: StationAccount[] = [
+  { id: 'CTA-001', name: 'Mariana López', email: 'mariana@estacion.demo', station: 'León Centro 01', role: 'Sucursal', status: 'active', lastAccess: '21 sep 2026 · 16:05' },
+  { id: 'CTA-003', name: 'Luis Ramírez', email: 'luis@estacion.demo', station: 'Silao Norte 03', role: 'Sucursal', status: 'active', lastAccess: '21 sep 2026 · 14:18' },
+  { id: 'CTA-012', name: 'Andrea Torres', email: 'andrea@estacion.demo', station: 'Irapuato Sur 02', role: 'Sucursal', status: 'active', lastAccess: '20 sep 2026 · 18:44' },
+  { id: 'CTA-021', name: 'Jorge Ruiz', email: 'jorge@estacion.demo', station: 'Celaya Oriente 05', role: 'Sucursal', status: 'active', lastAccess: '20 sep 2026 · 17:02' },
+  { id: 'CTA-029', name: 'Diana Soto', email: 'diana@estacion.demo', station: 'Salamanca Centro 04', role: 'Sucursal', status: 'revoked', lastAccess: '18 sep 2026 · 09:31' },
+  { id: 'CTA-A01', name: 'Operación Bajío', email: 'operacion@distribuidora.demo', station: '20 estaciones', role: 'Distribuidora', status: 'active', lastAccess: '21 sep 2026 · 16:42' }
+]
+
+export const stationMetrics: StationModelMetric[] = [
+  { station: 'León Centro 01', product: 'Regular', horizon: '1 semana', wape: 6.8, bias: 0.9, status: 'stable' },
+  { station: 'Silao Norte 03', product: 'Diésel', horizon: '1 semana', wape: 11.9, bias: 3.2, status: 'attention' },
+  { station: 'Irapuato Sur 02', product: 'Premium', horizon: '1 semana', wape: 7.4, bias: -1.1, status: 'stable' },
+  { station: 'Celaya Oriente 05', product: 'Regular', horizon: '4 semanas', wape: 8.1, bias: 1.4, status: 'stable' },
+  { station: 'Salamanca Centro 04', product: 'Diésel', horizon: '4 semanas', wape: 13.2, bias: 4.6, status: 'attention' },
+  { station: 'León Norte 07', product: 'Premium', horizon: '12 semanas', wape: 9.8, bias: -2.0, status: 'stable' }
 ]

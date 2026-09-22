@@ -101,3 +101,22 @@ export interface ModelCandidate {
   bias: string
   status: 'baseline' | 'candidate' | 'pending'
 }
+
+export interface StationAccount {
+  id: string
+  name: string
+  email: string
+  station: string
+  role: string
+  status: 'active' | 'revoked'
+  lastAccess: string
+}
+
+export interface StationModelMetric {
+  station: string
+  product: string
+  horizon: string
+  wape: number
+  bias: number
+  status: 'stable' | 'attention'
+}

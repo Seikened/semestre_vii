@@ -1,35 +1,62 @@
 # 07 · Prototipo visual frontend
 
-Esta iteración extiende la plantilla oficial de Nuxt Dashboard **sin eliminar ninguna de sus superficies existentes**.
+Esta etapa representa **todas las vistas funcionales ya descritas en la documentación canónica** sin implementar backend, persistencia, autenticación real ni forecasting real.
 
 ## Principio
 
-La template conserva Home, Inbox, Customers y Settings como baseline visual y funcional.
+El prototipo reutiliza el lenguaje visual del Nuxt Dashboard Template y separa claramente los dos contextos del producto:
 
-El dominio de reabastecimiento se añade en paralelo usando los mismos patrones:
+- **Administración:** revisión y supervisión de la operación.
+- **Solicitud:** experiencia de una sucursal asociada a una cuenta.
 
-| Nueva superficie | Patrón reutilizado |
+El selector superior cambia únicamente el contexto visual y la navegación disponible.
+
+## Vistas de administración
+
+| Ruta | Propósito visual |
 | --- | --- |
-| Resumen operativo | Home: stats + chart + tabla |
-| Pedidos | Inbox: lista + detalle + responsive slideover |
-| Estaciones | Customers: filtros + tabla + paginación + acciones |
-| Modelo | Home: cards + chart + tabla |
+| `/operacion` | Resumen ejecutivo de estaciones, pedidos, demanda y desempeño. |
+| `/pedidos` | Cola administrativa con lista, detalle, recomendación, solicitud y decisión humana. |
+| `/estaciones` | Consulta de sucursales, responsables, cierres y señal de desempeño. |
+| `/cuentas` | Asociación de cuentas, sucursales, roles, revocación y emisión de credenciales. |
+| `/modelo` | Métricas, evolución, filtros por estación/producto/horizonte y comparación de candidatos. |
 
-## Rutas añadidas
+## Vistas de solicitud
 
-- `/operacion`
-- `/pedidos`
-- `/estaciones`
-- `/modelo`
+| Ruta | Propósito visual |
+| --- | --- |
+| `/solicitud` | Portada de la sucursal, semana actual y accesos al flujo semanal. |
+| `/solicitud/pedido` | Captura asistida, modificada o manual del pedido por producto. |
+| `/solicitud/cierre` | Registro del resultado real y comparación con pronóstico y pedido. |
 
-## Alcance
+## Vistas de acceso
 
-El objetivo es validar la composición y experiencia, no implementar el sistema real.
+| Ruta | Propósito visual |
+| --- | --- |
+| `/login` | Acceso remoto mediante credenciales. |
+| `/recuperar-acceso` | Representación del flujo de recuperación de credenciales. |
 
-Los datos del dominio son fixtures deterministas locales. No se añade API, persistencia, autenticación ni conexión con modelos reales.
+## Decisiones deliberadas
 
-Las acciones visibles en el prototipo no representan efectos autoritativos.
+- No existe autorización real.
+- No existe API nueva.
+- No existe persistencia.
+- No se envían formularios.
+- No se revocan cuentas.
+- No se generan credenciales.
+- No se calcula forecast.
+- No se calcula confianza.
+- Los controles pueden cambiar estado puramente visual, pero no producen efectos de dominio.
+- Los valores mostrados son fixtures de demostración.
+
+## Incertidumbre
+
+La documentación todavía no define una fórmula única de confianza. Por ello el prototipo **no inventa un porcentaje de confianza**; muestra ese concepto como pendiente de definición.
+
+## Campos pendientes
+
+Los campos exactos de cierre y pedido aún deben confirmarse. Las vistas usan etiquetas provisionales y lo indican explícitamente para no convertir la maqueta en contrato accidental.
 
 ## Regla de evolución
 
-Mientras esta etapa sea de maquetado, cualquier cambio debe preferir componentes, composición y lenguaje visual ya presentes en Nuxt Dashboard Template antes de introducir nuevas primitivas.
+Cuando exista backend, los mocks deben sustituirse en una frontera de datos clara. Las vistas no deben absorber autorización, reglas de negocio, persistencia o lógica del modelo.
