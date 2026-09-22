@@ -1,20 +1,54 @@
 <script setup lang="ts">
+import type { TabsItem } from '@nuxt/ui'
+
+type ProductKey = 'regular' | 'premium' | 'diesel'
+
+const formatter = new Intl.NumberFormat('es-MX', { maximumFractionDigits: 0 })
+
 const products = [{
-  name: 'Regular',
-  forecast: '21,800 L',
-  requested: '22,000 L',
+  value: 'regular' as const,
+  label: 'Regular',
+  icon: 'i-lucide-droplets',
+  forecast: 21800,
+  requested: 22000,
   actual: '21,640'
 }, {
-  name: 'Premium',
-  forecast: '9,400 L',
-  requested: '9,000 L',
+  value: 'premium' as const,
+  label: 'Premium',
+  icon: 'i-lucide-gem',
+  forecast: 9400,
+  requested: 9000,
   actual: '9,180'
 }, {
-  name: 'Diésel',
-  forecast: '16,400 L',
-  requested: '18,000 L',
+  value: 'diesel' as const,
+  label: 'Diésel',
+  icon: 'i-lucide-truck',
+  forecast: 16400,
+  requested: 18000,
   actual: '17,260'
 }]
+
+const productTabs: TabsItem[] = products.map(product => ({
+  label: product.label,
+  icon: product.icon,
+  value: product.value
+}))
+
+const activeProduct = ref<ProductKey>('regular')
+
+const actualDraft = reactive<Record<ProductKey, string>>({
+  regular: '21,640',
+  premium: '9,180',
+  diesel: '17,260'
+})
+
+const currentProduct = computed(() => products.find(product => product.value === activeProduct.value) ?? products[0])
+
+const liters = (value: number) => `${formatter.format(value)} L`
+
+useSeoMeta({
+  title: 'Cierre semanal'
+})
 </script>
 
 <template>
@@ -23,6 +57,17 @@ const products = [{
       <UDashboardNavbar title="Cierre semanal">
         <template #leading>
           <UDashboardSidebarCollapse />
+        </template>
+
+        <template #trailing>
+          <div class="hidden items-center gap-2 sm:flex">
+            <UBadge color="neutral" variant="subtle">
+              GAS-001
+            </UBadge>
+            <UBadge color="neutral" variant="subtle">
+              2026-W38
+            </UBadge>
+          </div>
         </template>
 
         <template #right>
@@ -35,87 +80,86 @@ const products = [{
           />
         </template>
       </UDashboardNavbar>
+
+      <UDashboardToolbar>
+        <template #left>
+          <UTabs
+            v-model="activeProduct"
+            :items="productTabs"
+            :content="false"
+            color="neutral"
+            variant="pill"
+            class="w-full sm:w-auto"
+          />
+        </template>
+      </UDashboardToolbar>
     </template>
 
     <template #body>
-      <UPageCard
-        title="Semana 2026-W38"
-        description="Registro visual del resultado observado para cerrar el ciclo."
-        icon="i-lucide-calendar-check"
-        variant="subtle"
-      >
-        <template #footer>
-          <UBadge color="neutral" variant="subtle">
-            León Centro 01 · GAS-001
-          </UBadge>
-        </template>
-      </UPageCard>
+      <div class="grid items-start gap-4 xl:grid-cols-[minmax(0,1fr)_20rem]">
+        <UCard :title="currentProduct.label">
+          <div class="grid gap-4 md:grid-cols-2">
+            <UPageCard
+              title="Pronóstico"
+              icon="i-lucide-sparkles"
+              variant="soft"
+            >
+              <p class="text-2xl font-semibold text-highlighted">
+                {{ liters(currentProduct.forecast) }}
+              </p>
+            </UPageCard>
 
-      <UCard>
-        <template #header>
-          <div>
-            <p class="font-semibold text-highlighted">
-              Resultado por producto
-            </p>
-            <p class="text-sm text-muted">
-              Predicción, decisión enviada y valor real se muestran como datos distintos.
-            </p>
+            <UPageCard
+              title="Pedido enviado"
+              icon="i-lucide-clipboard-check"
+              variant="subtle"
+            >
+              <p class="text-2xl font-semibold text-highlighted">
+                {{ liters(currentProduct.requested) }}
+              </p>
+            </UPageCard>
           </div>
-        </template>
 
-        <div class="space-y-4">
-          <div
-            v-for="product in products"
-            :key="product.name"
-            class="grid gap-4 rounded-lg border border-default p-4 md:grid-cols-4 md:items-end"
-          >
-            <div>
-              <p class="font-semibold text-highlighted">
-                {{ product.name }}
-              </p>
-              <p class="text-xs text-muted">
-                Combustible
-              </p>
+          <USeparator class="my-5" />
+
+          <UFormField label="Resultado real">
+            <UInput
+              v-model="actualDraft[activeProduct]"
+              icon="i-lucide-gauge"
+              size="xl"
+              class="w-full"
+            >
+              <template #trailing>
+                <span class="text-xs text-muted">L</span>
+              </template>
+            </UInput>
+          </UFormField>
+        </UCard>
+
+        <UCard title="Resumen">
+          <div class="space-y-4">
+            <div
+              v-for="product in products"
+              :key="product.value"
+              class="flex items-center justify-between gap-3"
+            >
+              <span class="text-sm text-muted">
+                {{ product.label }}
+              </span>
+              <span class="text-sm font-medium text-highlighted">
+                {{ actualDraft[product.value] }} L
+              </span>
             </div>
-
-            <div>
-              <p class="text-xs text-muted">
-                Pronóstico
-              </p>
-              <p class="mt-1 font-medium text-highlighted">
-                {{ product.forecast }}
-              </p>
-            </div>
-
-            <div>
-              <p class="text-xs text-muted">
-                Pedido
-              </p>
-              <p class="mt-1 font-medium text-highlighted">
-                {{ product.requested }}
-              </p>
-            </div>
-
-            <UFormField label="Resultado real">
-              <UInput :model-value="product.actual" />
-            </UFormField>
           </div>
-        </div>
-      </UCard>
 
-      <UAlert
-        icon="i-lucide-info"
-        color="neutral"
-        variant="subtle"
-        title="La retroalimentación no reentrena automáticamente"
-        description="En el producto real este cierre alimentará métricas y evaluación; cualquier actualización de modelo requerirá criterios explícitos."
-      />
-
-      <div class="flex justify-end">
-        <UButton
-          label="Registrar cierre"
-          icon="i-lucide-check"
-        />
+          <template #footer>
+            <UButton
+              label="Registrar cierre"
+              icon="i-lucide-check"
+              block
+            />
+          </template>
+        </UCard>
       </div>
     </template>
   </UDashboardPanel>

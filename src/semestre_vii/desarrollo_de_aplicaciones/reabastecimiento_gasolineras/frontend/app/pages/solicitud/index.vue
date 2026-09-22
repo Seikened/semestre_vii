@@ -1,75 +1,66 @@
 <script setup lang="ts">
 const currentOrder = [{
   product: 'Regular',
-  recommended: '21,800 L',
   requested: '22,000 L',
   status: 'Pendiente'
 }, {
   product: 'Premium',
-  recommended: '9,400 L',
   requested: '9,000 L',
   status: 'Pendiente'
 }, {
   product: 'Diésel',
-  recommended: '16,400 L',
   requested: '18,000 L',
   status: 'En revisión'
 }]
+
+useSeoMeta({
+  title: 'Solicitud'
+})
 </script>
 
 <template>
   <UDashboardPanel id="request-home">
     <template #header>
-      <UDashboardNavbar title="Portal de sucursal">
+      <UDashboardNavbar title="Solicitud">
         <template #leading>
           <UDashboardSidebarCollapse />
         </template>
 
         <template #trailing>
-          <UBadge color="neutral" variant="subtle">
-            GAS-001
-          </UBadge>
+          <div class="hidden items-center gap-2 sm:flex">
+            <UBadge color="neutral" variant="subtle">
+              GAS-001
+            </UBadge>
+            <UBadge color="neutral" variant="subtle">
+              2026-W39
+            </UBadge>
+          </div>
         </template>
       </UDashboardNavbar>
     </template>
 
     <template #body>
-      <UPageGrid class="lg:grid-cols-3">
-        <UPageCard title="Sucursal" icon="i-lucide-fuel" variant="subtle">
-          <p class="text-xl font-semibold text-highlighted">
-            León Centro 01
-          </p>
-          <p class="text-xs text-muted">
-            Cuenta asociada de maqueta
-          </p>
-        </UPageCard>
-
-        <UPageCard title="Semana operativa" icon="i-lucide-calendar-days" variant="subtle">
-          <p class="text-xl font-semibold text-highlighted">
-            2026-W39
-          </p>
-          <p class="text-xs text-muted">
-            siguiente suministro
-          </p>
-        </UPageCard>
-
-        <UPageCard title="Estado" icon="i-lucide-clock-3" variant="subtle">
-          <p class="text-xl font-semibold text-highlighted">
-            Pedido en preparación
-          </p>
-          <p class="text-xs text-muted">
-            flujo visual
-          </p>
-        </UPageCard>
-      </UPageGrid>
+      <UPageCard
+        title="León Centro 01"
+        description="Semana 2026-W39"
+        icon="i-lucide-fuel"
+        variant="subtle"
+        orientation="horizontal"
+      >
+        <UBadge color="warning" variant="subtle">
+          Pedido en preparación
+        </UBadge>
+      </UPageCard>
 
       <div class="grid gap-4 lg:grid-cols-2">
         <UPageCard
           title="Nuevo pedido"
-          description="Captura el pedido de la semana siguiente con la recomendación como apoyo."
+          description="Prepara el suministro de la próxima semana."
           icon="i-lucide-file-plus-2"
           to="/solicitud/pedido"
-          variant="subtle"
+          variant="soft"
+          highlight
+          highlight-color="primary"
         >
           <template #footer>
             <UButton
@@ -84,7 +75,7 @@ const currentOrder = [{
 
         <UPageCard
           title="Cierre semanal"
-          description="Registra el resultado observado para cerrar el ciclo de evaluación."
+          description="Registra el resultado real de la semana."
           icon="i-lucide-clipboard-check"
           to="/solicitud/cierre"
           variant="subtle"
@@ -101,61 +92,32 @@ const currentOrder = [{
         </UPageCard>
       </div>
 
-      <UCard>
-        <template #header>
-          <div>
-            <p class="font-semibold text-highlighted">
-              Pedido actual
-            </p>
-            <p class="text-sm text-muted">
-              Comparación visual entre recomendación y cantidad solicitada.
-            </p>
-          </div>
-        </template>
-
+      <UCard title="Pedido actual">
         <div class="divide-y divide-default">
           <div
             v-for="item in currentOrder"
             :key="item.product"
-            class="grid gap-3 py-4 sm:grid-cols-4 sm:items-center"
+            class="flex items-center justify-between gap-4 py-3 first:pt-0 last:pb-0"
           >
-            <p class="font-medium text-highlighted">
+            <span class="font-medium text-highlighted">
               {{ item.product }}
-            </p>
-            <div>
-              <p class="text-xs text-muted">
-                Recomendado
-              </p>
-              <p class="text-sm">
-                {{ item.recommended }}
-              </p>
-            </div>
-            <div>
-              <p class="text-xs text-muted">
-                Solicitado
-              </p>
-              <p class="text-sm">
+            </span>
+
+            <div class="flex items-center gap-3">
+              <span class="text-sm text-muted">
                 {{ item.requested }}
-              </p>
+              </span>
+              <UBadge
+                :color="item.status === 'En revisión' ? 'info' : 'warning'"
+                variant="subtle"
+                size="sm"
+              >
+                {{ item.status }}
+              </UBadge>
             </div>
-            <UBadge
-              :color="item.status === 'En revisión' ? 'info' : 'warning'"
-              variant="subtle"
-              class="w-fit"
-            >
-              {{ item.status }}
-            </UBadge>
           </div>
         </div>
       </UCard>
-
-      <UAlert
-        icon="i-lucide-info"
-        color="neutral"
-        variant="subtle"
-        title="Datos de prototipo"
-        description="Los valores de esta vista son ficticios y no representan una recomendación operativa real."
-      />
     </template>
   </UDashboardPanel>
 </template>
