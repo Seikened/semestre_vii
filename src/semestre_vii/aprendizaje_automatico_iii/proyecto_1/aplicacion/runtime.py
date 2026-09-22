@@ -5,11 +5,11 @@ from time import perf_counter
 
 import cv2
 
-from .cobro import Estabilidad, calcular_ticket
 from ..configuracion import directorio, pesos_entrenados
 from ..entrenamiento.datos import EXTENSIONES
-from .interfaz import dibujar, guardar_captura
 from ..modelo.segmentacion import Segmentador
+from .cobro import Estabilidad, calcular_ticket
+from .interfaz import dibujar, guardar_captura
 
 
 def preprocesar(imagen, grayscale=False):

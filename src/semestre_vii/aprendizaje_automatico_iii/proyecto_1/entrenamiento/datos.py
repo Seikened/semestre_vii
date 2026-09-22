@@ -1,9 +1,9 @@
 """Lectura y auditoría del formato YOLO, sin modificar la exportación original."""
 
+import json
 from collections import Counter
 from dataclasses import dataclass
 from hashlib import sha256
-import json
 from math import isfinite
 from pathlib import Path
 
