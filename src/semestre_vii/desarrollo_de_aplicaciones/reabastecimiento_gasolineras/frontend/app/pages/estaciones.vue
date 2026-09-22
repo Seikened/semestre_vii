@@ -40,6 +40,10 @@ function getRowItems(row: Row<FuelStation>) {
     icon: 'i-lucide-clipboard-list',
     to: '/pedidos'
   }, {
+    label: 'Ver cuenta asociada',
+    icon: 'i-lucide-user-round-cog',
+    to: '/cuentas'
+  }, {
     label: 'Ver modelo',
     icon: 'i-lucide-chart-no-axes-combined',
     to: '/modelo'

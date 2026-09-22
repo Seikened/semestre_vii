@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
 
+type ViewMode = 'administration' | 'request'
+
+const route = useRoute()
 const toast = useToast()
 const open = ref(false)
+const selectedMode = useState<ViewMode>('reabastecimiento-view-mode', () => 'administration')
 
-const operationLinks = [{
+const administrationLinks = [{
   label: 'Resumen operativo',
   icon: 'i-lucide-layout-dashboard',
   to: '/operacion',
@@ -27,6 +31,13 @@ const operationLinks = [{
     open.value = false
   }
 }, {
+  label: 'Cuentas',
+  icon: 'i-lucide-users-round',
+  to: '/cuentas',
+  onSelect: () => {
+    open.value = false
+  }
+}, {
   label: 'Modelo',
   icon: 'i-lucide-chart-no-axes-combined',
   to: '/modelo',
@@ -35,11 +46,45 @@ const operationLinks = [{
   }
 }] satisfies NavigationMenuItem[]
 
+const requestLinks = [{
+  label: 'Inicio',
+  icon: 'i-lucide-house',
+  to: '/solicitud',
+  exact: true,
+  onSelect: () => {
+    open.value = false
+  }
+}, {
+  label: 'Nuevo pedido',
+  icon: 'i-lucide-file-plus-2',
+  to: '/solicitud/pedido',
+  onSelect: () => {
+    open.value = false
+  }
+}, {
+  label: 'Cierre semanal',
+  icon: 'i-lucide-clipboard-check',
+  to: '/solicitud/cierre',
+  onSelect: () => {
+    open.value = false
+  }
+}] satisfies NavigationMenuItem[]
+
+const activeLinks = computed(() => selectedMode.value === 'request' ? requestLinks : administrationLinks)
+
 const groups = computed(() => [{
-  id: 'operation',
-  label: 'Operación',
-  items: operationLinks
+  id: selectedMode.value,
+  label: selectedMode.value === 'request' ? 'Solicitud' : 'Administración',
+  items: activeLinks.value
 }])
+
+watch(() => route.path, (path) => {
+  if (path.startsWith('/solicitud')) {
+    selectedMode.value = 'request'
+  } else if (['/operacion', '/pedidos', '/estaciones', '/cuentas', '/modelo'].includes(path)) {
+    selectedMode.value = 'administration'
+  }
+}, { immediate: true })
 
 onMounted(async () => {
   const cookie = useCookie('cookie-consent')
@@ -86,7 +131,7 @@ onMounted(async () => {
 
         <UNavigationMenu
           :collapsed="collapsed"
-          :items="operationLinks"
+          :items="activeLinks"
           orientation="vertical"
           tooltip
           popover

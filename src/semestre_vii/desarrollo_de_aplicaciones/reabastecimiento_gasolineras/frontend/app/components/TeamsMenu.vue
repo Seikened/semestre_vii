@@ -7,17 +7,20 @@ defineProps<{
 
 type ViewMode = 'administration' | 'request'
 
+const router = useRouter()
+const selectedMode = useState<ViewMode>('reabastecimiento-view-mode', () => 'administration')
+
 const modes = [{
   value: 'administration' as const,
   label: 'Administración',
-  icon: 'i-lucide-layout-dashboard'
+  icon: 'i-lucide-layout-dashboard',
+  to: '/operacion'
 }, {
   value: 'request' as const,
   label: 'Solicitud',
-  icon: 'i-lucide-file-plus-2'
+  icon: 'i-lucide-file-plus-2',
+  to: '/solicitud'
 }]
-
-const selectedMode = useState<ViewMode>('reabastecimiento-view-mode', () => 'administration')
 
 const currentMode = computed(() => modes.find(mode => mode.value === selectedMode.value) ?? modes[0])
 
@@ -32,6 +35,7 @@ const items = computed<DropdownMenuItem[][]>(() => [[{
   onSelect(event: Event) {
     event.preventDefault()
     selectedMode.value = mode.value
+    router.push(mode.to)
   }
 }))])
 </script>
@@ -54,9 +58,7 @@ const items = computed<DropdownMenuItem[][]>(() => [[{
       :square="collapsed"
       class="data-[state=open]:bg-elevated"
       :class="[!collapsed && 'py-2']"
-      :ui="{
-        trailingIcon: 'text-dimmed'
-      }"
+      :ui="{ trailingIcon: 'text-dimmed' }"
     />
   </UDropdownMenu>
 </template>
