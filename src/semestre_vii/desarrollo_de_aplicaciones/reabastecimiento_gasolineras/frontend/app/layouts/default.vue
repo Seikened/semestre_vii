@@ -1,50 +1,117 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
 
+const route = useRoute()
+const toast = useToast()
+
 const open = ref(false)
 
 const links = [[{
-  label: 'Resumen',
-  icon: 'i-lucide-layout-dashboard',
+  label: 'Home',
+  icon: 'i-lucide-house',
   to: '/',
-  exact: true,
   onSelect: () => {
     open.value = false
   }
 }, {
-  label: 'Pedidos',
-  icon: 'i-lucide-clipboard-list',
-  to: '/pedidos',
-  badge: '8',
+  label: 'Inbox',
+  icon: 'i-lucide-inbox',
+  to: '/inbox',
+  badge: '4',
   onSelect: () => {
     open.value = false
   }
 }, {
-  label: 'Estaciones',
-  icon: 'i-lucide-fuel',
-  to: '/estaciones',
+  label: 'Customers',
+  icon: 'i-lucide-users',
+  to: '/customers',
   onSelect: () => {
     open.value = false
   }
 }, {
-  label: 'Modelo',
-  icon: 'i-lucide-chart-no-axes-combined',
-  to: '/modelo',
-  onSelect: () => {
-    open.value = false
-  }
+  label: 'Settings',
+  to: '/settings',
+  icon: 'i-lucide-settings',
+  defaultOpen: true,
+  type: 'trigger',
+  children: [{
+    label: 'General',
+    to: '/settings',
+    exact: true,
+    onSelect: () => {
+      open.value = false
+    }
+  }, {
+    label: 'Members',
+    to: '/settings/members',
+    onSelect: () => {
+      open.value = false
+    }
+  }, {
+    label: 'Notifications',
+    to: '/settings/notifications',
+    onSelect: () => {
+      open.value = false
+    }
+  }, {
+    label: 'Security',
+    to: '/settings/security',
+    onSelect: () => {
+      open.value = false
+    }
+  }]
 }], [{
-  label: 'Documentación',
-  icon: 'i-lucide-book-open',
-  to: 'https://github.com/Seikened/semestre_vii/tree/main/src/semestre_vii/desarrollo_de_aplicaciones/reabastecimiento_gasolineras/docs',
+  label: 'Feedback',
+  icon: 'i-lucide-message-circle',
+  to: 'https://github.com/nuxt-ui-templates/dashboard',
+  target: '_blank'
+}, {
+  label: 'Help & Support',
+  icon: 'i-lucide-info',
+  to: 'https://github.com/nuxt-ui-templates/dashboard',
   target: '_blank'
 }]] satisfies NavigationMenuItem[][]
 
 const groups = computed(() => [{
-  id: 'navigation',
-  label: 'Ir a',
-  items: links[0]
+  id: 'links',
+  label: 'Go to',
+  items: links.flat()
+}, {
+  id: 'code',
+  label: 'Code',
+  items: [{
+    id: 'source',
+    label: 'View page source',
+    icon: 'i-simple-icons-github',
+    to: `https://github.com/nuxt-ui-templates/dashboard/blob/main/app/pages${route.path === '/' ? '/index' : route.path}.vue`,
+    target: '_blank'
+  }]
 }])
+
+onMounted(async () => {
+  const cookie = useCookie('cookie-consent')
+  if (cookie.value === 'accepted') {
+    return
+  }
+
+  toast.add({
+    title: 'We use first-party cookies to enhance your experience on our website.',
+    duration: 0,
+    close: false,
+    actions: [{
+      label: 'Accept',
+      color: 'neutral',
+      variant: 'outline',
+      onClick: () => {
+        cookie.value = 'accepted'
+      }
+    }, {
+      label: 'Opt out',
+      color: 'neutral',
+      variant: 'ghost'
+    }]
+  })
+})
 </script>
 
 <template>
@@ -58,20 +125,7 @@ const groups = computed(() => [{
       :ui="{ footer: 'lg:border-t lg:border-default' }"
     >
       <template #header="{ collapsed }">
-        <div class="flex min-h-8 items-center gap-2 px-1">
-          <div class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-primary text-inverted">
-            <UIcon name="i-lucide-fuel" class="size-4" />
-          </div>
-
-          <div v-if="!collapsed" class="min-w-0">
-            <p class="truncate text-sm font-semibold text-highlighted">
-              Reabastecimiento
-            </p>
-            <p class="truncate text-xs text-muted">
-              Prototipo académico
-            </p>
-          </div>
-        </div>
+        <TeamsMenu :collapsed="collapsed" />
       </template>
 
       <template #default="{ collapsed }">
@@ -95,23 +149,14 @@ const groups = computed(() => [{
       </template>
 
       <template #footer="{ collapsed }">
-        <div class="flex items-center" :class="collapsed ? 'justify-center' : 'justify-between'">
-          <div v-if="!collapsed">
-            <p class="text-xs font-medium text-highlighted">
-              Datos simulados
-            </p>
-            <p class="text-xs text-muted">
-              Sin backend conectado
-            </p>
-          </div>
-
-          <UColorModeButton color="neutral" variant="ghost" />
-        </div>
+        <UserMenu :collapsed="collapsed" />
       </template>
     </UDashboardSidebar>
 
     <UDashboardSearch :groups="groups" />
 
     <slot />
+
+    <NotificationsSlideover />
   </UDashboardGroup>
 </template>

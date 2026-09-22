@@ -1,51 +1,64 @@
-# Frontend · Reabastecimiento de gasolineras
+# Nuxt Dashboard Template
 
-Prototipo visual de la aplicación de **Pronóstico y reabastecimiento de gasolineras**.
+[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
 
-Esta iteración es deliberadamente **frontend-only**:
+Get started with the Nuxt dashboard template with multiple pages, collapsible sidebar, keyboard shortcuts, light & dark mode, command palette and more, powered by [Nuxt UI](https://ui.nuxt.com).
 
-- no existe backend;
-- no hay autenticación real;
-- no hay persistencia;
-- no hay endpoints locales;
-- no hay modelo conectado;
-- todos los datos visibles son mocks deterministas.
+- [Live demo](https://dashboard-template.nuxt.dev/)
+- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
 
-## Base visual
+<a href="https://dashboard-template.nuxt.dev/" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/dashboard-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/dashboard-light.png">
+    <img alt="Nuxt Dashboard Template" src="https://ui.nuxt.com/assets/templates/nuxt/dashboard-light.png">
+  </picture>
+</a>
 
-El scaffold parte del proyecto oficial **Nuxt Dashboard Template** de `nuxt-ui-templates/dashboard`, la misma plantilla publicada en `dashboard-template.nuxt.dev`.
+> The dashboard template for Vue is on https://github.com/nuxt-ui-templates/dashboard-vue.
 
-Snapshot de referencia:
+## Quick Start
 
-```text
-nuxt-ui-templates/dashboard
-main @ 8915adfc5139823d65a816792ce365842497c7d1
+```bash [Terminal]
+npm create nuxt@latest -- -t ui/dashboard
 ```
 
-Se conserva su enfoque de dashboard con Nuxt UI: sidebar colapsable, búsqueda, cards, tablas y visualización. Se eliminaron Inbox, Settings, notificaciones y los `server/api` de la demo porque no pertenecen a esta iteración.
+## Deploy your own
 
-La plantilla original se distribuye bajo licencia MIT. El aviso correspondiente se conserva en `LICENSE.nuxt-dashboard`.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=dashboard&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fdashboard&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fdashboard-dark.png&demo-url=https%3A%2F%2Fdashboard-template.nuxt.dev%2F&demo-title=Nuxt%20Dashboard%20Template&demo-description=A%20dashboard%20template%20with%20multi-column%20layout%20for%20building%20sophisticated%20admin%20interfaces.)
 
-## Vistas
+## Setup
 
-- `/` — resumen operativo;
-- `/pedidos` — cola simulada de pedidos;
-- `/estaciones` — listado reducido de estaciones;
-- `/modelo` — visualización conceptual de forecasting y candidatos.
-
-## Ejecución
+Make sure to install the dependencies:
 
 ```bash
 pnpm install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
 pnpm dev
 ```
 
-Verificación:
+## Production
+
+Build the application for production:
 
 ```bash
-pnpm lint
-pnpm typecheck
 pnpm build
 ```
 
-El diseño funcional de esta maqueta está documentado en `../docs/07_maquetado_frontend.md`.
+Locally preview production build:
+
+```bash
+pnpm preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Renovate integration
+
+Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
