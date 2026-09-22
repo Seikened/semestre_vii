@@ -25,9 +25,8 @@ El selector superior cambia únicamente el contexto visual y la navegación disp
 
 | Ruta | Propósito visual |
 | --- | --- |
-| `/solicitud` | Portada de la sucursal, semana actual y accesos al flujo semanal. |
-| `/solicitud/pedido` | Captura asistida, modificada o manual del pedido por producto. |
-| `/solicitud/cierre` | Registro del resultado real y comparación con pronóstico y pedido. |
+| `/solicitud` | Portada de la sucursal y acceso a la operación semanal. |
+| `/solicitud/semanal` | Vista única con tabs para Pedido y Cierre; comparte composición y cambia únicamente el acento visual y los datos de cada modo. |
 
 ## Vistas de acceso
 

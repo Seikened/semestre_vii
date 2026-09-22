@@ -55,16 +55,9 @@ const requestLinks = [{
     open.value = false
   }
 }, {
-  label: 'Nuevo pedido',
-  icon: 'i-lucide-file-plus-2',
-  to: '/solicitud/pedido',
-  onSelect: () => {
-    open.value = false
-  }
-}, {
-  label: 'Cierre semanal',
-  icon: 'i-lucide-clipboard-check',
-  to: '/solicitud/cierre',
+  label: 'Operación semanal',
+  icon: 'i-lucide-calendar-sync',
+  to: '/solicitud/semanal',
   onSelect: () => {
     open.value = false
   }
