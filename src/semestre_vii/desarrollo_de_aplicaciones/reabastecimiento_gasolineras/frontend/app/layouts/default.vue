@@ -35,48 +35,10 @@ const operationLinks = [{
   }
 }] satisfies NavigationMenuItem[]
 
-const settingsLinks = [{
-  label: 'Settings',
-  to: '/settings',
-  icon: 'i-lucide-settings',
-  defaultOpen: true,
-  type: 'trigger',
-  children: [{
-    label: 'General',
-    to: '/settings',
-    exact: true,
-    onSelect: () => {
-      open.value = false
-    }
-  }, {
-    label: 'Members',
-    to: '/settings/members',
-    onSelect: () => {
-      open.value = false
-    }
-  }, {
-    label: 'Notifications',
-    to: '/settings/notifications',
-    onSelect: () => {
-      open.value = false
-    }
-  }, {
-    label: 'Security',
-    to: '/settings/security',
-    onSelect: () => {
-      open.value = false
-    }
-  }]
-}] satisfies NavigationMenuItem[]
-
 const groups = computed(() => [{
   id: 'operation',
   label: 'Operación',
   items: operationLinks
-}, {
-  id: 'settings',
-  label: 'Settings',
-  items: settingsLinks
 }])
 
 onMounted(async () => {
@@ -125,16 +87,6 @@ onMounted(async () => {
         <UNavigationMenu
           :collapsed="collapsed"
           :items="operationLinks"
-          orientation="vertical"
-          tooltip
-          popover
-        />
-
-        <USeparator class="my-2" />
-
-        <UNavigationMenu
-          :collapsed="collapsed"
-          :items="settingsLinks"
           orientation="vertical"
           tooltip
           popover
