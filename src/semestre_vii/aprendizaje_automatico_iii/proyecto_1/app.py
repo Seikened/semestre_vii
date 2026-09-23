@@ -4,7 +4,6 @@ from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import MODEL_PATH
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.aplicacion.runtime import ejecutar
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import dispositivo
 
-# "0" abre la cámara. También puedes usar DATA_DIR / "concha.jpg".
 
 def model(model):
     

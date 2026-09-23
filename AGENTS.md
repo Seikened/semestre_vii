@@ -4,7 +4,7 @@ Este documento define la forma de trabajo para todo el repositorio de Semestre V
 
 La prioridad es construir software **mínimo, explícito, verificable, cohesionado y mantenible**. DRY, SOLID, orientación a objetos, patrones y arquitecturas sofisticadas son herramientas; nunca son objetivos por sí mismos.
 
-Los AGENTS.md más profundos complementan estas reglas y tienen prioridad dentro de su propio alcance. Una regla local puede especializar la política global, pero no debe debilitar seguridad, trazabilidad, pruebas ni separación de responsabilidades.
+Los AGENTS.md más profundos complementan estas reglas y tienen prioridad dentro de su propio alcance. Una regla local puede especializar la política global, pero no debe debilitar seguridad, trazabilidad, verificación ni separación de responsabilidades.
 
 ## Lectura obligatoria
 
@@ -13,7 +13,7 @@ Antes de planificar, implementar o revisar un cambio:
 1. Leer el README.md de la raíz.
 2. Leer el README.md de la materia y del proyecto afectado cuando existan.
 3. Leer todos los AGENTS.md aplicables desde la raíz hasta el directorio que se modificará.
-4. Revisar implementaciones, pruebas, datos y contratos existentes relacionados con el cambio.
+4. Revisar implementaciones, datos y contratos existentes relacionados con el cambio.
 5. No asumir arquitectura, dependencias o convenciones que el repositorio todavía no tenga.
 
 AGENTS.md funciona como índice operativo. Los documentos de arquitectura, producto, datos o diseño de cada proyecto son las fuentes de verdad de sus decisiones específicas.
@@ -39,7 +39,7 @@ AGENTS.md funciona como índice operativo. Los documentos de arquitectura, produ
 - La abstracción debe aparecer después de que exista una necesidad real, no antes.
 - Una clase requiere una razón de estado, invariantes o ciclo de vida.
 - La herencia requiere una relación real de sustitución.
-- Ante dos soluciones funcionalmente equivalentes, elegir la que tenga menos estado, menos duplicación, menos abstracciones, contratos más claros y pruebas más sencillas.
+- Ante dos soluciones funcionalmente equivalentes, elegir la que tenga menos estado, menos duplicación, menos abstracciones, contratos más claros y verificación más sencilla.
 
 ## Python
 
@@ -144,11 +144,9 @@ Pyright, mypy y herramientas equivalentes pueden detectar errores reales, pero n
 
 No introducir wrappers, casts, protocolos, jerarquías o aliases únicamente para dejar un checker en verde.
 
-### Tests
+### Verificación académica
 
-Los tipos comunican expectativas. No demuestran comportamiento.
-
-Idempotencia, atomicidad, convergencia, reglas de negocio, transforms, parsers, reducers y modelos deben demostrarse mediante invariantes y pruebas deterministas.
+Los tipos comunican expectativas. No demuestran comportamiento. En este repositorio académico no se mantienen suites de tests. Verificar cada actividad con su ejecución real, los datos que utiliza y una revisión concreta de sus resultados.
 
 ## Datos, ciencia de datos y machine learning
 
@@ -216,28 +214,23 @@ Cuando exista frontend:
 - No representar errores mediante respuestas exitosas.
 - No registrar secretos, tokens ni payloads sensibles.
 
-## Pruebas y verificación
+## Verificación
 
 Todo cambio de comportamiento requiere evidencia proporcional.
 
-- Reglas, validadores, transformaciones y transiciones se prueban unitariamente.
-- Contratos se prueban cuando una capacidad cruza una frontera.
-- Integraciones se prueban cuando el comportamiento cruza persistencia o servicios externos.
-- Los flujos críticos deben cubrir camino exitoso, errores relevantes y casos frontera importantes.
-- No simular la propia regla bajo prueba.
-- No reducir assertions, eliminar pruebas ni debilitar validaciones para conseguir verde.
-- No ejecutar suites completas compulsivamente después de cada archivo; ejecutar pruebas focales durante construcción y cerrar con el gate completo aplicable.
+- Verificar rutas, imports y ejecución de la actividad afectada con sus datos reales o muestras pequeñas.
+- Revisar los resultados y errores relevantes de forma proporcional al cambio.
+- No agregar suites de tests al repositorio salvo nueva indicación de Fernando.
 
 Comandos base desde la raíz:
 
 ~~~bash
 uv lock --check
 uv run ruff check .
-uv run pytest
 uv build
 ~~~
 
-Si un subproyecto incorpora frontend u otra toolchain, sus comandos de test, lint, typecheck y build se vuelven gates adicionales para cambios que lo afecten.
+Si un subproyecto incorpora frontend u otra toolchain, sus comandos de lint, typecheck y build se vuelven gates adicionales para cambios que lo afecten.
 
 ## Git
 
@@ -245,7 +238,7 @@ Si un subproyecto incorpora frontend u otra toolchain, sus comandos de test, lin
 - No trabajar directamente en main para cambios significativos.
 - Usar ramas cortas y aisladas.
 - Todo cambio relevante entra mediante pull request.
-- Antes de presentar un PR como listo deben pasar las pruebas, validaciones y builds aplicables.
+- Antes de presentar un PR como listo deben pasar las verificaciones y builds aplicables.
 - No eliminar, omitir ni debilitar checks para conseguir verde.
 - No integrar un cambio mientras su verificación requerida esté pendiente o fallando.
 - Un commit intermedio es un punto de recuperación, no evidencia de verificación.

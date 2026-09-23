@@ -83,7 +83,7 @@ proyecto_1/
     ├── 02_plan_detector_pan.md
     └── 03_datasets_candidatos.md
 ```
-Los datos originales, derivados, pesos, configuraciones, experimentos y capturas van a `data/aprendizaje_automatico_iii/proyecto_1/`, fuera de `src` y excluidos de Git. Las pruebas están en `tests/proyecto_1/`. No hay base de datos, API web, servicios vacíos ni jerarquías de clases innecesarias.
+Los datos originales, derivados, pesos, configuraciones, experimentos y capturas van a `data/aprendizaje_automatico_iii/proyecto_1/`, fuera de `src` y excluidos de Git. No hay base de datos, API web, servicios vacíos ni jerarquías de clases innecesarias.
 
 ## Instalación
 
@@ -246,15 +246,9 @@ Si val/test contienen máscaras SAM, el mAP de máscaras mide concordancia con *
 
 Como objetivo experimental propuesto, no resultado obtenido, se puede exigir 95% de canastas exactas y error medio de importe menor a $1 MXN en bandejas nuevas. Ajusta esos criterios al riesgo tolerable. Incluye bandejas vacías, objetos ajenos, iluminación distinta y panes parcialmente tapados. Divide nuevas capturas por sesión/bandeja **antes** de aumentar datos: frames vecinos en train y test pueden falsear la evaluación. Un pan completamente oculto no es observable; confianza del modelo no equivale a probabilidad calibrada de cobro correcto.
 
-## Pruebas y límites de verificación
+## Límites de verificación
 
-```bash
-uv run pytest tests/proyecto_1 -q
-```
-
-`test_importacion_local.py` prueba ZIPs, carpetas, validación, preservación del origen, compatibilidad de rutas y CLI. Bloquea conexiones de red y solicitudes de entrada/credenciales durante las pruebas. Esos casos no requieren YOLO ni SAM.
-
-Las pruebas originales de integración con YOLO, SAM y cámara usan simulaciones explícitas. No sustituyen una ejecución con pesos reales, tus imágenes y tu cámara. El repositorio incluye el `best.pt` final publicado para inferencia; no inventa métricas ni incluye todos los checkpoints de entrenamiento.
+La importación y la inferencia deben revisarse con el dataset local, pesos reales, imágenes propias y cámara cuando corresponda. El repositorio incluye el `best.pt` final publicado para inferencia; no inventa métricas ni incluye todos los checkpoints de entrenamiento.
 
 ## Fuentes y atribución
 

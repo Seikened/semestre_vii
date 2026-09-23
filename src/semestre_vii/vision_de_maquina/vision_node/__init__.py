@@ -1,5 +1,5 @@
-from .grafica import Grafica as Grafica
 from .espectro import EspectroNode as EspectroNode
+from .grafica import Grafica as Grafica
 from .node import VisionNode as VisionNode
 from .optica import Camara as Camara
 from .optica import Escena as Escena

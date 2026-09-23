@@ -13,14 +13,17 @@ semestre_vii/
 │       └── actividades/
 │           └── <actividad>/          # una actividad autocontenida
 ├── entregas/                         # PDFs y artefactos finales versionados
-├── data/                             # datos por materia; se ignoran por defecto
+├── data/                             # datos por materia
 ├── tmp/                              # renders y archivos de trabajo; no se versiona
 ├── pyproject.toml                    # dependencias y entrypoints
 └── AGENTS.md                         # reglas de trabajo del repositorio
 ```
 
-`data/` se ignora por defecto, excepto los datasets académicos declarados explícitamente, como
-`data/vision_de_maquina/`. `tmp/` siempre contiene archivos locales no versionados.
+Cada materia usa `data/<materia>/`, con el mismo nombre que su paquete en `src/semestre_vii/`.
+Las imágenes didácticas de Visión de Máquina y algunos CSV de Minería de Datos ya están
+versionados. Los CSV grandes del examen se conservan con Git LFS. Los datos operativos de
+Desarrollo de Aplicaciones y las salidas nuevas de Aprendizaje Automático III permanecen locales.
+`tmp/` siempre contiene archivos locales no versionados.
 
 ## Convención para materias y actividades
 
@@ -54,7 +57,7 @@ También puede ejecutarse como módulo:
 uv run python -m semestre_vii.mineria_de_datos.actividades.ecobici --year 2025
 ```
 
-La actividad genera sus datos en `data/ecobici/`; la base DuckDB y los CSV descargados permanecen locales.
+La actividad genera sus datos en `data/mineria_de_datos/ecobici/`; la base DuckDB y los CSV descargados permanecen locales.
 
 ## Visión de máquina
 
@@ -88,7 +91,7 @@ filtrada = (
 )
 ```
 
-Para visualización externa, `to_numpy()` marca explícitamente la frontera hacia NumPy. Los módulos internos (`pixels/` y `signals/`) implementan la matemática y pueden probarse directamente, pero los ejercicios y consumidores normales deben preferir la API fluida.
+Para visualización externa, `to_numpy()` marca explícitamente la frontera hacia NumPy. Los módulos internos (`pixels/` y `signals/`) implementan la matemática, pero los ejercicios y consumidores normales deben preferir la API fluida.
 
 El kit está separado por responsabilidad:
 

@@ -1,18 +1,18 @@
 """Fine-tuning y evaluación; artefactos separados de los datos originales."""
 
+import json
+import sys
 from collections import Counter
 from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from importlib.metadata import version
-import json
 from pathlib import Path
-import sys
 from uuid import uuid4
 
 from ..aplicacion.cobro import calcular_ticket, normalizar
 from ..configuracion import directorio, dispositivo, pesos_entrenados
-from .datos import cargar_dataset
 from ..modelo.segmentacion import Segmentador
+from .datos import cargar_dataset
 
 
 @dataclass(frozen=True)
@@ -45,7 +45,7 @@ def entrenar(data: Path, config: Entrenamiento, aceptar_pseudo: bool = False) ->
     nombre = f"yolo26{config.tamano}-seg.pt"
     base = directorio()
     (base / "pesos").mkdir(parents=True, exist_ok=True)
-    identidad = f"{datetime.now():%Y%m%d_%H%M%S}_{uuid4().hex[:6]}"
+    identidad = f"{datetime.now(UTC):%Y%m%d_%H%M%S}_{uuid4().hex[:6]}"
     yaml_normalizado = dataset.guardar_yaml(base / "configuraciones" / f"{identidad}.yaml")
     modelo = YOLO(str(base / "pesos" / nombre))
     modelo.train(
@@ -59,7 +59,7 @@ def entrenar(data: Path, config: Entrenamiento, aceptar_pseudo: bool = False) ->
     if not mejor.is_file():
         raise RuntimeError(f"El entrenamiento terminó sin best.pt; revisa {salida}.")
     manifiesto = {
-        "fecha": datetime.now(timezone.utc).isoformat(), "configuracion": asdict(config),
+        "fecha": datetime.now(UTC).isoformat(), "configuracion": asdict(config),
         "device_real": dispositivo_real, "dataset": dataset.resumen(),
         "python": sys.version, "ultralytics": version("ultralytics"), "torch": version("torch"),
         "pesos": str(mejor), "solo_prueba": config.epochs == 1 or config.fraction < 1,
