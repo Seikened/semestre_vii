@@ -1,5 +1,5 @@
-import polars as pl
 import duckdb
+import polars as pl
 
 from semestre_vii.mineria_de_datos import DATA_DIR
 
