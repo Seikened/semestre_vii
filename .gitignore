@@ -13,6 +13,13 @@ wheels/
 tmp/
 *.part
 
+# Datos locales por materia
+/data/desarrollo_de_aplicaciones/
+/data/aprendizaje_automatico_iii/proyecto_1/*
+!/data/aprendizaje_automatico_iii/proyecto_1/concha.jpg
+/data/mineria_de_datos/ecobici/
+/src/semestre_vii/mineria_de_datos/examen_p1/Parcial1.pdf
+
 # macOS
 .DS_Store
 

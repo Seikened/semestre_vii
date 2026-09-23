@@ -4,7 +4,7 @@
 
 Esta actividad descarga el histórico público de viajes de ECOBICI, normaliza los CSV con Polars y persiste la capa cruda en DuckDB.
 
-El código de la actividad vive completo dentro de esta carpeta. Los datos generados se escriben en `data/ecobici/` y no forman parte del repositorio.
+El código de la actividad vive completo dentro de esta carpeta. Los datos generados se escriben en `data/mineria_de_datos/ecobici/` y no forman parte del repositorio.
 
 ## Ejecutar
 

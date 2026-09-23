@@ -1,9 +1,9 @@
 """Preparación local: cajas -> propuestas SAM, nunca cajas fingidas como máscaras."""
 
-from datetime import datetime, timezone
 import json
-from pathlib import Path
 import shutil
+from datetime import UTC, datetime
+from pathlib import Path
 from uuid import uuid4
 
 import yaml
@@ -72,7 +72,7 @@ def preparar(origen: Path, destino: Path, con_sam: bool, device: str = "auto") -
         contenido.update(names=list(dataset.nombres), nc=len(dataset.nombres))
         (temporal / "data.yaml").write_text(yaml.safe_dump(contenido), encoding="utf-8")
         procedencia = {
-            "fuente": str(dataset.yaml), "fecha": datetime.now(timezone.utc).isoformat(),
+            "fuente": str(dataset.yaml), "fecha": datetime.now(UTC).isoformat(),
             "pseudoetiquetas": hay_cajas or dataset.pseudoetiquetas,
             "generador": "sam2.1_t.pt" if hay_cajas else None,
             "advertencia": "Las propuestas SAM NO son ground truth humano. Revisar y corregir.",

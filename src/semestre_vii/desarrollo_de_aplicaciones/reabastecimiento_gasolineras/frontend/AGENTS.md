@@ -159,17 +159,16 @@ Todo cambio de interacción se diseña y revisa con estas heurísticas:
 - Diferenciar error recuperable de error terminal cuando el contrato lo permita.
 - No ocultar fallos silenciosamente.
 
-## Tests
+## Verificación académica
 
-Ubicar cada prueba junto al nivel de comportamiento que demuestra.
+Revisar cada capacidad en el nivel de comportamiento que le corresponde.
 
-- Unit tests para utilidades, formatters, composables y lógica determinista.
-- Component tests para estados visibles, eventos, formularios y errores.
-- Integration tests para contratos con la capa de datos.
-- E2E para recorridos críticos una vez exista una aplicación navegable.
-- No usar mocks que reimplementen exactamente la lógica bajo prueba.
+- Verificar utilidades y formatos con entradas y salidas concretas.
+- Revisar estados visibles, eventos, formularios y errores en la interfaz.
+- Recorrer las integraciones y las tareas críticas cuando exista una aplicación navegable.
+- No agregar suites de tests al repositorio salvo nueva indicación de Fernando.
 
-Cuando se cree el scaffold del frontend, su package manager y package.json deben convertirse en la fuente de verdad de los comandos. El gate esperado debe cubrir como mínimo test, lint, typecheck y build cuando esas capacidades existan.
+Cuando se cree el scaffold del frontend, su package manager y package.json deben convertirse en la fuente de verdad de los comandos. El gate esperado debe cubrir lint, typecheck y build cuando esas capacidades existan.
 
 No inventar comandos antes de que exista la toolchain.
 

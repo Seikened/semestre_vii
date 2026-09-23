@@ -1,11 +1,11 @@
 """Fine-tuning de YOLO26 para detección de tipos de pan."""
 
-from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
-from importlib.metadata import version
 import json
-from pathlib import Path
 import sys
+from dataclasses import asdict, dataclass
+from datetime import UTC, datetime
+from importlib.metadata import version
+from pathlib import Path
 from uuid import uuid4
 
 from ..configuracion import directorio, dispositivo
@@ -52,7 +52,7 @@ def entrenar_detector(data: Path, config: EntrenamientoDetector) -> Path:
 
     device_real = dispositivo(config.device)
     workers = 0 if device_real in {"cpu", "mps"} else 4
-    identidad = f"{datetime.now():%Y%m%d_%H%M%S}_{uuid4().hex[:6]}"
+    identidad = f"{datetime.now(UTC):%Y%m%d_%H%M%S}_{uuid4().hex[:6]}"
     base = directorio() / "deteccion"
     runs = base / "runs"
     runs.mkdir(parents=True, exist_ok=True)
@@ -86,7 +86,7 @@ def entrenar_detector(data: Path, config: EntrenamientoDetector) -> Path:
         raise RuntimeError(f"El entrenamiento terminó sin best.pt; revisa {salida}.")
 
     manifiesto = {
-        "fecha": datetime.now(timezone.utc).isoformat(),
+        "fecha": datetime.now(UTC).isoformat(),
         "objetivo": "deteccion_de_tipos_de_pan",
         "modelo_base": f"yolo26{config.tamano}.pt",
         "fine_tuning_completo": True,

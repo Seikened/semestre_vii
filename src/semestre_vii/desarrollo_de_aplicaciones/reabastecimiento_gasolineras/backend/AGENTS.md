@@ -146,27 +146,24 @@ Entregar errores estructurados y accionables que permitan al frontend explicar q
 
 Evitar round trips que sólo compensen una frontera mal diseñada, sin inventar endpoints genéricos por anticipación.
 
-## Pruebas
+## Verificación académica
 
-Toda regla de negocio, preparación de datos, métrica, split temporal, backtest, serializer y transform relevante debe tener evidencia proporcional.
+Toda regla de negocio, preparación de datos, métrica, split temporal, backtest, serializer y transform relevante debe tener evidencia proporcional mediante ejecuciones y resultados revisables.
 
-- Unit tests para lógica determinista.
-- Tests de contrato para fronteras.
-- Tests de integración cuando exista persistencia o servicios externos.
-- Tests de regresión para bugs reales.
-- No mockear la propia regla que se intenta demostrar.
-- No debilitar assertions para conseguir verde.
+- Verificar las reglas deterministas con entradas y salidas concretas.
+- Revisar las fronteras y los flujos de integración con datos reales o muestras representativas.
+- Conservar evidencia de los errores relevantes y de su recuperación.
 - En forecasting, comparar modelos bajo el mismo protocolo de backtesting.
+- No agregar suites de tests al repositorio salvo nueva indicación de Fernando.
 
-Durante construcción ejecutar primero pruebas focales. Antes de declarar listo el backend, cerrar con los gates aplicables desde la raíz:
+Durante construcción verificar la capacidad afectada. Antes de declarar listo el backend, cerrar con los gates aplicables desde la raíz:
 
 ~~~bash
-uv run ruff check src/semestre_vii/desarrollo_de_aplicaciones/reabastecimiento_gasolineras tests/desarrollo_de_aplicaciones
-uv run pytest tests/desarrollo_de_aplicaciones
+uv run ruff check src/semestre_vii/desarrollo_de_aplicaciones/reabastecimiento_gasolineras
 uv build
 ~~~
 
-Si todavía no existe una suite específica para backend, no inventar un comando falso; añadir la estructura de pruebas junto con la primera capacidad que la necesite.
+No inventar comandos de verificación antes de que exista la capacidad correspondiente.
 
 ## Git y alcance
 

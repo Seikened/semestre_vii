@@ -2,9 +2,11 @@
 
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import directorio
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos import cargar_dataset
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.descargas import descargar_mexican_bread
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.importacion import importar
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.preparacion import preparar
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.descargas import (
+    descargar_mexican_bread,
+)
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.importacion import importar
 
 
 def buscar_o_descargar(entrada):

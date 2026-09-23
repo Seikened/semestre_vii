@@ -1,0 +1,2 @@
+data/mineria_de_datos/features.csv filter=lfs diff=lfs merge=lfs -text
+data/mineria_de_datos/popularity.csv filter=lfs diff=lfs merge=lfs -text

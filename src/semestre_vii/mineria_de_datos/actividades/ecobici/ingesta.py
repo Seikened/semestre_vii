@@ -1,7 +1,7 @@
 import argparse
 import re
 import unicodedata
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -9,13 +9,15 @@ import duckdb
 import httpx
 import polars as pl
 
+from semestre_vii.mineria_de_datos import DATA_DIR as MATERIA_DATA_DIR
+
 # ============================================================
 # Configuration
 # ============================================================
 
 OPEN_DATA_URL = "https://ecobici.mx/datos-abiertos/"
 
-DATA_DIR = Path("data/ecobici")
+DATA_DIR = MATERIA_DATA_DIR / "ecobici"
 RAW_DIR = DATA_DIR / "raw"
 DB_PATH = DATA_DIR / "ecobici.duckdb"
 
@@ -64,8 +66,8 @@ def discover_files(
             (period, url)
         )
 
-    for year in files:
-        files[year].sort()
+    for year_files in files.values():
+        year_files.sort()
 
     if not files:
         raise RuntimeError(
@@ -269,7 +271,7 @@ def read_month(
 
         pl.lit(
             datetime.now(
-                timezone.utc
+                UTC
             ).isoformat()
         )
         .alias("_ingested_at"),
