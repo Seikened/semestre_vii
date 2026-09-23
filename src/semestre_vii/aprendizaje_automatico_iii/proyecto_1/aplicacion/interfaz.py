@@ -1,17 +1,17 @@
 """Presentación OpenCV y revisión visual; sin reglas de precios duplicadas."""
 
-from dataclasses import asdict
-from datetime import datetime, timezone
 import json
+from dataclasses import asdict
+from datetime import UTC, datetime
 from pathlib import Path
 from uuid import uuid4
 
 import cv2
 import numpy as np
 
-from .cobro import Ticket, calcular_ticket, normalizar
 from ..entrenamiento.datos import cargar_dataset
 from ..modelo.segmentacion import Instancia, Lectura
+from .cobro import Ticket, calcular_ticket, normalizar
 
 
 def dinero(centavos: int | None) -> str:
@@ -63,12 +63,12 @@ def dibujar(imagen, lectura: Lectura, ticket: Ticket, estable: bool, fps: float)
 
 def guardar_captura(imagen, ticket: Ticket, destino: Path, **contexto) -> Path:
     destino.mkdir(parents=True, exist_ok=True)
-    identidad = f"{datetime.now():%Y%m%d_%H%M%S}_{uuid4().hex[:6]}"
+    identidad = f"{datetime.now(UTC):%Y%m%d_%H%M%S}_{uuid4().hex[:6]}"
     ruta = destino / identidad
     if not cv2.imwrite(str(ruta.with_suffix(".jpg")), imagen):
         raise OSError("No se pudo guardar la captura.")
     documento = {"tipo": "estimacion_no_cobro", "moneda": "MXN", "precios": "ficticios",
-                 "fecha": datetime.now(timezone.utc).isoformat(), "ticket": asdict(ticket), **contexto}
+                 "fecha": datetime.now(UTC).isoformat(), "ticket": asdict(ticket), **contexto}
     ruta.with_suffix(".json").write_text(json.dumps(documento, indent=2, ensure_ascii=False), encoding="utf-8")
     return ruta.with_suffix(".json")
 

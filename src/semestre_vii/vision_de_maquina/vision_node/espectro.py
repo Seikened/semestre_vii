@@ -10,6 +10,7 @@ from .signals import espectros
 if TYPE_CHECKING:
     from .node import VisionNode
 
+# Las referencias diferidas evitan importar node durante la carga de este módulo.
 
 @dataclass(frozen=True, slots=True, eq=False, repr=False)
 class EspectroNode:
@@ -32,7 +33,7 @@ class EspectroNode:
             raise ValueError("la máscara debe coincidir con alto y ancho del espectro")
 
     @classmethod
-    def desde_imagen(cls, imagen: "VisionNode", *, centrado: bool = True) -> Self:
+    def desde_imagen(cls, imagen: "VisionNode", *, centrado: bool = True) -> Self:  # noqa: UP037
         tensor = espectros.transformada_centrada(imagen.tensor) if centrado else espectros.transformada_2d(imagen.tensor)
         return cls(tensor=tensor, titulo=f"TF de {imagen.titulo}", centrado=centrado)
 
@@ -60,14 +61,14 @@ class EspectroNode:
     def dtype(self) -> torch.dtype:
         return self.tensor.dtype
 
-    def magnitud(self, *, logaritmica: bool = True) -> "VisionNode":
+    def magnitud(self, *, logaritmica: bool = True) -> "VisionNode":  # noqa: UP037
         from .node import VisionNode
 
         tensor = espectros.magnitud_visual(self.tensor, logaritmica=logaritmica)
         escala = "log" if logaritmica else "lineal"
         return VisionNode(tensor, titulo=f"Magnitud {escala} · {self.titulo}")
 
-    def mascara_imagen(self) -> "VisionNode":
+    def mascara_imagen(self) -> "VisionNode":  # noqa: UP037
         from .node import VisionNode
 
         if self.mascara is None:
@@ -98,7 +99,7 @@ class EspectroNode:
         mascara = espectros.mascara_pasaaltas_butterworth(self.tensor, corte, orden)
         return self._filtrar(mascara, f"BHPF(D0={corte:g}, n={orden})")
 
-    def inversa(self, *, valor_absoluto: bool = False, clip: bool = False) -> "VisionNode":
+    def inversa(self, *, valor_absoluto: bool = False, clip: bool = False) -> "VisionNode":  # noqa: UP037
         """Recupera el dominio espacial sin destruir negativos ni sobreimpulsos por defecto."""
         from .node import VisionNode
 

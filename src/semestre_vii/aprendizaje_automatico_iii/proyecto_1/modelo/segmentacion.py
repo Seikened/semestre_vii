@@ -1,9 +1,10 @@
 """Frontera con Ultralytics: traduce sus tensores a instancias del proyecto."""
 
 from dataclasses import dataclass
+
 from ..aplicacion.cobro import catalogo, normalizar
-from ..configuracion import dispositivo
 from ..aplicacion.precios import PRECIOS
+from ..configuracion import dispositivo
 
 
 @dataclass(frozen=True)

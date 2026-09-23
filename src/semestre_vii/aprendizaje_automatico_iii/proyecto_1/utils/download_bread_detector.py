@@ -7,7 +7,9 @@ from semestre_vii.aprendizaje_automatico_iii.proyecto_1.entrenamiento.datos impo
     cargar_dataset,
     eliminar_fugas_entre_splits,
 )
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.descargas import descargar_bread_detector
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.descargas import (
+    descargar_bread_detector,
+)
 from semestre_vii.aprendizaje_automatico_iii.proyecto_1.utils.importacion import importar
 
 

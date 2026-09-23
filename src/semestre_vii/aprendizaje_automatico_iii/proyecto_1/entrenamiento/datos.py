@@ -154,7 +154,7 @@ def cargar_dataset(ruta: Path, verificar_fugas: bool = False, *, raiz_permitida:
     except yaml.YAMLError as exc:
         raise ValueError("El archivo data.yaml no contiene YAML válido.") from exc
     if not isinstance(contenido, dict):
-        raise ValueError("data.yaml debe contener un mapa con names, train y val.")
+        raise ValueError("data.yaml debe contener un mapa con names, train y val.")  # noqa: TRY004
     nombres = contenido.get("names")
     if isinstance(nombres, dict):
         if set(nombres) != set(range(len(nombres))):
@@ -168,7 +168,7 @@ def cargar_dataset(ruta: Path, verificar_fugas: bool = False, *, raiz_permitida:
         raise ValueError("nc no coincide con names.")
     path = contenido.get("path", ".")
     if not isinstance(path, str):
-        raise ValueError("path debe ser una ruta de texto.")
+        raise ValueError("path debe ser una ruta de texto.")  # noqa: TRY004
     base = (ruta.parent / path).resolve()
     carpetas, muestras, hashes = {}, [], {}
     for split in ("train", "val", "test"):
@@ -178,7 +178,7 @@ def cargar_dataset(ruta: Path, verificar_fugas: bool = False, *, raiz_permitida:
                 raise ValueError(f"Falta el split obligatorio {split}.")
             continue
         if not isinstance(valor, str):
-            raise ValueError("Este proyecto espera una carpeta images por split, no listas ni URLs.")
+            raise ValueError("Este proyecto espera una carpeta images por split, no listas ni URLs.")  # noqa: TRY004
         carpeta = (base / valor).resolve()
         # Roboflow exporta a veces ../train/images respecto del YAML situado en la raíz.
         fuera = raiz_permitida is not None and not carpeta.is_relative_to(raiz_permitida)
@@ -198,9 +198,10 @@ def cargar_dataset(ruta: Path, verificar_fugas: bool = False, *, raiz_permitida:
         for imagen in imagenes:
             relativa = imagen.relative_to(carpeta).with_suffix(".txt")
             etiqueta = carpeta.parent / "labels" / relativa
-            if raiz_permitida is not None:
-                if any(not p.resolve().is_relative_to(raiz_permitida) for p in (imagen, etiqueta)):
-                    raise ValueError("Una imagen o etiqueta apunta fuera del dataset local.")
+            if raiz_permitida is not None and any(
+                not p.resolve().is_relative_to(raiz_permitida) for p in (imagen, etiqueta)
+            ):
+                raise ValueError("Una imagen o etiqueta apunta fuera del dataset local.")
             if etiqueta in rutas_etiquetas:
                 raise ValueError(f"Varias imágenes comparten una etiqueta: {etiqueta}")
             rutas_etiquetas.add(etiqueta)

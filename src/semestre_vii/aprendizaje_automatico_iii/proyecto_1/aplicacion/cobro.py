@@ -1,9 +1,9 @@
 """Reglas deterministas, independientes de YOLO, OpenCV y archivos."""
 
+import unicodedata
 from collections import Counter
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
-import unicodedata
 
 from .precios import PRECIOS
 
