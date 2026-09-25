@@ -25,11 +25,12 @@ entrenamiento/train_detector.py
 
 ## Modelo entrenado incluido
 
-Los checkpoints publicados están versionados en:
+Los checkpoints publicados incluyen:
 
 ```text
 models/aprendizaje_automatico_iii/proyecto_1/bread_detector_best.pt
 models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt
+models/aprendizaje_automatico_iii/proyecto_1/yolo26n_bread-v2_det/weights/best.pt
 ```
 
 El primero es **YOLO26m-detect**, con 15 clases de Bread Detector v2. El segundo es **YOLO26s-seg**, con 11 clases de Mexican Bread. Cada `best.pt` contiene el modelo entrenado completo: para inferencia se carga directamente, sin combinarlo con los pesos base. En las corridas nuevas, los checkpoints temporales, incluido `last.pt`, quedan fuera de Git dentro de la carpeta de cada entrenamiento en `models/aprendizaje_automatico_iii/proyecto_1/`.
@@ -40,7 +41,13 @@ Para probarlo rápidamente con la primera cámara:
 uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
 ```
 
-`app.py` carga el detector publicado y conserva el color de la imagen. No depende de `ultimo_modelo.txt` ni de la máquina donde se entrenó. Para usar el segmentador anterior:
+`app.py` usa por defecto el detector mediano previo y conserva el color de la imagen. Su diccionario `MODELOS` descubre automáticamente los nuevos `best.pt` cuando llegan al equipo. Para elegir uno:
+
+```bash
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py yolo26n_bread-v2_det
+```
+
+El modelo elegido debe existir localmente. Para usar el segmentador anterior desde la CLI:
 
 ```bash
 uv run python -m semestre_vii.aprendizaje_automatico_iii.proyecto_1 caja --source data/aprendizaje_automatico_iii/proyecto_1/concha.jpg --model models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt --grayscale --sin-ventana
@@ -50,7 +57,7 @@ uv run python -m semestre_vii.aprendizaje_automatico_iii.proyecto_1 caja --sourc
 
 **No se usa el SDK de Roboflow ni API keys.** Las utilidades de descarga sólo abren la página pública en el navegador, esperan el ZIP descargado a tu PC y después lo importan localmente. El entrenamiento y la inferencia siguen siendo locales.
 
-El dataset sigue siendo una entrada necesaria para entrenar: un enlace no contiene los archivos en tu disco. Obtén una exportación ZIP con imágenes y etiquetas YOLO y guárdala en tu PC una vez. Si ya tienes una carpeta exportada, úsala directamente. **Los datasets y artefactos de entrenamiento no están incluidos en Git; los dos checkpoints finales están publicados en `models/`.**
+El dataset sigue siendo una entrada necesaria para entrenar: un enlace no contiene los archivos en tu disco. Obtén una exportación ZIP con imágenes y etiquetas YOLO y guárdala en tu PC una vez. Si ya tienes una carpeta exportada, úsala directamente. **Los datasets y archivos intermedios no están incluidos en Git; sólo se publican los mejores pesos en `models/`.**
 
 Esto no promete una instalación completamente desconectada: `uv` necesita obtener las dependencias, y Ultralytics puede descargar los pesos iniciales de YOLO/SAM cuando faltan. Esas descargas no son inferencia remota ni requieren la API key eliminada. La cámara, las imágenes y el entrenamiento del proyecto no se envían al servicio Roboflow.
 
@@ -88,7 +95,7 @@ proyecto_1/
     ├── 02_plan_detector_pan.md
     └── 03_datasets_candidatos.md
 ```
-Los datos originales, derivados, checkpoints intermedios, configuraciones, experimentos y capturas van a `data/aprendizaje_automatico_iii/proyecto_1/`, fuera de `src` y excluidos de Git. Los dos checkpoints finales publicados viven en `models/`. No hay base de datos ni API web.
+Los datos originales, derivados y capturas van a `data/aprendizaje_automatico_iii/proyecto_1/`, fuera de `src` y excluidos de Git. Las corridas nuevas dejan sus archivos intermedios locales en `models/`; sólo se publican sus mejores pesos. No hay base de datos ni API web.
 
 ## Instalación
 
@@ -193,15 +200,15 @@ Cada comando exporta 20 ejemplos distribuidos por el split. `--limite 0` exporta
 
 ## Entrenar y publicar desde el servidor
 
-Con los datasets en `~/Descargas/` y sus archivos `data_local.yaml`, una orden inicia el
-entrenamiento. Ultralytics actualiza `best.pt` durante la corrida y, al terminar bien, el script
-publica sólo ese peso en `main` mediante Git LFS:
+Con los datasets en `~/Descargas/` y sus archivos `data_local.yaml`, `ENTRENAMIENTOS` en
+`scripts/entrenar_panes.py` define las diez combinaciones. El script recorre los nombres indicados;
+Ultralytics guarda `best.pt` y, al terminar cada corrida, publica sólo ese peso en `main` mediante Git LFS:
 
 ```bash
-bash scripts/entrenar_y_publicar.sh n bread-v2 det
-bash scripts/entrenar_y_publicar.sh m mexican-v3 seg
+.venv/bin/python scripts/entrenar_panes.py yolo26s_bread-v2_det yolo26m_mexican-v3_seg
 ```
 
+El wrapper `scripts/entrenar_y_publicar.sh` sigue disponible para la cola ya iniciada en Linux.
 Cada combinación tiene una carpeta con versión, tamaño, dataset y tarea. `last.pt` y las salidas
 temporales permanecen locales. Si el entrenamiento o el push falla, el script termina con error y
 conserva la corrida para diagnóstico.
