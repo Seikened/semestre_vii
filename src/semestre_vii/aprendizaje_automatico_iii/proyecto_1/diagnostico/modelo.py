@@ -4,8 +4,11 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import MODEL_PATH, PROJECT_DATA_DIR
-from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import dispositivo
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1 import PROJECT_DATA_DIR
+from semestre_vii.aprendizaje_automatico_iii.proyecto_1.configuracion import (
+    MODELO_CAJA,
+    dispositivo,
+)
 
 SOURCE = PROJECT_DATA_DIR / "concha.jpg"
 DEVICE = "auto"
@@ -13,12 +16,12 @@ CONFIDENCE = 0.001
 
 
 def checkpoint_info() -> None:
-    modelo = YOLO(str(MODEL_PATH))
+    modelo = YOLO(str(MODELO_CAJA))
     ckpt = getattr(modelo, "ckpt", {}) or {}
     args = ckpt.get("train_args", {}) or {}
 
     print("=== CHECKPOINT ===")
-    print(f"Pesos: {MODEL_PATH}")
+    print(f"Pesos: {MODELO_CAJA}")
     print(f"Task: {modelo.task}")
     print(f"Clases: {modelo.names}")
     print(f"Epoch guardada: {ckpt.get('epoch', 'n/d')}")
@@ -45,7 +48,7 @@ def reducir_en_frame(imagen: np.ndarray, escala: float) -> np.ndarray:
 
 
 def probar(nombre: str, imagen: np.ndarray, device: str, imgsz: int) -> None:
-    modelo = YOLO(str(MODEL_PATH))
+    modelo = YOLO(str(MODELO_CAJA))
     resultado = modelo.predict(
         source=imagen,
         device=device,

@@ -1,14 +1,15 @@
 # Modelo · Proyecto 1
 
-Modelo final publicado para la caja asistida de panadería.
+Modelos finales publicados para la caja asistida de panadería.
 
 ```text
+bread_detector_best.pt
 yolo26s_mexican_bread_seg_best.pt
 ```
 
-Corresponde al **`best.pt`** del fine-tuning de **YOLO26s-seg** con el dataset Mexican Bread.
+`bread_detector_best.pt` corresponde al fine-tuning de **YOLO26m-detect** con Bread Detector v2 y es el predeterminado para inferencia. `yolo26s_mexican_bread_seg_best.pt` conserva el experimento anterior de **YOLO26s-seg** con Mexican Bread.
 
-Este directorio contiene únicamente el modelo final usado para inferencia. Los checkpoints intermedios, `last.pt`, datasets y resultados de entrenamiento permanecen fuera de Git.
+Este directorio contiene sólo los checkpoints finales. Los checkpoints intermedios, `last.pt`, datasets y resultados de entrenamiento permanecen fuera de Git.
 
 El consumidor principal es:
 

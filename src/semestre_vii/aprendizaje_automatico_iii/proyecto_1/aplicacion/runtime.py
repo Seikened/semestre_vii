@@ -1,4 +1,4 @@
-"""Orquesta una lectura por imagen: fuente -> preprocesado -> segmentación -> ticket -> interfaz."""
+"""Orquesta una lectura por imagen: fuente, modelo, ticket e interfaz."""
 
 from pathlib import Path
 from time import perf_counter
@@ -7,7 +7,7 @@ import cv2
 
 from ..configuracion import directorio, pesos_entrenados
 from ..entrenamiento.datos import EXTENSIONES
-from ..modelo.segmentacion import Segmentador
+from ..modelo.yolo import ModeloYOLO
 from .cobro import Estabilidad, calcular_ticket
 from .interfaz import dibujar, guardar_captura
 
@@ -33,7 +33,7 @@ def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
         raise ValueError("--sin-ventana admite una foto; cámara/video requieren interfaz interactiva.")
 
     pesos = pesos_entrenados(model)
-    segmentador = Segmentador(pesos, device, conf, imgsz)
+    yolo = ModeloYOLO(pesos, device, conf, imgsz)
     destino = directorio() / "capturas"
 
     if es_imagen:
@@ -42,7 +42,7 @@ def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
             raise ValueError(f"No se puede leer {archivo}")
 
         imagen = preprocesar(imagen, grayscale)
-        lectura = segmentador.predecir(imagen)
+        lectura = yolo.predecir(imagen)
         ticket = calcular_ticket(i.clase for i in lectura.instancias)
         vista = dibujar(imagen, lectura, ticket, False, 0)
 
@@ -76,7 +76,7 @@ def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
                     break
 
                 imagen = preprocesar(imagen, grayscale)
-                lectura = segmentador.predecir(imagen)
+                lectura = yolo.predecir(imagen)
                 ticket = calcular_ticket(i.clase for i in lectura.instancias)
                 estable = estabilidad.actualizar(ticket)
 

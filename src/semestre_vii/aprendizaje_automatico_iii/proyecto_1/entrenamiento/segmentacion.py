@@ -11,7 +11,7 @@ from uuid import uuid4
 
 from ..aplicacion.cobro import calcular_ticket, normalizar
 from ..configuracion import directorio, dispositivo, pesos_entrenados
-from ..modelo.segmentacion import Segmentador
+from ..modelo.yolo import ModeloYOLO
 from .datos import cargar_dataset
 
 
@@ -81,7 +81,9 @@ def evaluar(data: Path, pesos: Path | None, split: str, device: str, conf: float
     if split not in dataset.carpetas:
         raise ValueError(f"El dataset no tiene split {split}.")
     pesos = pesos_entrenados(pesos)
-    segmentador = Segmentador(pesos, device, conf)
+    segmentador = ModeloYOLO(pesos, device, conf)
+    if segmentador.modelo.task != "segment":
+        raise ValueError("La evaluación de segmentación requiere un checkpoint de segmentación.")
     if set(map(normalizar, dataset.nombres)) != set(map(normalizar, segmentador.modelo.names.values())):
         raise ValueError("Las clases del checkpoint no coinciden con las del dataset.")
     if tuple(dataset.nombres) != tuple(segmentador.modelo.names[i] for i in range(len(dataset.nombres))):

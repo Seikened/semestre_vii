@@ -10,8 +10,9 @@ import cv2
 import numpy as np
 
 from ..entrenamiento.datos import cargar_dataset
-from ..modelo.segmentacion import Instancia, Lectura
+from ..modelo.yolo import Instancia, Lectura
 from .cobro import Ticket, calcular_ticket, normalizar
+from .precios import PRODUCTOS
 
 
 def dinero(centavos: int | None) -> str:
@@ -22,7 +23,8 @@ def dinero(centavos: int | None) -> str:
 
 def dibujar(imagen, lectura: Lectura, ticket: Ticket, estable: bool, fps: float):
     alto, ancho = imagen.shape[:2]
-    lienzo = np.zeros((max(alto, 580), ancho + 360, 3), dtype=np.uint8)
+    alto_panel = max(alto, 580, 260 + 28 * len(ticket.renglones))
+    lienzo = np.zeros((alto_panel, ancho + 470, 3), dtype=np.uint8)
     original = imagen.copy()
     relleno = original.copy()
     for instancia in lectura.instancias:
@@ -36,7 +38,9 @@ def dibujar(imagen, lectura: Lectura, ticket: Ticket, estable: bool, fps: float)
         x = int(np.clip(puntos[:, 0].min(), 0, max(ancho - 140, 0)))
         y = int(np.clip(puntos[:, 1].min() - 8, 20, alto - 1))
         cv2.polylines(original, [puntos], True, (240, 240, 240), 1, cv2.LINE_AA)
-        etiqueta = f"{normalizar(instancia.clase)} {instancia.confianza:.0%}"
+        producto = PRODUCTOS.get(instancia.clase)
+        nombre = producto.nombre if producto else instancia.clase
+        etiqueta = f"{normalizar(nombre)} {instancia.confianza:.0%}"
         cv2.putText(original, etiqueta, (x, y), cv2.FONT_HERSHEY_SIMPLEX, .5, (0, 0, 0), 3)
         cv2.putText(original, etiqueta, (x, y), cv2.FONT_HERSHEY_SIMPLEX, .5, (255, 255, 255), 1)
     lienzo[:alto, :ancho] = original
@@ -46,10 +50,16 @@ def dibujar(imagen, lectura: Lectura, ticket: Ticket, estable: bool, fps: float)
 
     texto("PANADERIA | CAJA ASISTIDA", 32, .6)
     texto("ESTIMACION - precios ficticios MXN", 57, .45)
-    texto("CLASE         CANT.    SUBTOTAL", 91, .45)
+    texto("CLASE                 CANT.   UNIT.   SUBTOTAL", 91, .45)
     for indice, renglon in enumerate(ticket.renglones):
         y = 120 + indice * 28
-        texto(f"{normalizar(renglon.clase)[:13]:13} {renglon.cantidad:>2}   {dinero(renglon.subtotal_centavos)}", y, .5)
+        subtotal = dinero(renglon.subtotal_centavos) if renglon.subtotal_centavos is not None else "-"
+        texto(
+            f"{normalizar(renglon.clase)[:19]:19} {renglon.cantidad:>2} "
+            f"{dinero(renglon.precio_centavos):>10} {subtotal:>9}",
+            y,
+            .45,
+        )
     pie = lienzo.shape[0] - 115
     texto(f"PIEZAS: {ticket.piezas}", pie)
     total = dinero(ticket.total_centavos) if ticket.completo else "REVISAR PRECIOS"

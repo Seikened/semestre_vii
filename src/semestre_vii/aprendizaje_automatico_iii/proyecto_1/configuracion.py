@@ -4,6 +4,8 @@ from pathlib import Path
 
 from . import MODEL_PATH, PROJECT_DATA_DIR
 
+MODELO_CAJA = MODEL_PATH / "bread_detector_best.pt"
+
 
 def directorio():
     return PROJECT_DATA_DIR

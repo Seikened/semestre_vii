@@ -1,4 +1,4 @@
-"""Caja asistida de panadería mediante segmentación de instancias."""
+"""Caja asistida de panadería mediante detección o segmentación."""
 
 from semestre_vii.aprendizaje_automatico_iii import DATA_DIR, MODELS_DIR
 

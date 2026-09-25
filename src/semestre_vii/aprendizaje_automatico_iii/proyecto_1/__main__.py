@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .configuracion import directorio
+from .configuracion import MODELO_CAJA, directorio
 
 
 def construir_parser() -> argparse.ArgumentParser:
@@ -25,7 +25,7 @@ def construir_parser() -> argparse.ArgumentParser:
     revisar = comandos.add_parser("revisar", help="Exportar anotaciones superpuestas para revisión.")
     entrenar = comandos.add_parser("entrenar", help="Fine-tuning local de YOLO26-seg.")
     evaluar = comandos.add_parser("evaluar", help="mAP de máscaras y errores de conteo/importe.")
-    caja = comandos.add_parser("caja", help="Segmentar una foto, video o cámara y estimar el total.")
+    caja = comandos.add_parser("caja", help="Detectar panes en una foto, video o cámara.")
     comandos.add_parser("precios", help="Mostrar el catálogo ficticio MXN.")
     for comando in (inspeccionar, preparar, revisar, entrenar, evaluar):
         comando.add_argument("--data", type=Path, default=raw if comando is preparar else preferido)
@@ -49,9 +49,11 @@ def construir_parser() -> argparse.ArgumentParser:
     for comando in (evaluar, caja):
         comando.add_argument("--model", type=Path)
         comando.add_argument("--conf", type=float, default=.5)
+    caja.set_defaults(model=MODELO_CAJA)
     evaluar.add_argument("--split", choices=("val", "test"), default="val")
     caja.add_argument("--source", default="0")
     caja.add_argument("--sin-ventana", action="store_true")
+    caja.add_argument("--grayscale", action="store_true", help="Convertir la imagen a gris antes de inferir.")
     return parser
 
 
@@ -60,8 +62,15 @@ def main() -> None:
     args = parser.parse_args()
     try:
         if args.comando == "precios":
-            from .aplicacion.precios import PRECIOS
-            print(json.dumps({nombre: f"{precio / 100:.2f} MXN" for nombre, precio in PRECIOS.items()}, indent=2))
+            from .aplicacion.precios import PRODUCTOS
+            precios = {
+                etiqueta: {
+                    "nombre": producto.nombre,
+                    "precio": f"${producto.precio_centavos / 100:.2f} MXN",
+                }
+                for etiqueta, producto in PRODUCTOS.items()
+            }
+            print(json.dumps(precios, indent=2, ensure_ascii=False))
         elif args.comando == "importar":
             from .utils.importacion import importar
             ruta = importar(args.origen, args.destino)
@@ -85,7 +94,15 @@ def main() -> None:
             print(evaluar(args.data, args.model, args.split, args.device, args.conf, args.aceptar_pseudoetiquetas))
         elif args.comando == "caja":
             from .aplicacion.runtime import ejecutar
-            ejecutar(args.source, args.model, args.device, args.conf, args.imgsz, args.sin_ventana)
+            ejecutar(
+                source=args.source,
+                model=args.model,
+                device=args.device,
+                conf=args.conf,
+                imgsz=args.imgsz,
+                sin_ventana=args.sin_ventana,
+                grayscale=args.grayscale,
+            )
     except ModuleNotFoundError as exc:
         parser.exit(2, f"Falta {exc.name}. Ejecuta: uv add ultralytics opencv-python pyyaml\n")
     except (ValueError, OSError, RuntimeError) as exc:

@@ -5,7 +5,7 @@ from collections import Counter
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 
-from .precios import PRECIOS
+from .precios import PRODUCTOS, Producto
 
 
 def normalizar(nombre: str) -> str:
@@ -13,15 +13,17 @@ def normalizar(nombre: str) -> str:
     return " ".join("".join(c for c in texto if not unicodedata.combining(c)).split())
 
 
-def catalogo(precios: Mapping[str, int]) -> dict[str, tuple[str, int]]:
+def catalogo(productos: Mapping[str, Producto]) -> dict[str, Producto]:
     resultado = {}
-    for nombre, precio in precios.items():
-        clave = normalizar(nombre)
+    for etiqueta, producto in productos.items():
+        clave = normalizar(etiqueta)
         if not clave or clave in resultado:
-            raise ValueError(f"Nombre vacío o duplicado en precios: {nombre!r}")
-        if type(precio) is not int or precio < 0:
-            raise ValueError(f"El precio de {nombre} debe ser un entero no negativo en centavos.")
-        resultado[clave] = (nombre, precio)
+            raise ValueError(f"Etiqueta vacía o duplicada en productos: {etiqueta!r}")
+        if not producto.nombre.strip():
+            raise ValueError(f"Falta el nombre visible de {etiqueta!r}.")
+        if type(producto.precio_centavos) is not int or producto.precio_centavos < 0:
+            raise ValueError(f"El precio de {etiqueta} debe ser un entero no negativo en centavos.")
+        resultado[clave] = producto
     return resultado
 
 
@@ -45,13 +47,15 @@ class Ticket:
         return self.total_centavos is not None
 
 
-def calcular_ticket(clases: Iterable[str], precios: Mapping[str, int] = PRECIOS) -> Ticket:
+def calcular_ticket(clases: Iterable[str], productos: Mapping[str, Producto] = PRODUCTOS) -> Ticket:
     """Cuenta sólo esta imagen. Una clase sin precio invalida el total, nunca vale cero."""
-    productos = catalogo(precios)
+    referencias = catalogo(productos)
     cantidades = Counter(normalizar(clase) for clase in clases)
     renglones = []
     for clave, cantidad in sorted(cantidades.items()):
-        nombre, precio = productos.get(clave, (clave or "sin clase", None))
+        producto = referencias.get(clave)
+        nombre = producto.nombre if producto else clave or "sin clase"
+        precio = producto.precio_centavos if producto else None
         subtotal = None if precio is None else precio * cantidad
         renglones.append(Renglon(nombre, cantidad, precio, subtotal))
     conocido = sum(r.subtotal_centavos or 0 for r in renglones)

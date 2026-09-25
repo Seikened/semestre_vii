@@ -1,6 +1,6 @@
 # Proyecto 1 · Caja asistida de panadería
 
-**Aprendizaje Automático III — Semestre VII.** Segmentar cada pan de una bandeja, clasificarlo, contar las instancias visibles y estimar un ticket en MXN. No procesa pagos ni es una caja autónoma certificada.
+**Aprendizaje Automático III, Semestre VII.** Detectar o segmentar cada pan de una bandeja, identificar su clase, contar las instancias visibles y estimar un ticket cuando existan precios. No procesa pagos ni es una caja autónoma certificada.
 
 La red aprende **dónde está cada pan y qué clase es**. `precios.py` decide su precio; `cobro.py` calcula `cantidad × precio`. Cambiar un precio no requiere reentrenar. Los precios son ficticios y usan centavos enteros: dos conchas de $12, un bolillo de $5 y una dona de $15 suman **$44 MXN**.
 
@@ -8,7 +8,7 @@ La red aprende **dónde está cada pan y qué clase es**. `precios.py` decide su
 
 El primer experimento con **YOLO26s-seg + Mexican Bread** se conserva como referencia, pero las pruebas externas mostraron problemas claros de generalización en color, escala y clasificación.
 
-El siguiente experimento preparado es **YOLO26m-detect + Bread Detector v2**. La prioridad ahora es identificar, localizar y contar tipos de pan de forma robusta antes de volver a exigir máscaras exactas.
+El segundo experimento usa **YOLO26m-detect + Bread Detector v2**. Su `best.pt` está publicado en `models/` y es el modelo predeterminado para la caja. Detecta 15 clases. `aplicacion/precios.py` relaciona cada etiqueta del detector con un nombre en español y un precio ficticio en centavos, además de conservar las 11 clases del experimento anterior. Por ejemplo, `wheat-bread` se muestra como "Pan de trigo" con un precio de demostración de $15 MXN. Una clase desconocida se cuenta, pero invalida el total.
 
 Documentación:
 
@@ -25,13 +25,14 @@ entrenamiento/train_detector.py
 
 ## Modelo entrenado incluido
 
-El modelo final de referencia está versionado en:
+Los checkpoints publicados están versionados en:
 
 ```text
+models/aprendizaje_automatico_iii/proyecto_1/bread_detector_best.pt
 models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt
 ```
 
-Ese archivo es el **`best.pt`** del fine-tuning de YOLO26s-seg con Mexican Bread. Los checkpoints temporales de entrenamiento, incluido `last.pt`, permanecen fuera de Git dentro de `data/aprendizaje_automatico_iii/`.
+El primero es **YOLO26m-detect**, con 15 clases de Bread Detector v2. El segundo es **YOLO26s-seg**, con 11 clases de Mexican Bread. Cada `best.pt` contiene el modelo entrenado completo: para inferencia se carga directamente, sin combinarlo con los pesos base. Los checkpoints temporales, incluido `last.pt`, permanecen fuera de Git dentro de `data/aprendizaje_automatico_iii/`.
 
 Para probarlo rápidamente con la primera cámara:
 
@@ -39,13 +40,17 @@ Para probarlo rápidamente con la primera cámara:
 uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
 ```
 
-`app.py` carga explícitamente el modelo oficial anterior; no depende de `ultimo_modelo.txt` ni de la máquina donde se entrenó.
+`app.py` carga el detector publicado y conserva el color de la imagen. No depende de `ultimo_modelo.txt` ni de la máquina donde se entrenó. Para usar el segmentador anterior:
+
+```bash
+uv run python -m semestre_vii.aprendizaje_automatico_iii.proyecto_1 caja --source data/aprendizaje_automatico_iii/proyecto_1/concha.jpg --model models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt --grayscale --sin-ventana
+```
 
 ## Ejecución local, sin credenciales
 
 **No se usa el SDK de Roboflow ni API keys.** Las utilidades de descarga sólo abren la página pública en el navegador, esperan el ZIP descargado a tu PC y después lo importan localmente. El entrenamiento y la inferencia siguen siendo locales.
 
-El dataset sigue siendo una entrada necesaria: un enlace no contiene los archivos en tu disco. Obtén una exportación ZIP con imágenes y etiquetas YOLO del dataset de referencia y guárdala en tu PC una vez. Si ya tienes una carpeta exportada, úsala directamente. **Los datasets y artefactos de entrenamiento no están incluidos en Git; el único checkpoint versionado es el modelo final `best.pt` publicado en `models/`.**
+El dataset sigue siendo una entrada necesaria para entrenar: un enlace no contiene los archivos en tu disco. Obtén una exportación ZIP con imágenes y etiquetas YOLO y guárdala en tu PC una vez. Si ya tienes una carpeta exportada, úsala directamente. **Los datasets y artefactos de entrenamiento no están incluidos en Git; los dos checkpoints finales están publicados en `models/`.**
 
 Esto no promete una instalación completamente desconectada: `uv` necesita obtener las dependencias, y Ultralytics puede descargar los pesos iniciales de YOLO/SAM cuando faltan. Esas descargas no son inferencia remota ni requieren la API key eliminada. La cámara, las imágenes y el entrenamiento del proyecto no se envían al servicio Roboflow.
 
@@ -62,7 +67,7 @@ proyecto_1/
 │   ├── cobro.py            # Conteo, ticket y estabilidad
 │   └── precios.py          # Precios ficticios
 ├── modelo/
-│   └── segmentacion.py     # Adaptador del checkpoint YOLO26-seg actual
+│   └── yolo.py             # Traducción de cajas o máscaras a instancias
 ├── entrenamiento/
 │   ├── datos.py            # Lectura/auditoría de datasets YOLO
 │   ├── preparacion.py      # Preparación de segmentación
@@ -83,7 +88,7 @@ proyecto_1/
     ├── 02_plan_detector_pan.md
     └── 03_datasets_candidatos.md
 ```
-Los datos originales, derivados, pesos, configuraciones, experimentos y capturas van a `data/aprendizaje_automatico_iii/proyecto_1/`, fuera de `src` y excluidos de Git. No hay base de datos, API web, servicios vacíos ni jerarquías de clases innecesarias.
+Los datos originales, derivados, checkpoints intermedios, configuraciones, experimentos y capturas van a `data/aprendizaje_automatico_iii/proyecto_1/`, fuera de `src` y excluidos de Git. Los dos checkpoints finales publicados viven en `models/`. No hay base de datos ni API web.
 
 ## Instalación
 
@@ -186,7 +191,7 @@ pan revisar --split test --destino data/aprendizaje_automatico_iii/proyecto_1/re
 
 Cada comando exporta 20 ejemplos distribuidos por el split. `--limite 0` exporta todos. Son anotaciones superpuestas, **no predicciones de YOLO**; revisar veinte ejemplos no equivale a revisar todo el dataset. Omite test si tu exportación no lo incluye.
 
-## Entrenar YOLO26-seg en tu equipo
+## Experimento 1: entrenar YOLO26-seg en tu equipo
 
 Primero una prueba del recorrido, no un modelo confiable para cobrar:
 
@@ -220,13 +225,15 @@ pan caja --source /ruta/video.mp4 --device mps
 pan caja --source /ruta/bandeja.jpg --sin-ventana
 ```
 
-Se muestran máscaras, clase, confianza, piezas, subtotales, total, FPS e inferencia en milisegundos. **Espacio** pausa; **S** guarda una estimación JPG + JSON; **Q** o Escape cierra. Las fotos se guardan automáticamente. `--source 1` selecciona otra cámara y `--conf 0.65` cambia el umbral. En macOS concede permiso de cámara a la terminal/IDE que lance Python.
+Se muestran cajas o máscaras según el checkpoint, clase, confianza, piezas, subtotales disponibles, FPS e inferencia en milisegundos. **Espacio** pausa; **S** guarda una estimación JPG + JSON; **Q** o Escape cierra. Las fotos se guardan automáticamente. `--source 1` selecciona otra cámara y `--conf 0.65` cambia el umbral. En macOS concede permiso de cámara a la terminal/IDE que lance Python.
 
 Se cuenta sólo el fotograma actual, sin acumular observaciones entre frames. La misma concha durante diez segundos sigue siendo una concha; al vaciar la bandeja, el total vuelve a cero. La estabilidad indica que el conteo se repitió cinco frames, **no que sea correcto**. No hay tracking acumulativo ni procesamiento de pagos.
 
-Una clase sin precio no vale cero: invalida el total y exige corregir el catálogo/modelo. Un checkpoint COCO genérico no se acepta como si estuviera entrenado para esta panadería. El límite actual es 100 instancias por imagen.
+Una clase sin precio no vale cero: invalida el total. Las 15 clases del detector tienen nombres en español y precios de demostración editables en `aplicacion/precios.py`. El importe depende de las detecciones del modelo y puede ser erróneo si clasifica o cuenta mal. El límite actual es 100 instancias por imagen.
 
-## Evaluar la problemática
+## Evaluar el experimento 1 de segmentación
+
+`pan evaluar` sólo acepta el dataset y el checkpoint del experimento de segmentación. La evaluación del detector nuevo con Bread Detector v2 todavía no está integrada a este comando.
 
 Mientras eliges parámetros, utiliza validación:
 
@@ -248,7 +255,7 @@ Como objetivo experimental propuesto, no resultado obtenido, se puede exigir 95%
 
 ## Límites de verificación
 
-La importación y la inferencia deben revisarse con el dataset local, pesos reales, imágenes propias y cámara cuando corresponda. El repositorio incluye el `best.pt` final publicado para inferencia; no inventa métricas ni incluye todos los checkpoints de entrenamiento.
+La importación y la inferencia deben revisarse con el dataset local, pesos reales, imágenes propias y cámara cuando corresponda. El repositorio incluye los dos `best.pt` finales publicados para inferencia; no inventa métricas ni incluye todos los checkpoints de entrenamiento.
 
 ## Fuentes y atribución
 
