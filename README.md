@@ -22,7 +22,8 @@ semestre_vii/
 Cada materia usa `data/<materia>/`, con el mismo nombre que su paquete en `src/semestre_vii/`.
 Las imágenes didácticas de Visión de Máquina y algunos CSV de Minería de Datos ya están
 versionados. Los CSV grandes del examen se conservan con Git LFS. Los datos operativos de
-Desarrollo de Aplicaciones y las salidas nuevas de Aprendizaje Automático III permanecen locales.
+Desarrollo de Aplicaciones y los artefactos temporales de Aprendizaje Automático III permanecen
+locales. Los nuevos mejores pesos de panadería se publican en `models/` con Git LFS.
 `tmp/` siempre contiene archivos locales no versionados.
 
 ## Convención para materias y actividades

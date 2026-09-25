@@ -31,3 +31,4 @@ tmp/
 # Generated model checkpoints: only the published best model is versioned.
 *.onnx
 /runs/
+/weights/

@@ -72,7 +72,6 @@ def entrenar_detector(data: Path, config: EntrenamientoDetector) -> Path:
         workers=workers,
         cache=False,
         deterministic=True,
-        save_period=10,
         plots=True,
         project=str(runs),
         name=identidad,

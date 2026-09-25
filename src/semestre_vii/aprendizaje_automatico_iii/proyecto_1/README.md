@@ -191,6 +191,21 @@ pan revisar --split test --destino data/aprendizaje_automatico_iii/proyecto_1/re
 
 Cada comando exporta 20 ejemplos distribuidos por el split. `--limite 0` exporta todos. Son anotaciones superpuestas, **no predicciones de YOLO**; revisar veinte ejemplos no equivale a revisar todo el dataset. Omite test si tu exportación no lo incluye.
 
+## Entrenar y publicar desde el servidor
+
+Con los datasets en `~/Descargas/` y sus archivos `data_local.yaml`, una orden inicia el
+entrenamiento. Ultralytics actualiza `best.pt` durante la corrida y, al terminar bien, el script
+publica sólo ese peso en `main` mediante Git LFS:
+
+```bash
+bash scripts/entrenar_y_publicar.sh n bread-v2 det
+bash scripts/entrenar_y_publicar.sh m mexican-v3 seg
+```
+
+Cada combinación tiene una carpeta con versión, tamaño, dataset y tarea. `last.pt` y las salidas
+temporales permanecen locales. Si el entrenamiento o el push falla, el script termina con error y
+conserva la corrida para diagnóstico.
+
 ## Experimento 1: entrenar YOLO26-seg en tu equipo
 
 Primero una prueba del recorrido, no un modelo confiable para cobrar:
