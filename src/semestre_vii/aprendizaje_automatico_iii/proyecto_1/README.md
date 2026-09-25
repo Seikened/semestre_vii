@@ -32,7 +32,7 @@ models/aprendizaje_automatico_iii/proyecto_1/bread_detector_best.pt
 models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt
 ```
 
-El primero es **YOLO26m-detect**, con 15 clases de Bread Detector v2. El segundo es **YOLO26s-seg**, con 11 clases de Mexican Bread. Cada `best.pt` contiene el modelo entrenado completo: para inferencia se carga directamente, sin combinarlo con los pesos base. Los checkpoints temporales, incluido `last.pt`, permanecen fuera de Git dentro de `data/aprendizaje_automatico_iii/`.
+El primero es **YOLO26m-detect**, con 15 clases de Bread Detector v2. El segundo es **YOLO26s-seg**, con 11 clases de Mexican Bread. Cada `best.pt` contiene el modelo entrenado completo: para inferencia se carga directamente, sin combinarlo con los pesos base. En las corridas nuevas, los checkpoints temporales, incluido `last.pt`, quedan fuera de Git dentro de la carpeta de cada entrenamiento en `models/aprendizaje_automatico_iii/proyecto_1/`.
 
 Para probarlo rápidamente con la primera cámara:
 

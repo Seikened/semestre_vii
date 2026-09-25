@@ -9,6 +9,8 @@ mejor="$salida/weights/best.pt"
 [[ "$nombre" =~ ^yolo26[nsmlx]_[a-z0-9-]+_(det|seg)$ ]] || exit 2
 test -f "$mejor"
 cd "$repo"
+exec 9>"$(git rev-parse --git-path publicar_mejor_peso.lock)"
+flock 9
 test "$(git branch --show-current)" = main
 if ! git diff --cached --quiet; then
     echo "Hay cambios preparados para otro commit" >&2
@@ -27,9 +29,7 @@ EOF
 
 test "$(git check-attr filter -- "$mejor" | awk '{print $3}')" = lfs
 git add -- "$salida/.gitignore" "$mejor"
-if git diff --cached --quiet; then
-    echo "El mejor peso ya está publicado: $nombre"
-    exit 0
+if ! git diff --cached --quiet; then
+    git commit -m "Publicar mejor peso $nombre"
 fi
-git commit -m "Publicar mejor peso $nombre"
 git push origin main
