@@ -20,30 +20,31 @@ ENTRENAMIENTOS = {
     for tamano in "nsmlx"
 }
 
-if argv[1:] == ["--list"]:
-    print("\n".join(ENTRENAMIENTOS))
-    raise SystemExit
+if __name__ == "__main__":
+    if argv[1:] == ["--list"]:
+        print("\n".join(ENTRENAMIENTOS))
+        raise SystemExit
 
-os.chdir(DESCARGAS)
-for nombre in argv[1:] or ENTRENAMIENTOS:
-    modelo, datos = ENTRENAMIENTOS[nombre]
-    salida = MODELOS / nombre
-    if not (salida / ".gitignore").is_file():
-        if salida.exists():
-            raise FileExistsError(salida)
-        if not datos.is_file():
-            raise FileNotFoundError(datos)
-        YOLO(modelo).train(
-            data=str(datos),
-            project=str(MODELOS),
-            name=nombre,
-            epochs=100,
-            patience=20,
-            batch=0.7,
-            device=0,
-            workers=4,
-            seed=42,
-            save=True,
-            plots=False,
-        )
-    run([str(RAIZ / "scripts/publicar_mejor_peso.sh"), nombre], check=True)
+    os.chdir(DESCARGAS)
+    for nombre in argv[1:] or ENTRENAMIENTOS:
+        modelo, datos = ENTRENAMIENTOS[nombre]
+        salida = MODELOS / nombre
+        if not (salida / ".gitignore").is_file():
+            if salida.exists():
+                raise FileExistsError(salida)
+            if not datos.is_file():
+                raise FileNotFoundError(datos)
+            YOLO(modelo).train(
+                data=str(datos),
+                project=str(MODELOS),
+                name=nombre,
+                epochs=100,
+                patience=20,
+                batch=0.7,
+                device=0,
+                workers=4,
+                seed=42,
+                save=True,
+                plots=False,
+            )
+        run([str(RAIZ / "scripts/publicar_mejor_peso.sh"), nombre], check=True)
