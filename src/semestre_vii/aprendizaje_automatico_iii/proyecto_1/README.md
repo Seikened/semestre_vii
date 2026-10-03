@@ -23,35 +23,51 @@ utils/download_bread_detector.py
 entrenamiento/train_detector.py
 ```
 
-## Modelo entrenado incluido
+## Modelos entrenados incluidos
 
-Los checkpoints publicados incluyen:
+La rama `main` publica actualmente **12 checkpoints finales**: dos pesos previos conservados por compatibilidad y una matriz nueva de **10 modelos YOLO26**.
+
+Los pesos previos son:
 
 ```text
 models/aprendizaje_automatico_iii/proyecto_1/bread_detector_best.pt
 models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt
-models/aprendizaje_automatico_iii/proyecto_1/yolo26n_bread-v2_det/weights/best.pt
 ```
 
-El primero es **YOLO26m-detect**, con 15 clases de Bread Detector v2. El segundo es **YOLO26s-seg**, con 11 clases de Mexican Bread. Cada `best.pt` contiene el modelo entrenado completo: para inferencia se carga directamente, sin combinarlo con los pesos base. En las corridas nuevas, los checkpoints temporales, incluido `last.pt`, quedan fuera de Git dentro de la carpeta de cada entrenamiento en `models/aprendizaje_automatico_iii/proyecto_1/`.
+La matriz nueva cubre los tamaños `n`, `s`, `m`, `l` y `x` para las dos tareas:
 
-Para probarlo rápidamente con la primera cámara:
+```text
+yolo26{n,s,m,l,x}_bread-v2_det/weights/best.pt
+yolo26{n,s,m,l,x}_mexican-v3_seg/weights/best.pt
+```
+
+`bread-v2_det` corresponde a **object detection** con Bread Detector v2 y `mexican-v3_seg` a **instance segmentation** con Mexican Bread v3. Cada `best.pt` contiene el modelo entrenado completo y se carga directamente para inferencia; no se combina con los pesos base.
+
+`app.py` descubre automáticamente los checkpoints con la convención nueva. Sin argumentos mantiene el detector mediano previo como predeterminado:
 
 ```bash
 uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
 ```
 
-`app.py` usa por defecto el detector mediano previo y conserva el color de la imagen. Su diccionario `MODELOS` descubre automáticamente los nuevos `best.pt` cuando llegan al equipo. Para elegir uno:
+Para elegir una corrida concreta, usa el nombre de su carpeta:
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py yolo26n_bread-v2_det
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py yolo26m_bread-v2_det
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py yolo26s_mexican-v3_seg
 ```
 
-El modelo elegido debe existir localmente. Para usar el segmentador anterior desde la CLI:
+También puede pasarse la ruta de cualquier checkpoint a la CLI:
 
 ```bash
-uv run python -m semestre_vii.aprendizaje_automatico_iii.proyecto_1 caja --source data/aprendizaje_automatico_iii/proyecto_1/concha.jpg --model models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican_bread_seg_best.pt --grayscale --sin-ventana
+uv run python -m semestre_vii.aprendizaje_automatico_iii.proyecto_1 caja \
+  --source data/aprendizaje_automatico_iii/proyecto_1/concha.jpg \
+  --model models/aprendizaje_automatico_iii/proyecto_1/yolo26s_mexican-v3_seg/weights/best.pt \
+  --sin-ventana
 ```
+
+La frontera `ModeloYOLO` acepta tanto checkpoints `detect` como `segment` y los traduce al mismo contrato `Lectura`, por lo que un consumidor interno puede cambiar de modelo sin implementar dos pipelines de inferencia. El catálogo completo, la convención de nombres y ejemplos de consumo desde Python están documentados en [`models/aprendizaje_automatico_iii/proyecto_1/README.md`](../../../../../models/aprendizaje_automatico_iii/proyecto_1/README.md).
+
+Los checkpoints temporales, incluido `last.pt`, permanecen fuera de Git. Los pesos finales se publican mediante Git LFS.
 
 ## Ejecución local, sin credenciales
 
