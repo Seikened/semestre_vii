@@ -65,7 +65,7 @@ uv run python -m semestre_vii.aprendizaje_automatico_iii.proyecto_1 caja \
   --sin-ventana
 ```
 
-La frontera `ModeloYOLO` acepta tanto checkpoints `detect` como `segment` y los traduce al mismo contrato `Lectura`, por lo que un consumidor interno puede cambiar de modelo sin implementar dos pipelines de inferencia. El catálogo completo, la convención de nombres y ejemplos de consumo desde Python están documentados en [`models/aprendizaje_automatico_iii/proyecto_1/README.md`](../../../../../models/aprendizaje_automatico_iii/proyecto_1/README.md).
+La frontera `ModeloYOLO` acepta tanto checkpoints `detect` como `segment` y los traduce al mismo contrato `Lectura`, por lo que un consumidor interno puede cambiar de modelo sin implementar dos pipelines de inferencia. El catálogo completo, la convención de nombres y ejemplos de consumo desde Python están documentados en [`models/aprendizaje_automatico_iii/proyecto_1/README.md`](../../../../models/aprendizaje_automatico_iii/proyecto_1/README.md).
 
 Los checkpoints temporales, incluido `last.pt`, permanecen fuera de Git. Los pesos finales se publican mediante Git LFS.
 
