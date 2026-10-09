@@ -8,7 +8,7 @@ La red aprende **dónde está cada pan y qué clase es**. `precios.py` decide su
 
 El primer experimento con **YOLO26s-seg + Mexican Bread** se conserva como referencia, pero las pruebas externas mostraron problemas claros de generalización en color, escala y clasificación.
 
-El segundo experimento usa **YOLO26m-detect + Bread Detector v2**. Su `best.pt` está publicado en `models/` y es el modelo predeterminado para la caja. Detecta 15 clases. `aplicacion/precios.py` relaciona cada etiqueta del detector con un nombre en español y un precio ficticio en centavos, además de conservar las 11 clases del experimento anterior. Por ejemplo, `wheat-bread` se muestra como "Pan de trigo" con un precio de demostración de $15 MXN. Una clase desconocida se cuenta, pero invalida el total.
+El segundo experimento usa **YOLO26m-detect + Bread Detector v2**. Su `best.pt` está publicado en `models/` y se conserva como referencia. Detecta 15 clases. `aplicacion/precios.py` relaciona cada etiqueta del detector con un nombre en español y un precio ficticio en centavos, además de conservar las 11 clases del experimento anterior. Por ejemplo, `wheat-bread` se muestra como "Pan de trigo" con un precio de demostración de $15 MXN. Una clase desconocida se cuenta, pero invalida el total.
 
 Documentación:
 
@@ -41,10 +41,10 @@ Para probarlo rápidamente con la primera cámara:
 uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
 ```
 
-`app.py` usa por defecto el detector mediano previo y conserva el color de la imagen. Su diccionario `MODELOS` descubre automáticamente los nuevos `best.pt` cuando llegan al equipo. Para elegir uno:
+`app.py` usa por defecto YOLO26 extragrande (`x`) con Bread v2 y conserva el color de la imagen. Para cambiar entre los diez pesos nuevos, ajusta `DATASET` (`bread-v2` o `mexican-v3`) y `TAMANO` (`n`, `s`, `m`, `l` o `x`) al inicio del archivo. También puedes elegirlos al ejecutar la aplicación, sin editar el archivo:
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py yolo26n_bread-v2_det
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py mexican-v3 x
 ```
 
 El modelo elegido debe existir localmente. Para usar el segmentador anterior desde la CLI:
