@@ -8,7 +8,7 @@ La red aprende **dónde está cada pan y qué clase es**. `precios.py` decide su
 
 El primer experimento con **YOLO26s-seg + Mexican Bread** se conserva como referencia, pero las pruebas externas mostraron problemas claros de generalización en color, escala y clasificación.
 
-El segundo experimento usa **YOLO26m-detect + Bread Detector v2**. Su `best.pt` está publicado en `models/` y es el modelo predeterminado para la caja. Detecta 15 clases. `aplicacion/precios.py` relaciona cada etiqueta del detector con un nombre en español y un precio ficticio en centavos, además de conservar las 11 clases del experimento anterior. Por ejemplo, `wheat-bread` se muestra como "Pan de trigo" con un precio de demostración de $15 MXN. Una clase desconocida se cuenta, pero invalida el total.
+El segundo experimento usa **YOLO26m-detect + Bread Detector v2**. Su `best.pt` está publicado en `models/` y se conserva como referencia. Detecta 15 clases. `aplicacion/precios.py` relaciona cada etiqueta del detector con un nombre en español y un precio ficticio en centavos, además de conservar las 11 clases del experimento anterior. Por ejemplo, `wheat-bread` se muestra como "Pan de trigo" con un precio de demostración de $15 MXN. Una clase desconocida se cuenta, pero invalida el total.
 
 Documentación:
 
@@ -43,17 +43,16 @@ yolo26{n,s,m,l,x}_mexican-v3_seg/weights/best.pt
 
 `bread-v2_det` corresponde a **object detection** con Bread Detector v2 y `mexican-v3_seg` a **instance segmentation** con Mexican Bread v3. Cada `best.pt` contiene el modelo entrenado completo y se carga directamente para inferencia; no se combina con los pesos base.
 
-`app.py` descubre automáticamente los checkpoints con la convención nueva. Sin argumentos mantiene el detector mediano previo como predeterminado:
+`app.py` usa por defecto YOLO26 extragrande (`x`) con Bread v2 y conserva el color de la imagen:
 
 ```bash
 uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
 ```
 
-Para elegir una corrida concreta, usa el nombre de su carpeta:
+Para cambiar entre los diez pesos nuevos, ajusta `DATASET` (`bread-v2` o `mexican-v3`) y `TAMANO` (`n`, `s`, `m`, `l` o `x`) al inicio del archivo. También puedes elegirlos al ejecutar la aplicación, sin editar el archivo:
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py yolo26m_bread-v2_det
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py yolo26s_mexican-v3_seg
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py mexican-v3 x
 ```
 
 También puede pasarse la ruta de cualquier checkpoint a la CLI:
@@ -293,7 +292,7 @@ Como objetivo experimental propuesto, no resultado obtenido, se puede exigir 95%
 
 ## Límites de verificación
 
-La importación y la inferencia deben revisarse con el dataset local, pesos reales, imágenes propias y cámara cuando corresponda. El repositorio incluye los dos `best.pt` finales publicados para inferencia; no inventa métricas ni incluye todos los checkpoints de entrenamiento.
+La importación y la inferencia deben revisarse con el dataset local, pesos reales, imágenes propias y cámara cuando corresponda. El repositorio incluye los checkpoints finales publicados para inferencia; no inventa métricas ni incluye todos los checkpoints de entrenamiento.
 
 ## Fuentes y atribución
 

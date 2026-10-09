@@ -121,7 +121,7 @@ def filtro_umbral(
     if filtrada.shape != tensor.shape:
         raise ValueError(f"shape incompatible: {tuple(filtrada.shape)} vs {tuple(tensor.shape)}")
     _validar_no_negativo("umbral", umbral)
-    mascara = (tensor - filtrada).abs() > umbral
+    mascara = (tensor - filtrada).abs() < umbral
     return torch.where(mascara, filtrada, tensor)
 
 
@@ -162,6 +162,30 @@ def ruido_uniforme(
         generator=generador,
     )
     return (tensor + (ruido * 2 - 1) * amplitud).clamp(0.0, 1.0)
+
+
+def ruido_gaussiano(
+    tensor: torch.Tensor,
+    sigma: float = 0.05,
+    media: float = 0.0,
+    seed: int | None = None,
+) -> torch.Tensor:
+    """Suma ruido normal en unidades del tensor y recorta al rango [0, 1]."""
+    _validar_no_negativo("sigma", sigma)
+    _validar_finito("media", media)
+    if sigma == 0:
+        return (tensor + media).clamp(0.0, 1.0)
+    dispositivo = tensor.device
+    if seed is not None and dispositivo.type == "mps":
+        # MPS no admite un generador local con semilla.
+        dispositivo = torch.device("cpu")
+    generador = None
+    if seed is not None:
+        generador = torch.Generator(device=dispositivo).manual_seed(seed)
+    ruido = torch.randn(
+        tensor.shape, dtype=tensor.dtype, device=dispositivo, generator=generador,
+    ).to(tensor.device)
+    return (tensor + media + sigma * ruido).clamp(0.0, 1.0)
 
 
 def laplaciano(

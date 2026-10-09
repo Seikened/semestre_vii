@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratorio notch · Visión VII</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="cabecera">
+    <div>
+      <p class="eyebrow">VISIÓN VII <span>/</span> EXPERIMENTO DE FOURIER</p>
+      <h1>Laboratorio <em>notch.</em></h1>
+      <p class="intro">Marca las frecuencias del tejido. Cada punto incluye su pareja simétrica.</p>
+    </div>
+    <div class="acciones">
+      <span class="etiqueta-local">● Local</span>
+      <button id="cargar" disabled>Cargar puntos</button>
+      <button id="guardar" disabled>Guardar puntos</button>
+      <button id="copiar" class="primario" disabled>Copiar filtro ↗</button>
+      <input id="archivo" type="file" accept="application/json,.json" hidden>
+    </div>
+  </header>
+
+  <main>
+    <section class="tarjeta espectro">
+      <div class="titulo-panel">
+        <div><p class="eyebrow">01 / FRECUENCIAS</p><h2>Elige dónde bloquear</h2></div>
+        <label class="zoom">Zoom
+          <select id="zoom-fft" aria-label="Zoom de Fourier">
+            <option value="1">1×</option><option value="2">2×</option>
+            <option value="4" selected>4×</option><option value="8">8×</option>
+          </select>
+        </label>
+      </div>
+      <div class="escenario">
+        <canvas id="fourier" tabindex="0" aria-label="Fourier interactiva: clic agrega un par notch; arrastrar desplaza la vista"></canvas>
+        <div class="leyenda"><span class="punto-principal">●</span> Centro <span class="punto-espejo">●</span> Simétrico</div>
+        <output id="coordenadas" class="coordenadas">Fila 0 · Columna 0</output>
+      </div>
+      <div class="herramientas">
+        <label class="radio-nuevo">Radio nuevo
+          <input id="radio-rango" type="range" min="1" max="80" step="1" value="8">
+          <input id="radio-nuevo" type="number" min="0.5" step="0.5" value="8" aria-label="Radio de un nuevo par en bins">
+          <span>bins</span>
+        </label>
+        <label class="checkbox"><input id="fft-original" type="checkbox"> Ver Fourier original</label>
+      </div>
+      <p class="ayuda">Clic: agrega un par. Arrastra: mueve la vista. Rueda: zoom. Clic en un centro: selecciona.</p>
+    </section>
+
+    <section class="comparacion">
+      <div class="tarjeta">
+        <div class="titulo-panel">
+          <div><p class="eyebrow">02 / RESULTADO</p><h2>Mira el tejido y las letras</h2></div>
+          <label class="zoom">Zoom
+            <select id="zoom-imagen" aria-label="Zoom de las imágenes">
+              <option value="1">1×</option><option value="2">2×</option>
+              <option value="4">4×</option><option value="8">8×</option>
+            </select>
+          </label>
+        </div>
+        <div class="imagenes">
+          <figure><canvas id="original" tabindex="0" aria-label="Saco original; arrastra para comparar la misma zona en ambas imágenes"></canvas><figcaption><span>Original</span><small>Cuadrado inferior</small></figcaption></figure>
+          <figure><canvas id="filtrada" tabindex="0" aria-label="Saco filtrado; arrastra para comparar la misma zona en ambas imágenes"></canvas><figcaption><span>Filtrada</span><a id="descargar" download="saco_notch.png" aria-disabled="true">Descargar PNG ↗</a></figcaption></figure>
+        </div>
+        <div class="estado" role="status" aria-live="polite">
+          <span id="estado">Cargando el saco…</span>
+          <span id="estadistica">0 pares</span>
+          <button id="reintentar" hidden>Reintentar</button>
+        </div>
+        <p id="aviso-dc" class="aviso" hidden>Se está bloqueando DC: este filtro también elimina el brillo promedio.</p>
+      </div>
+
+      <section class="tarjeta puntos">
+        <div class="titulo-panel">
+          <div><p class="eyebrow">03 / TU FILTRO</p><h2>Pares notch <span id="cantidad" class="contador">0</span></h2></div>
+          <div class="botones-pequenos"><button id="deshacer" disabled>Deshacer</button><button id="vaciar" disabled>Vaciar</button></div>
+        </div>
+        <div id="lista" class="lista"><p class="vacio">Marca un punto sobre Fourier para empezar.</p></div>
+        <details class="manual">
+          <summary>Agregar por coordenadas</summary>
+          <form id="formulario">
+            <label>Fila (Y)<input id="fila" type="number" step="0.5" value="0" required></label>
+            <label>Columna (X)<input id="columna" type="number" step="0.5" value="84" required></label>
+            <label>Radio<input id="radio-manual" type="number" min="0.5" step="0.5" value="8" required></label>
+            <button type="submit">Agregar par +</button>
+          </form>
+          <p class="ayuda">Fila y columna son desplazamientos respecto al centro de Fourier; el radio se mide en bins.</p>
+        </details>
+        <details class="codigo"><summary>Ver el código del filtro</summary><pre id="codigo"></pre></details>
+      </section>
+    </section>
+  </main>
+  <footer><span id="fuente">Saco LED · recorte inferior</span><span>Notch ideal · pares conjugados · imagen en escala de grises</span></footer>
+</body>
+</html>

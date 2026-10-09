@@ -33,7 +33,7 @@ Los nombres siguen la convención `yolo26{tamano}_{dataset}_{tarea}`:
 - `bread-v2_det`: Bread Detector v2, **object detection**.
 - `mexican-v3_seg`: Mexican Bread v3, **instance segmentation**.
 
-`bread_detector_best.pt` corresponde al detector mediano previo de Bread Detector v2 y sigue siendo el predeterminado de la aplicación. `yolo26s_mexican_bread_seg_best.pt` conserva el segmentador previo de Mexican Bread. Los checkpoints con la convención nueva son las corridas publicadas por la cola de entrenamiento.
+`bread_detector_best.pt` corresponde al detector mediano previo de Bread Detector v2. `yolo26s_mexican_bread_seg_best.pt` conserva el segmentador previo de Mexican Bread. Los checkpoints con la convención nueva son las corridas publicadas por la cola de entrenamiento.
 
 Este directorio conserva únicamente `best.pt`. Los checkpoints intermedios, `last.pt`, datasets y resultados de entrenamiento permanecen fuera de Git. Los pesos finales se versionan con Git LFS.
 
@@ -45,14 +45,14 @@ El consumidor principal es:
 src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
 ```
 
-`app.py` descubre automáticamente los modelos con la convención nueva. El identificador de ejecución es el nombre de la carpeta del modelo:
+`app.py` selecciona el modelo mediante el dataset y el tamaño:
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py yolo26m_bread-v2_det
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py yolo26s_mexican-v3_seg
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py bread-v2 m
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py mexican-v3 s
 ```
 
-Sin argumento se mantiene el alias `bread-v2_m_previo`, que apunta a `bread_detector_best.pt`.
+Sin argumentos usa `DATASET="bread-v2"` y `TAMANO="x"`, que apuntan a `yolo26x_bread-v2_det/weights/best.pt`. Ambos valores pueden ajustarse al inicio del archivo.
 
 También puede consumirse cualquier checkpoint explícitamente desde la CLI del proyecto:
 

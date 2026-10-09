@@ -104,6 +104,26 @@ class Grafica:
         nombre = titulo or ("TF centrada" if getattr(espectro, "centrado", False) else "TF")
         return self.imagen(magnitud, nombre, rango="unidad")
 
+    def histogramas(
+        self, *series: tuple[object, str], canal: int = 0, titulo: str = "Histogramas",
+    ) -> Self:
+        if not series:
+            raise ValueError("se necesita al menos una imagen")
+        tensores = [(_tensor(nodo), etiqueta) for nodo, etiqueta in series]
+        for tensor, _ in tensores:
+            _validar_fila_canal(tensor, 0, canal)
+
+        def dibujar(eje: Axes) -> None:
+            for tensor, etiqueta in tensores:
+                tonos = tensor[canal].detach().cpu().clamp(0, 1).mul(255).round().numpy()
+                conteos = np.bincount(tonos.astype(int).ravel(), minlength=256)
+                eje.bar(np.arange(256), conteos, width=1, alpha=0.5, label=etiqueta)
+            eje.set(title=titulo, xlabel="Tono de gris", ylabel="Cantidad de píxeles", xlim=(0, 255))
+            eje.legend()
+
+        self._paneles.append(_Panel(dibujar))
+        return self
+
     def mascara(self, espectro, titulo: str | None = None) -> Self:
         nombre = titulo or f"H · {getattr(espectro, 'filtro', None) or 'Filtro'}"
         return self.imagen(espectro.mascara_imagen(), nombre, rango="unidad")

@@ -11,15 +11,16 @@ from .espectro import EspectroNode
 from .io import cargar_imagen, guardar_imagen
 from .pixels import convoluciones, transformaciones, visualizacion
 from .pixels.transformaciones import PuntosControl
-from .signals import graficas, sinteticas
+from .signals import sinteticas
 from .signals.frecuencias import EspectroCanal, analizar_espectros
+from .visualizacion_node import VisualizacionNode
 
 _DTYPES_SOPORTADOS = frozenset({torch.float32, torch.float64})
 _CANALES_SOPORTADOS = frozenset({1, 3})
 
 
 @dataclass(frozen=True, slots=True, eq=False, repr=False, init=False)
-class VisionNode:
+class VisionNode(VisualizacionNode):
     """Fachada Fluent para experimentar con tensores de imagen CHW."""
 
     tensor: torch.Tensor = field(repr=False)
@@ -314,6 +315,13 @@ class VisionNode:
     def ruido_uniforme(self, amplitud: float = 0.1, seed: int | None = None) -> Self:
         return self._nuevo(convoluciones.ruido_uniforme(self.tensor, amplitud, seed))
 
+    def ruido_gaussiano(
+        self, sigma: float = 0.05, media: float = 0.0, seed: int | None = None,
+    ) -> Self:
+        """Usa sigma y media normalizadas: 10 tonos de gris equivalen a 10/255."""
+        tensor = convoluciones.ruido_gaussiano(self.tensor, sigma, media, seed)
+        return self._nuevo(tensor)
+
     def laplaciano(
         self,
         *,
@@ -367,134 +375,6 @@ class VisionNode:
             excluir_radio_dc=excluir_radio_dc,
             distancia_minima=distancia_minima,
         )
-
-    def mostrar(self, block: bool = True) -> Self:
-        visualizacion.mostrar(self.tensor, self.titulo, block=block)
-        return self
-
-    def mostrar_diferencias(
-        self,
-        comparada: Self,
-        magnifier: float = 1.0,
-        block: bool = True,
-    ) -> Self:
-        visualizacion.mostrar_diferencias(
-            self.tensor,
-            comparada.tensor,
-            self.titulo,
-            comparada.titulo,
-            magnifier=magnifier,
-            block=block,
-        )
-        tensor = transformaciones.diferencia_absoluta(
-            self.tensor,
-            comparada.tensor,
-            magnifier,
-        )
-        titulo = f"Diferencias: {self.titulo} vs {comparada.titulo}"
-        return self._nuevo(tensor, titulo)
-
-    def histograma(self, block: bool = True) -> Self:
-        visualizacion.histograma(self.tensor, self.titulo, block=block)
-        return self
-
-    def graficar_acumulado(self, title_suffix: str = "", block: bool = False) -> Self:
-        titulo = self.titulo
-        if title_suffix:
-            titulo = f"{titulo} ({title_suffix})"
-        visualizacion.graficar_acumulado(self.tensor, titulo, block=block)
-        return self
-
-    def mostrar_reporte(self, block: bool = True) -> Self:
-        visualizacion.mostrar_reporte(self.tensor, self.titulo, block=block)
-        return self
-
-    def senal_por_canal(
-        self,
-        fila: int | None = None,
-        block: bool = False,
-        excluir_dc: bool = False,
-        magnifier: float = 1.0,
-    ) -> Self:
-        graficas.senal_por_canal(
-            self.tensor,
-            self.titulo,
-            fila=fila,
-            block=block,
-            excluir_dc=excluir_dc,
-            magnifier=magnifier,
-        )
-        return self
-
-    def comparar_fft(
-        self,
-        comparada: Self,
-        fila: int | None = None,
-        block: bool = False,
-        excluir_dc: bool = False,
-    ) -> Self:
-        graficas.comparar_fft(
-            self.tensor,
-            comparada.tensor,
-            self.titulo,
-            comparada.titulo,
-            fila=fila,
-            block=block,
-            excluir_dc=excluir_dc,
-        )
-        return self
-
-    def transformada_fourier_2d(self, block: bool = False) -> Self:
-        graficas.transformada_fourier_2d(self.tensor, self.titulo, block=block)
-        return self
-
-    def espectro_2d_picos(
-        self,
-        n_picos: int = 6,
-        excluir_radio_dc: int = 20,
-        ventana_supresion: int = 10,
-        radio_marcador: int = 12,
-        radio_dc_visual: int = 5,
-        clip_percentil: float = 99.5,
-        block: bool = False,
-    ) -> Self:
-        graficas.espectro_2d_picos(
-            self.tensor,
-            self.titulo,
-            n_picos=n_picos,
-            excluir_radio_dc=excluir_radio_dc,
-            ventana_supresion=ventana_supresion,
-            radio_marcador=radio_marcador,
-            radio_dc_visual=radio_dc_visual,
-            clip_percentil=clip_percentil,
-            block=block,
-        )
-        return self
-
-    def espectro_2d_con_perfiles(
-        self,
-        n_picos: int = 8,
-        excluir_radio_dc: int = 20,
-        ventana_supresion: int = 10,
-        radio_marcador: int = 12,
-        radio_dc_visual: int = 5,
-        clip_percentil: float = 99.5,
-        escala_perfiles: str = "lineal",
-        block: bool = False,
-    ) -> Self:
-        graficas.espectro_2d_con_perfiles(
-            self.tensor,
-            self.titulo,
-            n_picos=n_picos,
-            excluir_radio_dc=excluir_radio_dc,
-            ventana_supresion=ventana_supresion,
-            radio_marcador=radio_marcador,
-            radio_dc_visual=radio_dc_visual,
-            clip_percentil=clip_percentil,
-            escala_perfiles=escala_perfiles,
-            block=block,
-        )
-        return self
 
     @classmethod
     def describir_api(cls) -> str:

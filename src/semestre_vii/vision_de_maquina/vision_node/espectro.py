@@ -1,5 +1,6 @@
 """Objeto fluido para trabajar en el dominio de Fourier."""
 
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Self
 
@@ -99,6 +100,25 @@ class EspectroNode:
         mascara = espectros.mascara_pasaaltas_butterworth(self.tensor, corte, orden)
         return self._filtrar(mascara, f"BHPF(D0={corte:g}, n={orden})")
 
+    def rechazabanda_butterworth(
+        self,
+        corte_bajo: float,
+        corte_alto: float,
+        orden_bajo: int = 2,
+        orden_alto: int = 2,
+    ) -> Self:
+        """Suma las máscaras de paso bajo y alto antes de aplicarlas al espectro."""
+        mascara = espectros.mascara_rechazabanda_butterworth(
+            self.tensor, corte_bajo, corte_alto, orden_bajo, orden_alto,
+        )
+        nombre = f"BRF({corte_bajo:g}, {corte_alto:g}, n={orden_bajo}/{orden_alto})"
+        return self._filtrar(mascara, nombre)
+
+    def notch_ideal(self, centros: Sequence[tuple[float, float]], radio: float) -> Self:
+        """Rechaza círculos y sus parejas conjugadas, con centros relativos en (fila, columna)."""
+        mascara = espectros.mascara_notch_ideal(self.tensor, centros, radio)
+        return self._filtrar(mascara, f"Notch ideal(r={radio:g})")
+
     def inversa(self, *, valor_absoluto: bool = False, clip: bool = False) -> "VisionNode":  # noqa: UP037
         """Recupera el dominio espacial sin destruir negativos ni sobreimpulsos por defecto."""
         from .node import VisionNode
@@ -116,6 +136,8 @@ class EspectroNode:
         if not self.centrado:
             raise ValueError("los filtros radiales requieren un espectro centrado; usa imagen.fft()")
         tensor = espectros.aplicar_mascara(self.tensor, mascara)
+        if self.mascara is not None:
+            mascara = self.mascara * mascara
         return type(self)(tensor=tensor, titulo=f"{self.titulo} · {nombre}", centrado=True, mascara=mascara, filtro=nombre)
 
     def __repr__(self) -> str:
