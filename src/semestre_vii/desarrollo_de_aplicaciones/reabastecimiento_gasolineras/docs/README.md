@@ -11,7 +11,7 @@ Desde el 21 de septiembre de 2026 reemplaza a la nota de planeación de Traveler
 3. [03 · Datos](03_datos.md)
 4. [04 · Modelos y evaluación](04_modelos_y_evaluacion.md)
 5. [05 · Arquitectura](05_arquitectura.md)
-6. [06 · Plan de trabajo](06_plan_de_trabajo.md)
+6. [06 · Plan de proyecto](06_plan_de_trabajo.md), pendiente de completar y revisar.
 7. [07 · Prototipo visual frontend](07_prototipo_frontend.md)
 
 ## Regla de autoridad
