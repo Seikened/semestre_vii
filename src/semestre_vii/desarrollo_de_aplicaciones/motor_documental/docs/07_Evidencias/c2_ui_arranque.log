@@ -1,0 +1,181 @@
+ Image motor-documental-c2-ui-final-api Building 
+ Image motor-documental-c2-ui-final-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.42kB done
+#1 DONE 0.0s
+
+#2 [web internal] load build definition from Dockerfile
+#2 transferring dockerfile: 447B 0.0s done
+#2 DONE 0.1s
+
+#3 [api internal] load build definition from Dockerfile
+#3 transferring dockerfile: 778B 0.0s done
+#3 DONE 0.1s
+
+#4 [api internal] load metadata for ghcr.io/astral-sh/uv:0.13.6
+#4 ...
+
+#5 [auth] library/python:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#6 [web internal] load metadata for docker.io/library/node:24-bookworm-slim
+#6 DONE 0.6s
+
+#7 [api internal] load metadata for docker.io/library/python:3.12-slim
+#7 DONE 0.7s
+
+#8 [web internal] load .dockerignore
+#8 transferring context: 73B done
+#8 DONE 0.0s
+
+#9 [web construir 1/7] FROM docker.io/library/node:24-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c
+#9 resolve docker.io/library/node:24-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c done
+#9 DONE 0.0s
+
+#10 [auth] astral-sh/uv:pull token for ghcr.io
+#10 DONE 0.0s
+
+#11 [web internal] load build context
+#11 transferring context: 440.32kB 0.0s done
+#11 DONE 0.0s
+
+#12 [web construir 7/7] RUN pnpm rebuild && pnpm exec nuxt prepare && pnpm build
+#12 CACHED
+
+#13 [web construir 2/7] RUN npm install -g pnpm@11.22.0
+#13 CACHED
+
+#14 [web construir 4/7] COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+#14 CACHED
+
+#15 [web construir 6/7] COPY . .
+#15 CACHED
+
+#16 [web construir 3/7] WORKDIR /app
+#16 CACHED
+
+#17 [web stage-1 2/3] WORKDIR /app
+#17 CACHED
+
+#18 [web construir 5/7] RUN pnpm install --frozen-lockfile --ignore-scripts
+#18 CACHED
+
+#19 [web stage-1 3/3] COPY --from=construir /app/.output ./.output
+#19 CACHED
+
+#20 [web] exporting to image
+#20 exporting layers done
+#20 exporting manifest sha256:5b8fdfa9073f3346d98e2d82dfd355856914da42b1e67f78038a1f9721bb8e0c 0.0s done
+#20 exporting config sha256:19a1a264ef64a2935c50f851c68ba6e89e4982fcfe12e20d6b9ec1832d2c90ef
+#20 exporting config sha256:19a1a264ef64a2935c50f851c68ba6e89e4982fcfe12e20d6b9ec1832d2c90ef done
+#20 exporting attestation manifest sha256:8c5d6b3abd54a008464be0648719f5d404e5ac3836e5148af01cfcbe72e39e2d done
+#20 exporting manifest list sha256:0349a4131d95418eb8b9a8293b084663e55262d42644ad45e354c20b8bec06cc done
+#20 naming to docker.io/library/motor-documental-c2-ui-final-web:latest done
+#20 unpacking to docker.io/library/motor-documental-c2-ui-final-web:latest done
+#20 DONE 0.1s
+
+#21 [web] resolving provenance for metadata file
+#21 DONE 0.0s
+
+#4 [api internal] load metadata for ghcr.io/astral-sh/uv:0.13.6
+#4 DONE 1.2s
+
+#22 [api internal] load .dockerignore
+#22 transferring context: 105B done
+#22 DONE 0.0s
+
+#23 [api] FROM ghcr.io/astral-sh/uv:0.13.6@sha256:af22a52f5eafef3d78e551599d405c02df61919d18028f0cea8eda93bc9986d0
+#23 resolve ghcr.io/astral-sh/uv:0.13.6@sha256:af22a52f5eafef3d78e551599d405c02df61919d18028f0cea8eda93bc9986d0 0.0s done
+#23 DONE 0.0s
+
+#24 [api stage-0 1/9] FROM docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30
+#24 resolve docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30 0.0s done
+#24 DONE 0.0s
+
+#25 [api internal] load build context
+#25 transferring context: 860.12kB 0.0s done
+#25 DONE 0.1s
+
+#26 [api stage-0 5/9] COPY api/pyproject.toml api/uv.lock ./backend/
+#26 CACHED
+
+#27 [api stage-0 7/9] COPY api/app ./backend/app
+#27 CACHED
+
+#28 [api stage-0 4/9] WORKDIR /proyecto
+#28 CACHED
+
+#29 [api stage-0 6/9] RUN uv sync --project backend --frozen --no-dev --no-install-project
+#29 CACHED
+
+#30 [api stage-0 2/9] COPY --from=ghcr.io/astral-sh/uv:0.13.6 /uv /usr/local/bin/uv
+#30 CACHED
+
+#31 [api stage-0 3/9] RUN apt-get update && apt-get install -y --no-install-recommends     tesseract-ocr-spa tesseract-ocr-eng libglib2.0-0 libgl1 libgomp1     && apt-get clean
+#31 CACHED
+
+#32 [api stage-0 8/9] RUN uv sync --project backend --frozen --no-dev
+#32 CACHED
+
+#33 [api stage-0 9/9] COPY demo ./demo
+#33 DONE 0.1s
+
+#34 [api] exporting to image
+#34 exporting layers 0.1s done
+#34 exporting manifest sha256:a0e1e17ea8699b887b644569342296e521d7e87b221d9d64aa7816408ae43984 done
+#34 exporting config sha256:b425ee1b654bf1b589298da78411c976bd65262d6e3be9478572912a2249e0b1 done
+#34 exporting attestation manifest sha256:644f79977b603e6ee50deedbada64504aa76f4d81d9242316eb9c9e91dd94c04 done
+#34 exporting manifest list sha256:8f53cf7bc152e5247bc96430492157d18669fdb153bed8632529d82872976f27 done
+#34 naming to docker.io/library/motor-documental-c2-ui-final-api:latest
+#34 naming to docker.io/library/motor-documental-c2-ui-final-api:latest done
+#34 unpacking to docker.io/library/motor-documental-c2-ui-final-api:latest 0.0s done
+#34 DONE 0.1s
+
+#35 [api] resolving provenance for metadata file
+#35 DONE 0.0s
+ Image motor-documental-c2-ui-final-api Built 
+ Image motor-documental-c2-ui-final-web Built 
+ Network motor-documental-c2-ui-final_datos Creating 
+ Network motor-documental-c2-ui-final_presentacion Creating 
+ Volume motor-documental-c2-ui-final_clave_api Creating 
+ Volume motor-documental-c2-ui-final_originales Creating 
+ Volume motor-documental-c2-ui-final_modelos Creating 
+ Volume motor-documental-c2-ui-final_credenciales Creating 
+ Network motor-documental-c2-ui-final_presentacion Creating 
+ Network motor-documental-c2-ui-final_datos Creating 
+ Volume motor-documental-c2-ui-final_postgres Creating 
+ Volume motor-documental-c2-ui-final_postgres Creating 
+ Volume motor-documental-c2-ui-final_credenciales Creating 
+ Volume motor-documental-c2-ui-final_clave_api Creating 
+ Volume motor-documental-c2-ui-final_modelos Creating 
+ Volume motor-documental-c2-ui-final_originales Creating 
+ Volume motor-documental-c2-ui-final_clave_api Created 
+ Volume motor-documental-c2-ui-final_clave_api Created 
+ Volume motor-documental-c2-ui-final_modelos Created 
+ Volume motor-documental-c2-ui-final_modelos Created 
+ Volume motor-documental-c2-ui-final_originales Created 
+ Volume motor-documental-c2-ui-final_originales Created 
+ Volume motor-documental-c2-ui-final_postgres Created 
+ Volume motor-documental-c2-ui-final_postgres Created 
+ Volume motor-documental-c2-ui-final_credenciales Created 
+ Volume motor-documental-c2-ui-final_credenciales Created 
+ Network motor-documental-c2-ui-final_datos Created 
+ Network motor-documental-c2-ui-final_datos Created 
+ Container motor-documental-c2-ui-final-db-1 Creating 
+ Network motor-documental-c2-ui-final_presentacion Created 
+ Network motor-documental-c2-ui-final_presentacion Created 
+ Container motor-documental-c2-ui-final-db-1 Created 
+ Container motor-documental-c2-ui-final-api-1 Creating 
+ Container motor-documental-c2-ui-final-api-1 Created 
+ Container motor-documental-c2-ui-final-web-1 Creating 
+ Container motor-documental-c2-ui-final-web-1 Created 
+ Container motor-documental-c2-ui-final-db-1 Starting 
+ Container motor-documental-c2-ui-final-db-1 Started 
+ Container motor-documental-c2-ui-final-db-1 Waiting 
+ Container motor-documental-c2-ui-final-db-1 Healthy 
+ Container motor-documental-c2-ui-final-api-1 Starting 
+ Container motor-documental-c2-ui-final-api-1 Started 
+ Container motor-documental-c2-ui-final-api-1 Waiting 
+ Container motor-documental-c2-ui-final-api-1 Healthy 
+ Container motor-documental-c2-ui-final-web-1 Starting 
+ Container motor-documental-c2-ui-final-web-1 Started 

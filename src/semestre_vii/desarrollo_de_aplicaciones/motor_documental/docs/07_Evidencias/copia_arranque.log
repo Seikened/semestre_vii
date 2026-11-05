@@ -1,0 +1,293 @@
+ Image motor-documental-copia-web Building 
+ Image motor-documental-copia-api Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.28kB done
+#1 DONE 0.0s
+
+#2 [web internal] load build definition from Dockerfile
+#2 transferring dockerfile: 447B done
+#2 DONE 0.0s
+
+#3 [api internal] load build definition from Dockerfile
+#3 transferring dockerfile: 790B done
+#3 DONE 0.0s
+
+#4 [web internal] load metadata for docker.io/library/node:24-bookworm-slim
+#4 ...
+
+#5 [auth] astral-sh/uv:pull token for ghcr.io
+#5 DONE 0.0s
+
+#6 [auth] library/python:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#7 [api internal] load metadata for ghcr.io/astral-sh/uv:0.13.6
+#7 ...
+
+#4 [web internal] load metadata for docker.io/library/node:24-bookworm-slim
+#4 DONE 0.5s
+
+#8 [web internal] load .dockerignore
+#8 transferring context: 73B done
+#8 DONE 0.0s
+
+#9 [web construir 1/7] FROM docker.io/library/node:24-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c
+#9 resolve docker.io/library/node:24-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c done
+#9 DONE 0.0s
+
+#10 [web internal] load build context
+#10 transferring context: 8.65kB done
+#10 DONE 0.0s
+
+#11 [web construir 2/7] RUN npm install -g pnpm@11.22.0
+#11 CACHED
+
+#12 [web construir 3/7] WORKDIR /app
+#12 CACHED
+
+#13 [web construir 4/7] COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+#13 CACHED
+
+#14 [web construir 5/7] RUN pnpm install --frozen-lockfile --ignore-scripts
+#14 CACHED
+
+#15 [web construir 6/7] COPY . .
+#15 DONE 0.0s
+
+#16 [api internal] load metadata for docker.io/library/python:3.12-slim
+#16 DONE 0.7s
+
+#17 [web construir 7/7] RUN pnpm rebuild && pnpm exec nuxt prepare && pnpm build
+#17 ...
+
+#7 [api internal] load metadata for ghcr.io/astral-sh/uv:0.13.6
+#7 DONE 0.9s
+
+#18 [api internal] load .dockerignore
+#18 transferring context: 105B done
+#18 DONE 0.0s
+
+#19 [api] FROM ghcr.io/astral-sh/uv:0.13.6@sha256:af22a52f5eafef3d78e551599d405c02df61919d18028f0cea8eda93bc9986d0
+#19 resolve ghcr.io/astral-sh/uv:0.13.6@sha256:af22a52f5eafef3d78e551599d405c02df61919d18028f0cea8eda93bc9986d0 0.0s done
+#19 DONE 0.0s
+
+#20 [api stage-0 1/9] FROM docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30
+#20 resolve docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30 0.0s done
+#20 DONE 0.0s
+
+#21 [api internal] load build context
+#21 transferring context: 776.59kB 0.0s done
+#21 DONE 0.0s
+
+#22 [api stage-0 5/9] COPY backend/pyproject.toml backend/uv.lock ./backend/
+#22 CACHED
+
+#23 [api stage-0 2/9] COPY --from=ghcr.io/astral-sh/uv:0.13.6 /uv /usr/local/bin/uv
+#23 CACHED
+
+#24 [api stage-0 3/9] RUN apt-get update && apt-get install -y --no-install-recommends     tesseract-ocr-spa tesseract-ocr-eng libglib2.0-0 libgl1 libgomp1     && apt-get clean
+#24 CACHED
+
+#25 [api stage-0 4/9] WORKDIR /proyecto
+#25 CACHED
+
+#26 [api stage-0 6/9] RUN uv sync --project backend --frozen --no-dev --no-install-project
+#26 CACHED
+
+#27 [api stage-0 7/9] COPY backend/app ./backend/app
+#27 CACHED
+
+#28 [api stage-0 8/9] RUN uv sync --project backend --frozen --no-dev
+#28 CACHED
+
+#29 [api stage-0 9/9] COPY demo ./demo
+#29 DONE 0.0s
+
+#30 [api] exporting to image
+#30 exporting layers 0.0s done
+#30 exporting manifest sha256:5de74a7ba657472bc2caf1b5370479ea0c4cba7a45f929fd73ec27b4d236c8c8
+#30 exporting manifest sha256:5de74a7ba657472bc2caf1b5370479ea0c4cba7a45f929fd73ec27b4d236c8c8 done
+#30 exporting config sha256:0acd87bd1b5c20c6f419d80961971b61e3a6c5c2493ef693749e1cb52811399e done
+#30 exporting attestation manifest sha256:2e0c974a5fc2401e3efaa6c7c97de12f04f8bc74111cf33830c1b5632226f24e done
+#30 exporting manifest list sha256:b1584e75e1fc71e4b959b34b94120725a88ecbacf48010687aa2348352d04424 done
+#30 naming to docker.io/library/motor-documental-copia-api:latest done
+#30 unpacking to docker.io/library/motor-documental-copia-api:latest done
+#30 DONE 0.1s
+
+#31 [api] resolving provenance for metadata file
+#31 DONE 0.0s
+
+#17 [web construir 7/7] RUN pnpm rebuild && pnpm exec nuxt prepare && pnpm build
+#17 0.883 .../esbuild@0.28.2/node_modules/esbuild postinstall$ node install.js
+#17 0.961 .../esbuild@0.27.7/node_modules/esbuild postinstall$ node install.js
+#17 0.976 .../esbuild@0.28.2/node_modules/esbuild postinstall: Done
+#17 1.052 .../esbuild@0.27.7/node_modules/esbuild postinstall: Done
+#17 1.626 .../node_modules/vue-demi postinstall$ node -e "try{require('./scripts/postinstall.js')}catch(e){}"
+#17 1.728 .../node_modules/vue-demi postinstall: Done
+#17 2.808 . postinstall$ nuxt prepare
+#17 3.635 . postinstall: ℹ Nuxt Icon server bundle mode is set to local
+#17 3.647 . postinstall: [nuxt:icon] ✔ Nuxt Icon discovered local-installed 1 collections: lucide
+#17 3.869 . postinstall: ℹ Nuxt Icon client bundle consist of 43 icons with 10.40KB(uncompressed) in size
+#17 3.922 . postinstall: │
+#17 3.922 . postinstall: ◆  Types generated in .nuxt.
+#17 3.983 . postinstall: Done
+#17 4.866 ℹ Nuxt Icon server bundle mode is set to local
+#17 4.872 [nuxt:icon] ✔ Nuxt Icon discovered local-installed 1 collections: lucide
+#17 5.040 ℹ Nuxt Icon client bundle consist of 43 icons with 10.40KB(uncompressed) in size
+#17 5.089 │
+#17 5.089 ◆  Types generated in .nuxt.
+#17 5.426 $ nuxt build
+#17 5.484 ┌  Building Nuxt for production...
+#17 5.564 │
+#17 5.564 ●  Nuxt 4.5.2 (with Nitro 2.13.5, Vite 8.3.5 and Vue 3.5.44)
+#17 5.800 ℹ Nuxt Icon server bundle mode is set to local
+#17 5.805 [nuxt:icon] ✔ Nuxt Icon discovered local-installed 1 collections: lucide
+#17 5.879 │
+#17 5.879 ●  Nitro preset: node-server
+#17 5.981 ℹ Nuxt Icon client bundle consist of 43 icons with 10.40KB(uncompressed) in size
+#17 6.576 ℹ Building client...
+#17 6.592 ℹ vite v8.3.5 building client environment for production...
+#17 6.621 transforming...
+#17 8.433 ✓ 873 modules transformed.
+#17 8.558 rendering chunks...
+#17 8.664 computing gzip size...
+#17 8.676 ℹ node_modules/.cache/nuxt/.nuxt/dist/client/manifest.json                   6.16 kB │ gzip:  0.83 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/error-500.B-n301G5.css    1.90 kB │ gzip:  0.72 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/error-404.FWzvRjWo.css    2.42 kB │ gzip:  0.85 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/entry.DUhYLxqQ.css      207.94 kB │ gzip: 28.61 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/BDNMzG2s.js               0.08 kB │ gzip:  0.09 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/rxhDcyfF.js               0.14 kB │ gzip:  0.14 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/D4ZWE39i.js               0.50 kB │ gzip:  0.33 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/BW3xJdEx.js               0.73 kB │ gzip:  0.43 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/DIy_6iUe.js               3.40 kB │ gzip:  1.54 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/B1zFFHJn.js               3.72 kB │ gzip:  1.69 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/vjOppadB.js               5.21 kB │ gzip:  2.30 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/BH3ZlIu1.js               8.78 kB │ gzip:  3.69 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/BLVVYNYD.js              25.96 kB │ gzip:  7.64 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/DuYS2cWz.js              30.34 kB │ gzip:  9.30 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/BHWnFSru.js              85.76 kB │ gzip: 33.11 kB
+#17 8.676 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/Bd6rsmE0.js             313.55 kB │ gzip: 98.69 kB
+#17 8.676 
+#17 8.677 ℹ ✓ built in 2.08s
+#17 8.677 ✔ Client built in 2100ms
+#17 8.679 ℹ Building server...
+#17 8.691 ℹ vite v8.3.5 building ssr environment for production...
+#17 8.704 transforming...
+#17 10.85 ✓ 797 modules transformed.
+#17 10.97 rendering chunks...
+#17 11.16 ℹ node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-404-styles.DzVaeH2h.mjs            0.08 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-500-styles.BpHErI13.mjs            0.08 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/styles.mjs                                     0.61 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/_plugin-vue_export-helper-DjkACiAr.js    0.24 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/utils-CAAgRe3Y.js                        0.27 kB │ map:     1.60 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/svg-BzJNg7zV.js                          1.36 kB │ map:     2.41 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/head-EyceDRTt.js                         1.50 kB │ map:     4.27 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-500-styles-1.mjs-C3IqCoWc.js       2.42 kB │ map:     5.28 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-404-styles-1.mjs-opPMFt3h.js       2.95 kB │ map:     5.92 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-500-DxDpzWjL.js                    4.64 kB │ map:     5.66 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-404-CewtErKw.js                    5.34 kB │ map:     6.54 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/render-B9p18Fao.js                       7.78 kB │ map:    21.12 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/nuxt-CZyFD1nd.js                        11.29 kB │ map:    32.40 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/css-runtime-Xj72bGKJ.js                 12.89 kB │ map:    24.04 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/shared-BS7IvEeG.js                      14.02 kB │ map:    18.84 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/iconify-D3klKqGa.js                     44.21 kB │ map:    83.15 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/Toast-_SHIm43u.js                       60.68 kB │ map:    99.62 kB
+#17 11.16 node_modules/.cache/nuxt/.nuxt/dist/server/server.mjs                                   609.10 kB │ map: 1,455.93 kB
+#17 11.16 
+#17 11.16 ℹ ✓ built in 2.47s
+#17 11.17 ✔ Server built in 2490ms
+#17 11.21 [nitro] ✔ Generated public .output/public
+#17 11.23 [nitro] ℹ Building Nuxt Nitro server (preset: node-server, compatibility date: 2026-10-15)
+#17 16.14 [nitro] ✔ Nuxt Nitro server built
+#17 16.19   ├─ .output/server/chunks/_/error-500.mjs (5.05 kB) (2.07 kB gzip)
+#17 16.19   ├─ .output/server/chunks/_/icons.mjs (646 kB) (98 kB gzip)
+#17 16.19   ├─ .output/server/chunks/build/_plugin-vue_export-helper-DjkACiAr.mjs (313 B) (220 B gzip)
+#17 16.19   ├─ .output/server/chunks/build/css-runtime-Xj72bGKJ.mjs (13.4 kB) (4.32 kB gzip)
+#17 16.19   ├─ .output/server/chunks/build/error-404-CewtErKw.mjs (5.83 kB) (2.4 kB gzip)
+#17 16.19   ├─ .output/server/chunks/build/error-404-styles.DzVaeH2h.mjs (3.01 kB) (1.16 kB gzip)
+#17 16.19   ├─ .output/server/chunks/build/error-500-DxDpzWjL.mjs (5.17 kB) (2.16 kB gzip)
+#17 16.19   ├─ .output/server/chunks/build/error-500-styles.BpHErI13.mjs (2.49 kB) (1.03 kB gzip)
+#17 16.19   ├─ .output/server/chunks/build/iconify-D3klKqGa.mjs (44.2 kB) (12.4 kB gzip)
+#17 16.19   ├─ .output/server/chunks/build/shared-BS7IvEeG.mjs (14 kB) (2.54 kB gzip)
+#17 16.19   ├─ .output/server/chunks/build/svg-BzJNg7zV.mjs (1.88 kB) (898 B gzip)
+#17 16.19   ├─ .output/server/chunks/build/Toast-_SHIm43u.mjs (61.2 kB) (11 kB gzip)
+#17 16.19   ├─ .output/server/chunks/nitro/nitro.mjs (175 kB) (44 kB gzip)
+#17 16.19   ├─ .output/server/chunks/routes/api/motor/_...ruta_.mjs (2.01 kB) (883 B gzip)
+#17 16.19   ├─ .output/server/chunks/routes/renderer.mjs (16.3 kB) (5.62 kB gzip)
+#17 16.19   ├─ .output/server/chunks/virtual/_virtual_spa-template.mjs (94 B) (100 B gzip)
+#17 16.19   ├─ .output/server/chunks/virtual/entry.mjs (633 kB) (128 kB gzip)
+#17 16.19   ├─ .output/server/chunks/virtual/precomputed.mjs (13.4 kB) (1.32 kB gzip)
+#17 16.19   ├─ .output/server/chunks/virtual/styles.mjs (690 B) (338 B gzip)
+#17 16.19   ├─ .output/server/index.mjs (396 B) (226 B gzip)
+#17 16.19   └─ .output/server/package.json (830 B) (374 B gzip)
+#17 16.19 Σ Total size: 3.6 MB (820 kB gzip)
+#17 16.19 [nitro] ✔ You can preview this build using node .output/server/index.mjs
+#17 16.20 │
+#17 16.20 └  ✨ Build complete!
+#17 DONE 16.7s
+
+#32 [web stage-1 2/3] WORKDIR /app
+#32 CACHED
+
+#33 [web stage-1 3/3] COPY --from=construir /app/.output ./.output
+#33 DONE 0.1s
+
+#34 [web] exporting to image
+#34 exporting layers
+#34 exporting layers 0.2s done
+#34 exporting manifest sha256:f6911a100bdd456a5cf735b913ad98153cbf24e4c46478d7b1094d9689a78ef3 done
+#34 exporting config sha256:6efbbe876b70f5e56d59b8c7bf698801d76c49a5189c8fa69641ba4af52dd48c done
+#34 exporting attestation manifest sha256:5d83aae07090afc21b51aab7fd4037388aed6d2a5cdfa381d37254cd36e6f00b done
+#34 exporting manifest list sha256:7ae6858fc7d214023ff944a05dcb505675b2fd676f2e6005c6f1245908fb360a done
+#34 naming to docker.io/library/motor-documental-copia-web:latest done
+#34 unpacking to docker.io/library/motor-documental-copia-web:latest 0.0s done
+#34 DONE 0.2s
+
+#35 [web] resolving provenance for metadata file
+#35 DONE 0.0s
+ Image motor-documental-copia-api Built 
+ Image motor-documental-copia-web Built 
+ Volume motor-documental-copia_clave_api Creating 
+ Volume motor-documental-copia_postgres Creating 
+ Volume motor-documental-copia_postgres Creating 
+ Volume motor-documental-copia_clave_api Creating 
+ Network motor-documental-copia_datos Creating 
+ Network motor-documental-copia_presentacion Creating 
+ Network motor-documental-copia_datos Creating 
+ Network motor-documental-copia_presentacion Creating 
+ Volume motor-documental-copia_modelos Creating 
+ Volume motor-documental-copia_credenciales Creating 
+ Volume motor-documental-copia_credenciales Creating 
+ Volume motor-documental-copia_modelos Creating 
+ Volume motor-documental-copia_originales Creating 
+ Volume motor-documental-copia_originales Creating 
+ Volume motor-documental-copia_modelos Created 
+ Volume motor-documental-copia_modelos Created 
+ Volume motor-documental-copia_originales Created 
+ Volume motor-documental-copia_originales Created 
+ Volume motor-documental-copia_clave_api Created 
+ Volume motor-documental-copia_clave_api Created 
+ Volume motor-documental-copia_credenciales Created 
+ Volume motor-documental-copia_credenciales Created 
+ Volume motor-documental-copia_postgres Created 
+ Volume motor-documental-copia_postgres Created 
+ Network motor-documental-copia_datos Created 
+ Network motor-documental-copia_datos Created 
+ Container motor-documental-copia-db-1 Creating 
+ Network motor-documental-copia_presentacion Created 
+ Network motor-documental-copia_presentacion Created 
+ Container motor-documental-copia-db-1 Created 
+ Container motor-documental-copia-api-1 Creating 
+ Container motor-documental-copia-api-1 Created 
+ Container motor-documental-copia-web-1 Creating 
+ Container motor-documental-copia-web-1 Created 
+ Container motor-documental-copia-db-1 Starting 
+ Container motor-documental-copia-db-1 Started 
+ Container motor-documental-copia-db-1 Waiting 
+ Container motor-documental-copia-db-1 Healthy 
+ Container motor-documental-copia-api-1 Starting 
+ Container motor-documental-copia-api-1 Started 
+ Container motor-documental-copia-api-1 Waiting 
+ Container motor-documental-copia-api-1 Healthy 
+ Container motor-documental-copia-web-1 Starting 
+ Container motor-documental-copia-web-1 Started 

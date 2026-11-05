@@ -1,0 +1,109 @@
+{
+  "local": {
+    "caso_id": "SIM0001-C18",
+    "archivo": "SIM0001_digital.pdf",
+    "formato": "digital",
+    "pagina": 5,
+    "variante": "libre",
+    "modo": "hibrida",
+    "consulta": "¿En cuántos días regresan la garantía después de entregar las llaves para Villa Jacaranda?",
+    "posicion_pagina": 3,
+    "posicion_documento": 3,
+    "cita_en_top5": true,
+    "cita_literal_en_top5": true,
+    "segundos": 0.048462417000337155,
+    "fuentes": [
+      "SIM0004_digital.pdf#p5",
+      "SIM0002_digital.pdf#p5",
+      "SIM0001_digital.pdf#p5",
+      "SIM0003_digital.pdf#p5",
+      "SIM0026_digital.pdf#p5"
+    ]
+  },
+  "openai": {
+    "vector_store_id": "vs_6ae911da598c81918e58f3cd6138f3c6",
+    "corpus_sha256": "7862783a581a978e6d93e5eb75ec29c240475a58c940d6841c731d9b21377ae3",
+    "caso_id": "SIM0001-C18",
+    "variante": "libre",
+    "modo_local": "hibrida",
+    "archivo_esperado": "SIM0001_digital.pdf",
+    "peticion": {
+      "query": "¿En cuántos días regresan la garantía después de entregar las llaves para Villa Jacaranda?",
+      "max_num_results": 5,
+      "rewrite_query": false,
+      "ranking_options": {
+        "ranker": "auto",
+        "score_threshold": 0.0
+      }
+    },
+    "respuesta": {
+      "object": "vector_store.search_results.page",
+      "data": [
+        {
+          "file_id": "file-DV8UzbDVE4LxM1qi5ZyRBz",
+          "filename": "SIM0004_digital.pdf",
+          "score": 0.973768319257394,
+          "content": [
+            {
+              "type": "text",
+              "text": "Página 4 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0004 | Escritura simulada ficticio | Villa Jacaranda Anexo\nPartes ficticias: Fernando León Franco y Fabián León Franco.\n\n\nCláusula 17. Constitución de garantía\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Villa Jacaranda Anexo, folio SIM0004. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0004-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 16 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Villa Jacaranda Anexo, folio\nSIM0004. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0004-18.\n\nCláusula 19. Deducciones documentadas\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Villa Jacaranda Anexo, folio\nSIM0004. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la\ncláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se\nrechazan instrucciones verbales contradictorias. La referencia de control es FICT-0004-19.\n\nCláusula 20. Entrega de llaves\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Villa Jacaranda Anexo, folio SIM0004. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0004-20.\n\nPágina 5 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0004 | Escritura simulada ficticio | Villa Jacaranda Anexo\nPartes ficticias: Fernando León Franco y Fabián León Franco."
+            }
+          ]
+        },
+        {
+          "file_id": "file-DV8UzbDVE4LxM1qi5ZyRBz",
+          "filename": "SIM0004_digital.pdf",
+          "score": 0.9736863147192579,
+          "content": [
+            {
+              "type": "text",
+              "text": "Cláusula 14. Conservación ordinaria\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Villa Jacaranda Anexo, folio\nSIM0004. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0004-14.\n\nCláusula 15. Servicios del inmueble\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Villa Jacaranda Anexo, folio\nSIM0004. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la\ncláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se\nrechazan instrucciones verbales contradictorias. La referencia de control es FICT-0004-15.\n\nCláusula 16. Autorizaciones previas\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Villa Jacaranda Anexo, folio SIM0004. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0004-16.\n\nPágina 4 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0004 | Escritura simulada ficticio | Villa Jacaranda Anexo\nPartes ficticias: Fernando León Franco y Fabián León Franco.\n\n\nCláusula 17. Constitución de garantía\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Villa Jacaranda Anexo, folio SIM0004. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0004-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 16 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Villa Jacaranda Anexo, folio\nSIM0004. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0004-18."
+            }
+          ]
+        },
+        {
+          "file_id": "file-NL5zhf4b2K7cVYNwJVi6Er",
+          "filename": "SIM0002_digital.pdf",
+          "score": 0.9735907862485548,
+          "content": [
+            {
+              "type": "text",
+              "text": "Cláusula 14. Conservación ordinaria\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Villa Jacaranda Norte, folio SIM0002. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0002-14.\n\nCláusula 15. Servicios del inmueble\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Villa Jacaranda Norte, folio SIM0002. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0002-15.\n\nCláusula 16. Autorizaciones previas\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Villa Jacaranda Norte, folio\nSIM0002. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0002-16.\n\nPágina 4 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0002 | Compraventa ficticio | Villa Jacaranda Norte\nPartes ficticias: Fernando León Franco y Fabián León Franco.\n\n\nCláusula 17. Constitución de garantía\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Villa Jacaranda Norte, folio\nSIM0002. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la\ncláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se\nrechazan instrucciones verbales contradictorias. La referencia de control es FICT-0002-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 24 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Villa Jacaranda Norte, folio SIM0002.\nLas partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier\nmovimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La\nreferencia de control es FICT-0002-18."
+            }
+          ]
+        },
+        {
+          "file_id": "file-S4GRaGBj58EnVB2m1FaS1Y",
+          "filename": "SIM0001_digital.pdf",
+          "score": 0.9733166032055465,
+          "content": [
+            {
+              "type": "text",
+              "text": "Cláusula 14. Conservación ordinaria\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Villa Jacaranda, folio SIM0001.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0001-14.\n\nCláusula 15. Servicios del inmueble\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Villa Jacaranda, folio SIM0001. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0001-15.\n\nCláusula 16. Autorizaciones previas\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Villa Jacaranda, folio SIM0001. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0001-16.\n\nPágina 4 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0001 | Arrendamiento ficticio | Villa Jacaranda\nPartes ficticias: Fernando León Franco y Fabián León Franco.\n\n\nCláusula 17. Constitución de garantía\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Villa Jacaranda, folio\nSIM0001. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0001-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 37 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Villa Jacaranda, folio SIM0001. Toda\nmodificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada.\nMientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones\nverbales contradictorias. La referencia de control es FICT-0001-18."
+            }
+          ]
+        },
+        {
+          "file_id": "file-S4GRaGBj58EnVB2m1FaS1Y",
+          "filename": "SIM0001_digital.pdf",
+          "score": 0.9731363872664173,
+          "content": [
+            {
+              "type": "text",
+              "text": "Página 4 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0001 | Arrendamiento ficticio | Villa Jacaranda\nPartes ficticias: Fernando León Franco y Fabián León Franco.\n\n\nCláusula 17. Constitución de garantía\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Villa Jacaranda, folio\nSIM0001. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0001-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 37 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Villa Jacaranda, folio SIM0001. Toda\nmodificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada.\nMientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones\nverbales contradictorias. La referencia de control es FICT-0001-18.\n\nCláusula 19. Deducciones documentadas\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Villa Jacaranda, folio SIM0001. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0001-19.\n\nCláusula 20. Entrega de llaves\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Villa Jacaranda, folio SIM0001. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0001-20.\n\nPágina 5 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0001 | Arrendamiento ficticio | Villa Jacaranda\nPartes ficticias: Fernando León Franco y Fabián León Franco."
+            }
+          ]
+        }
+      ],
+      "search_query": [
+        "¿En cuántos días regresan la garantía después de entregar las llaves para Villa Jacaranda?"
+      ],
+      "has_more": false
+    },
+    "request_id": "req_d9b71e09997948a787c3c46151e376e6",
+    "segundos": 1.0516313329862896,
+    "posicion_documento": 4,
+    "cita_normalizada_en_top5": true,
+    "cita_literal_en_top5": true
+  }
+}

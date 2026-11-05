@@ -1,0 +1,43 @@
+{
+  "object": "vector_store.file_content.page",
+  "data": [
+    {
+      "type": "text",
+      "text": "No text could be parsed from document 'SIM0152_escaneado.pdf' which contains 8 pages."
+    },
+    {
+      "type": "text",
+      "text": "<IMAGE FOR PAGE: 1 / 8>"
+    },
+    {
+      "type": "text",
+      "text": "<IMAGE FOR PAGE: 2 / 8>"
+    },
+    {
+      "type": "text",
+      "text": "<IMAGE FOR PAGE: 3 / 8>"
+    },
+    {
+      "type": "text",
+      "text": "<IMAGE FOR PAGE: 4 / 8>"
+    },
+    {
+      "type": "text",
+      "text": "<IMAGE FOR PAGE: 5 / 8>"
+    },
+    {
+      "type": "text",
+      "text": "<IMAGE FOR PAGE: 6 / 8>"
+    },
+    {
+      "type": "text",
+      "text": "<IMAGE FOR PAGE: 7 / 8>"
+    },
+    {
+      "type": "text",
+      "text": "<IMAGE FOR PAGE: 8 / 8>"
+    }
+  ],
+  "has_more": false,
+  "next_page": null
+}

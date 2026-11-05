@@ -1,0 +1,31 @@
+[
+  {
+    "caso": "Biblioteca vacía",
+    "resultado": "0 documentos y mensaje de colección vacía visibles."
+  },
+  {
+    "caso": "Archivo vacío",
+    "resultado": "Rechazo local visible; título, colección y archivo conservados; no comenzó indexación."
+  },
+  {
+    "caso": "Reintento TXT y título manual",
+    "resultado": "Indexación real: 1 página, 0 OCR, título manual conservado."
+  },
+  {
+    "caso": "Arrastre físico",
+    "resultado": "Fernando confirmó que se indexa al soltarlo.",
+    "procedencia": "Confirmación directa del usuario; no se presenta como arrastre automatizado."
+  },
+  {
+    "caso": "PDF por arrastre e indexación automática",
+    "resultado": "Después del arrastre nativo desde Finder se observó 04_prueba.pdf indexado, 1 página, 0 OCR y 2 documentos en la colección, sin pulsar Indexar."
+  },
+  {
+    "caso": "Error real de búsqueda",
+    "resultado": "API aislada detenida: aviso seguro, pregunta conservada, controles habilitados y Reintentar visible."
+  },
+  {
+    "caso": "Error de actualización, hallazgo inicial",
+    "resultado": "La alerta aparece, pero se pierden los datos visibles y el selector muestra un UUID. Se conserva esta evidencia antes de corregirlo."
+  }
+]

@@ -1,0 +1,614 @@
+[
+  {
+    "caso_id": "SIM0001-C01",
+    "archivo": "SIM0001_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18155,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0001-C09",
+    "archivo": "SIM0001_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18155,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0001-C13",
+    "archivo": "SIM0001_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18155,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0001-C18",
+    "archivo": "SIM0001_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18155,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0001-C21",
+    "archivo": "SIM0001_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18155,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0002-C09",
+    "archivo": "SIM0002_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18382,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0002-C13",
+    "archivo": "SIM0002_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18382,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0002-C18",
+    "archivo": "SIM0002_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18382,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0002-C21",
+    "archivo": "SIM0002_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18382,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0017-C09",
+    "archivo": "SIM0017_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18601,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0017-C13",
+    "archivo": "SIM0017_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18601,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0017-C18",
+    "archivo": "SIM0017_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18601,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0017-C21",
+    "archivo": "SIM0017_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18601,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0091-C09",
+    "archivo": "SIM0091_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18778,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0091-C13",
+    "archivo": "SIM0091_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18778,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0091-C18",
+    "archivo": "SIM0091_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18778,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0091-C21",
+    "archivo": "SIM0091_digital.pdf",
+    "formato": "digital",
+    "bloques": 16,
+    "caracteres": 18778,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0121-C01",
+    "archivo": "SIM0121_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0121-C09",
+    "archivo": "SIM0121_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0121-C13",
+    "archivo": "SIM0121_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0121-C18",
+    "archivo": "SIM0121_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0121-C21",
+    "archivo": "SIM0121_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0122-C09",
+    "archivo": "SIM0122_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0122-C13",
+    "archivo": "SIM0122_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0122-C18",
+    "archivo": "SIM0122_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0122-C21",
+    "archivo": "SIM0122_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0135-C09",
+    "archivo": "SIM0135_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0135-C13",
+    "archivo": "SIM0135_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0135-C18",
+    "archivo": "SIM0135_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0135-C21",
+    "archivo": "SIM0135_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0152-C09",
+    "archivo": "SIM0152_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0152-C13",
+    "archivo": "SIM0152_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0152-C18",
+    "archivo": "SIM0152_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0152-C21",
+    "archivo": "SIM0152_escaneado.pdf",
+    "formato": "escaneado",
+    "bloques": 9,
+    "caracteres": 269,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0161-C01",
+    "archivo": "SIM0161_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 12,
+    "caracteres": 9125,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0161-C09",
+    "archivo": "SIM0161_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 12,
+    "caracteres": 9125,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0161-C13",
+    "archivo": "SIM0161_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 12,
+    "caracteres": 9125,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0161-C18",
+    "archivo": "SIM0161_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 12,
+    "caracteres": 9125,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0161-C21",
+    "archivo": "SIM0161_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 12,
+    "caracteres": 9125,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0170-C09",
+    "archivo": "SIM0170_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 20,
+    "caracteres": 10438,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0170-C13",
+    "archivo": "SIM0170_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 20,
+    "caracteres": 10438,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0170-C18",
+    "archivo": "SIM0170_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 20,
+    "caracteres": 10438,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0170-C21",
+    "archivo": "SIM0170_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 20,
+    "caracteres": 10438,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0179-C09",
+    "archivo": "SIM0179_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 12,
+    "caracteres": 9553,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0179-C13",
+    "archivo": "SIM0179_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 12,
+    "caracteres": 9553,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0179-C18",
+    "archivo": "SIM0179_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 12,
+    "caracteres": 9553,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0179-C21",
+    "archivo": "SIM0179_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 12,
+    "caracteres": 9553,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0190-C09",
+    "archivo": "SIM0190_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 20,
+    "caracteres": 10343,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0190-C13",
+    "archivo": "SIM0190_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 20,
+    "caracteres": 10343,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0190-C18",
+    "archivo": "SIM0190_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 20,
+    "caracteres": 10343,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0190-C21",
+    "archivo": "SIM0190_mixto.pdf",
+    "formato": "mixto",
+    "bloques": 20,
+    "caracteres": 10343,
+    "cita_normalizada_en_un_bloque": false,
+    "cita_literal_en_un_bloque": false
+  },
+  {
+    "caso_id": "SIM0201-C01",
+    "archivo": "SIM0201_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16172,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0201-C09",
+    "archivo": "SIM0201_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16172,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0201-C13",
+    "archivo": "SIM0201_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16172,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0201-C18",
+    "archivo": "SIM0201_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16172,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0201-C21",
+    "archivo": "SIM0201_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16172,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0202-C09",
+    "archivo": "SIM0202_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16427,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0202-C13",
+    "archivo": "SIM0202_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16427,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0202-C18",
+    "archivo": "SIM0202_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16427,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0202-C21",
+    "archivo": "SIM0202_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16427,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0219-C09",
+    "archivo": "SIM0219_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16558,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0219-C13",
+    "archivo": "SIM0219_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16558,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0219-C18",
+    "archivo": "SIM0219_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16558,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0219-C21",
+    "archivo": "SIM0219_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16558,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0237-C09",
+    "archivo": "SIM0237_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16526,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0237-C13",
+    "archivo": "SIM0237_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16526,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0237-C18",
+    "archivo": "SIM0237_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16526,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  },
+  {
+    "caso_id": "SIM0237-C21",
+    "archivo": "SIM0237_txt.txt",
+    "formato": "txt",
+    "bloques": 1,
+    "caracteres": 16526,
+    "cita_normalizada_en_un_bloque": true,
+    "cita_literal_en_un_bloque": true
+  }
+]

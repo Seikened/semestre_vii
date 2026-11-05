@@ -1,0 +1,5 @@
+ colecciones | documentos | paginas | fragmentos 
+-------------+------------+---------+------------
+           1 |          6 |      12 |         12
+(1 row)
+

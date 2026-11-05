@@ -1,0 +1,703 @@
+{
+  "fecha": "2026-11-02T19:08:17.975173-06:00",
+  "comprobaciones": [
+    {
+      "nombre": "GET /salud: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "GET /documentos: HTTP 401",
+      "correcto": true,
+      "detalle": "HTTP 401"
+    },
+    {
+      "nombre": "Error seguro: ACCESO_DENEGADO",
+      "correcto": true,
+      "detalle": "Se requiere una API key válida."
+    },
+    {
+      "nombre": "POST /buscar: HTTP 422",
+      "correcto": true,
+      "detalle": "HTTP 422"
+    },
+    {
+      "nombre": "Error seguro: ENTRADA_INVALIDA",
+      "correcto": true,
+      "detalle": "Revisa los datos y formatos enviados."
+    },
+    {
+      "nombre": "POST /buscar: HTTP 422",
+      "correcto": true,
+      "detalle": "HTTP 422"
+    },
+    {
+      "nombre": "Error seguro: ENTRADA_INVALIDA",
+      "correcto": true,
+      "detalle": "Revisa los datos y formatos enviados."
+    },
+    {
+      "nombre": "GET /documentos: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Corpus inicial",
+      "correcto": true,
+      "detalle": "246 documentos activos"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-001_digital.pdf",
+      "correcto": true,
+      "detalle": "¿Cuándo se devuelve el depósito de la casa Aurora?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-002_escaneado.pdf",
+      "correcto": true,
+      "detalle": "¿Qué multa corresponde si se entrega tarde el departamento Bruma?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-003_mixto.pdf",
+      "correcto": true,
+      "detalle": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-004_digital.pdf",
+      "correcto": true,
+      "detalle": "¿Hasta qué monto puede autorizar reparaciones el administrador de Duna?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-005_escaneado.pdf",
+      "correcto": true,
+      "detalle": "¿Se recupera el apartado de Estela si hay problemas con los papeles de propiedad?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-006_mixto.pdf",
+      "correcto": true,
+      "detalle": "¿En qué horario puedo entrar a la oficina Faro?"
+    },
+    {
+      "nombre": "GET /documentos/7071e978-410b-4e07-938e-466d57db5fde: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: veinte por ciento al firmar",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/7071e978-410b-4e07-938e-466d57db5fde: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: 1500 pesos ficticios por día",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/7071e978-410b-4e07-938e-466d57db5fde: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: El mobiliario no forma parte de la operación",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/885b4ddd-4970-40d3-816e-85671c1f3414: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: sesenta días naturales de anticipación",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/885b4ddd-4970-40d3-816e-85671c1f3414: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: dos mensualidades de renta",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/2315c73d-609c-4902-b3c2-04c508f088d6: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: superficie de 320 metros cuadrados",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/2315c73d-609c-4902-b3c2-04c508f088d6: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: el apartado se devuelve íntegro",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/bf22195a-1e03-42fe-84b0-ef4f6014a37b: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: cuarenta y cinco días",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "POST /colecciones: HTTP 201",
+      "correcto": true,
+      "detalle": "HTTP 201"
+    },
+    {
+      "nombre": "POST /colecciones: HTTP 409",
+      "correcto": true,
+      "detalle": "HTTP 409"
+    },
+    {
+      "nombre": "Error seguro: COLECCION_DUPLICADA",
+      "correcto": true,
+      "detalle": "La colección ya existe."
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Colección vacía",
+      "correcto": true,
+      "detalle": "Sin resultados de otras colecciones"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Búsqueda texto",
+      "correcto": true,
+      "detalle": "2 coincidencias"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Búsqueda vector",
+      "correcto": true,
+      "detalle": "5 coincidencias"
+    },
+    {
+      "nombre": "GET /documentos/8055fc1e-0400-429f-8ae3-32a89f6f842f: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 422",
+      "correcto": true,
+      "detalle": "HTTP 422"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_VACIO",
+      "correcto": true,
+      "detalle": "El documento no contiene texto."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 415",
+      "correcto": true,
+      "detalle": "HTTP 415"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_FORMATO",
+      "correcto": true,
+      "detalle": "El archivo TXT debe usar UTF-8."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 415",
+      "correcto": true,
+      "detalle": "HTTP 415"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_FORMATO",
+      "correcto": true,
+      "detalle": "Solo se admiten PDF y TXT UTF-8."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 422",
+      "correcto": true,
+      "detalle": "HTTP 422"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_LECTURA",
+      "correcto": true,
+      "detalle": "El archivo PDF no se puede leer."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 413",
+      "correcto": true,
+      "detalle": "HTTP 413"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_TAMANO",
+      "correcto": true,
+      "detalle": "El archivo supera el límite de 10 MiB."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: COLECCION_NO_ENCONTRADA",
+      "correcto": true,
+      "detalle": "La colección no existe."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 201",
+      "correcto": true,
+      "detalle": "HTTP 201"
+    },
+    {
+      "nombre": "GET /documentos/141d42d7-cb8b-4fc1-9e3a-35a85a120f48/archivo: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "PATCH /documentos/141d42d7-cb8b-4fc1-9e3a-35a85a120f48: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Edición de título",
+      "correcto": true,
+      "detalle": "Contrato Olmo ficticio"
+    },
+    {
+      "nombre": "POST /documentos: HTTP 201",
+      "correcto": true,
+      "detalle": "HTTP 201"
+    },
+    {
+      "nombre": "SC001 vía carga HTTP",
+      "correcto": true,
+      "detalle": "Dos páginas escaneadas procesadas con OCR"
+    },
+    {
+      "nombre": "DELETE /documentos/141d42d7-cb8b-4fc1-9e3a-35a85a120f48: HTTP 204",
+      "correcto": true,
+      "detalle": "HTTP 204"
+    },
+    {
+      "nombre": "GET /documentos/141d42d7-cb8b-4fc1-9e3a-35a85a120f48: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "GET /documentos/141d42d7-cb8b-4fc1-9e3a-35a85a120f48/archivo: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "DELETE /documentos/b73404df-25e0-43ec-b93d-632ad02b4f8a: HTTP 204",
+      "correcto": true,
+      "detalle": "HTTP 204"
+    },
+    {
+      "nombre": "GET /documentos/b73404df-25e0-43ec-b93d-632ad02b4f8a: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "GET /documentos/b73404df-25e0-43ec-b93d-632ad02b4f8a/archivo: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Baja excluye búsqueda",
+      "correcto": true,
+      "detalle": "Colección sin documentos activos"
+    }
+  ],
+  "consultas": [
+    {
+      "consulta": "¿Cuándo se devuelve el depósito de la casa Aurora?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "f9fdeba1-a7c6-4638-8405-dcaff3110bb5",
+          "titulo": "FIC-001 digital",
+          "nombre_original": "FIC-001_digital.pdf",
+          "pagina": 2,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 3 Depósito en garantía: 12500 pesos ficticios. Se devuelve dentro de treinta días naturales después de entregar la vivienda, descontando daños documentados. Cláusula 4 Mascotas: se permite un gato doméstico. Queda prohibido subarrendar la vivienda sin autorización escrita. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "f9fdeba1-a7c6-4638-8405-dcaff3110bb5",
+          "titulo": "FIC-001 digital",
+          "nombre_original": "FIC-001_digital.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 1 Partes: Persona Alfa y Persona Beta, identidades inventadas. Inmueble: casa Aurora, calle Imaginaria 101, ciudad ficticia Puerto Claro. Cláusula 2 Renta mensual: 12500 pesos ficticios, pagaderos durante los primeros cinco días de cada mes. Plazo: doce meses desde el 1 de enero de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "8935c727-a551-459b-8e1b-0a20ed46b2db",
+          "titulo": "SIM0121 | Arrendamiento ficticio | Departamento Ópalo",
+          "nombre_original": "SIM0121_escaneado.pdf",
+          "pagina": 5,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0121 | Arrendamiento ficticio | Departamento Opalo Partes ficticias: Fernando León Franco y Fabián León Franco. Cláusula 17. Constitución de garantía Los avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que modifican. Este apartado corresponde a Departamento Ópalo, folio SIM0121. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0121-17. Cláusula 18. Devolución de garantía La garantía se devuelve dentro de 43 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este apartado corresponde a Departamento",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "bf22195a-1e03-42fe-84b0-ef4f6014a37b",
+          "titulo": "FIC-006 mixto",
+          "nombre_original": "FIC-006_mixto.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro Cláusula 3 Acceso: lunes a viernes de ocho a veinte horas. Las modificaciones eléctricas requieren autorización previa por escrito. Cláusula 4 Actualización de renta: cuatro por ciento al renovar. Depósito: dos mensualidades, con devolución dentro de cuarenta y cinco días después de la entrega. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "cd268aa9-25aa-48b3-968a-615045453cae",
+          "titulo": "SIM0230 | Compraventa ficticio | Unidad Jacaranda 230",
+          "nombre_original": "SIM0230_txt.txt",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "devuelve dentro de 54 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este apartado corresponde a Unidad Jacaranda 230, folio SIM0230. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0230-18. Cláusula 19. Deducciones documentadas. Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Jacaranda 230, folio SIM0230. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿Qué multa corresponde si se entrega tarde el departamento Bruma?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+          "titulo": "FIC-002 escaneado",
+          "nombre_original": "FIC-002_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+          "titulo": "FIC-002 escaneado",
+          "nombre_original": "FIC-002_escaneado.pdf",
+          "pagina": 1,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 1 Partes: Persona Gamma y Persona Delta, identidades inventadas. Inmueble: departamento Bruma, edificio ficticio Nube, unidad B-12. Cláusula 2 Precio: 2400000 pesos ficticios. Anticipo: veinte por ciento al firmar; saldo: ochenta por ciento al formalizar la operación. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "cc75c769-abd7-4693-a2ff-932f600ee838",
+          "titulo": "SIM0061 | Arrendamiento ficticio | Unidad Olmo 061",
+          "nombre_original": "SIM0061_digital.pdf",
+          "pagina": 6,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0061 | Arrendamiento ficticio | Unidad Olmo 061 Partes ficticias: Persona Cedente 061 del Archivo Imaginario y Persona Receptora 186 de Puerto Inventado. Cláusula 21. Terminación anticipada La terminación anticipada requiere aviso con 34 días naturales y una compensación de 2 mensualidades ficticias. No basta abandonar el inmueble. Este apartado corresponde a Unidad Olmo 061, folio SIM0061. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0061-21. Cláusula 22. Notificación de salida La entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "5625ec20-6a82-4e0e-a96e-734fde582e15",
+          "titulo": "SIM0205 | Arrendamiento ficticio | Unidad Olmo 205",
+          "nombre_original": "SIM0205_txt.txt",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Olmo 205, folio SIM0205. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0205-20. Cláusula 21. Terminación anticipada. La terminación anticipada requiere aviso con 64 días naturales y una compensación de 2 mensualidades ficticias. No basta abandonar el inmueble. Este apartado corresponde a Unidad Olmo 205, folio SIM0205. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "590d1786-e6f2-4a26-90bc-b37688428cd6",
+          "titulo": "SIM0229 | Arrendamiento ficticio | Unidad Olmo 229",
+          "nombre_original": "SIM0229_txt.txt",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Olmo 229, folio SIM0229. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0229-20. Cláusula 21. Terminación anticipada. La terminación anticipada requiere aviso con 80 días naturales y una compensación de 2 mensualidades ficticias. No basta abandonar el inmueble. Este apartado corresponde a Unidad Olmo 229, folio SIM0229. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+          "titulo": "FIC-003 mixto",
+          "nombre_original": "FIC-003_mixto.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 1 Partes: Persona Épsilon y Persona Zeta, identidades inventadas. Inmueble: local comercial Cedro, plaza ficticia Horizonte, local L-04. Cláusula 2 Renta mensual: 18000 pesos ficticios. El uso autorizado es una librería. El plazo es de veinticuatro meses a partir del 1 de marzo de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+          "titulo": "FIC-003 mixto",
+          "nombre_original": "FIC-003_mixto.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "df987c77-cce9-447b-ace7-8e78b7985659",
+          "titulo": "SIM0084 | Escritura simulada ficticio | Unidad Cobre 084",
+          "nombre_original": "SIM0084_digital.pdf",
+          "pagina": 6,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0084 | Escritura simulada ficticio | Unidad Cobre 084 Partes ficticias: Persona Cedente 084 del Archivo Imaginario y Persona Receptora 106 de Puerto Inventado. Cláusula 21. Terminación anticipada La terminación anticipada requiere aviso con 26 días naturales y una compensación de 1 mensualidades ficticias. No basta abandonar el inmueble. Este apartado corresponde a Unidad Cobre 084, folio SIM0084. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0084-21. Cláusula 22. Notificación de salida Los avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "4267ec60-9d9d-40e4-ba5b-76ed965d7c37",
+          "titulo": "SIM0130 | Compraventa ficticio | Unidad Coral 130",
+          "nombre_original": "SIM0130_escaneado.pdf",
+          "pagina": 6,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0130 | Compraventa ficticio | Unidad Coral 130 Partes ficticias: Persona Cedente 130 del Archivo Imaginario y Persona Receptora 187 de Puerto Inventado. Cláusula 21. Terminación anticipada La terminación anticipada requiere aviso con 77 días naturales y una compensación de 2 mensualidades ficticias. No basta abandonar el inmueble. Este apartado corresponde a Unidad Coral 130, folio SIM0130. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0130-21. Cláusula 22. Notificación de salida La revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas partes ficticias. Este apartado corresponde",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "6d94921b-2c31-427d-a09f-a7f8e82ae553",
+          "titulo": "SIM0017 | Arrendamiento ficticio | Unidad Nácar 017",
+          "nombre_original": "SIM0017_digital.pdf",
+          "pagina": 6,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0017 | Arrendamiento ficticio | Unidad Nácar 017 Partes ficticias: Persona Cedente 017 del Archivo Imaginario y Persona Receptora 119 de Puerto Inventado. Cláusula 21. Terminación anticipada La terminación anticipada requiere aviso con 81 días naturales y una compensación de 3 mensualidades ficticias. No basta abandonar el inmueble. Este apartado corresponde a Unidad Nácar 017, folio SIM0017. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0017-21. Cláusula 22. Notificación de salida La entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas.",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿Hasta qué monto puede autorizar reparaciones el administrador de Duna?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "fba0cafa-9230-405a-af60-abf439930ca9",
+          "titulo": "FIC-004 digital",
+          "nombre_original": "FIC-004_digital.pdf",
+          "pagina": 2,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-004 | Administración de propiedad Duna Cláusula 3 Reparaciones: el administrador puede autorizar gastos hasta 3000 pesos ficticios por evento. Los montos superiores requieren autorización escrita del propietario. Cláusula 4 Rescisión: cualquiera de las partes puede terminar el servicio con treinta días naturales de aviso. La entrega de llaves se registra mediante inventario. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.03278688524590164
+        },
+        {
+          "documento_id": "fba0cafa-9230-405a-af60-abf439930ca9",
+          "titulo": "FIC-004 digital",
+          "nombre_original": "FIC-004_digital.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-004 | Administración de propiedad Duna Cláusula 1 Partes: Persona Eta y Administración Umbral Ficticia. Inmueble: casa Duna, avenida Inventada 404, ciudad ficticia Puerto Claro. Cláusula 2 Comisión de administración: ocho por ciento de la renta efectivamente cobrada. El informe de ingresos y gastos se entrega el día diez de cada mes. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "92e59590-bdd6-48f8-8d15-d5229fcf0435",
+          "titulo": "SIM0159 | Administración ficticio | Unidad Álamo 159",
+          "nombre_original": "SIM0159_escaneado.pdf",
+          "pagina": 4,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0159 | Administración ficticio | Unidad Alamo 159 Partes ficticias: Persona Cedente 159 del Archivo Imaginario y Persona Receptora 149 de Puerto Inventado. Cláusula 13. Límite de reparaciones El límite de reparaciones sin autorización adicional es de 3000 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita. Este apartado corresponde a Unidad Álamo 159, folio SIM0159. Las partes conservarán una copia idéntica de este apartadoy cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0159-13. Cláusula 14. Conservación ordinaria Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Álamo 159, folio SIM0159.",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "7c141a0e-6ff5-4600-b358-f0807fd09997",
+          "titulo": "SIM0023 | Administración ficticio | Unidad Abedul 023",
+          "nombre_original": "SIM0023_digital.pdf",
+          "pagina": 4,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0023 | Administración ficticio | Unidad Abedul 023 Partes ficticias: Persona Cedente 023 del Archivo Imaginario y Persona Receptora 161 de Puerto Inventado. Cláusula 13. Límite de reparaciones El límite de reparaciones sin autorización adicional es de 3500 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita. Este apartado corresponde a Unidad Abedul 023, folio SIM0023. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0023-13. Cláusula 14. Conservación ordinaria Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Abedul 023, folio",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "7962f591-a612-4510-8674-408f2d68e3ec",
+          "titulo": "SIM0059 | Administración ficticio | Unidad Abedul 059",
+          "nombre_original": "SIM0059_digital.pdf",
+          "pagina": 4,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0059 | Administración ficticio | Unidad Abedul 059 Partes ficticias: Persona Cedente 059 del Archivo Imaginario y Persona Receptora 172 de Puerto Inventado. Cláusula 13. Límite de reparaciones El límite de reparaciones sin autorización adicional es de 2500 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita. Este apartado corresponde a Unidad Abedul 059, folio SIM0059. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0059-13. Cláusula 14. Conservación ordinaria Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Abedul 059, folio",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿Se recupera el apartado de Estela si hay problemas con los papeles de propiedad?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "2315c73d-609c-4902-b3c2-04c508f088d6",
+          "titulo": "FIC-005 escaneado",
+          "nombre_original": "FIC-005_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela Cláusula 3 Condición de devolución: el apartado se devuelve íntegro si la documentación de propiedad presenta inconsistencias antes del vencimiento. Cláusula 4 La reserva no transfiere la propiedad. La firma definitiva depende de verificar la documentación y del acuerdo de ambas partes. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "2315c73d-609c-4902-b3c2-04c508f088d6",
+          "titulo": "FIC-005 escaneado",
+          "nombre_original": "FIC-005_escaneado.pdf",
+          "pagina": 1,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela Cláusula 1 Partes: Persona Theta y Persona lota, identidades inventadas. Inmueble: terreno Estela, lote ficticio T-09, superficie de 320 metros cuadrados. Cláusula 2 Reserva: 25000 pesos ficticios por un plazo de quince días naturales, desde el 5 de abril de 2027. El precio de referencia es 850000 pesos ficticios. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "88eb5dc8-04c8-4243-b671-1269dea8a8fb",
+          "titulo": "SIM0052 | Escritura simulada ficticio | Unidad Ópalo 052",
+          "nombre_original": "SIM0052_digital.pdf",
+          "pagina": 5,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0052 | Escritura simulada ficticio | Unidad Ópalo 052 Partes ficticias: Persona Cedente 052 del Archivo Imaginario y Persona Receptora 123 de Puerto Inventado. Cláusula 17. Constitución de garantía Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Ópalo 052, folio SIM0052. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0052-17. Cláusula 18. Devolución de garantía La garantía se devuelve dentro de 69 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "1e27c04c-cc35-4675-8c0d-63be23e65b75",
+          "titulo": "SIM0136 | Escritura simulada ficticio | Unidad Ópalo 136",
+          "nombre_original": "SIM0136_escaneado.pdf",
+          "pagina": 5,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0136 | Escritura simulada ficticio | Unidad Opalo 136 Partes ficticias: Persona Cedente 136 del Archivo Imaginario y Persona Receptora 229 de Puerto Inventado. Cláusula 17. Constitución de garantía Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Ópalo 136, folio SIM0136. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0136-17. Cláusula 18. Devolución de garantía La garantía se devuelve dentro de 41 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "214721ea-df2b-4e57-a6d6-fd9f3536ae29",
+          "titulo": "SIM0064 | Escritura simulada ficticio | Unidad Ópalo 064",
+          "nombre_original": "SIM0064_digital.pdf",
+          "pagina": 5,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0064 | Escritura simulada ficticio | Unidad Ópalo 064 Partes ficticias: Persona Cedente 064 del Archivo Imaginario y Persona Receptora 207 de Puerto Inventado. Cláusula 17. Constitución de garantía Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Ópalo 064, folio SIM0064. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0064-17. Cláusula 18. Devolución de garantía La garantía se devuelve dentro de 45 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿En qué horario puedo entrar a la oficina Faro?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "bf22195a-1e03-42fe-84b0-ef4f6014a37b",
+          "titulo": "FIC-006 mixto",
+          "nombre_original": "FIC-006_mixto.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro Cláusula 3 Acceso: lunes a viernes de ocho a veinte horas. Las modificaciones eléctricas requieren autorización previa por escrito. Cláusula 4 Actualización de renta: cuatro por ciento al renovar. Depósito: dos mensualidades, con devolución dentro de cuarenta y cinco días después de la entrega. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "bf22195a-1e03-42fe-84b0-ef4f6014a37b",
+          "titulo": "FIC-006 mixto",
+          "nombre_original": "FIC-006_mixto.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro Cláusula 1 Partes: Persona Kappa y Persona Lambda, identidades inventadas. Inmueble: oficina Faro, torre ficticia Prisma, nivel 3, espacio O-16. Cláusula 2 Renta mensual: 22000 pesos ficticios. Plazo de doce meses desde el 1 de mayo de 2027. Se incluye un cajón de estacionamiento. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "981a6f75-763d-46ca-8c43-b2d2d70063e7",
+          "titulo": "SIM0047 | Administración ficticio | Unidad Abedul 047",
+          "nombre_original": "SIM0047_digital.pdf",
+          "pagina": 7,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0047 | Administración ficticio | Unidad Abedul 047 Partes ficticias: Persona Cedente 047 del Archivo Imaginario y Persona Receptora 088 de Puerto Inventado. Cláusula 25. Cesión a terceros No se permite ceder el uso del inmueble a terceros sin autorización escrita. Una visita temporal no constituye una cesión del acuerdo. Este apartado corresponde a Unidad Abedul 047, folio SIM0047. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0047-25. Cláusula 26. Modificaciones interiores Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Abedul 047, folio",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "24b2ecca-4aef-44f5-b10f-81a1f66c80e5",
+          "titulo": "SIM0167 | Administración ficticio | Unidad Abedul 167",
+          "nombre_original": "SIM0167_mixto.pdf",
+          "pagina": 7,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0167 | Administración ficticio | Unidad Abedul 167 Partes ficticias: Persona Cedente 167 del Archivo Imaginario y Persona Receptora 205 de Puerto Inventado. Cláusula 25. Cesión a terceros No se permite ceder el uso del inmueble a terceros sin autorización escrita. Una visita temporal no constituye una cesión del acuerdo. Este apartado corresponde a Unidad Abedul 167, folio SIM0167. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0167-25. Cláusula 26. Modificaciones interiores Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Abedul 167, folio",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "64fe75cc-a8df-4380-aded-66bdcde06f95",
+          "titulo": "SIM0079 | Administración ficticio | Unidad Encino 079",
+          "nombre_original": "SIM0079_digital.pdf",
+          "pagina": 7,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0079 | Administración ficticio | Unidad Encino 079 Partes ficticias: Persona Cedente 079 del Archivo Imaginario y Persona Receptora 071 de Puerto Inventado. Cláusula 25. Cesión a terceros No se permite ceder el uso del inmueble a terceros sin autorización escrita. Una visita temporal no constituye una cesión del acuerdo. Este apartado corresponde a Unidad Encino 079, folio SIM0079. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0079-25. Cláusula 26. Modificaciones interiores Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Encino 079, folio",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    }
+  ]
+}

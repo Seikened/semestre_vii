@@ -1,0 +1,21 @@
+   Building motor-documental @ file:///proyecto/backend
+warning: `build_system.requires = ["uv-build>=0.9,<0.13"]` does not contain the current uv version 0.13.6
+      Built motor-documental @ file:///proyecto/backend
+Uninstalled 1 package in 2ms
+Installed 1 package in 10ms
+Extraído: FIC-001_digital.pdf, métodos: ['texto', 'texto']
+Extraído: FIC-002_escaneado.pdf, métodos: ['ocr', 'ocr']
+Extraído: FIC-003_mixto.pdf, métodos: ['texto', 'ocr']
+Extraído: FIC-004_digital.pdf, métodos: ['texto', 'texto']
+Extraído: FIC-005_escaneado.pdf, métodos: ['ocr', 'ocr']
+Extraído: FIC-006_mixto.pdf, métodos: ['texto', 'ocr']
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8064.10it/s]
+Consulta: ¿Cuándo se devuelve el depósito de la casa Aurora? | fuente esperada en posición 1
+Consulta: ¿Qué multa corresponde si se entrega tarde el departamento Bruma? | fuente esperada en posición 1
+Consulta: ¿Qué debo pagar si desocupo antes de tiempo el local Cedro? | fuente esperada en posición 2
+Consulta: ¿Hasta qué monto puede autorizar reparaciones el administrador de Duna? | fuente esperada en posición 1
+Consulta: ¿Se recupera el apartado de Estela si hay problemas con los papeles de propiedad? | fuente esperada en posición 1
+Consulta: ¿En qué horario puedo entrar a la oficina Faro? | fuente esperada en posición 1
+Recall@5 del corpus ficticio: 1.000. Informe: /proyecto/docs/07_Evidencias/recuperacion_tesseract.json
+Controles de texto OCR: 8/8

@@ -1,0 +1,76 @@
+[
+  {
+    "caso": "Biblioteca vacía",
+    "resultado": "0 documentos y mensaje de colección vacía visibles."
+  },
+  {
+    "caso": "Archivo vacío",
+    "resultado": "Rechazo local visible; título, colección y archivo conservados; no comenzó indexación."
+  },
+  {
+    "caso": "Reintento TXT y título manual",
+    "resultado": "Indexación real: 1 página, 0 OCR, título manual conservado."
+  },
+  {
+    "caso": "Arrastre físico",
+    "resultado": "Fernando confirmó que se indexa al soltarlo.",
+    "procedencia": "Confirmación directa del usuario; no se presenta como arrastre automatizado."
+  },
+  {
+    "caso": "PDF por arrastre e indexación automática",
+    "resultado": "Se observó 04_prueba.pdf indexado, una página digital y dos documentos en la colección, sin pulsar Indexar. Fernando confirmó la indexación al soltar un archivo.",
+    "procedencia": "Resultado observado y confirmación del usuario; no se acredita como éxito de un gesto automatizado."
+  },
+  {
+    "caso": "Error real de búsqueda",
+    "resultado": "API aislada detenida: aviso seguro, pregunta conservada, controles habilitados y Reintentar visible."
+  },
+  {
+    "caso": "Error de actualización, hallazgo inicial",
+    "resultado": "La alerta aparece, pero se pierden los datos visibles y el selector muestra un UUID. Se conserva esta evidencia antes de corregirlo."
+  },
+  {
+    "caso": "Recuperación de búsqueda y biblioteca",
+    "resultado": "Al restablecer API y pulsar ambos Reintentar desaparecen las alertas, vuelve el nombre de colección y se recupera 01_valido.txt con su fuente."
+  },
+  {
+    "caso": "Búsqueda sin coincidencias",
+    "resultado": "Consulta textual inexistente: 0 fuentes, aviso Sin coincidencias y sugerencia de recuperación; sin error de servicio."
+  },
+  {
+    "caso": "Biblioteca corregida ante caída real",
+    "resultado": "En la versión compilada se conservan nombre de colección y 2 documentos, junto a la alerta de actualización fallida."
+  },
+  {
+    "caso": "Error en móvil",
+    "resultado": "Vista 390 por 700: mensaje de error, Reintentar apertura y Cerrar visibles; viewport restaurado."
+  },
+  {
+    "caso": "Detalle y recuperación",
+    "resultado": "Con API detenida se muestra error y Reintentar apertura. Tras restaurarla, el mismo botón carga título, páginas, edición y original sin recargar la web."
+  },
+  {
+    "caso": "Aviso obsoleto corregido",
+    "resultado": "En la versión corregida, reemplazar 02_vacio.txt por 01_valido.txt elimina tanto la alerta como el error de campo, conserva el título manual y mantiene el destino."
+  },
+  {
+    "caso": "PDF inválido rechazado por API",
+    "resultado": "Archivo de 50 bytes con extensión PDF: error del backend traducido a aviso seguro, título/colección/archivo conservados y botón Indexar habilitado para reintento."
+  },
+  {
+    "caso": "Reintento con PDF mixto",
+    "resultado": "Tras sustituir el PDF inválido se limpia el error. 05_mixto.pdf termina indexado con 2 páginas y 1 OCR; no se repitió la petición al tardar en aparecer el éxito."
+  },
+  {
+    "caso": "Procedencia del mixto",
+    "resultado": "Detalle nuevo muestra página 1 digital, página 2 OCR y la cláusula de salida anticipada con dos mensualidades y aviso de sesenta días."
+  },
+  {
+    "caso": "Consulta y original",
+    "resultado": "La búsqueda híbrida de Cedro devuelve 05_mixto.pdf, página 2 OCR, y el enlace abre el PDF original con #page=2."
+  },
+  {
+    "caso": "Límite de la automatización de arrastre",
+    "resultado": "No se logró observar la entrega de un arrastre múltiple ni un segundo arrastre durante carga. Esos gestos no se acreditan como ejecutados; la carga simple por arrastre fue confirmada por Fernando y se observó el PDF indexado."
+  }
+]

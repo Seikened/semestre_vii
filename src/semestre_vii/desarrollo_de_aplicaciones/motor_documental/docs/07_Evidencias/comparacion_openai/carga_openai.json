@@ -1,0 +1,1448 @@
+{
+  "corpus_sha256": "7862783a581a978e6d93e5eb75ec29c240475a58c940d6841c731d9b21377ae3",
+  "vector_store_id": "vs_6ae911da598c81918e58f3cd6138f3c6",
+  "archivos": [
+    {
+      "archivo": "SIM0001_digital.pdf",
+      "sha256": "334b66ec31cebc7d1bbc274d801334f663dd084632fe0a52408ee70d3630bda2",
+      "file_id": "file-S4GRaGBj58EnVB2m1FaS1Y",
+      "segundos": 1.6746266249974724
+    },
+    {
+      "archivo": "SIM0002_digital.pdf",
+      "sha256": "f3e53ae4ba18b8179b8e435dec4b920e0c350675672a8d28b0dac88eac4fc60e",
+      "file_id": "file-NL5zhf4b2K7cVYNwJVi6Er",
+      "segundos": 0.5174297500052489
+    },
+    {
+      "archivo": "SIM0003_digital.pdf",
+      "sha256": "440f4a7b32098ff0f2fd3242a4d5b7d32301458b07c17f34b37049b76c6d01fc",
+      "file_id": "file-8ng8reLWBQhRshEN5NZiCs",
+      "segundos": 0.8074399170000106
+    },
+    {
+      "archivo": "SIM0004_digital.pdf",
+      "sha256": "883f37162a00cedc25c72ff64a9e8581aa418ac29665ee5661e3920799d7bdc0",
+      "file_id": "file-DV8UzbDVE4LxM1qi5ZyRBz",
+      "segundos": 0.5012319580127951
+    },
+    {
+      "archivo": "SIM0005_digital.pdf",
+      "sha256": "4568eba6586c4c76820af011fb860010eb7aff008a8a855cf85e87b184895efd",
+      "file_id": "file-YY2fq89BiVCssBDEXMeiGa",
+      "segundos": 0.4732650840014685
+    },
+    {
+      "archivo": "SIM0006_digital.pdf",
+      "sha256": "92ded1a21db7c30854feb9ab82e23eb3219b57bfab3865a59a1f85772ad23543",
+      "file_id": "file-7DgrFswU7ptRwobr94ELia",
+      "segundos": 0.6478085840062704
+    },
+    {
+      "archivo": "SIM0007_digital.pdf",
+      "sha256": "901b8156db734b36baa88d26a878e3e7d6d05abcc6425857d3fa11f49e6df1f6",
+      "file_id": "file-6jqkR2xDejJMQDdNVpwdip",
+      "segundos": 0.5039415000064764
+    },
+    {
+      "archivo": "SIM0008_digital.pdf",
+      "sha256": "0a7f3a32217cdef98ec1928671f5e2f971515a1ca6d1f511dca4b11a1080f0ea",
+      "file_id": "file-LZRtJEPM36d3Gt4BqU6QQf",
+      "segundos": 0.8225451670004986
+    },
+    {
+      "archivo": "SIM0009_digital.pdf",
+      "sha256": "47361424736b91509ffc5e3708ceaa24a262d6242bd49781b5ff456d9e2c66b5",
+      "file_id": "file-734ZoLDuoALMna9rZY1vih",
+      "segundos": 0.6578198750212323
+    },
+    {
+      "archivo": "SIM0010_digital.pdf",
+      "sha256": "35f96b8e066d62328cf03ef8e915726eab04a1f607fc3fef8505d452a98402dd",
+      "file_id": "file-CdaxvHF6AnhVC1jDvxGsnt",
+      "segundos": 0.6028648749925196
+    },
+    {
+      "archivo": "SIM0011_digital.pdf",
+      "sha256": "c4bc3a13901e805de11b35788da6e8973d7b2028efc235d863191cc64a403d11",
+      "file_id": "file-LmeQedd7Q7dvF5eLUgF2za",
+      "segundos": 0.4443915419979021
+    },
+    {
+      "archivo": "SIM0012_digital.pdf",
+      "sha256": "d8a43b807aa9581603e0d2b46997b7babf7fb204b98368d67c61f4edd17a2291",
+      "file_id": "file-8TBKFhUw76FYZKqUhVaqAy",
+      "segundos": 0.46933183301007375
+    },
+    {
+      "archivo": "SIM0013_digital.pdf",
+      "sha256": "e072fab1288ff412e2e62af0628fce773d0fe0ee3a5b355f62f610bbf5670648",
+      "file_id": "file-T23Hrc3PnTeBXZsUehjk6Z",
+      "segundos": 0.6367554159951396
+    },
+    {
+      "archivo": "SIM0014_digital.pdf",
+      "sha256": "574886b446983b9af7194b9897e59d005828eb98256611ce0667ddc83cfada50",
+      "file_id": "file-CXqgkUufhZMdvGsVTVtsWr",
+      "segundos": 0.6646177920047194
+    },
+    {
+      "archivo": "SIM0015_digital.pdf",
+      "sha256": "ce231ee8e28c09935c2014c38b566f4c5c0b14b227d4b9642b93bffa804d96ba",
+      "file_id": "file-NBz94PFbukD5SpPhRzCeQK",
+      "segundos": 0.4694609160069376
+    },
+    {
+      "archivo": "SIM0016_digital.pdf",
+      "sha256": "dc7c07303b92796d02657d07ff6f60f7201d7bbf8cc867192e8f410f17a7e00c",
+      "file_id": "file-JKJfE333LGhpZq2YdHQqr1",
+      "segundos": 0.5734259999881033
+    },
+    {
+      "archivo": "SIM0017_digital.pdf",
+      "sha256": "928221d99181dc9dcc3792cfeb47c007ee221889737774993ae21bcd8b46528f",
+      "file_id": "file-PZ4zLG2PSdHzEBMN9JYEX6",
+      "segundos": 0.4731780420115683
+    },
+    {
+      "archivo": "SIM0018_digital.pdf",
+      "sha256": "b772498e323f28b7802c9b91d0d2c34d2db02772dd6570d0df22e23f65793370",
+      "file_id": "file-XGVN7CCDet1fRQqusK8HRS",
+      "segundos": 0.43631779102724977
+    },
+    {
+      "archivo": "SIM0019_digital.pdf",
+      "sha256": "5b7cdefb86e6c0d718bf8e9b1111395d9f5837ca6096ca8770ae68c1ac93a2e7",
+      "file_id": "file-FymCV26cfC22aCAd3bmQBC",
+      "segundos": 0.5138649579894263
+    },
+    {
+      "archivo": "SIM0020_digital.pdf",
+      "sha256": "2193b73b09e5117fbb93459f87bc19c24ea7cc748e1787f993aa9220cd96149d",
+      "file_id": "file-6MCZ7n39CUhmJT94iCD5LR",
+      "segundos": 0.7974567080091219
+    },
+    {
+      "archivo": "SIM0021_digital.pdf",
+      "sha256": "ff5d54a955521f58d64e2f6c6ca6ccf4316ae663017f396d6219a03fdf295ce7",
+      "file_id": "file-KSBFbCuyNu5rQYgti8nQkS",
+      "segundos": 0.7162906670127995
+    },
+    {
+      "archivo": "SIM0022_digital.pdf",
+      "sha256": "8318d3a2ebaacb8c4de9c488688b0659e0a330f83287713b2ec2241a46f42750",
+      "file_id": "file-JFRaHjtAFUFwjLSX5xgSpY",
+      "segundos": 0.46478629097691737
+    },
+    {
+      "archivo": "SIM0023_digital.pdf",
+      "sha256": "5285d84887b5393f693cb0d3cb065bd3396d9ca4df28a21b442dd09e5aaeeff0",
+      "file_id": "file-L75YvjYwfxn4oLUV6eErdh",
+      "segundos": 0.45171916601248085
+    },
+    {
+      "archivo": "SIM0024_digital.pdf",
+      "sha256": "56f77467aa5cada908c590b2bb50f96d60b2ef5d08cd9f759c0b35835ac47859",
+      "file_id": "file-QWs4VfhPmTXNgjyNqYCMyy",
+      "segundos": 0.6269967910193373
+    },
+    {
+      "archivo": "SIM0025_digital.pdf",
+      "sha256": "846643eebc2f16de5378688eb5bc6b2a0439bfe378bad7c19bf512d9c94b9e76",
+      "file_id": "file-DjmqC6iQ2KBXADsxi9sZLU",
+      "segundos": 0.7031530830136035
+    },
+    {
+      "archivo": "SIM0026_digital.pdf",
+      "sha256": "893ffc28fefa55fcacc29549fa269c1ece4f357416ffca8d7ba88f1d4e4f1c9b",
+      "file_id": "file-EqMXD4hL5iQ5XR3u5Y2Xmx",
+      "segundos": 0.44991645801928826
+    },
+    {
+      "archivo": "SIM0027_digital.pdf",
+      "sha256": "a95705461d2b150c20ec30c650101df1fd2aad61a081b9a6925b3232acd22818",
+      "file_id": "file-VBekMDfxPyTm1kJBoUswnq",
+      "segundos": 0.4879549579927698
+    },
+    {
+      "archivo": "SIM0028_digital.pdf",
+      "sha256": "afe65fea591189d8698f7ee1ae639a8b0ed14825534eedec1d66b355578346e3",
+      "file_id": "file-4QniaKbYGtL8tuG5r1Cymy",
+      "segundos": 0.952775957994163
+    },
+    {
+      "archivo": "SIM0029_digital.pdf",
+      "sha256": "90a63fabb09ab3b8cb38f754fec8743a8eb6d93ffa46a81033de240d67c9eb40",
+      "file_id": "file-GdhZupjx14TyAsLdMP69s1",
+      "segundos": 0.4497131249809172
+    },
+    {
+      "archivo": "SIM0030_digital.pdf",
+      "sha256": "ebdfe143b9d68f88af27bd0feb362bbc7b4821235bc8bb77cce293c52a46cc66",
+      "file_id": "file-PMmQcNf3qrYGR3vSPfP2Gy",
+      "segundos": 0.46683487499831244
+    },
+    {
+      "archivo": "SIM0031_digital.pdf",
+      "sha256": "a1d547296253055241273597257b1d152379f7a4b97ac75f4e46299f00ecc852",
+      "file_id": "file-T3LcA9gkWJKSeWo7PiuE9A",
+      "segundos": 0.47948112498852424
+    },
+    {
+      "archivo": "SIM0032_digital.pdf",
+      "sha256": "b83d1941fc36837cac16e575f433e33acfc753e273128467a842c0eb815c4157",
+      "file_id": "file-QkNJJFsthaAS4oXx4MWRXc",
+      "segundos": 0.7910032079962548
+    },
+    {
+      "archivo": "SIM0033_digital.pdf",
+      "sha256": "eb3e9e5ad08a80f4d74c011975b70eb76cd2924767047b0e625d81e5c934782c",
+      "file_id": "file-VuG85NPtxxvB1HHLAV89ZY",
+      "segundos": 0.48822966701118276
+    },
+    {
+      "archivo": "SIM0034_digital.pdf",
+      "sha256": "3cb0d7cde6a1a65c7156e01708117f62b6ad8a6b312c2852f45fcc0ca26f78af",
+      "file_id": "file-YJq2hgJpP7b1WiMDBP9Eov",
+      "segundos": 0.4936910830147099
+    },
+    {
+      "archivo": "SIM0035_digital.pdf",
+      "sha256": "1485c23f66eb136d38bb117be55528c8c20fcbfb6f18e35e7be0b3ff4c03a8d7",
+      "file_id": "file-3tTozqavPgjoCMdqS5XcUN",
+      "segundos": 0.6502396250143647
+    },
+    {
+      "archivo": "SIM0036_digital.pdf",
+      "sha256": "754bd3bbda5297e3f5f5e2e75bd78066e145c5b196630df8fc2c82a9c58cb17c",
+      "file_id": "file-VfYNBPnXrrX1Dxn3JdjLD6",
+      "segundos": 0.4520389170211274
+    },
+    {
+      "archivo": "SIM0037_digital.pdf",
+      "sha256": "7ca331a52fb5eccfe071cfcce24ebdce9e5feaedfc2f3c8701b51e58e74d0fa1",
+      "file_id": "file-4z2Q58Vi3qmN8XVsWko7cG",
+      "segundos": 0.6698099590139464
+    },
+    {
+      "archivo": "SIM0038_digital.pdf",
+      "sha256": "9c976553a8eb97107b9c785811e80245fb1cd3194198cfe3c85e65349f51ebd7",
+      "file_id": "file-N8Uk3az9SXZoLGSBBEeE3b",
+      "segundos": 0.48644737497670576
+    },
+    {
+      "archivo": "SIM0039_digital.pdf",
+      "sha256": "94e329ae194591565b0f632e184598c1281ba4785748d127dd7a98e6c705a7ad",
+      "file_id": "file-5nmTtuKrmfNMfkKmKubHPE",
+      "segundos": 0.6198808329936583
+    },
+    {
+      "archivo": "SIM0040_digital.pdf",
+      "sha256": "73a4f78859652b6e12a423c6407a4e31e42253f06e0a8f7f35d9b27695203ad6",
+      "file_id": "file-ChcMW5mgfBDUFkopC4vEQc",
+      "segundos": 0.5515132920118049
+    },
+    {
+      "archivo": "SIM0041_digital.pdf",
+      "sha256": "3abf204a153c0ac34710e0a4c601276182d9f024e1f436be6e747fe41795ec37",
+      "file_id": "file-EpYPeYxr3uz9mJWYSXmkZp",
+      "segundos": 0.4704921660013497
+    },
+    {
+      "archivo": "SIM0042_digital.pdf",
+      "sha256": "3f5e55bf83d4158f293879de17db0e9c67b1858496fcdd6e01115f1b857c7ccf",
+      "file_id": "file-CEG5ssGxRi37JVF9wkwj8V",
+      "segundos": 0.45591529199737124
+    },
+    {
+      "archivo": "SIM0043_digital.pdf",
+      "sha256": "c223d5d17219b1fc68459ec8468e013119175e136330dba6c47cc642603e1d8a",
+      "file_id": "file-KjKz3HjuD66CG4rpzWKFZr",
+      "segundos": 0.6933281249948777
+    },
+    {
+      "archivo": "SIM0044_digital.pdf",
+      "sha256": "a22434d296b2061160caabae070cf9e882b0de2b56da4990af98838f5ef76db7",
+      "file_id": "file-N3kZZgXc5watVGVZMKwBAt",
+      "segundos": 0.7014739169972017
+    },
+    {
+      "archivo": "SIM0045_digital.pdf",
+      "sha256": "7ed6ac03f02b12056ab00fc3d842e265b1115b0cbd5997646db89113019869f2",
+      "file_id": "file-2Vc3k1gx4paXBfbUvqUEyz",
+      "segundos": 0.4966011249925941
+    },
+    {
+      "archivo": "SIM0046_digital.pdf",
+      "sha256": "5a1d0cb2ec59ed0761069f30eebeaf66f89e1aa22161ec88b08651cbc7412701",
+      "file_id": "file-DsnAB9KMLKvCd2BXbGogwy",
+      "segundos": 0.5210034590272699
+    },
+    {
+      "archivo": "SIM0047_digital.pdf",
+      "sha256": "6c4946493cba46fbb0724ac3bb6d25bf74d14aaf6aa64ddad3aaae6c830de160",
+      "file_id": "file-LSqLhEqXdaNG6cQEjV1YrA",
+      "segundos": 0.6586932920035906
+    },
+    {
+      "archivo": "SIM0048_digital.pdf",
+      "sha256": "d56ae78015510a8d281979690014e89c99d2df1a9a72ec593ca249827ec1c445",
+      "file_id": "file-JSbCQM8iYLtJP5Xz4Lsi7g",
+      "segundos": 0.6829099159804173
+    },
+    {
+      "archivo": "SIM0049_digital.pdf",
+      "sha256": "57b9162bc666f4c8d8c66fe5e9a2a915a6f70dd240bf9652be070b1d46ea13b5",
+      "file_id": "file-VQUyR55yFr4AAoFLs4dQh5",
+      "segundos": 0.663560166984098
+    },
+    {
+      "archivo": "SIM0050_digital.pdf",
+      "sha256": "cd0b2ac014fad94011f4499d6b2189eece28f37d1f192967e4debfa11e8d1fbb",
+      "file_id": "file-AkEf6Zp41mTQZnddaaAEY2",
+      "segundos": 0.6367363329918589
+    },
+    {
+      "archivo": "SIM0051_digital.pdf",
+      "sha256": "835dc12db52a36f1bc4d5ca74dbe2964fbb7823ce9358d6b24d4eecd1ac39bf7",
+      "file_id": "file-5kXoN12EeKk9xjvkS5rgZV",
+      "segundos": 0.5559606660099234
+    },
+    {
+      "archivo": "SIM0052_digital.pdf",
+      "sha256": "145957aa6001138706cc9844f75f0772edb3a8e7984a9996fb7714b519035e95",
+      "file_id": "file-7axhWGT85WwXC2BnBZVX3H",
+      "segundos": 0.49291987498872913
+    },
+    {
+      "archivo": "SIM0053_digital.pdf",
+      "sha256": "ee9a5391fecbf24671bdf3ea588132c218d120d3e4ef5dd87f17fc9e8e99b744",
+      "file_id": "file-L74PrVfANE6YYUYUsAUpNi",
+      "segundos": 0.6060962500050664
+    },
+    {
+      "archivo": "SIM0054_digital.pdf",
+      "sha256": "209fe072d67cee0f0306794a0864f5cac3e3dc113b315ed7a50de24154a3d36d",
+      "file_id": "file-W6QXRa7Zrbfhf67cATq41X",
+      "segundos": 1.113794874981977
+    },
+    {
+      "archivo": "SIM0055_digital.pdf",
+      "sha256": "be8f1fc3774a343d6c52cfe6df80df71814937f01427d849d10e7440489b251e",
+      "file_id": "file-VvrWFKWy2UaiPScRePSoAh",
+      "segundos": 0.49726358300540596
+    },
+    {
+      "archivo": "SIM0056_digital.pdf",
+      "sha256": "0280e1c1c287ab692cb1163f45024e83ceb5fa3205f1488a4fdaadf4333792d6",
+      "file_id": "file-Fn6wc2MsgaWFntt3C8eVr2",
+      "segundos": 0.5552321250142995
+    },
+    {
+      "archivo": "SIM0057_digital.pdf",
+      "sha256": "2f340a619b5b6b130e149a077c6dd793f9e3fc4301bab4c663533f769276e808",
+      "file_id": "file-163Mrh4zu9iHZnUyvV6j5q",
+      "segundos": 0.5170527920126915
+    },
+    {
+      "archivo": "SIM0058_digital.pdf",
+      "sha256": "79c747e7b24163ca6af61160bec6f7ed88b1b74d7b1c4e54c8fafa9402f9cece",
+      "file_id": "file-RPi2JpLZY6MvZdHc2CPAAU",
+      "segundos": 0.46036708299652673
+    },
+    {
+      "archivo": "SIM0059_digital.pdf",
+      "sha256": "b83428af7a86f146e433a1650fd0ceb128a4f99a8e2dd6a95c796b384b781ae0",
+      "file_id": "file-A4RLNNdDH4K67erRycfrtM",
+      "segundos": 0.4270453329954762
+    },
+    {
+      "archivo": "SIM0060_digital.pdf",
+      "sha256": "3c23899fe45a1ec0101a34e7ae21e8fe0ac1cf99c382372db16eb4d27fa28fd3",
+      "file_id": "file-8b2r2noQyETwL71eHwmwcg",
+      "segundos": 0.5055647499975748
+    },
+    {
+      "archivo": "SIM0061_digital.pdf",
+      "sha256": "0095476aee6770860ac7fc6bc407d942216bfa1d992d15d44e1fd1ec09926971",
+      "file_id": "file-As3Pbvsiboc5K9zxWSfH3Z",
+      "segundos": 0.4833953329944052
+    },
+    {
+      "archivo": "SIM0062_digital.pdf",
+      "sha256": "4fb6b96f111105ad4d90df9e21e02018ebb4d3a3544a7f691acb7435f6d502c9",
+      "file_id": "file-EGioBpYUGaVQFpkBUdvKLG",
+      "segundos": 0.43165287500596605
+    },
+    {
+      "archivo": "SIM0063_digital.pdf",
+      "sha256": "45b1482337dd5a25098938d1e4f6761349e7a7a450f1a0d82ec50d208d0d9cdd",
+      "file_id": "file-1Ugum3PNcEbYiVHQVtVtZA",
+      "segundos": 0.6686737090058159
+    },
+    {
+      "archivo": "SIM0064_digital.pdf",
+      "sha256": "3db1541da362d762615ab1437341718fcc1e3e20d33f1eb033f8d02b44d60c22",
+      "file_id": "file-EV8atJvC4PYLXEFyxbSTUp",
+      "segundos": 0.4137843330099713
+    },
+    {
+      "archivo": "SIM0065_digital.pdf",
+      "sha256": "cbd1f45c9e74cba20762214fbe67b699c8b86654cb06e276d516e5e121f0166a",
+      "file_id": "file-CyzQGtazDdHUUWtkKVTTbq",
+      "segundos": 0.6366847500030417
+    },
+    {
+      "archivo": "SIM0066_digital.pdf",
+      "sha256": "43210b0f3162d7b9a352e1923e398233e5d51a649ae530d9e43a7a97d33364ae",
+      "file_id": "file-Jdpoz2JSzuwCU9gttSQfDt",
+      "segundos": 0.7261895000119694
+    },
+    {
+      "archivo": "SIM0067_digital.pdf",
+      "sha256": "239de7d1738a8520d8b6cddeb7d1c30f11bbbe145c844b59f106093eac355a23",
+      "file_id": "file-TxcAatXegKb4akK1TMa4zm",
+      "segundos": 0.4612520419759676
+    },
+    {
+      "archivo": "SIM0068_digital.pdf",
+      "sha256": "adb72b179a6414eda2b6663a725afd5f9ccb004a3e59612d827a31a6322c830e",
+      "file_id": "file-WLDcJKeZUWGm5mRRW4DwXe",
+      "segundos": 0.47167345898924395
+    },
+    {
+      "archivo": "SIM0069_digital.pdf",
+      "sha256": "6c19d5f58eea100922446f934f3160a72933992cec03212ac87f9ca47a848657",
+      "file_id": "file-VmM7hgRWdpenfkMUVu4EPR",
+      "segundos": 0.6676974160072859
+    },
+    {
+      "archivo": "SIM0070_digital.pdf",
+      "sha256": "880ed69a02faf11c90f7a2b1912282f6bf3b37b033c6473803230a69daab0447",
+      "file_id": "file-14UQ5qZvRJgFEVpYk6H4AC",
+      "segundos": 0.5098822909931187
+    },
+    {
+      "archivo": "SIM0071_digital.pdf",
+      "sha256": "ed99b2f93b3761a7241ccaaabd6ea30c1d40627702b03b438f4964b31ce2ba41",
+      "file_id": "file-5CUeZnB8bnrfUCz71zzoDU",
+      "segundos": 0.4495428749942221
+    },
+    {
+      "archivo": "SIM0072_digital.pdf",
+      "sha256": "cc487911b412f10d292059b207fe2f7c4bdebe54a2e992ebd5e4a2fa0206bb4c",
+      "file_id": "file-L47SdfnbFATzgzHkKA11m6",
+      "segundos": 1.104158041998744
+    },
+    {
+      "archivo": "SIM0073_digital.pdf",
+      "sha256": "012e2937be55dc6246c6ee2d45183853bb4926648acdd5506495faabd6c06063",
+      "file_id": "file-3pU3dQJQa9r1BcgCpdQgQq",
+      "segundos": 0.5307795830012765
+    },
+    {
+      "archivo": "SIM0074_digital.pdf",
+      "sha256": "5f9634d86b1ab55718ca77dea0d596a2021079af8470cced7d8d596009f1c4a7",
+      "file_id": "file-LXZzdYJy5hkv15Uz7mVNaT",
+      "segundos": 0.8120495000039227
+    },
+    {
+      "archivo": "SIM0075_digital.pdf",
+      "sha256": "966aaca44889054d5e82f51a98b8a2a78c541515f354011de69d7274f376ccee",
+      "file_id": "file-1abBne9WautBJJ5StELcks",
+      "segundos": 1.0507882499950938
+    },
+    {
+      "archivo": "SIM0076_digital.pdf",
+      "sha256": "b25e5d4fd783344bdb3a1d004e5e97dcec32ffb342d462078ac0bf0383c5f33a",
+      "file_id": "file-QPM4XjvC75ovE4GfpWJPKK",
+      "segundos": 0.4747871669824235
+    },
+    {
+      "archivo": "SIM0077_digital.pdf",
+      "sha256": "bc7c669d810668bb51a9a63bb99f1588bac553ce7fbd8ad83f8769d428e432d5",
+      "file_id": "file-K5cenvFim4vL6TMF9gdeHJ",
+      "segundos": 0.47316170801059343
+    },
+    {
+      "archivo": "SIM0078_digital.pdf",
+      "sha256": "a6b37def8af537d6e35e94f51df3b15a4c07e44acaf976220c0cdc6ea7ee1c11",
+      "file_id": "file-W6iUSveV5t7HeTzuMhBKnx",
+      "segundos": 0.625863166002091
+    },
+    {
+      "archivo": "SIM0079_digital.pdf",
+      "sha256": "70fa78b2340e7ea46c36ade3d2efbf0acae500cfa6678e2505d21328c53ce623",
+      "file_id": "file-HoqNXLSdEBgr1cNH8TcPLR",
+      "segundos": 0.6379719589895103
+    },
+    {
+      "archivo": "SIM0080_digital.pdf",
+      "sha256": "c5e780bdbc6e1ed7868d632dbea9b7001d9265e3635a9b5dc2c77d1140b79772",
+      "file_id": "file-1kE1T1mw4bKQhfi2aAYxi7",
+      "segundos": 0.8680333749798592
+    },
+    {
+      "archivo": "SIM0081_digital.pdf",
+      "sha256": "a4cfb213e525df200faa418a49a213a3bc1cc8141e6cd187124c24c93f0e7d8a",
+      "file_id": "file-E8YXCxdiG29YtPUfGoof84",
+      "segundos": 0.7470939170161728
+    },
+    {
+      "archivo": "SIM0082_digital.pdf",
+      "sha256": "c760f44d68485d87d0d7001d349a34d1d42ec239b7b8841ac86d5fa9d0aadd01",
+      "file_id": "file-Fa5WH3PBACsRH4RPc5VL1F",
+      "segundos": 0.4813537079899106
+    },
+    {
+      "archivo": "SIM0083_digital.pdf",
+      "sha256": "dc7f0153bbf347c89c8f180f160d26f9b534f6ad2769d0bb90cc5e5881b62f08",
+      "file_id": "file-4gdgL1NYX9r9cGFrWFmjhA",
+      "segundos": 0.7093346670153551
+    },
+    {
+      "archivo": "SIM0084_digital.pdf",
+      "sha256": "29223f03322d8965280ad3380cf4ac52fe10d41bfc55ab0763369b235d98055f",
+      "file_id": "file-66Qht39VTSXkGs5vkZaUBd",
+      "segundos": 0.7260505000012927
+    },
+    {
+      "archivo": "SIM0085_digital.pdf",
+      "sha256": "062bf8c28591ca9fffcc42e8e02301375b7cc128c931b4dddb643b6e183cb711",
+      "file_id": "file-L4D9upkZKxv1jKi5jpddi3",
+      "segundos": 0.44646287499926984
+    },
+    {
+      "archivo": "SIM0086_digital.pdf",
+      "sha256": "b832b4d2cd0312e436f135623f997444a22d840ba18f9269c5fc680a5fda965b",
+      "file_id": "file-69mzHXkLP9W9kHGMeKV3qv",
+      "segundos": 0.6578776669921353
+    },
+    {
+      "archivo": "SIM0087_digital.pdf",
+      "sha256": "9426020f43babe48b905db72544e3ce04c4f5ba31641e8a1ba7672585d2034f8",
+      "file_id": "file-668nK94472JAAaJdEEA7Nb",
+      "segundos": 0.644599624996772
+    },
+    {
+      "archivo": "SIM0088_digital.pdf",
+      "sha256": "72b1e27aea93e4bad63d3ed12dd56d099caf64b743a10abd14a7cce46ab1f4c8",
+      "file_id": "file-EmWK32Z2BNpoKwtcpJvEDx",
+      "segundos": 0.46974845899967477
+    },
+    {
+      "archivo": "SIM0089_digital.pdf",
+      "sha256": "3c19ee372ca8bff8f99cba30548b420b41525ad3de3c953fa7eee28bc05cdafe",
+      "file_id": "file-TzvvWMjVtdwZzZgCvnqSSJ",
+      "segundos": 0.46813175000716
+    },
+    {
+      "archivo": "SIM0090_digital.pdf",
+      "sha256": "8e7ea4ef565cebbc02c3d4008a68b430ccc745f200887e4d1c30ed520b663929",
+      "file_id": "file-E8R9EKHygg4JoBzZgVP2Qz",
+      "segundos": 0.4762094579928089
+    },
+    {
+      "archivo": "SIM0091_digital.pdf",
+      "sha256": "1702e644a944d582ae04fa336b4f7e20b6cfc67ead6512a65a25ad97b66fd9e3",
+      "file_id": "file-92FLrj75uNKcCtNiMUF3Dd",
+      "segundos": 0.7877750830084551
+    },
+    {
+      "archivo": "SIM0092_digital.pdf",
+      "sha256": "af9d8190f01bc5f1f8d6612f266622bfab972a843afcc3e79d6e481f7fb76504",
+      "file_id": "file-8cPz9PwJKkUKmXkeVgLrfT",
+      "segundos": 0.6472528330050409
+    },
+    {
+      "archivo": "SIM0093_digital.pdf",
+      "sha256": "fa4260cb9f0329a04c76fe8b0b02c56600eab602737808338ad644ce9ce5bbb8",
+      "file_id": "file-Xvt4Xp3gVH5Yqc4Tnx3zNo",
+      "segundos": 0.5366119999962393
+    },
+    {
+      "archivo": "SIM0094_digital.pdf",
+      "sha256": "c913fa224165c45691b0d39ae764c814ee45e87cd6ca2168c15c6b66c874ddd4",
+      "file_id": "file-MuYutzfzf2uKeEuc8JvvHz",
+      "segundos": 0.7001684170099907
+    },
+    {
+      "archivo": "SIM0095_digital.pdf",
+      "sha256": "5e19c342db37372cf640cffb2fa7f05bd09729e4f30baca3095f7d45e0ffb828",
+      "file_id": "file-Xd4iGFFdGkPtjYkQB8BoWg",
+      "segundos": 0.8294344579917379
+    },
+    {
+      "archivo": "SIM0096_digital.pdf",
+      "sha256": "9bee8fa17597f5c148ea02c33888c4fb66763f440c003e06a15355d8ad84de0e",
+      "file_id": "file-HJKiLvLZcHdu183DCqd6Jd",
+      "segundos": 0.453703332983423
+    },
+    {
+      "archivo": "SIM0097_digital.pdf",
+      "sha256": "3b815fcf0d8c5002db2ff952a99ec8eee95e59b098df9bf6c31ea236cc829470",
+      "file_id": "file-EeHoL54vx8yYT3RFS7f1ZW",
+      "segundos": 0.45436616698862053
+    },
+    {
+      "archivo": "SIM0098_digital.pdf",
+      "sha256": "e53404de1869fecf0586acb6262cf95f4b74658397a6d07ff097aaf005da77b1",
+      "file_id": "file-TUxvgv84oZzg3WK8zHh5f6",
+      "segundos": 0.45068050001282245
+    },
+    {
+      "archivo": "SIM0099_digital.pdf",
+      "sha256": "a2a1f41dd4d27266bef360f51b2eb70280af09da7847418a901a84b366e7ce92",
+      "file_id": "file-4FhGojrRqYeNVhFMY3AfZa",
+      "segundos": 0.48745995899662375
+    },
+    {
+      "archivo": "SIM0100_digital.pdf",
+      "sha256": "c170a1ccce8337e65809b8d493578c28dbbd521645f34fb08abd55dba8013088",
+      "file_id": "file-9aqe1BgdPXhTG8NcthqKHA",
+      "segundos": 0.4825727500137873
+    },
+    {
+      "archivo": "SIM0101_digital.pdf",
+      "sha256": "6400ef581d6abc53d4c0feb26bc21aa3f29dec3ebd7588048e111c8a677fde00",
+      "file_id": "file-E1Df4JDmcjEsAfeFq7EkSm",
+      "segundos": 0.4377607079804875
+    },
+    {
+      "archivo": "SIM0102_digital.pdf",
+      "sha256": "c6dea26b154564ae2bb5b2f92fb9ef9cf339b54a829ca3daf4fb044dfa03c616",
+      "file_id": "file-TePQ5a4dZ5Mx5cQvXFypcX",
+      "segundos": 0.4477290000068024
+    },
+    {
+      "archivo": "SIM0103_digital.pdf",
+      "sha256": "c4a1d01d37ccde72f8fc8a73630ccd79ef09428f5d0a2960de5e9702c41a33a1",
+      "file_id": "file-YKrmX2CvqukuBivk8PDXE5",
+      "segundos": 0.8352454169944394
+    },
+    {
+      "archivo": "SIM0104_digital.pdf",
+      "sha256": "4ade09bcb929986d73c8376b837cf61446396611ab5856cd7cb59dc707c29a8e",
+      "file_id": "file-DzJWN2GpsYgYwHDFJmPh8q",
+      "segundos": 0.7592177909973543
+    },
+    {
+      "archivo": "SIM0105_digital.pdf",
+      "sha256": "e1af30aca269d4b99b48c66cce1536bb162a4f8e592f1bcb65db0add3839ff95",
+      "file_id": "file-5SEFe5AiW8bwSNJDpud16b",
+      "segundos": 0.607056000008015
+    },
+    {
+      "archivo": "SIM0106_digital.pdf",
+      "sha256": "b65cc95ef1406e11ad916813fa7725f50f27782291d4163758559e43aec4119f",
+      "file_id": "file-6kpGt2N2RndvjVCKtFTyuW",
+      "segundos": 0.5930425419937819
+    },
+    {
+      "archivo": "SIM0107_digital.pdf",
+      "sha256": "6a7e57d6705f7724403c7e8cb16f373459b9a0ca008d71a58d0733a745de82ee",
+      "file_id": "file-F92GEP4xhjSW5rouAGmvxs",
+      "segundos": 0.5412640419963282
+    },
+    {
+      "archivo": "SIM0108_digital.pdf",
+      "sha256": "b60af08fe15b0fc0b6b95e4a03f5f9d45d9231dd7247acc576396740406f22f9",
+      "file_id": "file-DwA5WyRijFKJs5G3atZ2wn",
+      "segundos": 0.6447564580012113
+    },
+    {
+      "archivo": "SIM0109_digital.pdf",
+      "sha256": "bfa6b0cba7c85e25326592feb9e650341b7a65a8090db43c68287b854639aa4f",
+      "file_id": "file-93Ce5Haca5jsnzFCBGze4q",
+      "segundos": 0.528206290997332
+    },
+    {
+      "archivo": "SIM0110_digital.pdf",
+      "sha256": "61fd5eee50d1589d5aec8c20cc8a5aef0986cab50e07f57a91541951ed353be6",
+      "file_id": "file-CYDzTCvGtxeWSksFFmiCoG",
+      "segundos": 0.7544857920147479
+    },
+    {
+      "archivo": "SIM0111_digital.pdf",
+      "sha256": "442e204a2854efdc9bec0dcdc9ae6edabd7b475f6a876562d18c9988837b80d2",
+      "file_id": "file-Wr5AepbAFvjSqFmMKG3Gfg",
+      "segundos": 0.5333147500059567
+    },
+    {
+      "archivo": "SIM0112_digital.pdf",
+      "sha256": "9bed4787a3c147c3de3c4d30d26cbff41aed10e66d65a3e4a71961574efa56e8",
+      "file_id": "file-DbDnY9kMbm3JuMGtcF9Myt",
+      "segundos": 0.7769479170092382
+    },
+    {
+      "archivo": "SIM0113_digital.pdf",
+      "sha256": "6e9cc7fec446ce2fbce0d08536826df07f6983b58c38cc0c82abf32755e5c397",
+      "file_id": "file-SsxyrwgPjcRKbxdi6P6Jku",
+      "segundos": 0.709817416005535
+    },
+    {
+      "archivo": "SIM0114_digital.pdf",
+      "sha256": "a088736c650f32a3adc4ff636707987e972ed208b25e4cede7610369c82d77e6",
+      "file_id": "file-1YA9qk7dTX4Ybc6i7SJnnt",
+      "segundos": 0.5255574169859756
+    },
+    {
+      "archivo": "SIM0115_digital.pdf",
+      "sha256": "290d2eb790f3ab656844abaebbef09d39612d509e760759e6b52124bdd93bd8a",
+      "file_id": "file-XBTUmK4QjqxSSLT1itu6T3",
+      "segundos": 0.6350760839995928
+    },
+    {
+      "archivo": "SIM0116_digital.pdf",
+      "sha256": "59fe42c13e839b295d0b858757703a26852a112e5fa11af6c5cf7c0b2e7e5a5a",
+      "file_id": "file-PoZd4dYNCd9BrpPh2eycUc",
+      "segundos": 0.4626072500250302
+    },
+    {
+      "archivo": "SIM0117_digital.pdf",
+      "sha256": "0eb34d34ef774db82217d6d6266eedafc832ed796d1079b5effcd4a3af966e6b",
+      "file_id": "file-DXaozZoBn5wCa6Mh7ZSCaj",
+      "segundos": 0.45648208298371173
+    },
+    {
+      "archivo": "SIM0118_digital.pdf",
+      "sha256": "e57aee0afdaf8a6010d87d5e23b0aa309896a44f4f6158efb1a63f53add1fe7d",
+      "file_id": "file-BZQW3Yhqryg1hehifVh4Qq",
+      "segundos": 0.6628734169935342
+    },
+    {
+      "archivo": "SIM0119_digital.pdf",
+      "sha256": "5fabe07b478fdd65e4e57cfacca0a98875319747288feb806c4ab51b14a949a2",
+      "file_id": "file-6LY27LKD8iJ8fj6Khdv9L6",
+      "segundos": 0.6339320830011275
+    },
+    {
+      "archivo": "SIM0120_digital.pdf",
+      "sha256": "00674de94c3aca002e7bb349c20baf38772ee0bf4d210163df84938f5a5e361a",
+      "file_id": "file-RpP2PZcUZV8UAajqH1U6RU",
+      "segundos": 0.6982085419876967
+    },
+    {
+      "archivo": "SIM0121_escaneado.pdf",
+      "sha256": "f9f5735f6366184f770438a2ba09a69c52555ede85fa92a93ad2a8901fe13d88",
+      "file_id": "file-X9tocobmutcHu29zYvwUF2",
+      "segundos": 0.9279677919985261
+    },
+    {
+      "archivo": "SIM0122_escaneado.pdf",
+      "sha256": "e875b5427f5b85c59892f4c621378a97a99e8ad19c466901b782079e8b11fdbe",
+      "file_id": "file-JZe2hmCQuM8x2E7Kj8qg2q",
+      "segundos": 2.067160833015805
+    },
+    {
+      "archivo": "SIM0123_escaneado.pdf",
+      "sha256": "1a6f1f8175b66788f934bf7266aaea5083054d52f010b996bd6384813ad2ec4b",
+      "file_id": "file-XR2AZ7kDGb9c8HVur9kbSS",
+      "segundos": 0.9880678339977749
+    },
+    {
+      "archivo": "SIM0124_escaneado.pdf",
+      "sha256": "918197ac5cb208fa12fd52d5d400e5398c8a02c50bda9d69e7eb9415cd4914e2",
+      "file_id": "file-EDysnRnRcxvtBPEdxvfrsD",
+      "segundos": 1.2525235840003006
+    },
+    {
+      "archivo": "SIM0125_escaneado.pdf",
+      "sha256": "6e9b204493a739bcc58c359d5872a42aeb786e0b57313bf5bc85d404e65a3736",
+      "file_id": "file-JPj3KxVBvaK5EoYZqoXMfF",
+      "segundos": 0.8965166670095641
+    },
+    {
+      "archivo": "SIM0126_escaneado.pdf",
+      "sha256": "b7d086c9f66c26835a86e0daa5c7a51fc883d608889581efef76eb5c2732e0e8",
+      "file_id": "file-3bZjfutzZayLaRWH9JNLy8",
+      "segundos": 1.1373167080164421
+    },
+    {
+      "archivo": "SIM0127_escaneado.pdf",
+      "sha256": "97fc72a7128d42f26646d0d169d3ebed2e376332a54068376ae04b41e2baf4ab",
+      "file_id": "file-L2FicEKkSVW8dxzpGdYG52",
+      "segundos": 1.0006085420027375
+    },
+    {
+      "archivo": "SIM0128_escaneado.pdf",
+      "sha256": "2ec0654cb9ae492c2d58f2e4836a4608c6936e274606cd6bf067b5c59525a702",
+      "file_id": "file-DQYhDbMTyKHPvehsXGFLg6",
+      "segundos": 1.0225884579995181
+    },
+    {
+      "archivo": "SIM0129_escaneado.pdf",
+      "sha256": "f9b0bd426dcaf3daf1a1a17fc4a9269351533057060b34baaa8a15e0d5489283",
+      "file_id": "file-9T2D1gTD2NnzrQPArWR1Az",
+      "segundos": 0.8763909589906689
+    },
+    {
+      "archivo": "SIM0130_escaneado.pdf",
+      "sha256": "ea9f28b84ed000ba9b1b6db7bf3da2173d5f140d869893fe1d824fa7d16415d1",
+      "file_id": "file-GoCmJfVQMrxUmFADtD3ue8",
+      "segundos": 1.1841497909917962
+    },
+    {
+      "archivo": "SIM0131_escaneado.pdf",
+      "sha256": "188a29e989d4b252f569a652a348b03292ed2a3841368cf26deb06d4dc0f3aa5",
+      "file_id": "file-A2kMfvLRWXMJpZmptXzXtD",
+      "segundos": 0.9482823330035899
+    },
+    {
+      "archivo": "SIM0132_escaneado.pdf",
+      "sha256": "b9edc56bb7bd57569ba6c5855e5193fe70d0fd2af9fc6cb706b242a5ee314577",
+      "file_id": "file-FSUzoaHCQnBnEe6LHm3J4e",
+      "segundos": 1.3043298750126269
+    },
+    {
+      "archivo": "SIM0133_escaneado.pdf",
+      "sha256": "daec463b1317ee597f1cc7920a56c8c560f609a7aea2bce19fdf8f1b96e5ac3b",
+      "file_id": "file-6qzJ7ozjaWDH4fhqcsMKo1",
+      "segundos": 1.0119387909944635
+    },
+    {
+      "archivo": "SIM0134_escaneado.pdf",
+      "sha256": "0d178c3839a7c2b7b04694f0c93193bcaa8a2f78a02ea0275172125b0500bce4",
+      "file_id": "file-9pNui5Hbx9iP2vciu9pSPY",
+      "segundos": 0.697215583990328
+    },
+    {
+      "archivo": "SIM0135_escaneado.pdf",
+      "sha256": "3da5a26dfeb82fec2bd949c5538b8cbc7cbd1f930b4f0dd5d281d3b4fe711e36",
+      "file_id": "file-SzYyFBU6pJu8XdupqFqusR",
+      "segundos": 0.8291572919988539
+    },
+    {
+      "archivo": "SIM0136_escaneado.pdf",
+      "sha256": "aebd4b649a9de7153060c853138c0b57d1c3160762f3000a6d32ad57f8a09f94",
+      "file_id": "file-TLiRmdTUfv4Zv2tLGc9Uvx",
+      "segundos": 0.6018603340198752
+    },
+    {
+      "archivo": "SIM0137_escaneado.pdf",
+      "sha256": "6353044d2bd64bd6b4317ddda6b713681324cc84898ed03e52ef13a90330ed97",
+      "file_id": "file-23xSxoipkjV4kgKK8nkPNz",
+      "segundos": 1.776786375005031
+    },
+    {
+      "archivo": "SIM0138_escaneado.pdf",
+      "sha256": "dd91456c8beb9ed3dd0dd0f0e5f8d241c0cc3d4cdf58c959fbd2bcbb1df4e691",
+      "file_id": "file-NRUMnHvNQ7gzmBRfMoh4ph",
+      "segundos": 0.9461452910036314
+    },
+    {
+      "archivo": "SIM0139_escaneado.pdf",
+      "sha256": "7a448b02483b9678a344c86839cc0077cd174d7e11e63793f3240035b6a13963",
+      "file_id": "file-FjVDudDm6PVhUR1RKPkBiC",
+      "segundos": 0.6792679579812102
+    },
+    {
+      "archivo": "SIM0140_escaneado.pdf",
+      "sha256": "a6929d472915e02a7f24d16b9c159ba83ecba80ff0129593482d1747aea87eea",
+      "file_id": "file-JzuJPVcbqwTr6pD1TBYvp5",
+      "segundos": 1.015385000006063
+    },
+    {
+      "archivo": "SIM0141_escaneado.pdf",
+      "sha256": "a7620d28f008f4f434790e66a97939d6afa583c1af2926d3577f9fd5111ad2bf",
+      "file_id": "file-5cAjf8Ghj1MY1LpWV5Kwuc",
+      "segundos": 1.128190249990439
+    },
+    {
+      "archivo": "SIM0142_escaneado.pdf",
+      "sha256": "73a477b3ff4aea0f73ee288405e9120a658c69f73fbac59968b29912c9d5bbce",
+      "file_id": "file-Q7uXb9kCYK8W1EWfVoekJj",
+      "segundos": 1.00390716700349
+    },
+    {
+      "archivo": "SIM0143_escaneado.pdf",
+      "sha256": "169b1cdb68b7e08f6bc49922f1faa29734817cf323569054e168cf9a0f5bfbea",
+      "file_id": "file-MGEQ35E6gWQ3xw8uKDJ4oX",
+      "segundos": 0.9526824580098037
+    },
+    {
+      "archivo": "SIM0144_escaneado.pdf",
+      "sha256": "f447609bd7ad15467f444fb2c18d60f3afb43375077bfda4b46890d0d71e864b",
+      "file_id": "file-QMrs4bk5ox8Lkm7ARfbm3S",
+      "segundos": 0.6077223749889527
+    },
+    {
+      "archivo": "SIM0145_escaneado.pdf",
+      "sha256": "37ef21a744b57ce20445fc3a49fdc35341cb72739ce0b817c495f5e06f011acc",
+      "file_id": "file-PhuqZuDgF6gM7PH5cHmHum",
+      "segundos": 0.7462919169920497
+    },
+    {
+      "archivo": "SIM0146_escaneado.pdf",
+      "sha256": "8e8748d38cfdb2e91a72a9c85cb519a5ac29131d1daaad8c1c41df30f32a650f",
+      "file_id": "file-RkpbEgKUapcGFmJhvYygBg",
+      "segundos": 0.9185256249911617
+    },
+    {
+      "archivo": "SIM0147_escaneado.pdf",
+      "sha256": "2fea18edd2b33640bd3556a948b142444869b67d0fbaee2a29301c4f2356070a",
+      "file_id": "file-ViM5sZdAnZ38z1ouPZYb75",
+      "segundos": 1.270006167003885
+    },
+    {
+      "archivo": "SIM0148_escaneado.pdf",
+      "sha256": "c335ccff16dade496b986a780f14a52fc8ac25701ad70f03f4e3965c793de309",
+      "file_id": "file-8RFW7yeRmYZBMq7yJa897z",
+      "segundos": 1.1644158750132192
+    },
+    {
+      "archivo": "SIM0149_escaneado.pdf",
+      "sha256": "b5e0d122225535e3861427723b72a67caa8d5ff276db846c6c42b1c31e8a7462",
+      "file_id": "file-SHw6FQ2jXGb5d8rqmCVSUZ",
+      "segundos": 0.66171137499623
+    },
+    {
+      "archivo": "SIM0150_escaneado.pdf",
+      "sha256": "52ac36e98f6bcabed83b89f641cd068957c6ce9caee940a052ab4bface963315",
+      "file_id": "file-Q4shz4MnWDykmQMtWSXQv3",
+      "segundos": 1.087297124991892
+    },
+    {
+      "archivo": "SIM0151_escaneado.pdf",
+      "sha256": "99c52bdd0ab37f56e6a593a286aac8e81ad7e07a1fdcc3b5841e52435ed0defe",
+      "file_id": "file-MpUvjq2m3yAdiDXkijh7hu",
+      "segundos": 0.7056563340011053
+    },
+    {
+      "archivo": "SIM0152_escaneado.pdf",
+      "sha256": "1787ff71a2f0d36a41c77ae0e5d17e2fb9539567e6a0a9a49c33a7828a505914",
+      "file_id": "file-1GCSdjRqx1Gv6hheoGjEaV",
+      "segundos": 1.3648066669993568
+    },
+    {
+      "archivo": "SIM0153_escaneado.pdf",
+      "sha256": "1455595c25106c1b859266102b3184b0646d7702ae67a5884617ab23d3e8039b",
+      "file_id": "file-2wnZ5E3o9CQLuwmqJbj596",
+      "segundos": 0.8418745420058258
+    },
+    {
+      "archivo": "SIM0154_escaneado.pdf",
+      "sha256": "9a5021d12b1806ee4f5e09e25c40f91d41859f56c9b1643be42ea486667f636e",
+      "file_id": "file-WoNqCheCSpuwyde9GXhGtG",
+      "segundos": 1.0992758750217035
+    },
+    {
+      "archivo": "SIM0155_escaneado.pdf",
+      "sha256": "0f76a360b6e20421d983aa5791e67164742e155f32890d2e898f11f198cf91d5",
+      "file_id": "file-36XBM7dfkU1dX5CAue2Xgr",
+      "segundos": 1.1273738330055494
+    },
+    {
+      "archivo": "SIM0156_escaneado.pdf",
+      "sha256": "2402c62d12b73c0db35343c5b40de4c0a4927f37e9c393b4fd661da97fa9dc14",
+      "file_id": "file-13vdWPTbrgmFRyVpYqtjzF",
+      "segundos": 1.2529400420025922
+    },
+    {
+      "archivo": "SIM0157_escaneado.pdf",
+      "sha256": "ea0b9b8da39c4e0e7de1652f74884a77b4ad120b3f46db8e11770b72a2440283",
+      "file_id": "file-JbRtWgroA6eLLsC4a4Xa6b",
+      "segundos": 1.2957098750048317
+    },
+    {
+      "archivo": "SIM0158_escaneado.pdf",
+      "sha256": "86aaf8231b69923e274a12761d98d52f64d5ec10068d12512c6a7d30e15693d7",
+      "file_id": "file-HCD1nhf1EZGgN5iTEh8mb1",
+      "segundos": 1.5650431249814574
+    },
+    {
+      "archivo": "SIM0159_escaneado.pdf",
+      "sha256": "bbc3986061b1aaad5a26e5136f404c54037a3f5b06b05d2f7b5cc67fde45aaf0",
+      "file_id": "file-2eYcAe22wBVQf3M3NTAZpV",
+      "segundos": 1.1029927500057966
+    },
+    {
+      "archivo": "SIM0160_escaneado.pdf",
+      "sha256": "f1c954b13fa9bdc399654c6d9bfc8d0cc5e3e084eb2d413d8cee29515f9ca1d0",
+      "file_id": "file-PEXiBcWU2sJZKTUVf2rB1f",
+      "segundos": 0.9083057500247378
+    },
+    {
+      "archivo": "SIM0161_mixto.pdf",
+      "sha256": "2d4d78218709362e5ffb49ffab0d39a16cff6ac4c4ecef413801a1c8ff531c91",
+      "file_id": "file-Gapx3321NyRo5GnUULrNPK",
+      "segundos": 2.499778958997922
+    },
+    {
+      "archivo": "SIM0162_mixto.pdf",
+      "sha256": "03d7a66fdeedd38f34db2ded3c90979e9fc937e654a8b0302b48c89978e8f6c3",
+      "file_id": "file-KGKGKdCn79GJ6iMSaQUBSR",
+      "segundos": 0.7799454159976449
+    },
+    {
+      "archivo": "SIM0163_mixto.pdf",
+      "sha256": "4b79fa82d7ab6216596f6128b7e33facb8f7e7a63d23b1172a5199cbfa3c448e",
+      "file_id": "file-BRFjDSt9CGzY1KrJVBwK9t",
+      "segundos": 0.9339099999924656
+    },
+    {
+      "archivo": "SIM0164_mixto.pdf",
+      "sha256": "02f774350acd2e8349cc366c128473d4704415d277ef512138c5532faa2a8088",
+      "file_id": "file-Qvx3pDjwi5XzYNu8wEUmVc",
+      "segundos": 1.5942545419966336
+    },
+    {
+      "archivo": "SIM0165_mixto.pdf",
+      "sha256": "b4d5414e5037591edd305f206e7dff43dde26361e5cd31f0968203f4ba6efcdf",
+      "file_id": "file-LUwLZcNQ1a3DSXTAJksgsm",
+      "segundos": 0.6076635830104351
+    },
+    {
+      "archivo": "SIM0166_mixto.pdf",
+      "sha256": "adc9267da9136ae77e5227edd68fbfde1bf45e33204c7d13fcf711e9bdcf3575",
+      "file_id": "file-DFrLtPQ1jaW6vu88sVSfP1",
+      "segundos": 0.9725104579993058
+    },
+    {
+      "archivo": "SIM0167_mixto.pdf",
+      "sha256": "1e4d3b29110de79ee2f5f520c8c92c5c2e1f245288f38edcd6f26c08adbed014",
+      "file_id": "file-CtLuNGQHfTNmW94cnoesTe",
+      "segundos": 0.6126532919879537
+    },
+    {
+      "archivo": "SIM0168_mixto.pdf",
+      "sha256": "be5984ad636d683251940d8200dad429f481364ec38cdfe2d5293b18784da65e",
+      "file_id": "file-At2KkP6eASj62eoi14iDsi",
+      "segundos": 0.8644622919964604
+    },
+    {
+      "archivo": "SIM0169_mixto.pdf",
+      "sha256": "60a5dc0fe81e8f77fb5869905bf1e7c21f99ce37a813411909dd4e6b1a182ced",
+      "file_id": "file-6fkppbp9SCQqpi7x9p81ja",
+      "segundos": 0.7989452919864561
+    },
+    {
+      "archivo": "SIM0170_mixto.pdf",
+      "sha256": "e77a35017cb0140558e2ba35bd18fb3f605647d3476c7c0c19954b29ccc69967",
+      "file_id": "file-AYQXafYEwfesRkMv47qPMh",
+      "segundos": 1.6076761250151321
+    },
+    {
+      "archivo": "SIM0171_mixto.pdf",
+      "sha256": "1cf26277acce224e7a192d5fe8fe36409df1e3a22c20085d36bce721ffb3aa86",
+      "file_id": "file-LQuvpD1LEJsgYpmChgMaHR",
+      "segundos": 1.2387773329974152
+    },
+    {
+      "archivo": "SIM0172_mixto.pdf",
+      "sha256": "3ea734ffadd3019e5b46a266d1118a2fb297aee6d0e85824f041a53e6bbe7f96",
+      "file_id": "file-RcbhqrsCUC6Y6fgRHLMdWg",
+      "segundos": 0.6016868749866262
+    },
+    {
+      "archivo": "SIM0173_mixto.pdf",
+      "sha256": "b6431aef1083427bb6ebbbef55bcf25b11bde598a9dbe231fec832fa2a08e67a",
+      "file_id": "file-KqpFiPcjrfcvAiiNJhMh5z",
+      "segundos": 0.6364364580076654
+    },
+    {
+      "archivo": "SIM0174_mixto.pdf",
+      "sha256": "176792941d22976e6e3c22c9538a2a166f3b51526c63b05f2f4791bab6e0d227",
+      "file_id": "file-R9eCHpk1nWwk8d4bSQDS7f",
+      "segundos": 0.8901569579902571
+    },
+    {
+      "archivo": "SIM0175_mixto.pdf",
+      "sha256": "df4a16cc74c66429ead89712629be5b94c51df55954e26a961591930fa05a207",
+      "file_id": "file-Lt4J1RZdF9jHtYpXTY9NjJ",
+      "segundos": 0.5941507919924334
+    },
+    {
+      "archivo": "SIM0176_mixto.pdf",
+      "sha256": "b6bde1f6e4dd43d50622d1fa6169bd72162fb38d42908a9dbd800efa37ac6ec9",
+      "file_id": "file-7V4sZp2WkmXdFVixPTRB2j",
+      "segundos": 1.120761666999897
+    },
+    {
+      "archivo": "SIM0177_mixto.pdf",
+      "sha256": "1c635b1253772c843db2e5d457d8bee18c7b46231ece9f4c6e9e33a3f858aab7",
+      "file_id": "file-5RNnapBVjN8V9PGQrHPb1c",
+      "segundos": 1.2475013750081416
+    },
+    {
+      "archivo": "SIM0178_mixto.pdf",
+      "sha256": "bfe96ac0bf3d576e2cb046e5d4023156341f904d3788cbcddfc3749f24378a0d",
+      "file_id": "file-A6NzxrcFUyPNbAksnTiBmc",
+      "segundos": 0.6293008329812437
+    },
+    {
+      "archivo": "SIM0179_mixto.pdf",
+      "sha256": "262b1fdcb4f229366a8206b502275657410edf231a2160890be4af648e231b38",
+      "file_id": "file-Snis9gUbi8rF43cXx5xkJV",
+      "segundos": 0.82499733302393
+    },
+    {
+      "archivo": "SIM0180_mixto.pdf",
+      "sha256": "dc7341a99492444f5bbb4e278b0efb4f0c339561e727714c01ca0fcc73de4d3f",
+      "file_id": "file-XmpZS4z7WW3NQwyU2VPvKk",
+      "segundos": 1.2611893330176827
+    },
+    {
+      "archivo": "SIM0181_mixto.pdf",
+      "sha256": "c88c01a069776510f6208447170cde812d8a137a08c234fa9336c716d0b302f6",
+      "file_id": "file-X1wfThfWTGcHPfCuhzayqG",
+      "segundos": 0.6189994169981219
+    },
+    {
+      "archivo": "SIM0182_mixto.pdf",
+      "sha256": "a1e6527082fff14fae0b8ec23234a95f2b8c65c0c6509e5d94b971ac374e4735",
+      "file_id": "file-Uxy14zyJoL7C3NXRMpbRx2",
+      "segundos": 1.100498542014975
+    },
+    {
+      "archivo": "SIM0183_mixto.pdf",
+      "sha256": "a0b59a8f6f9ca9b42778e175873188ddcdad786206381be12b1bae437c0ae6cb",
+      "file_id": "file-Afd38w89NW6FoFDqoRUieZ",
+      "segundos": 0.7750627500063274
+    },
+    {
+      "archivo": "SIM0184_mixto.pdf",
+      "sha256": "37e84ed20dd031075522b52ae8693bafa7de4fbbef94d084f4966f691b1a1617",
+      "file_id": "file-PHeN1JqDjmL3vU3ZrW4sv9",
+      "segundos": 0.6751563330180943
+    },
+    {
+      "archivo": "SIM0185_mixto.pdf",
+      "sha256": "25f258d686b57a2a1f9500a8e4a12e91fa4fe84e9caaf1dcf56dff46a7ac1cc6",
+      "file_id": "file-Mk4MTv3MLcxEgj4TG1Bdhz",
+      "segundos": 0.9020498750032857
+    },
+    {
+      "archivo": "SIM0186_mixto.pdf",
+      "sha256": "856a176c92dec9bf71915f57936ea12a6eeaa09c5b337ad4e67c0637b204b793",
+      "file_id": "file-QJhdDzqWc4ziYAmDHfLrXg",
+      "segundos": 1.0810356670117471
+    },
+    {
+      "archivo": "SIM0187_mixto.pdf",
+      "sha256": "2fcc3e024ebededf448ea8f342b36ee1f91a5558e08c72cb631a5602d99d2b58",
+      "file_id": "file-4uyManWQBcgp8wH8roJCpY",
+      "segundos": 0.9155399169831071
+    },
+    {
+      "archivo": "SIM0188_mixto.pdf",
+      "sha256": "fcbc90b47aee120ed6b5dcb8e85a67b9dccd2c72acf286b92fd47279fd8260d9",
+      "file_id": "file-5tAn9R9yru63BrXuf5efzi",
+      "segundos": 0.9098045419959817
+    },
+    {
+      "archivo": "SIM0189_mixto.pdf",
+      "sha256": "3bf0818cbdf558b2e7d71b942d5cea3f762a02b1a440ed0a8c58450e6dfe65fd",
+      "file_id": "file-Qxg2JGQiAJGsJn7MY8BW2c",
+      "segundos": 0.715898833994288
+    },
+    {
+      "archivo": "SIM0190_mixto.pdf",
+      "sha256": "c3055ff52754161e12abc38f0d6e28c22d80a881d9cf06b9f1073275dcaf39e1",
+      "file_id": "file-36p1RGQ66str7TABCJy8ZU",
+      "segundos": 0.9194094580016099
+    },
+    {
+      "archivo": "SIM0191_mixto.pdf",
+      "sha256": "d524c651bbcf4e073ae79709578ccb5100f351f7319d80dfd6c636db053250d5",
+      "file_id": "file-2wL4jJozAb69CzECZcfabM",
+      "segundos": 0.8153499590116553
+    },
+    {
+      "archivo": "SIM0192_mixto.pdf",
+      "sha256": "02b4934a0929ef445257a4a084a4dad7e0f2e8910407cc88d6d1696303b77b7e",
+      "file_id": "file-1pGrhgj64CmiwxdqHfch2J",
+      "segundos": 0.955432416027179
+    },
+    {
+      "archivo": "SIM0193_mixto.pdf",
+      "sha256": "c7df49875e5b9438518dccadd97ddd6fe7036a051fd73ab4803a487ffd1a6f70",
+      "file_id": "file-DWmsXmEJDfsTe2YVP2dG8V",
+      "segundos": 2.8578216249879915
+    },
+    {
+      "archivo": "SIM0194_mixto.pdf",
+      "sha256": "f4ca3478ef06b1da8b8b47607f2fca9a4a29c171c2d2ca2d991a6f439b0bb5fa",
+      "file_id": "file-9nAe75R5Mzdahy2SABLodY",
+      "segundos": 0.9920724589901511
+    },
+    {
+      "archivo": "SIM0195_mixto.pdf",
+      "sha256": "935ca4d1a49d57831b6aa95377fb6fd629dfa82a115aa6276511cbba7495d9c2",
+      "file_id": "file-JG8psDhbTERhgs4fhor5Nb",
+      "segundos": 0.6489304169954266
+    },
+    {
+      "archivo": "SIM0196_mixto.pdf",
+      "sha256": "3a3b36e54520e8f3f3d0de1a2d16db8b12d09d868526dd055baf21cf29e34ccf",
+      "file_id": "file-L6Sm1TeCE23NnNU4ec7FBp",
+      "segundos": 0.6744870420079678
+    },
+    {
+      "archivo": "SIM0197_mixto.pdf",
+      "sha256": "f4f7a55e563df3952ceb0dc4bf8bafde517fa2f16d260acf59dbd514232a9433",
+      "file_id": "file-6Zgnfzf3NeDzgXsaWXLACm",
+      "segundos": 0.585452625004109
+    },
+    {
+      "archivo": "SIM0198_mixto.pdf",
+      "sha256": "6605ecb3c710340c9fa168379c063c37f639df075a0a1548d349ff626c196f91",
+      "file_id": "file-PzNMoyY7oAMV4w6VKqF1mh",
+      "segundos": 0.8686283330025617
+    },
+    {
+      "archivo": "SIM0199_mixto.pdf",
+      "sha256": "53d18cd57769ff9529a019ab4c68f7627522d03eb9ba42ec24629a565a744e86",
+      "file_id": "file-4Di3vBRnL4zGxoxevShTWA",
+      "segundos": 0.9069615420012269
+    },
+    {
+      "archivo": "SIM0200_mixto.pdf",
+      "sha256": "eb62c1c405dd8ec5c2d537f2ec74c381f4a4bfa8e56b6cf86d5b165852c09a05",
+      "file_id": "file-8J45Gsccu4xWz7EiT8bWJr",
+      "segundos": 0.6268541669996921
+    },
+    {
+      "archivo": "SIM0201_txt.txt",
+      "sha256": "73451672c8e9fd58f16e05807bbaf8a7a86d3b9090dddf22888d0c62574c24a1",
+      "file_id": "file-BokYd3AN1wNNuBK44z3waE",
+      "segundos": 0.3834773749986198
+    },
+    {
+      "archivo": "SIM0202_txt.txt",
+      "sha256": "0c7840f0cff76294434d774028c94cbdde3d902639f35f96c2b91bc253bf6fda",
+      "file_id": "file-BBom3eGtvbt1bV8MJeeX1G",
+      "segundos": 0.6989477500028443
+    },
+    {
+      "archivo": "SIM0203_txt.txt",
+      "sha256": "b724cd338ea76c2d5bce621c33a5ec4eab44b3f92723a7bcdbba50508d63812e",
+      "file_id": "file-JdnZEqRVMh5Vph9FPQi2jh",
+      "segundos": 0.4255738749925513
+    },
+    {
+      "archivo": "SIM0204_txt.txt",
+      "sha256": "f79e97b75cc157cccfbe9ec71d5a3e6ff0e78a71d7e732296cd329abb9f19ecd",
+      "file_id": "file-5jaF2RFXxgn2C15FhGmRGe",
+      "segundos": 0.5839209170080721
+    },
+    {
+      "archivo": "SIM0205_txt.txt",
+      "sha256": "5581d3ff351ebfe0e771b149c70ec1454174e55ee2e43dc2f5320cb7f2c60e00",
+      "file_id": "file-ABakuDsghGcrqN7x4Zi5oR",
+      "segundos": 0.40819362498587
+    },
+    {
+      "archivo": "SIM0206_txt.txt",
+      "sha256": "f7d3525bdfcb407221a6b3664753171768fc712fe08cfe47f45557199a547573",
+      "file_id": "file-GmatFuVGZETqYQ5PupuZjc",
+      "segundos": 0.45793020800920203
+    },
+    {
+      "archivo": "SIM0207_txt.txt",
+      "sha256": "1436da8d5e43d30235c2947b797121f78154c066eb714033dfbccac93d188c1e",
+      "file_id": "file-TdMsS5GAsejUKmdpYU8UPM",
+      "segundos": 0.5999424170004204
+    },
+    {
+      "archivo": "SIM0208_txt.txt",
+      "sha256": "59fb3ab50d5b4917e29d1656553ee002499a155428484aefdeeb53e8e314a6e8",
+      "file_id": "file-Pm4jeqCDA3Hvhzdz966wsa",
+      "segundos": 0.44447758299065754
+    },
+    {
+      "archivo": "SIM0209_txt.txt",
+      "sha256": "a2756b82c8c5913106d7a8ee35774b9c98ee4be3066cb5f1603c80996602b7c1",
+      "file_id": "file-G46cXvystHyx5xpTifDdyd",
+      "segundos": 0.6592210840026382
+    },
+    {
+      "archivo": "SIM0210_txt.txt",
+      "sha256": "0a77817a2a4d2a49470e2409ee89a2aefef503ec77ce49d4d847168de1f120b8",
+      "file_id": "file-CxDNmsmqkeAGvi2EisJ6FM",
+      "segundos": 0.3666786669928115
+    },
+    {
+      "archivo": "SIM0211_txt.txt",
+      "sha256": "3fed7641e922c4658020ed765a499a5742e3fe4549c49aa10aa133927c61fbfb",
+      "file_id": "file-BJ6BBTYveYp8fBtEpciVFL",
+      "segundos": 0.7238285419880413
+    },
+    {
+      "archivo": "SIM0212_txt.txt",
+      "sha256": "b06c40fd7296f7ee176e06c5e0f58f3ecc19973d329673a99b538f21b9f29836",
+      "file_id": "file-V1z59iUGDaohZWBzWferHy",
+      "segundos": 0.4497145420173183
+    },
+    {
+      "archivo": "SIM0213_txt.txt",
+      "sha256": "be973f942e81271d73ad062e3fbadadedaa23152d9726123c0d7e828310dedc1",
+      "file_id": "file-NVexxvDN9peTWaYfewv3YJ",
+      "segundos": 0.5604095839953516
+    },
+    {
+      "archivo": "SIM0214_txt.txt",
+      "sha256": "de1e523924ebc83e8c9368c513897d3af68626af1b37d2f39aeb7a4e87b4f09a",
+      "file_id": "file-CfgW1uFgUAbvqXieqf8AD6",
+      "segundos": 0.5775655419856776
+    },
+    {
+      "archivo": "SIM0215_txt.txt",
+      "sha256": "a629244116f078f42b3bb3d0293f64a5353a7cf0fb391de19d841dbd30341a34",
+      "file_id": "file-7anAEsdDLrx95PhV9tqShK",
+      "segundos": 0.8360704579972662
+    },
+    {
+      "archivo": "SIM0216_txt.txt",
+      "sha256": "c9dde72664da36734bf38c38dc747ac2cb6a25b8e85e17b0960d5340e626e191",
+      "file_id": "file-Mfq8Yrf7AK1PFzV2EEN16d",
+      "segundos": 0.5341652499919292
+    },
+    {
+      "archivo": "SIM0217_txt.txt",
+      "sha256": "87d5f897bd0f4ad6b634ce959a009c3e9eb49bad9e18c42d31834b367b86cf27",
+      "file_id": "file-BzQ6Pz32Hqnc9ZjZu7r3AA",
+      "segundos": 0.7658745840017218
+    },
+    {
+      "archivo": "SIM0218_txt.txt",
+      "sha256": "bfe07eb49740d568679a8437efcec695c0336ed3788cbbea1aaf9c4c5940f8bf",
+      "file_id": "file-GN9n4mhGnnqezDoKbDBnXR",
+      "segundos": 0.40566037499229424
+    },
+    {
+      "archivo": "SIM0219_txt.txt",
+      "sha256": "aa950c8dff3e1f1d137e139bf0fe3c2e1c732732f6dc227d3532c6bc59450474",
+      "file_id": "file-CRHn16jdEo5d6NFzQYbzUG",
+      "segundos": 0.4383024580019992
+    },
+    {
+      "archivo": "SIM0220_txt.txt",
+      "sha256": "11f18331ddf84fec56d9e44023b7d18922373ea2316db97da1a70c73ed699835",
+      "file_id": "file-JxLLYyPUcH6rEJp3T6www8",
+      "segundos": 0.7284662500023842
+    },
+    {
+      "archivo": "SIM0221_txt.txt",
+      "sha256": "8beb6df77d260d0eacf579b6a6beefce2c323d5f333efbe5a075fa0ec0e137bc",
+      "file_id": "file-GTYHevjYwMq8z6uXccWxVG",
+      "segundos": 0.3907662910060026
+    },
+    {
+      "archivo": "SIM0222_txt.txt",
+      "sha256": "3b9742356c87744ec3825858c7a1a63532fa091c10ff31d8c2b2473e1818285b",
+      "file_id": "file-HEtrHCmSYa38qas91uBb29",
+      "segundos": 0.567056041007163
+    },
+    {
+      "archivo": "SIM0223_txt.txt",
+      "sha256": "2965bc5e11edb8ac52c955920ee61ad0bdd78bba4ab1275cb8dedac452281565",
+      "file_id": "file-HeVKD3CDTDpWQ17Apj7HWr",
+      "segundos": 0.39547812499222346
+    },
+    {
+      "archivo": "SIM0224_txt.txt",
+      "sha256": "66f995bde19e3ec611216a3c367f4f4f6d2b644f58588cbf063225bff58b7c83",
+      "file_id": "file-Sf5ehuwqcW5MeaRPqwzFvC",
+      "segundos": 0.3828416250180453
+    },
+    {
+      "archivo": "SIM0225_txt.txt",
+      "sha256": "08d4d77efcc70858794f9869dc14c4595b030055ad4a2462ec15665937c262cc",
+      "file_id": "file-XvPpKgN6S1bwKcoYAuduja",
+      "segundos": 0.5587083749996964
+    },
+    {
+      "archivo": "SIM0226_txt.txt",
+      "sha256": "49e8ed55512437c11460894312664f505c79689a1a683e59b86ae7ce1d59edd2",
+      "file_id": "file-DsM9Jusdq1Jgz57jw1prEY",
+      "segundos": 0.5551939170109108
+    },
+    {
+      "archivo": "SIM0227_txt.txt",
+      "sha256": "83d987fecbf70f43540a21f1c41dc1de382863f892b854bfd2a0b689f9a68a74",
+      "file_id": "file-FKWppaB6UfQZix8Sm7ALS2",
+      "segundos": 0.7124927080003545
+    },
+    {
+      "archivo": "SIM0228_txt.txt",
+      "sha256": "990ed591290912fb453ef557a12a65e92fbd270ce12d8625dc04a957cad22cd5",
+      "file_id": "file-D4pEuvuHVYtyyxegWBnnEX",
+      "segundos": 0.4046838330104947
+    },
+    {
+      "archivo": "SIM0229_txt.txt",
+      "sha256": "02fbbff68835f7844b99dfc599420c8187d9f01914eb53e6a902d46c030c2819",
+      "file_id": "file-92edqmo7kswya81CfdTUKn",
+      "segundos": 0.4371824160043616
+    },
+    {
+      "archivo": "SIM0230_txt.txt",
+      "sha256": "73b4ea9b55452b50d78286a481a8fff5b8191a520f8276cb7c9fd3f457b7bc4f",
+      "file_id": "file-F4nwEL9VEsrfHS6XAF2w7E",
+      "segundos": 0.5138081249897368
+    },
+    {
+      "archivo": "SIM0231_txt.txt",
+      "sha256": "fe9070fc6d3e61291445e72d18005ac6004d941ad15201064ed7fa7be58cdf72",
+      "file_id": "file-LuyNyAhBDFzMNvsi5xe4k5",
+      "segundos": 0.6147757909784559
+    },
+    {
+      "archivo": "SIM0232_txt.txt",
+      "sha256": "e06682cd7a1ffdb2925971e8e3ab0a9b19dc11375e8130ff9194240db8a1ea00",
+      "file_id": "file-1ShKfnRRCoSduGj8e3bozC",
+      "segundos": 0.400509333005175
+    },
+    {
+      "archivo": "SIM0233_txt.txt",
+      "sha256": "3cd6c9668d2c78f06c13e844822a6d76f678ab499cde6a42ccb31c202d57ac8b",
+      "file_id": "file-34oPy44GDocEWrxirBA42h",
+      "segundos": 0.6130840420082677
+    },
+    {
+      "archivo": "SIM0234_txt.txt",
+      "sha256": "53da5e9b62af5e0632391c8c8df03d6a7fc11586bafc269895f3ed3bb43977b1",
+      "file_id": "file-MhccJKX2GWV11yesT3ubrY",
+      "segundos": 0.3905102499993518
+    },
+    {
+      "archivo": "SIM0235_txt.txt",
+      "sha256": "678bd0af6f5396a60da672cb741bc22f3dc47da0bd919fec0cc7833caa8f3d79",
+      "file_id": "file-1qBdYsUUbh7dYgNbjVkgr5",
+      "segundos": 0.5280093339970335
+    },
+    {
+      "archivo": "SIM0236_txt.txt",
+      "sha256": "ec4f5bfd3c92a5234fb596ecc2f52521ab02fbfab5fcc7d90ae9d9b34776352e",
+      "file_id": "file-F9Y7rdH1PyFHYXu2qHdnpw",
+      "segundos": 0.5933319579926319
+    },
+    {
+      "archivo": "SIM0237_txt.txt",
+      "sha256": "0bfcd0de78af7537e5c014e0a36499e1d0bb2f3864f0581c699d0d90d3dab625",
+      "file_id": "file-XqxC1fw41LwEiq1iaaGa4F",
+      "segundos": 0.38184508300037123
+    },
+    {
+      "archivo": "SIM0238_txt.txt",
+      "sha256": "4795618a7442dcefe0e34f2e8500f6f15be6801327df0c13e541c852ecd2c221",
+      "file_id": "file-9ZqQQ6hJJ1fRyti779uka9",
+      "segundos": 1.2073449169984087
+    },
+    {
+      "archivo": "SIM0239_txt.txt",
+      "sha256": "51646d5bb385aa198c01ab06e4fd3a72652c47ea15fd4af90bbd444798f47b1d",
+      "file_id": "file-NFwxXRKBEjPpAUijezoqyy",
+      "segundos": 0.5958384580153506
+    },
+    {
+      "archivo": "SIM0240_txt.txt",
+      "sha256": "759b57d5070df6a5e42bf666cca5dc44370b9293ff218e3ca7bd0cb5f98a04fd",
+      "file_id": "file-Wr9tmttAAyiXnGRMdvHNCS",
+      "segundos": 0.4910454170021694
+    }
+  ],
+  "operacion_pendiente": null,
+  "lote_id": "vsfb_ibj_b45fbe65a5a881f48c1ee0ea12eb37df"
+}

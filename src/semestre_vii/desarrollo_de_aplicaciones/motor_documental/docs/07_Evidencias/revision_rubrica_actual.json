@@ -1,0 +1,193 @@
+{
+  "web": {
+    "status": 200
+  },
+  "salud": {
+    "status": 200
+  },
+  "swagger": {
+    "status": 200
+  },
+  "openapi": {
+    "igual_exportacion": true,
+    "operaciones": [
+      {
+        "metodo": "get",
+        "ruta": "/salud",
+        "descripcion": false,
+        "respuestas": [
+          "200",
+          "503"
+        ]
+      },
+      {
+        "metodo": "get",
+        "ruta": "/colecciones",
+        "descripcion": true,
+        "respuestas": [
+          "200",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503"
+        ]
+      },
+      {
+        "metodo": "post",
+        "ruta": "/colecciones",
+        "descripcion": true,
+        "respuestas": [
+          "201",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503"
+        ]
+      },
+      {
+        "metodo": "get",
+        "ruta": "/documentos",
+        "descripcion": true,
+        "respuestas": [
+          "200",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503"
+        ]
+      },
+      {
+        "metodo": "post",
+        "ruta": "/documentos",
+        "descripcion": true,
+        "respuestas": [
+          "201",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503"
+        ]
+      },
+      {
+        "metodo": "get",
+        "ruta": "/documentos/{identificador}",
+        "descripcion": true,
+        "respuestas": [
+          "200",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503"
+        ]
+      },
+      {
+        "metodo": "patch",
+        "ruta": "/documentos/{identificador}",
+        "descripcion": true,
+        "respuestas": [
+          "200",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503"
+        ]
+      },
+      {
+        "metodo": "delete",
+        "ruta": "/documentos/{identificador}",
+        "descripcion": true,
+        "respuestas": [
+          "204",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503"
+        ]
+      },
+      {
+        "metodo": "get",
+        "ruta": "/documentos/{identificador}/archivo",
+        "descripcion": true,
+        "respuestas": [
+          "200",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503"
+        ]
+      },
+      {
+        "metodo": "post",
+        "ruta": "/buscar",
+        "descripcion": true,
+        "respuestas": [
+          "200",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503"
+        ]
+      },
+      {
+        "metodo": "post",
+        "ruta": "/chat",
+        "descripcion": true,
+        "respuestas": [
+          "200",
+          "401",
+          "404",
+          "409",
+          "413",
+          "415",
+          "422",
+          "500",
+          "503",
+          "502"
+        ]
+      }
+    ]
+  },
+  "sin_clave": {
+    "status": 401,
+    "cuerpo": {
+      "codigo": "ACCESO_DENEGADO",
+      "detalle": "Se requiere una API key válida."
+    }
+  }
+}

@@ -39,7 +39,7 @@ requires = ["uv_build>=0.12.1,<0.13.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
-source-exclude = ["node_modules", "src/semestre_vii/mineria_de_datos/examen_p1/Parcial1.pdf"]
+source-exclude = ["node_modules", "**/.nuxt", "**/.output", "**/dist", "**/.env", "**/.env.local", "**/.env.production", "**/.venv", "**/kernel-ipc-*", "src/semestre_vii/mineria_de_datos/examen_p1/Parcial1.pdf"]
 
 [tool.ruff]
 line-length = 100

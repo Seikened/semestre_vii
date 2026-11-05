@@ -1,0 +1,27 @@
+{
+  "name": "motor-documental-ui",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.22.0",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.111",
+    "@nuxt/ui": "4.12.0",
+    "nuxt": "4.5.2",
+    "tailwindcss": "^4.3.3",
+    "vue": "^3.5.43"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "@types/node": "^24.19.2",
+    "eslint": "^10.11.0",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.11"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "nombre": "ficticio.txt",
+  "paginas": [
+    {
+      "numero": 1,
+      "texto": "Contrato ficticio FIC-TXT. Propiedad inventada Olmo. Aviso de salida: sesenta días.",
+      "metodo": "texto"
+    }
+  ]
+}

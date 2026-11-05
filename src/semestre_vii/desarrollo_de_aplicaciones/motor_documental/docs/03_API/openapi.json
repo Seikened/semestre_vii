@@ -1,0 +1,2059 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Motor documental inmobiliario",
+    "description": "Extracción y búsqueda de contratos ficticios, con chat opcional de Luna y fuentes verificables.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/salud": {
+      "get": {
+        "tags": [
+          "Servicio"
+        ],
+        "summary": "Comprobar disponibilidad",
+        "operationId": "salud_salud_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Salud"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/colecciones": {
+      "get": {
+        "tags": [
+          "Biblioteca"
+        ],
+        "summary": "Colecciones",
+        "description": "Lista los grupos disponibles para organizar contratos.",
+        "operationId": "colecciones_colecciones_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Coleccion"
+                  },
+                  "type": "array",
+                  "title": "Response Colecciones Colecciones Get"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Unsupported Media Type",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "BD_NO_DISPONIBLE",
+                  "detalle": "La base de datos no está disponible."
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Biblioteca"
+        ],
+        "summary": "Crear Coleccion",
+        "description": "Crea una colección con nombre único; rechaza nombres vacíos o repetidos.",
+        "operationId": "crear_coleccion_colecciones_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NuevaColeccion"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Coleccion"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Unsupported Media Type",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "BD_NO_DISPONIBLE",
+                  "detalle": "La base de datos no está disponible."
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/documentos": {
+      "get": {
+        "tags": [
+          "Documentos"
+        ],
+        "summary": "Documentos",
+        "description": "Lista solo documentos activos; permite restringir la colección.",
+        "operationId": "documentos_documentos_get",
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "coleccion_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Coleccion Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Documento"
+                  },
+                  "title": "Response Documentos Documentos Get"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unsupported Media Type"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "BD_NO_DISPONIBLE",
+                  "detalle": "La base de datos no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Documentos"
+        ],
+        "summary": "Incorporar Documento",
+        "description": "Extrae cada página, aplica OCR si hace falta y guarda fragmentos y vectores atómicamente.",
+        "operationId": "incorporar_documento_documentos_post",
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_incorporar_documento_documentos_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetalleDocumento"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unsupported Media Type"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "BD_NO_DISPONIBLE",
+                  "detalle": "La base de datos no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/documentos/{identificador}": {
+      "get": {
+        "tags": [
+          "Documentos"
+        ],
+        "summary": "Detalle Documento",
+        "description": "Devuelve metadatos, texto y método de extracción de cada página.",
+        "operationId": "detalle_documento_documentos__identificador__get",
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "identificador",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Identificador"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetalleDocumento"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unsupported Media Type"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "BD_NO_DISPONIBLE",
+                  "detalle": "La base de datos no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Documentos"
+        ],
+        "summary": "Editar Documento",
+        "description": "Cambia título o colección; los vectores y el original se conservan.",
+        "operationId": "editar_documento_documentos__identificador__patch",
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "identificador",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Identificador"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditarDocumento"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetalleDocumento"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unsupported Media Type"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "BD_NO_DISPONIBLE",
+                  "detalle": "La base de datos no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Documentos"
+        ],
+        "summary": "Retirar Documento",
+        "description": "Aplica baja lógica y excluye el documento de búsqueda, detalle y descarga.",
+        "operationId": "retirar_documento_documentos__identificador__delete",
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "identificador",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Identificador"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unsupported Media Type"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "BD_NO_DISPONIBLE",
+                  "detalle": "La base de datos no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/documentos/{identificador}/archivo": {
+      "get": {
+        "tags": [
+          "Documentos"
+        ],
+        "summary": "Archivo Original",
+        "description": "Entrega el original disponible; no acepta rutas del sistema de archivos.",
+        "operationId": "archivo_original_documentos__identificador__archivo_get",
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "identificador",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Identificador"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Original PDF o TXT",
+            "content": {
+              "application/pdf": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unsupported Media Type"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "codigo": "BD_NO_DISPONIBLE",
+                  "detalle": "La base de datos no está disponible."
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/buscar": {
+      "post": {
+        "tags": [
+          "Recuperación"
+        ],
+        "summary": "Buscar",
+        "description": "Busca por texto, similitud coseno o fusión RRF; devuelve pasajes y procedencia sin un LLM.",
+        "operationId": "buscar_buscar_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Consulta"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultadoBusqueda"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Unsupported Media Type",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "BD_NO_DISPONIBLE",
+                  "detalle": "La base de datos no está disponible."
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/chat": {
+      "post": {
+        "tags": [
+          "Conversación"
+        ],
+        "summary": "Conversar",
+        "description": "Luna busca en el motor local y responde con fuentes; requiere clave privada del proveedor.",
+        "operationId": "conversar_chat_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultaChat"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaChat"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "ACCESO_DENEGADO",
+                  "detalle": "Se requiere una API key válida."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_NO_ENCONTRADO",
+                  "detalle": "El documento no está disponible."
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "COLECCION_DUPLICADA",
+                  "detalle": "La colección ya existe."
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_TAMANO",
+                  "detalle": "El archivo supera el límite de 10 MiB."
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Unsupported Media Type",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "DOCUMENTO_FORMATO",
+                  "detalle": "Solo se admiten PDF y TXT UTF-8."
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "ENTRADA_INVALIDA",
+                  "detalle": "Revisa los datos y formatos enviados."
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                },
+                "example": {
+                  "codigo": "UNKNOWN",
+                  "detalle": "No fue posible completar la operación."
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Luna no está configurada o no está disponible.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "La respuesta de Luna no se pudo validar.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespuesta"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Body_incorporar_documento_documentos_post": {
+        "properties": {
+          "archivo": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "Archivo",
+            "description": "PDF o TXT UTF-8, máximo 10 MiB"
+          },
+          "coleccion_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Coleccion Id",
+            "examples": [
+              "8c9fac40-7aee-4aa6-a08c-3e1ad438da91"
+            ]
+          },
+          "titulo": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Titulo",
+            "examples": [
+              "Contrato ficticio de arrendamiento"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "archivo",
+          "coleccion_id",
+          "titulo"
+        ],
+        "title": "Body_incorporar_documento_documentos_post"
+      },
+      "Coincidencia": {
+        "properties": {
+          "documento_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Documento Id"
+          },
+          "titulo": {
+            "type": "string",
+            "title": "Titulo"
+          },
+          "nombre_original": {
+            "type": "string",
+            "title": "Nombre Original"
+          },
+          "pagina": {
+            "type": "integer",
+            "title": "Pagina"
+          },
+          "metodo": {
+            "$ref": "#/components/schemas/MetodoExtraccion"
+          },
+          "texto": {
+            "type": "string",
+            "title": "Texto"
+          },
+          "puntuacion": {
+            "type": "number",
+            "title": "Puntuacion"
+          }
+        },
+        "type": "object",
+        "required": [
+          "documento_id",
+          "titulo",
+          "nombre_original",
+          "pagina",
+          "metodo",
+          "texto",
+          "puntuacion"
+        ],
+        "title": "Coincidencia"
+      },
+      "Coleccion": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "nombre": {
+            "type": "string",
+            "title": "Nombre"
+          },
+          "creada_en": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Creada En"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "nombre",
+          "creada_en"
+        ],
+        "title": "Coleccion"
+      },
+      "Consulta": {
+        "properties": {
+          "texto": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Texto"
+          },
+          "modo": {
+            "$ref": "#/components/schemas/ModoBusqueda",
+            "default": "hibrida"
+          },
+          "limite": {
+            "type": "integer",
+            "maximum": 20.0,
+            "minimum": 1.0,
+            "title": "Limite",
+            "default": 5
+          },
+          "coleccion_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Coleccion Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "texto"
+        ],
+        "title": "Consulta",
+        "examples": [
+          {
+            "limite": 5,
+            "modo": "hibrida",
+            "texto": "¿Cuándo se devuelve el depósito de Aurora?"
+          }
+        ]
+      },
+      "ConsultaChat": {
+        "properties": {
+          "texto": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Texto",
+            "examples": [
+              "¿Cuándo se devuelve el depósito de Aurora?"
+            ]
+          },
+          "modo": {
+            "$ref": "#/components/schemas/ModoBusqueda",
+            "default": "hibrida"
+          },
+          "coleccion_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Coleccion Id"
+          },
+          "historial": {
+            "items": {
+              "$ref": "#/components/schemas/MensajeChat"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "title": "Historial"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "texto"
+        ],
+        "title": "ConsultaChat"
+      },
+      "DetalleDocumento": {
+        "properties": {
+          "documento": {
+            "$ref": "#/components/schemas/Documento"
+          },
+          "paginas": {
+            "items": {
+              "$ref": "#/components/schemas/PaginaExtraida"
+            },
+            "type": "array",
+            "title": "Paginas"
+          }
+        },
+        "type": "object",
+        "required": [
+          "documento",
+          "paginas"
+        ],
+        "title": "DetalleDocumento"
+      },
+      "Documento": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "coleccion_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Coleccion Id"
+          },
+          "titulo": {
+            "type": "string",
+            "title": "Titulo"
+          },
+          "nombre_original": {
+            "type": "string",
+            "title": "Nombre Original"
+          },
+          "extension": {
+            "type": "string",
+            "title": "Extension"
+          },
+          "modelo": {
+            "type": "string",
+            "title": "Modelo"
+          },
+          "creado_en": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Creado En"
+          },
+          "paginas": {
+            "type": "integer",
+            "title": "Paginas"
+          },
+          "paginas_ocr": {
+            "type": "integer",
+            "title": "Paginas Ocr"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "coleccion_id",
+          "titulo",
+          "nombre_original",
+          "extension",
+          "modelo",
+          "creado_en",
+          "paginas",
+          "paginas_ocr"
+        ],
+        "title": "Documento",
+        "examples": [
+          {
+            "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+            "creado_en": "2026-11-02T12:00:00-06:00",
+            "extension": "pdf",
+            "id": "c563feab-223a-4b2c-b743-d92f7463de3c",
+            "modelo": "intfloat/multilingual-e5-small",
+            "nombre_original": "FIC-001_digital.pdf",
+            "paginas": 2,
+            "paginas_ocr": 0,
+            "titulo": "Contrato ficticio Aurora"
+          }
+        ]
+      },
+      "EditarDocumento": {
+        "properties": {
+          "titulo": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Titulo"
+          },
+          "coleccion_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Coleccion Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "EditarDocumento"
+      },
+      "ErrorRespuesta": {
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "title": "Codigo",
+            "examples": [
+              "DOCUMENTO_NO_ENCONTRADO"
+            ]
+          },
+          "detalle": {
+            "type": "string",
+            "title": "Detalle",
+            "examples": [
+              "El documento no está disponible."
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "codigo",
+          "detalle"
+        ],
+        "title": "ErrorRespuesta"
+      },
+      "MensajeChat": {
+        "properties": {
+          "rol": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ],
+            "title": "Rol"
+          },
+          "texto": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Texto"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "rol",
+          "texto"
+        ],
+        "title": "MensajeChat"
+      },
+      "MetodoExtraccion": {
+        "type": "string",
+        "enum": [
+          "texto",
+          "ocr"
+        ],
+        "title": "MetodoExtraccion"
+      },
+      "ModoBusqueda": {
+        "type": "string",
+        "enum": [
+          "texto",
+          "vector",
+          "hibrida"
+        ],
+        "title": "ModoBusqueda"
+      },
+      "NuevaColeccion": {
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Nombre",
+            "examples": [
+              "Contratos ficticios"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "nombre"
+        ],
+        "title": "NuevaColeccion"
+      },
+      "PaginaExtraida": {
+        "properties": {
+          "numero": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Numero"
+          },
+          "texto": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Texto"
+          },
+          "metodo": {
+            "$ref": "#/components/schemas/MetodoExtraccion"
+          }
+        },
+        "type": "object",
+        "required": [
+          "numero",
+          "texto",
+          "metodo"
+        ],
+        "title": "PaginaExtraida"
+      },
+      "RespuestaChat": {
+        "properties": {
+          "respuesta": {
+            "type": "string",
+            "title": "Respuesta",
+            "examples": [
+              "Se devuelve dentro de treinta días naturales, descontando daños documentados. [1]"
+            ]
+          },
+          "resultado": {
+            "$ref": "#/components/schemas/ResultadoBusqueda"
+          },
+          "modelo": {
+            "type": "string",
+            "title": "Modelo"
+          }
+        },
+        "type": "object",
+        "required": [
+          "respuesta",
+          "resultado",
+          "modelo"
+        ],
+        "title": "RespuestaChat"
+      },
+      "ResultadoBusqueda": {
+        "properties": {
+          "consulta": {
+            "type": "string",
+            "title": "Consulta"
+          },
+          "modo": {
+            "$ref": "#/components/schemas/ModoBusqueda"
+          },
+          "coincidencias": {
+            "items": {
+              "$ref": "#/components/schemas/Coincidencia"
+            },
+            "type": "array",
+            "title": "Coincidencias"
+          }
+        },
+        "type": "object",
+        "required": [
+          "consulta",
+          "modo",
+          "coincidencias"
+        ],
+        "title": "ResultadoBusqueda"
+      },
+      "Salud": {
+        "properties": {
+          "estado": {
+            "type": "string",
+            "title": "Estado",
+            "default": "disponible"
+          },
+          "modelo": {
+            "type": "string",
+            "title": "Modelo"
+          },
+          "dimension": {
+            "type": "integer",
+            "title": "Dimension"
+          }
+        },
+        "type": "object",
+        "required": [
+          "modelo",
+          "dimension"
+        ],
+        "title": "Salud"
+      }
+    },
+    "securitySchemes": {
+      "APIKeyHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    }
+  }
+}

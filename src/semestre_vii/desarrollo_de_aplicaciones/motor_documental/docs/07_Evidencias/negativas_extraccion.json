@@ -1,0 +1,22 @@
+[
+  {
+    "archivo": "vacio.txt",
+    "codigo": "DOCUMENTO_VACIO",
+    "detalle": "El documento no contiene texto."
+  },
+  {
+    "archivo": "invalido.txt",
+    "codigo": "DOCUMENTO_FORMATO",
+    "detalle": "El archivo TXT debe usar UTF-8."
+  },
+  {
+    "archivo": "contrato.exe",
+    "codigo": "DOCUMENTO_FORMATO",
+    "detalle": "Solo se admiten PDF y TXT UTF-8."
+  },
+  {
+    "archivo": "imagen.pdf",
+    "codigo": "DOCUMENTO_FORMATO",
+    "detalle": "El contenido del archivo no es un PDF."
+  }
+]

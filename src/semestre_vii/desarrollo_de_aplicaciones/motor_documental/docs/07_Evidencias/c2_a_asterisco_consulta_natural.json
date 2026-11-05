@@ -1,0 +1,59 @@
+{
+  "consulta": {
+    "texto": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?",
+    "modo": "hibrida",
+    "limite": 5
+  },
+  "resultado": {
+    "consulta": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?",
+    "modo": "hibrida",
+    "coincidencias": [
+      {
+        "documento_id": "0e978aeb-498f-4b41-b13a-972e38fa74bd",
+        "titulo": "FIC-003 mixto",
+        "nombre_original": "FIC-003_mixto.pdf",
+        "pagina": 1,
+        "metodo": "texto",
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 1 Partes: Persona Épsilon y Persona Zeta, identidades inventadas. Inmueble: local comercial Cedro, plaza ficticia Horizonte, local L-04. Cláusula 2 Renta mensual: 18000 pesos ficticios. El uso autorizado es una librería. El plazo es de veinticuatro meses a partir del 1 de marzo de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.01639344262295082
+      },
+      {
+        "documento_id": "0e978aeb-498f-4b41-b13a-972e38fa74bd",
+        "titulo": "FIC-003 mixto",
+        "nombre_original": "FIC-003_mixto.pdf",
+        "pagina": 2,
+        "metodo": "ocr",
+        "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.016129032258064516
+      },
+      {
+        "documento_id": "00d946a4-aa1c-463c-834e-1983ed9a7f2c",
+        "titulo": "FIC-005 escaneado",
+        "nombre_original": "FIC-005_escaneado.pdf",
+        "pagina": 1,
+        "metodo": "ocr",
+        "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela Cláusula 1 Partes: Persona Theta y Persona lota, identidades inventadas. Inmueble: terreno Estela, lote ficticio T-09, superficie de 320 metros cuadrados. Cláusula 2 Reserva: 25000 pesos ficticios por un plazo de quince días naturales, desde el 5 de abril de 2027. El precio de referencia es 850000 pesos ficticios. Página 1. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.015873015873015872
+      },
+      {
+        "documento_id": "ceab11ec-1778-44ba-a615-109d41ef1901",
+        "titulo": "FIC-001 digital",
+        "nombre_original": "FIC-001_digital.pdf",
+        "pagina": 2,
+        "metodo": "texto",
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 3 Depósito en garantía: 12500 pesos ficticios. Se devuelve dentro de treinta días naturales después de entregar la vivienda, descontando daños documentados. Cláusula 4 Mascotas: se permite un gato doméstico. Queda prohibido subarrendar la vivienda sin autorización escrita. Página 2. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.015625
+      },
+      {
+        "documento_id": "4201a88f-50ca-468a-9d5b-35914ce64b20",
+        "titulo": "FIC-002 escaneado",
+        "nombre_original": "FIC-002_escaneado.pdf",
+        "pagina": 2,
+        "metodo": "ocr",
+        "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.015384615384615385
+      }
+    ]
+  },
+  "observacion": "El primer resultado fue la página 1 de FIC-003; comprobar la posición de la cláusula en todos los pasajes recuperados."
+}

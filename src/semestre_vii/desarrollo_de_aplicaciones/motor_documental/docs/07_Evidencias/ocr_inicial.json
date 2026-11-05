@@ -1,0 +1,92 @@
+[
+  {
+    "nombre": "FIC-001_digital.pdf",
+    "paginas": [
+      {
+        "numero": 1,
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA\n   FIC-001 | Arrendamiento de vivienda Aurora\n\n\nCláusula 1\nPartes: Persona Alfa y Persona Beta, identidades inventadas. Inmueble: casa\nAurora, calle Imaginaria 101, ciudad ficticia Puerto Claro.\n\n\nCláusula 2\nRenta mensual: 12500 pesos ficticios, pagaderos durante los primeros cinco días\nde cada mes. Plazo: doce meses desde el 1 de enero de 2027.\n\n\nPágina 1. Todo el contenido y sus partes son inventados.",
+        "metodo": "texto"
+      },
+      {
+        "numero": 2,
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA\n   FIC-001 | Arrendamiento de vivienda Aurora\n\n\nCláusula 3\nDepósito en garantía: 12500 pesos ficticios. Se devuelve dentro de treinta días\nnaturales después de entregar la vivienda, descontando daños documentados.\n\n\nCláusula 4\nMascotas: se permite un gato doméstico. Queda prohibido subarrendar la vivienda\nsin autorización escrita.\n\n\nPágina 2. Todo el contenido y sus partes son inventados.",
+        "metodo": "texto"
+      }
+    ]
+  },
+  {
+    "nombre": "FIC-002_escaneado.pdf",
+    "paginas": [
+      {
+        "numero": 1,
+        "texto": "## DOCUMENTO FICTICIO· DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma\n\n## Cláusula 1\n\nPartes: Persona Gamma y Persona Delta, identidades inventadas. Inmueble: departamento Bruma, edificio ficticio Nube, unidad B-12.\n\n## Cláusula 2\n\nPrecio: 2400000 pesos ficticios. Anticipo: veinte por ciento al firmar; saldo: ochenta por ciento al formalizar la operación.\n\nPágina 1. Todo el contenido y sus partes son inventados.",
+        "metodo": "ocr"
+      },
+      {
+        "numero": 2,
+        "texto": "## DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma\n\n## Cláusula 3\n\nEntrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días.\n\n## Cláusula 4\n\nlp so s    S  d  n in d estacionamiento identificados como E-07 y E-08.\n\nPágina 2. Todo el contenido y sus partes son inventados.",
+        "metodo": "ocr"
+      }
+    ]
+  },
+  {
+    "nombre": "FIC-003_mixto.pdf",
+    "paginas": [
+      {
+        "numero": 1,
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA\n     FIC-003 | Arrendamiento de local Cedro\n\n\nCláusula 1\nPartes: Persona Épsilon y Persona Zeta, identidades inventadas. Inmueble: local\ncomercial Cedro, plaza ficticia Horizonte, local L-04.\n\n\nCláusula 2\nRenta mensual: 18000 pesos ficticios. El uso autorizado es una librería. El plazo\nes de veinticuatro meses a partir del 1 de marzo de 2027.\n\n\nPágina 1. Todo el contenido y sus partes son inventados.",
+        "metodo": "texto"
+      },
+      {
+        "numero": 2,
+        "texto": "## DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-003 |Arrendamiento de local Cedro\n\n## Cláusula 3\n\nSalida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta.\n\n## Cláusula 4\n\nMantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento.\n\nPágina 2. Todo el contenido y sus partes son inventados.",
+        "metodo": "ocr"
+      }
+    ]
+  },
+  {
+    "nombre": "FIC-004_digital.pdf",
+    "paginas": [
+      {
+        "numero": 1,
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA\n   FIC-004 | Administración de propiedad Duna\n\n\nCláusula 1\nPartes: Persona Eta y Administración Umbral Ficticia. Inmueble: casa Duna,\navenida Inventada 404, ciudad ficticia Puerto Claro.\n\n\nCláusula 2\nComisión de administración: ocho por ciento de la renta efectivamente cobrada. El\ninforme de ingresos y gastos se entrega el día diez de cada mes.\n\n\nPágina 1. Todo el contenido y sus partes son inventados.",
+        "metodo": "texto"
+      },
+      {
+        "numero": 2,
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA\n   FIC-004 | Administración de propiedad Duna\n\n\nCláusula 3\nReparaciones: el administrador puede autorizar gastos hasta 3000 pesos ficticios\npor evento. Los montos superiores requieren autorización escrita del propietario.\n\n\nCláusula 4\nRescisión: cualquiera de las partes puede terminar el servicio con treinta días\nnaturales de aviso. La entrega de llaves se registra mediante inventario.\n\n\nPágina 2. Todo el contenido y sus partes son inventados.",
+        "metodo": "texto"
+      }
+    ]
+  },
+  {
+    "nombre": "FIC-005_escaneado.pdf",
+    "paginas": [
+      {
+        "numero": 1,
+        "texto": "## DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela\n\n## Cláusula 1\n\nPartes: Persona Theta y Persona lota, identidades inventadas. Inmueble: terreno Estela, lote ficticio T-09, superficie de 320 metros cuadrados.\n\n## Cláusula 2\n\nReserva: 25000 pesos ficticios por un plazo de quince días naturales, desde el 5 de abril de 2027. El precio de referencia es 850000 pesos ficticios.\n\nPágina 1. Todo el contenido y sus partes son inventados.",
+        "metodo": "ocr"
+      },
+      {
+        "numero": 2,
+        "texto": "## DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela\n\n## Cláusula 3\n\nCondición de devolución: el apartado se devuelve íntegro si la documentación de propiedad presenta inconsistencias antes del vencimiento.\n\n## Cláusula 4\n\nLa reserva no transfiere la propiedad. La firma definitiva depende de verificar la documentación y del acuerdo de ambas partes.\n\nPágina 2. Todo el contenido y sus partes son inventados.",
+        "metodo": "ocr"
+      }
+    ]
+  },
+  {
+    "nombre": "FIC-006_mixto.pdf",
+    "paginas": [
+      {
+        "numero": 1,
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA\n     FIC-006 | Arrendamiento de oficina Faro\n\n\nCláusula 1\nPartes: Persona Kappa y Persona Lambda, identidades inventadas. Inmueble:\noficina Faro, torre ficticia Prisma, nivel 3, espacio O-16.\n\n\nCláusula 2\nRenta mensual: 22000 pesos ficticios. Plazo de doce meses desde el 1 de mayo\nde 2027. Se incluye un cajón de estacionamiento.\n\n\nPágina 1. Todo el contenido y sus partes son inventados.",
+        "metodo": "texto"
+      },
+      {
+        "numero": 2,
+        "texto": "## DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro\n\n## Cláusula 3\n\nAcceso: lunes a viernes de ocho a veinte horas. Las modificaciones eléctricas requieren autorización previa por escrito.\n\n## Cláusula 4\n\nActualización de renta: cuatro por ciento al renovar. Depósito: dos mensualidades, con devolución dentro de cuarenta y cinco días después de la entrega.\n\nPágina 2. Todo el contenido y sus partes son inventados.",
+        "metodo": "ocr"
+      }
+    ]
+  }
+]

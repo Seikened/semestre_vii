@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-11-02T14:57:40.316020-06:00",
+  "documentos_iniciales": 6,
+  "fuente": {
+    "documento_id": "c149f843-69b5-4171-a0b2-bad555dca4be",
+    "titulo": "FIC-003 mixto",
+    "nombre_original": "FIC-003_mixto.pdf",
+    "pagina": 2,
+    "metodo": "ocr",
+    "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+    "puntuacion": 0.03278688524590164
+  },
+  "original_identico": true,
+  "sha256_original": "579ce87f621dc2d761d8b8fd4f668b03dbf6cc752906a4491191347d58ffd31d"
+}

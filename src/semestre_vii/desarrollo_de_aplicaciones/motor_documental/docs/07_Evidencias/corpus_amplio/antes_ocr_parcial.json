@@ -1,0 +1,469 @@
+{
+  "fecha": "2026-11-02T16:17:58.331991-06:00",
+  "coleccion_id": "a865c442-6358-4f2d-a19f-20997ac9d225",
+  "documentos": 240,
+  "huellas_detalle": {
+    "SIM0240_txt.txt": "41403891f2c4d11376d9654d5c144e2eb51a59f0a7349ee740db050e92985039",
+    "SIM0239_txt.txt": "3c0beb5516aa9cbfd3dacbe07fc6e3dd38df38c8eb6c28c95b903dbf976e4fa8",
+    "SIM0238_txt.txt": "59d2fb16b35ea9fb90294ff5338b6832c8e706123062defba740bc4cac3332e7",
+    "SIM0237_txt.txt": "dc2f7f08f8f7b56c71773c488e16f1e385548764830a422b69a0f00ff5ff0ab9",
+    "SIM0236_txt.txt": "a5dd7bcc2756eca7058b4a639edf045c1f7f1e0a2327da74856ddcc7deec4ec9",
+    "SIM0235_txt.txt": "fe2af859451447a5448e9902d4a9b78d41e4b2b9a30bc909ca7c6aee7fc2e388",
+    "SIM0234_txt.txt": "522bfa0d7c6102d03a9a21c176184ee62674dd85e35c2a4e6da14c83dc4e9091",
+    "SIM0233_txt.txt": "3de354025ddaae18d5003454aa939231a2f93bb808d194d044aba62702f4f4dc",
+    "SIM0232_txt.txt": "49501f3939fb12703c26ce4dd23a67c15b2c78850102821ec3331e5a4a4d4e60",
+    "SIM0231_txt.txt": "4c6feb4d5fc1e1c233aabee0ef084b58186216681347fa297571c4f6489a2c1b",
+    "SIM0230_txt.txt": "9e5ae3250c75ad4c6ebad1bd8652c2099c08efcf7ad3a3310c02ad7d54fb1ce4",
+    "SIM0229_txt.txt": "a6e2509c6efb9d79f7093b64df72581c5d528fe86f743a71a0a5b8276f65e209",
+    "SIM0228_txt.txt": "50f3e162831de21ff5cec7de3ec78f1863ce88bd65eba91b0dcdda60f8eb334c",
+    "SIM0227_txt.txt": "aee4536d93ddb65aade7631776169691c35f0f487b7c04c62a66960cb50a5e4a",
+    "SIM0226_txt.txt": "447df110de38d08dbb4042db895a67abeebf1a7a6f83c5e95f719228d22bf964",
+    "SIM0225_txt.txt": "f76b6fe1155c556359e084645f543f37ffca4c1f76369fe2c9ac64eaa262c18b",
+    "SIM0224_txt.txt": "357b47508cd380a8493d0a3841bdeeaadc621a6908ed590e4fb33ff0b422c74d",
+    "SIM0223_txt.txt": "3a2238d210a640c71945db2601802415f655ec9396f84837db6c1df2076e443a",
+    "SIM0222_txt.txt": "d44b95c306c8e7262eb77e56de15be758389c83c43f81ab4777f7fab3343ef02",
+    "SIM0221_txt.txt": "a97a0e70b1d0e359756e1a4582862d085d3aa317bb90de6e0b239ea31756dbc0",
+    "SIM0220_txt.txt": "be86cf4ad2398fb996abb9039589d7e7e9fefd552b2997742e4f0675e18721c0",
+    "SIM0219_txt.txt": "6bd20f29dcfadd144c2e2b6360b1b8e9c55edd939eca338987fd523035821e6a",
+    "SIM0218_txt.txt": "e9217fb30a9863558e44062f3372f86787e82d70c9f37e2b4fc3fe253fda0585",
+    "SIM0217_txt.txt": "6afe6d2f7eeea26f2fa999d71d4b200ff16255baccf8ff03e59994457ac333f1",
+    "SIM0216_txt.txt": "b88b901aba52932991aa8a69fc9bbd91c2085dee00afe004c13d75999bdecfa7",
+    "SIM0215_txt.txt": "fb86a269074592c9286c82c1feac89448c63a37059bf72bdd7631b2c063d7192",
+    "SIM0214_txt.txt": "a9a46e86c08e4104d6571ae8ea18131fa69602342111eaac21336df86a745e18",
+    "SIM0213_txt.txt": "94d4a68df9301b965d86e097d5b1c277e330854ed72580bdf5575dc395e76ef6",
+    "SIM0212_txt.txt": "6ef070320e5234f1611bfb39fd34be770ee20b4cc874eb8adde0baa6fd1d2e64",
+    "SIM0211_txt.txt": "1ced344cc577dd26b7bf763bdfb981d31496b21a20212e75f5985ada4c482d9e",
+    "SIM0210_txt.txt": "7f2e2c252500b2c82a7b239f3cea2b86b57f229ce166c9f991c3c7cddf834abc",
+    "SIM0209_txt.txt": "306f780bbb08fc456e5fab83535e2328fdc66488973d1a87f4b9ea6a4e905216",
+    "SIM0208_txt.txt": "fd0acdcc28b47e5a9a9efc3ebfeb0899d9b34cc2df4507a00994935d16eede33",
+    "SIM0207_txt.txt": "50ba8c0bd034c41d78bda161dfa027279dda9e15bf49c52061b15daf336b8ffd",
+    "SIM0206_txt.txt": "542fb3d534d358542d503b3785c1a8223b6de5e13405441f41e3e27c57f6ed5e",
+    "SIM0205_txt.txt": "97a1c7bc47eeda95d109ac4d8012fbbd9d017fa27014b35517dfa2c5ed12d285",
+    "SIM0204_txt.txt": "33cededaf6b70e9b95d91b083fe82ec09ef9ba894170f7b91c2008a451c73b1e",
+    "SIM0203_txt.txt": "3f8cdbd44f27f6fec4d9b68f8582050a64384bb6c11f1449284893395ac167f7",
+    "SIM0202_txt.txt": "1849be8800c76fef5fd78b25dd37f1e2b35f1a69a1b6fb4ef9e845e9b34ee60b",
+    "SIM0201_txt.txt": "399e83320b2a464c25d4bdc83146a3c65149ddd525028795b8f63bcf084efadc",
+    "SIM0200_mixto.pdf": "9fd7cf65c69cc16602f2cef1dafab6c1bb99aab9cc63a224ee03b099bc6ea40d",
+    "SIM0199_mixto.pdf": "6cb384ca9835746206a8ab76f7d6d027f806bfbd17677d82d2397974052bdb00",
+    "SIM0198_mixto.pdf": "0d58285027b35fb0eeb8a5ff2a148d7a2a997b2921a7d290f0cf789e77c4f1d5",
+    "SIM0197_mixto.pdf": "343c3d892f54b1a578101309e77982f6613c51f9e564258e2eebe71871130261",
+    "SIM0196_mixto.pdf": "673f463624916eb7a25aab4cca7ce2da45407b450bd0efa4f899771827b9ca83",
+    "SIM0195_mixto.pdf": "f6b66dc3e054f986cd624a64e11de25ebc41124e5475f9d70f369fa8823b043c",
+    "SIM0194_mixto.pdf": "42da99fa657b5a4c0db61632e5be93fedf962812cd2f0e0fe67253d3d0616120",
+    "SIM0193_mixto.pdf": "42c711fd6824c7f4ea7252c621d6d0a30cc259cbd587aea2f610a072d8f02b64",
+    "SIM0192_mixto.pdf": "040444987e9760ca1277aa2f5c2113213d8a3e81b996ad86d18db92b865f74a7",
+    "SIM0191_mixto.pdf": "1a9ceb9585066da13098367c8fcd01d27dfa7e92a550ae15894e6fb10235d66c",
+    "SIM0190_mixto.pdf": "2cc11a05389c3bad7e0c2ed7f6c8eaf8b713d377ca03636e07491a746c2918de",
+    "SIM0189_mixto.pdf": "8d7631727ee0e955b811908dd891a78fee8b7223fa8409ffbf78503ec8738893",
+    "SIM0188_mixto.pdf": "5adad4dcf41a6a44baa194c61c552faef2e2a05a7258d05a0181fc11ed1f0bf8",
+    "SIM0187_mixto.pdf": "ba0c1b5245ccf7505c2b89f902285958a06710457677e4ef623184d52b7ce486",
+    "SIM0186_mixto.pdf": "c0614f1251cd9eadfc7ababb2ddc9ab543e86eeaffc79c0aa11d1f974fea83ed",
+    "SIM0185_mixto.pdf": "cac7075d5a666d14cd14c457b1b7153b34412c4bb9469cf15aa8e445ca4f4c1a",
+    "SIM0184_mixto.pdf": "df8ff048d31cd5a2d0b1e6ef066f3781cfa54f80af3443cc140a5e4e5015757a",
+    "SIM0183_mixto.pdf": "a7a39d35d44d739708052b8a8b91d111c770de6fac502f7fe8c0f5b3f95a14fb",
+    "SIM0182_mixto.pdf": "95b0ac8c60d4cf7786e92fdb011bd0367957f66746647258bb9c020faabdc000",
+    "SIM0181_mixto.pdf": "77a4517157a153ff9c8b563972dc025be39f2ec780ba248f25176fcc6e746808",
+    "SIM0180_mixto.pdf": "a26e0e876931c976cb6172dd2d158db77a7b9a7f2faf45f6406833b80e864d86",
+    "SIM0179_mixto.pdf": "e2722323a2749687ee36bd4c9a3ef973bc70d81a0dd7938741f20e790dae6bb3",
+    "SIM0178_mixto.pdf": "463c2e7b126caaa7ff6635b0b124a9d9b440d19c140fcb83ed9139193d4fa47c",
+    "SIM0177_mixto.pdf": "dccc0468bf150c904106cd58c48f002c3aca76c460e597aa8468101fe6165b95",
+    "SIM0176_mixto.pdf": "b6b3836feed812490dc9c5fb24a41293d2e78190a83044c16b06a22a00d087cd",
+    "SIM0175_mixto.pdf": "a03e42f07b09765bd58cbc3b4d875fefc67fd70f41f3d0dd663ef2312689908c",
+    "SIM0174_mixto.pdf": "22358c0a29fccef00204f981e1e223fec29b517db3f952a1ca7ce78468f4edc7",
+    "SIM0173_mixto.pdf": "f1cfc0a0bf2ab73f121de385db80718746908b4b2365a58ce210d743a5ceca01",
+    "SIM0172_mixto.pdf": "42b9838d39a2bf8b0249960fe8f25aa8520cdbf354cd2a3928c4340ae8fe0fb8",
+    "SIM0171_mixto.pdf": "7458a375dc0854894050e37a1ed7c36ae58cc84763ae98bcfd718250955dafbb",
+    "SIM0170_mixto.pdf": "d5912c8e208f93ea03f7bdabf2612367f1440bc8ef0f9606e27d632408b502d6",
+    "SIM0169_mixto.pdf": "27b2b3b658cc11e46a303cc9f45089cfd3513afe61b624a06867f8560d580d26",
+    "SIM0168_mixto.pdf": "070fb69cf342a86a1306b2264c9f88fee5d190eb1934829c0f147c86866d32d6",
+    "SIM0167_mixto.pdf": "e8f30b097b344ebb05da07d5927f5482e87c36ec5b2255af963c2ef82df2e795",
+    "SIM0166_mixto.pdf": "18956509ef99bc785b471d9f21909aefc9327d7f13e8cd6665d33daed4a8fafa",
+    "SIM0165_mixto.pdf": "c5ce2d10c02436c6acf0a97449809c02f5fc8bb0d661562cefc26837c71cd60d",
+    "SIM0164_mixto.pdf": "01da8c402cc5cbca70e0e5e41e3d55174ccc0b40b70512d60686c3c3912eaa5e",
+    "SIM0163_mixto.pdf": "0a1e0468e138993613582dc01b136b51e908820f797a204e47d79b2ca9547c39",
+    "SIM0162_mixto.pdf": "e577e7240671f90b22ff7083f616498c4e5f47c574b6710ca60fec49c045e8bd",
+    "SIM0161_mixto.pdf": "f32c2097d394a1017e5cb52b3666ed1183865f61a4b3810950c988c49ce66080",
+    "SIM0160_escaneado.pdf": "b81af1815a0768a3db4e0600149a45c454c37050e2abce7126867f19f7b0e09d",
+    "SIM0159_escaneado.pdf": "165bb0d57fa667d7d856ced6e6507981d06412f4446f556c2bef4efc34a2e309",
+    "SIM0158_escaneado.pdf": "4e3e94e80aba595ca790fcd00cf775a56ee46af70405801c6d7127d2c2f3d50f",
+    "SIM0157_escaneado.pdf": "9896aeda379ad56b2bb3515375ab796235979c25be909809433a1030bc2ef6d3",
+    "SIM0156_escaneado.pdf": "2c09e798b5ed92cada90a6b59f2b05c57ac32d6e0b37696220a261ef3e003c0a",
+    "SIM0155_escaneado.pdf": "87bc2c0e88dcd7aa1cf0cd057b34456893c86b5837315f042612284bec380c9d",
+    "SIM0154_escaneado.pdf": "f53124f586e7041a528aa90097c5e724557ca4f228bd6d22e22462e0b4a33e5e",
+    "SIM0153_escaneado.pdf": "34e25eb1e1c870e47e4f2fd1a0e2d40975a324bcbd8e0d19c446c1f4dc6decbc",
+    "SIM0152_escaneado.pdf": "c229eab8dde75e5e3bd52451a97988171905cd51c56624642daeca943c76475f",
+    "SIM0151_escaneado.pdf": "dcb321efb881555bddc198c00f96d39bee7028fe6dc131e3f7ef8f19fdff8c57",
+    "SIM0150_escaneado.pdf": "9c1a26c99148b14ce23956739170ade571b7e8fa4c4fbe4cf764ca4df366462c",
+    "SIM0149_escaneado.pdf": "2170b56a624cbab9f4fd613ecc37c94f77342a8ae9c51827adb22c3c0b3981bf",
+    "SIM0148_escaneado.pdf": "ef0c2ca4f692afd5530ed258ae8cafd8851e99155f9eea8159949d5c41f927e7",
+    "SIM0147_escaneado.pdf": "df6ae669ff01bba5b6536b70cbfc7ff088b0005619a7efdf30f5623b8f6f5e9a",
+    "SIM0146_escaneado.pdf": "a71c05ea81f693f7f290f63592606c78387c7cb5c395a9db2bf0f1d84dbb6402",
+    "SIM0145_escaneado.pdf": "6e9323cee08f9483c91795c1f1f186612bf689d640cf08fe7fd59e32ecdcc6a5",
+    "SIM0144_escaneado.pdf": "03bbb2c3022258c6b46951e18e62acb7a54d82cc1d1a19a4a60bd4580919b20a",
+    "SIM0143_escaneado.pdf": "cc195c08623a7c9cff05ee22f530a130f46d63302a336e0f4161bd80c636d035",
+    "SIM0142_escaneado.pdf": "9f14f08060425c4331e089a6662305d9e84285c6bd9024a2316922fc2ff09aff",
+    "SIM0141_escaneado.pdf": "231fb336065f69911c1d98054477f5942d0585370d02b721964bf471dea765c7",
+    "SIM0140_escaneado.pdf": "ffcb71d410d46d7c620bd805131a2ba8a795bcd77ddcf9cfb35eec4561c8f38d",
+    "SIM0139_escaneado.pdf": "d0c02301dedb7af6bbb7e0fe7a36e7b3d996a2ad236bd87a96d9b16b4437de81",
+    "SIM0138_escaneado.pdf": "353542a23f12050acde4f7933fd3df55b32dbc440589266096f4fafa52e28580",
+    "SIM0137_escaneado.pdf": "04c862ec943e347bb789fce5485098655ff488f8f7c13a46ae846cb16134e80a",
+    "SIM0136_escaneado.pdf": "b5c2ea12766065125906ea26ea98371e91392d76f95e879a838b402bd24547ef",
+    "SIM0135_escaneado.pdf": "148626a43264986986e329ea7af8a2d739e41232ce3cc7682b4095a32a48c135",
+    "SIM0134_escaneado.pdf": "ea26688c0248fe4706928d9ac4e7ea78c7be3073fa7bad4fc2ba464e5b742034",
+    "SIM0133_escaneado.pdf": "39893eb565268b8c7449dc9c0b1cd03f412ef1b55c12c564ede0274a1214d850",
+    "SIM0132_escaneado.pdf": "457b5e6c970e90f6aac99a21020e2cfc9b642bcb853ce8e82720df4f22246c05",
+    "SIM0131_escaneado.pdf": "86c5f8dd048ecfd71b85a9c00047f12e074ea82bc6ce50cef81f276deddb9f34",
+    "SIM0130_escaneado.pdf": "1bbe109d7989f4b64aad36eeb075faf01522ac341c0a12eb2278e6c8741a05b6",
+    "SIM0129_escaneado.pdf": "0e42d14f2a9979219b376fb06616219e523ebcaa473423ae42080c9d442a9e43",
+    "SIM0128_escaneado.pdf": "f12b365ecd08115686e39bbb12a8df11ee1a17153563a2da1a6c473eacc37d7e",
+    "SIM0127_escaneado.pdf": "ef3a0d1007e328b1dbe7105ee00ce3e7452731be3aa951adc7b0806908aa6407",
+    "SIM0126_escaneado.pdf": "bacd11c96c334d8d4f830a289d8279f506714e8381bd60ed97c0b83af7acd11b",
+    "SIM0125_escaneado.pdf": "0309289039105bad0ec92639ac92cb4e3432d3ed81c4cbe219a13c93face3200",
+    "SIM0124_escaneado.pdf": "1702d26275324dfe2099514a72870ac99c1a4320539b5db01951387de6c9ca9f",
+    "SIM0123_escaneado.pdf": "6474f6114f86a2d202bf5b5e055e65b57d864f4f638b0983d22da726cdb122c8",
+    "SIM0122_escaneado.pdf": "94ee2e79a951fd04a159fe8e1c7b9224cf3dad1648c36d388dda3bf6232226c2",
+    "SIM0121_escaneado.pdf": "efc9ab2324ee7e274050f338ed6be61b37fb58c0acd0879dbb77aaa57f4f4543",
+    "SIM0120_digital.pdf": "647961d6aee69b735a4732f0387d18f22cccc43d3929764b6e9f07629dbde0e9",
+    "SIM0119_digital.pdf": "3452db7701fb97ce72f186aabfac65feaac9a314d54e5de52368ae0a4a626840",
+    "SIM0118_digital.pdf": "b3f6bafe167e038f82638a0e323fb0c62651e1679b056fddc201bd4ee9737e5c",
+    "SIM0117_digital.pdf": "b4782d191b74bf1fe3073d708dbda9b43451ba6f717a60b68df1e72968c96ffd",
+    "SIM0116_digital.pdf": "a11c17fb5e70e2cad9168d6842316e8eb5d7237ae5f0156d4f4d89286f71672e",
+    "SIM0115_digital.pdf": "eb74e16be5a7670f27a14d64cb85f9b057b50eb0b7ec8aa1c929d05e23f71abd",
+    "SIM0114_digital.pdf": "6b5b901540114e3906617cdd8e13a8f8375b22022fe993c7e0fe61d33e9a78aa",
+    "SIM0113_digital.pdf": "6a9fec1640cfdf294ef8f2ecda51365f329167b265a320d40b49b5856c32e122",
+    "SIM0112_digital.pdf": "6691eeb08926b64345d80b84dd0f803c5c9e48f3692666466e5ea832db57f235",
+    "SIM0111_digital.pdf": "df95af6c52fd0d9f4240cfce6a94e2790423e5a855b3943759f34f2c069dad52",
+    "SIM0110_digital.pdf": "28980bf64f048e902a2708eac5329a2a6a2fd6f75087d1655ff31d9aaa3b4a9c",
+    "SIM0109_digital.pdf": "b716ee374c775df453a30a806848cd7ceb6565b89eb77111a81fc5579a1fb3eb",
+    "SIM0108_digital.pdf": "4ae55b086eea47574931026280b482f74291e59b7ba276e9ee85857434fc7c40",
+    "SIM0107_digital.pdf": "2b52a6702964ec9edd4e5172188bfbd1d9b8bdb2c86a904ed9ec4b4f175514aa",
+    "SIM0106_digital.pdf": "d8e4827531c4cea4440507813b91cbfce0530f5bd6789a045449bb4ecd4f91b5",
+    "SIM0105_digital.pdf": "ee26f0df0d165bc4f6b0e6d84f8f5677ad3e6202b5f4e6b7bedd58dfe8fd3776",
+    "SIM0104_digital.pdf": "ecd224a97f32dc16e6dca9e95ff7cc383f8bae6b5f16fd91d05453c4fade0ebb",
+    "SIM0103_digital.pdf": "e767ca5d8d0972d4abcd9ca28d5f7dfa563701351cfea0052d5f0eb9267ee5eb",
+    "SIM0102_digital.pdf": "0ec6851ca378ec89a2ebddd2d64d5c8f530e89a20f161c8228e391d52d6345e7",
+    "SIM0101_digital.pdf": "40a4627b34b9775180b52e1ba6879ff9531a522701f5aa58df4982917083b53b",
+    "SIM0100_digital.pdf": "fbce84e570f30d359792d97acd6f3a0209d42d0efc50f0f36d74c422b4c3ab29",
+    "SIM0099_digital.pdf": "62245883d4783eff34665f5d68d8b5a449bb8414d3a3230db8a7ff98853932ee",
+    "SIM0098_digital.pdf": "49e5c99c60c4e69495daa27cb1ea7d8fc8b73dd3bdbe1431ac2f79c707d96c71",
+    "SIM0097_digital.pdf": "658b906c38d0e1d268fafb2b76b1be6de3986a56a52f77bf8626d8cdb71acbec",
+    "SIM0096_digital.pdf": "9ec45a17e58e189de184716e5e78e8f42716205be019e2dec8d93d32cb237901",
+    "SIM0095_digital.pdf": "c81d5e849b170295f5ddec17fc25d1ea59946016e419ce33f600aa750315754f",
+    "SIM0094_digital.pdf": "fb85f286279931484a6a5cd22b138a806b83f066372bd59cd1865ffedf0634d3",
+    "SIM0093_digital.pdf": "a233178483711551a23078e9514364c9731f8905ebeb448635a77b1b97d04b0f",
+    "SIM0092_digital.pdf": "fd1d39a80c2754f0da5663c35131ebb767fe4d7cecd71c2025acc41795f1316b",
+    "SIM0091_digital.pdf": "449761b89e6e56a153d08209b2b4a8f7bcb3d7380b40e6532322774940dcd181",
+    "SIM0090_digital.pdf": "a969eefd91a0d730c81cffafb9f0f28334b572993b90e31241ebe5c8f85f5f06",
+    "SIM0089_digital.pdf": "112c94735cb2cd145547f0ec7db85e12e4393a7d433c3a5fa105cc6e4ed7f08f",
+    "SIM0088_digital.pdf": "732a1abde8a37b0a4b8dca3de2ce1cff3bf43d68505172b8401f18efdb095983",
+    "SIM0087_digital.pdf": "17db10a67bece8364ea0af0f5438f763d86b6d78829f7253770b27b40217e00d",
+    "SIM0086_digital.pdf": "6b6ac840dc012909b5576ebeeebae006f2967db813d8feacceea0c4bfbf43cf1",
+    "SIM0085_digital.pdf": "9c37e758ca81e937bbbbb92fdedbb528c197ff74cf88e0f41e7689a1cc12dc45",
+    "SIM0084_digital.pdf": "cd1473e845cd6fa44abb57092f892d8c341e445bac928d4631e666c0c86ebbb6",
+    "SIM0083_digital.pdf": "e1de5d00e836188305d87bfb0f6af92ba5e3dec46de0b2396d7a2d41ba9e7e47",
+    "SIM0082_digital.pdf": "d118ecbb39248fd500a0500e4c6d79ebe0aff0ec31d2a0a4a33f91e278ff0016",
+    "SIM0081_digital.pdf": "98fba8b6d8c078e9e945b25d711765302f22eab0b18615a8ae3065ee527c5751",
+    "SIM0080_digital.pdf": "1a3e48a10e3bb06fd51c9792643521ebccef9912ccf83c651c3222b1573fea05",
+    "SIM0079_digital.pdf": "15e5b29a38806388c4c88c167cf70e7be8ce4d165367ac7926bb33987fece72c",
+    "SIM0078_digital.pdf": "11b54a86b858e8c2478adaeb1b8d5012abde86f580a81cbe28acea95c830f1d7",
+    "SIM0077_digital.pdf": "420973bba9f9fa86f6546e421b183c923d252f67384e55119f7137a6b6a0cbbc",
+    "SIM0076_digital.pdf": "6ec2dbf0f76efbb17889f68cd11d73cfcd7266510024b541787b285ac384b574",
+    "SIM0075_digital.pdf": "3592e0734fc6d22e00db6391e76da596cd55f0fca01d144453b1ca0a0d5647cb",
+    "SIM0074_digital.pdf": "da810233498caea5915c5300e8b4324cb24632ce196124d922f2ad569ed316c0",
+    "SIM0073_digital.pdf": "e671d125181a634b5fb94790a62d7aad46b40ca0bbc01a403e911e1adf14abdd",
+    "SIM0072_digital.pdf": "53cab53d8a89cd5b9f7a4f41dc1df01450883b9a462d1917cfe51e620161b8a5",
+    "SIM0071_digital.pdf": "ba0a89efd66a747343fcb0d3684c693a951ac70c53b5bfa24d5b5550b2f20376",
+    "SIM0070_digital.pdf": "35808b81296c54dc96085a511961a8b763a6ac101aebed2f8aaf36dad80fd40e",
+    "SIM0069_digital.pdf": "a64747bf2f5dd13db31b8ee1ab4bf7489058cccad40ac7112e6a2b5777187b38",
+    "SIM0068_digital.pdf": "ffd968e01f314567c3d0d496e348f72fd79a00da32a132b413b2e517688e36fd",
+    "SIM0067_digital.pdf": "5805283f782c32148d5e5d6e501791ccb4aca77eec721970051c22d195d324ab",
+    "SIM0066_digital.pdf": "8f5111dbad527228d4d799b0027690f1bd0a125c2a26ccb26d6ac326d9c8a2ea",
+    "SIM0065_digital.pdf": "7144b931002c3c0bf6fbc5b5a816ccfd0cc38befbc1456a6b7139206c0eee4a5",
+    "SIM0064_digital.pdf": "5f2284164782aca644aa7235098755921bc221865b6d28cc8c2dc856365b3364",
+    "SIM0063_digital.pdf": "0e33e6cf08e9323cb402f5f5d05330251efe47756bb161335d89f4e0ab5ac8a8",
+    "SIM0062_digital.pdf": "d9c2f37c2619eb8ad7014b22bc90bf27bc2930e3a9b6c6d8c125d598087d502b",
+    "SIM0061_digital.pdf": "2738582df9581d9c7443f6a5ddba1327db0232daba3ea5d2f7e0d1f42a592411",
+    "SIM0060_digital.pdf": "0780b85d7f91e0ba4803a1eabeb90b6dfb00e6a4c4ceea6911165f4025ef9117",
+    "SIM0059_digital.pdf": "76eaba135769b464cf49c56306bbf631c9ed57928362b920de1e5f6a26699f75",
+    "SIM0058_digital.pdf": "2ced03f151857feaa4f21918f42d22c8d13c0868b8e989f03e4da4823a8f781c",
+    "SIM0057_digital.pdf": "44d1c2c4bc1d41df9a35d3d99eff2c659438f8d2f0c57bab24b9b6f8ba789697",
+    "SIM0056_digital.pdf": "8e9666f48a21eb82f47f4c30ff84150245c6ba39492d12ea8d2dbf2f80eb5a37",
+    "SIM0055_digital.pdf": "a6a2b88f964b02ac6bef27331895df02128e0bad1e8991cdb9011902ad34e5da",
+    "SIM0054_digital.pdf": "dbe2621ae433525403d19e503bc52c84ba9ceb8f0292900ae45f367728a23555",
+    "SIM0053_digital.pdf": "0621562c9ea082c3d5c8550645bf5732e9fa1cf3396152cfcf0d474ddcd3db53",
+    "SIM0052_digital.pdf": "d2d97b9b7c6101162bda92e112b8d6dc440004a863eb97b4c6d53261854a71e0",
+    "SIM0051_digital.pdf": "17282eadd975d229b861d63315af1bdfe44d8332162fa91a435474905f1bfb68",
+    "SIM0050_digital.pdf": "729001041a6544d3e232102abc87d805e9e455654cf82f00f280ec77ea78ea51",
+    "SIM0049_digital.pdf": "3994093be40a53c1785c6b1a4e5c43d62f08bf41201dea21bbf43bc1b096c191",
+    "SIM0048_digital.pdf": "430f585c2fe79c69ce0b199dc5f1ada23a8386e29421e0e9d35b25e3346619f1",
+    "SIM0047_digital.pdf": "88b5384a9f03fc8b1d9578048b9b206f7f50cdb7adc9b5f8e6af3b5edd2443d5",
+    "SIM0046_digital.pdf": "1083b0b9e94d0e0b6124067d4fd1117db38232fb95a8e09bdb4bb816aa05fe1d",
+    "SIM0045_digital.pdf": "a240b0cc9c4a84d3f965d6e4af4c7991626b7eaba5baae078c993d20004c57f7",
+    "SIM0044_digital.pdf": "2ef8fc230d4bad56bfa42cfe15d2c4078a7dbfaca6107f86d6853ca77466533a",
+    "SIM0043_digital.pdf": "7797f09fe6e4ac4ed1fbcd186591b1f3a92709b39bda097991556090d1c8f256",
+    "SIM0042_digital.pdf": "55a953075d7aea6b5ad08d30969cfc4ad935172d23187c656fb86e996969e714",
+    "SIM0041_digital.pdf": "54971392464a20be86dc971ced787f1b67f59e82764a5932dd946ce99addca50",
+    "SIM0040_digital.pdf": "7603a441e75aeddd539a4f9da782bcf47986f4cbff2727133e89adc746a4fcf8",
+    "SIM0039_digital.pdf": "e15555747e4f2e421a68e28d36acfa1989584c0bff396c8409f5a078ff746e66",
+    "SIM0038_digital.pdf": "7f237c503c9bb655a3e1bd8e2866007d2bdbd4f84082ca7e56202a40d19f719e",
+    "SIM0037_digital.pdf": "54e86ef9a04edf4003b9d6ee77e0fbd2d43c05a591594dd1d53bfe016daa663c",
+    "SIM0036_digital.pdf": "b4ac1e0da88d1d4f98f7bd58cac1accf2deebce912f07b7e47c4c614694542fa",
+    "SIM0035_digital.pdf": "a4edd48a5be764869b1468c475da84febf6fc472964e7a613fa9a33e762a4173",
+    "SIM0034_digital.pdf": "5a70b831e2af1e4ab4f8c9e5aeca33cfdf3b7901bed2b0f00cf85e77e15eda46",
+    "SIM0033_digital.pdf": "f738c258e8406b2fc55f292fa6bad7851a14ff0a36fd2dbce87cdf0e0044e8cb",
+    "SIM0032_digital.pdf": "9f9d6f03d3a87b47c965d7cd8a698ac931f47149d0a0c11d32755eb7eff813a5",
+    "SIM0031_digital.pdf": "8c3522551e62189efb1d05781bf02c13d7e9257c320d9077d0716348466985da",
+    "SIM0030_digital.pdf": "ee7f7f390b4fc11825e25d7f198063045a4ac07851f1e39d7a96a4959b273bc1",
+    "SIM0029_digital.pdf": "34fdcf27713a85dfcde0c88e44eed950aa32b7180d4c352d2b2dc7d35720569f",
+    "SIM0028_digital.pdf": "9283a9cc9de5520a381ec0b3c78b4b6816ffdde11e5748797ec5f7753fe5714c",
+    "SIM0027_digital.pdf": "22cd7c7a9f15b9e37df96e70291348a5c0d79d6bbdcb4fe3f6b1d02e079bb106",
+    "SIM0026_digital.pdf": "85540302cb56a3e65437b8306b04edc61d414c0bf345187ad6ea97709f51cc71",
+    "SIM0025_digital.pdf": "0c49eb7d02dc67ed4b154422df096b35462685aee42067d1869ba216f4512640",
+    "SIM0024_digital.pdf": "b2b95cf566d10114253cf69bfbebc9ddcb4c1e2a547c3a1a16e3e523009512da",
+    "SIM0023_digital.pdf": "369a890840caacbf40c38b40ca29fd153450dbbe44822303c3ceb9dda9f83d58",
+    "SIM0022_digital.pdf": "eec85d4c1a27319832aa9b5836e859a2bcd94f78188736a5cae40d4901965483",
+    "SIM0021_digital.pdf": "aa320a063a115e52d823d69764a3a11c69abbc08a786e576370d42123ade9f11",
+    "SIM0020_digital.pdf": "b4b803e4d7aa33d1f8b20dc3aae1e23c43171fe50dceee55f5b9add9dddd8204",
+    "SIM0019_digital.pdf": "a8253c8c126c2fbf5610ee1b81acbc231cb8320a88a8fc0fbe9d259ac32928af",
+    "SIM0018_digital.pdf": "877ec7c60765d7cf9a6b255d3e18c2f2160de8031ea5f7c8c17bb708049b9192",
+    "SIM0017_digital.pdf": "240c818a7e542de03f2ed7a6486f81a556c3ced3e26f88723d102b2fbc499521",
+    "SIM0016_digital.pdf": "32323f88aeadf70635343693856ef7140ca77b3dea0ecdfb4287227e448b0b55",
+    "SIM0015_digital.pdf": "2db6304973b7071de7e9a218052a8af8600f81f9a0865f60a68393e9fcd1616f",
+    "SIM0014_digital.pdf": "c2120374de7b1cbb7ec5475b82f614fa10b0f9678f904f6515c412c034987d6b",
+    "SIM0013_digital.pdf": "0f3dce45fad2b9c4e4a4a564afe377cbc9d9393e214e1c50ac7b00404c6711d5",
+    "SIM0012_digital.pdf": "23e4b954cb3a42b21b028096a14c7b0bda66bae0dd4e99668b427eb0e03c81ff",
+    "SIM0011_digital.pdf": "282bb88dbda2d68fccaa9bc2e48ac2f4cb27cdfa424f2126a29d5e47012c6bf3",
+    "SIM0010_digital.pdf": "b7f0b9f3285769710aea444bc8d696e3c7f5ce531d3a7f7e140d853ff418f27c",
+    "SIM0009_digital.pdf": "ef45824e1ad715c08a4d1535f86d8dc65e11c80ed93482c1ef7c1d1987c3737e",
+    "SIM0008_digital.pdf": "09e66a9b4bf2a7c62ae40f378b4b0e8b4911151e7e65328f2467972df2f376cc",
+    "SIM0007_digital.pdf": "4685d66b2805bd0e83931c04b1ea71c73ee599ba4d9d9162be3fd88268e58168",
+    "SIM0006_digital.pdf": "c1aca06781f3bef026cb1d9ab98d7f50c5036d67db6d571fd5e9918c018d7db0",
+    "SIM0005_digital.pdf": "723e6693f2a478eb46bce87d1b22ef4c4fd7a623f039eebd6b625e2c24fcfb1d",
+    "SIM0004_digital.pdf": "6375385aa8b2c3fad9d4c6fc88882e328ed5f1c594aa068c781750d0425c35be",
+    "SIM0003_digital.pdf": "3580cda02d646a0da91d5a9d74da9ddf987e0939ba5e3cb1f9cbef508f1e3db4",
+    "SIM0002_digital.pdf": "a27eb769e101540fe31d82e4a5f0e3a46cc47e2d2625f0545e3bf617f8040a5c",
+    "SIM0001_digital.pdf": "b92ca7c7a443d3f359909e0cf0c698f84cd9e7b360b85b160b3cad59d062cd50"
+  },
+  "reindexar": [
+    {
+      "documento": {
+        "id": "1ea385af-edb0-48c4-b876-06d00750bc91",
+        "coleccion_id": "a865c442-6358-4f2d-a19f-20997ac9d225",
+        "titulo": "SIM0200 | Escritura simulada ficticio | Unidad Sauce 200",
+        "nombre_original": "SIM0200_mixto.pdf",
+        "extension": "pdf",
+        "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+        "creado_en": "2026-11-02T21:43:22.760016Z",
+        "paginas": 8,
+        "paginas_ocr": 0
+      },
+      "paginas": [
+        {
+          "numero": 1,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0200 | Escritura simulada ficticio | Unidad Sauce 200\nPartes ficticias: Persona Cedente 200 del Archivo Imaginario y Persona Receptora 195 de Puerto\nInventado.\n\nCláusula 1. Identificación de las partes\nLa parte cedente es Persona Cedente 200 del Archivo Imaginario y la parte receptora es Persona\nReceptora 195 de Puerto Inventado. Actúan exclusivamente como personajes de una simulación, sin\nrepresentar una operación jurídica real. Este apartado corresponde a Unidad Sauce 200, folio SIM0200. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0200-01.\n\nCláusula 2. Objeto del acuerdo\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Sauce 200, folio\nSIM0200. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0200-02.\n\nCláusula 3. Descripción del inmueble\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Sauce 200, folio SIM0200.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0200-03.\n\nCláusula 4. Documentación e inventario\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Sauce 200, folio SIM0200. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0200-04.\n\nPágina 1 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 2,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0200 | Escritura simulada ficticio | Unidad Sauce 200\nPartes ficticias: Persona Cedente 200 del Archivo Imaginario y Persona Receptora 195 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 3,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0200 | Escritura simulada ficticio | Unidad Sauce 200\nPartes ficticias: Persona Cedente 200 del Archivo Imaginario y Persona Receptora 195 de Puerto\nInventado.\n\nCláusula 9. Importe principal\nEl importe principal acordado es de 24500 pesos ficticios. No incluye conceptos adicionales que no consten\npor escrito. Este apartado corresponde a Unidad Sauce 200, folio SIM0200. La documentación de respaldo\ndebe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los\nconceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola\nreferencia. La referencia de control es FICT-0200-09.\n\nCláusula 10. Calendario de pagos\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Sauce 200, folio\nSIM0200. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0200-10.\n\nCláusula 11. Comprobantes y recibos\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Sauce 200, folio SIM0200.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0200-11.\n\nCláusula 12. Actualización de importes\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Sauce 200, folio SIM0200. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0200-12.\n\nPágina 3 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 4,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0200 | Escritura simulada ficticio | Unidad Sauce 200\nPartes ficticias: Persona Cedente 200 del Archivo Imaginario y Persona Receptora 195 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 5,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0200 | Escritura simulada ficticio | Unidad Sauce 200\nPartes ficticias: Persona Cedente 200 del Archivo Imaginario y Persona Receptora 195 de Puerto\nInventado.\n\nCláusula 17. Constitución de garantía\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Sauce 200, folio SIM0200. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0200-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 30 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Unidad Sauce 200, folio SIM0200.\nLa persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las\ndiferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0200-18.\n\nCláusula 19. Deducciones documentadas\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Sauce 200, folio SIM0200.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0200-19.\n\nCláusula 20. Entrega de llaves\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Sauce 200, folio SIM0200. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0200-20.\n\nPágina 5 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 6,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0200 | Escritura simulada ficticio | Unidad Sauce 200\nPartes ficticias: Persona Cedente 200 del Archivo Imaginario y Persona Receptora 195 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 7,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0200 | Escritura simulada ficticio | Unidad Sauce 200\nPartes ficticias: Persona Cedente 200 del Archivo Imaginario y Persona Receptora 195 de Puerto\nInventado.\n\nCláusula 25. Cesión a terceros\nNo se permite ceder el uso del inmueble a terceros sin autorización escrita. Una visita temporal no\nconstituye una cesión del acuerdo. Este apartado corresponde a Unidad Sauce 200, folio SIM0200. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0200-25.\n\nCláusula 26. Modificaciones interiores\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Sauce 200, folio\nSIM0200. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0200-26.\n\nCláusula 27. Reglas de convivencia\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Sauce 200, folio SIM0200.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0200-27.\n\nCláusula 28. Inspecciones programadas\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Sauce 200, folio SIM0200. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0200-28.\n\nPágina 7 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 8,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0200 | Escritura simulada ficticio | Unidad Sauce 200\nPartes ficticias: Persona Cedente 200 del Archivo Imaginario y Persona Receptora 195 de Puerto\nInventado.",
+          "metodo": "texto"
+        }
+      ]
+    },
+    {
+      "documento": {
+        "id": "3552fe80-e63f-4bc3-ab02-48d103732eb8",
+        "coleccion_id": "a865c442-6358-4f2d-a19f-20997ac9d225",
+        "titulo": "SIM0190 | Compraventa ficticio | Unidad Coral 190",
+        "nombre_original": "SIM0190_mixto.pdf",
+        "extension": "pdf",
+        "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+        "creado_en": "2026-11-02T21:42:24.073702Z",
+        "paginas": 8,
+        "paginas_ocr": 0
+      },
+      "paginas": [
+        {
+          "numero": 1,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0190 | Compraventa ficticio | Unidad Coral 190\nPartes ficticias: Persona Cedente 190 del Archivo Imaginario y Persona Receptora 125 de Puerto\nInventado.\n\nCláusula 1. Identificación de las partes\nLa parte cedente es Persona Cedente 190 del Archivo Imaginario y la parte receptora es Persona\nReceptora 125 de Puerto Inventado. Actúan exclusivamente como personajes de una simulación, sin\nrepresentar una operación jurídica real. Este apartado corresponde a Unidad Coral 190, folio SIM0190.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0190-01.\n\nCláusula 2. Objeto del acuerdo\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Coral 190, folio SIM0190. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0190-02.\n\nCláusula 3. Descripción del inmueble\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Coral 190, folio SIM0190. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0190-03.\n\nCláusula 4. Documentación e inventario\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Coral 190, folio\nSIM0190. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0190-04.\n\nPágina 1 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 2,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0190 | Compraventa ficticio | Unidad Coral 190\nPartes ficticias: Persona Cedente 190 del Archivo Imaginario y Persona Receptora 125 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 3,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0190 | Compraventa ficticio | Unidad Coral 190\nPartes ficticias: Persona Cedente 190 del Archivo Imaginario y Persona Receptora 125 de Puerto\nInventado.\n\nCláusula 9. Importe principal\nEl importe principal acordado es de 108875 pesos ficticios. No incluye conceptos adicionales que no\nconsten por escrito. Este apartado corresponde a Unidad Coral 190, folio SIM0190. Toda modificación de\nesta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no\nexista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales\ncontradictorias. La referencia de control es FICT-0190-09.\n\nCláusula 10. Calendario de pagos\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Coral 190, folio SIM0190. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0190-10.\n\nCláusula 11. Comprobantes y recibos\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Coral 190, folio SIM0190. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0190-11.\n\nCláusula 12. Actualización de importes\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Coral 190, folio\nSIM0190. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0190-12.\n\nPágina 3 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 4,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0190 | Compraventa ficticio | Unidad Coral 190\nPartes ficticias: Persona Cedente 190 del Archivo Imaginario y Persona Receptora 125 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 5,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0190 | Compraventa ficticio | Unidad Coral 190\nPartes ficticias: Persona Cedente 190 del Archivo Imaginario y Persona Receptora 125 de Puerto\nInventado.\n\nCláusula 17. Constitución de garantía\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Coral 190, folio SIM0190.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0190-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 65 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Unidad Coral 190, folio SIM0190.\nLas partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier\nmovimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La\nreferencia de control es FICT-0190-18.\n\nCláusula 19. Deducciones documentadas\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Coral 190, folio SIM0190. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0190-19.\n\nCláusula 20. Entrega de llaves\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Coral 190, folio\nSIM0190. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0190-20.\n\nPágina 5 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 6,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0190 | Compraventa ficticio | Unidad Coral 190\nPartes ficticias: Persona Cedente 190 del Archivo Imaginario y Persona Receptora 125 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 7,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0190 | Compraventa ficticio | Unidad Coral 190\nPartes ficticias: Persona Cedente 190 del Archivo Imaginario y Persona Receptora 125 de Puerto\nInventado.\n\nCláusula 25. Cesión a terceros\nNo se permite ceder el uso del inmueble a terceros sin autorización escrita. Una visita temporal no\nconstituye una cesión del acuerdo. Este apartado corresponde a Unidad Coral 190, folio SIM0190. Toda\nmodificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada.\nMientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones\nverbales contradictorias. La referencia de control es FICT-0190-25.\n\nCláusula 26. Modificaciones interiores\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Coral 190, folio SIM0190. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0190-26.\n\nCláusula 27. Reglas de convivencia\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Coral 190, folio SIM0190. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0190-27.\n\nCláusula 28. Inspecciones programadas\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Coral 190, folio\nSIM0190. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0190-28.\n\nPágina 7 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 8,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0190 | Compraventa ficticio | Unidad Coral 190\nPartes ficticias: Persona Cedente 190 del Archivo Imaginario y Persona Receptora 125 de Puerto\nInventado.",
+          "metodo": "texto"
+        }
+      ]
+    },
+    {
+      "documento": {
+        "id": "0d042fd9-ca29-42fc-aeb7-0b653cf5f17e",
+        "coleccion_id": "a865c442-6358-4f2d-a19f-20997ac9d225",
+        "titulo": "SIM0180 | Escritura simulada ficticio | Unidad Cobre 180",
+        "nombre_original": "SIM0180_mixto.pdf",
+        "extension": "pdf",
+        "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+        "creado_en": "2026-11-02T21:41:27.615159Z",
+        "paginas": 8,
+        "paginas_ocr": 0
+      },
+      "paginas": [
+        {
+          "numero": 1,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0180 | Escritura simulada ficticio | Unidad Cobre 180\nPartes ficticias: Persona Cedente 180 del Archivo Imaginario y Persona Receptora 055 de Puerto\nInventado.\n\nCláusula 1. Identificación de las partes\nLa parte cedente es Persona Cedente 180 del Archivo Imaginario y la parte receptora es Persona\nReceptora 055 de Puerto Inventado. Actúan exclusivamente como personajes de una simulación, sin\nrepresentar una operación jurídica real. Este apartado corresponde a Unidad Cobre 180, folio SIM0180. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0180-01.\n\nCláusula 2. Objeto del acuerdo\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Cobre 180, folio\nSIM0180. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0180-02.\n\nCláusula 3. Descripción del inmueble\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Cobre 180, folio SIM0180.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0180-03.\n\nCláusula 4. Documentación e inventario\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Cobre 180, folio SIM0180. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0180-04.\n\nPágina 1 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 2,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0180 | Escritura simulada ficticio | Unidad Cobre 180\nPartes ficticias: Persona Cedente 180 del Archivo Imaginario y Persona Receptora 055 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 3,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0180 | Escritura simulada ficticio | Unidad Cobre 180\nPartes ficticias: Persona Cedente 180 del Archivo Imaginario y Persona Receptora 055 de Puerto\nInventado.\n\nCláusula 9. Importe principal\nEl importe principal acordado es de 93250 pesos ficticios. No incluye conceptos adicionales que no consten\npor escrito. Este apartado corresponde a Unidad Cobre 180, folio SIM0180. La documentación de respaldo\ndebe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los\nconceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola\nreferencia. La referencia de control es FICT-0180-09.\n\nCláusula 10. Calendario de pagos\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Cobre 180, folio\nSIM0180. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0180-10.\n\nCláusula 11. Comprobantes y recibos\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Cobre 180, folio SIM0180.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0180-11.\n\nCláusula 12. Actualización de importes\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Cobre 180, folio SIM0180. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0180-12.\n\nPágina 3 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 4,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0180 | Escritura simulada ficticio | Unidad Cobre 180\nPartes ficticias: Persona Cedente 180 del Archivo Imaginario y Persona Receptora 055 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 5,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0180 | Escritura simulada ficticio | Unidad Cobre 180\nPartes ficticias: Persona Cedente 180 del Archivo Imaginario y Persona Receptora 055 de Puerto\nInventado.\n\nCláusula 17. Constitución de garantía\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Cobre 180, folio SIM0180. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0180-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 58 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Unidad Cobre 180, folio SIM0180. La\npersona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las\ndiferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0180-18.\n\nCláusula 19. Deducciones documentadas\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Cobre 180, folio SIM0180.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0180-19.\n\nCláusula 20. Entrega de llaves\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Cobre 180, folio SIM0180. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0180-20.\n\nPágina 5 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 6,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0180 | Escritura simulada ficticio | Unidad Cobre 180\nPartes ficticias: Persona Cedente 180 del Archivo Imaginario y Persona Receptora 055 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 7,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0180 | Escritura simulada ficticio | Unidad Cobre 180\nPartes ficticias: Persona Cedente 180 del Archivo Imaginario y Persona Receptora 055 de Puerto\nInventado.\n\nCláusula 25. Cesión a terceros\nNo se permite ceder el uso del inmueble a terceros sin autorización escrita. Una visita temporal no\nconstituye una cesión del acuerdo. Este apartado corresponde a Unidad Cobre 180, folio SIM0180. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0180-25.\n\nCláusula 26. Modificaciones interiores\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Cobre 180, folio\nSIM0180. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0180-26.\n\nCláusula 27. Reglas de convivencia\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Cobre 180, folio SIM0180.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0180-27.\n\nCláusula 28. Inspecciones programadas\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Cobre 180, folio SIM0180. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0180-28.\n\nPágina 7 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 8,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0180 | Escritura simulada ficticio | Unidad Cobre 180\nPartes ficticias: Persona Cedente 180 del Archivo Imaginario y Persona Receptora 055 de Puerto\nInventado.",
+          "metodo": "texto"
+        }
+      ]
+    },
+    {
+      "documento": {
+        "id": "6982a5b8-7d22-48f7-9578-cdcdfe03ccd3",
+        "coleccion_id": "a865c442-6358-4f2d-a19f-20997ac9d225",
+        "titulo": "SIM0170 | Compraventa ficticio | Unidad Jacaranda 170",
+        "nombre_original": "SIM0170_mixto.pdf",
+        "extension": "pdf",
+        "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+        "creado_en": "2026-11-02T21:40:31.003813Z",
+        "paginas": 8,
+        "paginas_ocr": 0
+      },
+      "paginas": [
+        {
+          "numero": 1,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0170 | Compraventa ficticio | Unidad Jacaranda 170\nPartes ficticias: Persona Cedente 170 del Archivo Imaginario y Persona Receptora 226 de Puerto\nInventado.\n\nCláusula 1. Identificación de las partes\nLa parte cedente es Persona Cedente 170 del Archivo Imaginario y la parte receptora es Persona\nReceptora 226 de Puerto Inventado. Actúan exclusivamente como personajes de una simulación, sin\nrepresentar una operación jurídica real. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0170-01.\n\nCláusula 2. Objeto del acuerdo\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0170-02.\n\nCláusula 3. Descripción del inmueble\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0170-03.\n\nCláusula 4. Documentación e inventario\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Jacaranda 170, folio\nSIM0170. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0170-04.\n\nPágina 1 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 2,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0170 | Compraventa ficticio | Unidad Jacaranda 170\nPartes ficticias: Persona Cedente 170 del Archivo Imaginario y Persona Receptora 226 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 3,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0170 | Compraventa ficticio | Unidad Jacaranda 170\nPartes ficticias: Persona Cedente 170 del Archivo Imaginario y Persona Receptora 226 de Puerto\nInventado.\n\nCláusula 9. Importe principal\nEl importe principal acordado es de 21125 pesos ficticios. No incluye conceptos adicionales que no consten\npor escrito. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170. Toda modificación de esta\ncondición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista\nese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales\ncontradictorias. La referencia de control es FICT-0170-09.\n\nCláusula 10. Calendario de pagos\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0170-10.\n\nCláusula 11. Comprobantes y recibos\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0170-11.\n\nCláusula 12. Actualización de importes\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Jacaranda 170, folio\nSIM0170. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0170-12.\n\nPágina 3 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 4,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0170 | Compraventa ficticio | Unidad Jacaranda 170\nPartes ficticias: Persona Cedente 170 del Archivo Imaginario y Persona Receptora 226 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 5,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0170 | Compraventa ficticio | Unidad Jacaranda 170\nPartes ficticias: Persona Cedente 170 del Archivo Imaginario y Persona Receptora 226 de Puerto\nInventado.\n\nCláusula 17. Constitución de garantía\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Jacaranda 170, folio\nSIM0170. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la\ncláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se\nrechazan instrucciones verbales contradictorias. La referencia de control es FICT-0170-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 62 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Unidad Jacaranda 170, folio\nSIM0170. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar\ncualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás\nsecciones. La referencia de control es FICT-0170-18.\n\nCláusula 19. Deducciones documentadas\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0170-19.\n\nCláusula 20. Entrega de llaves\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Jacaranda 170, folio\nSIM0170. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0170-20.\n\nPágina 5 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 6,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0170 | Compraventa ficticio | Unidad Jacaranda 170\nPartes ficticias: Persona Cedente 170 del Archivo Imaginario y Persona Receptora 226 de Puerto\nInventado.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 7,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0170 | Compraventa ficticio | Unidad Jacaranda 170\nPartes ficticias: Persona Cedente 170 del Archivo Imaginario y Persona Receptora 226 de Puerto\nInventado.\n\nCláusula 25. Cesión a terceros\nNo se permite ceder el uso del inmueble a terceros sin autorización escrita. Una visita temporal no\nconstituye una cesión del acuerdo. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0170-25.\n\nCláusula 26. Modificaciones interiores\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0170-26.\n\nCláusula 27. Reglas de convivencia\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0170-27.\n\nCláusula 28. Inspecciones programadas\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Jacaranda 170, folio\nSIM0170. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0170-28.\n\nPágina 7 de 8. Personas, importes y operaciones de este acto son inventados.",
+          "metodo": "texto"
+        },
+        {
+          "numero": 8,
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\nSIM0170 | Compraventa ficticio | Unidad Jacaranda 170\nPartes ficticias: Persona Cedente 170 del Archivo Imaginario y Persona Receptora 226 de Puerto\nInventado.",
+          "metodo": "texto"
+        }
+      ]
+    }
+  ]
+}

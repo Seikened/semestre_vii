@@ -1,0 +1,67 @@
+ Image motor-documental-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.32kB done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 447B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:24-bookworm-slim
+#3 ...
+
+#4 [auth] library/node:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:24-bookworm-slim
+#3 DONE 0.8s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 73B done
+#5 DONE 0.0s
+
+#6 [construir 1/7] FROM docker.io/library/node:24-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c
+#6 resolve docker.io/library/node:24-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 10.18kB done
+#7 DONE 0.0s
+
+#8 [construir 7/7] RUN pnpm rebuild && pnpm exec nuxt prepare && pnpm build
+#8 CACHED
+
+#9 [construir 2/7] RUN npm install -g pnpm@11.22.0
+#9 CACHED
+
+#10 [construir 6/7] COPY . .
+#10 CACHED
+
+#11 [stage-1 2/3] WORKDIR /app
+#11 CACHED
+
+#12 [construir 3/7] WORKDIR /app
+#12 CACHED
+
+#13 [construir 4/7] COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+#13 CACHED
+
+#14 [construir 5/7] RUN pnpm install --frozen-lockfile --ignore-scripts
+#14 CACHED
+
+#15 [stage-1 3/3] COPY --from=construir /app/.output ./.output
+#15 CACHED
+
+#16 exporting to image
+#16 exporting layers done
+#16 exporting manifest sha256:aa569a8946419411b5379ee09d36128551a435b723cdcf5fbd360d4038fb11eb done
+#16 exporting config sha256:aef0675af5a3c9ff9c3e51b67ab3913081553e7d2ffc9b7d1850fd0b826c7a91 done
+#16 exporting attestation manifest sha256:9b13cd289c6fc6ba3597595a1ae34a65062acd798ffcb7af11609a7f7f6b4866 done
+#16 exporting manifest list sha256:0f3ba167e32bd271a730cfe103859510e93933d0f587621968c468984a2cdcce done
+#16 naming to docker.io/library/motor-documental-web:latest done
+#16 unpacking to docker.io/library/motor-documental-web:latest done
+#16 DONE 0.0s
+
+#17 resolving provenance for metadata file
+#17 DONE 0.0s
+ Image motor-documental-web Built 

@@ -1,21 +1,23 @@
 # Desarrollo de Aplicaciones
 
-Materia del semestre VII centrada en un único producto de software: **Pronóstico y reabastecimiento de gasolineras**.
+Materia del semestre VII centrada en el **motor documental inmobiliario**.
 
-No se usa una secuencia `proyecto_1`, `proyecto_2`, etc. La materia evoluciona alrededor del mismo sistema y su documentación viva se mantiene junto con el código.
+La documentación viva se mantiene junto con el código. El proyecto de gasolineras fue descartado por Fernando y se conserva como antecedente.
 
 ## Producto
 
 ```text
 src/semestre_vii/desarrollo_de_aplicaciones/
-└── reabastecimiento_gasolineras/
+└── motor_documental/
     ├── README.md
     ├── docs/
     ├── backend/
     └── frontend/
 ```
 
-El producto combina operación de pedidos, autenticación y cuentas, una experiencia para sucursales, una experiencia administrativa y un motor predictivo. **El forecasting es una capacidad del sistema, no la identidad completa del producto.**
+El producto extrae, vectoriza y recupera contratos completamente ficticios. La recuperación funciona sin un LLM. La interfaz Nuxt UI también incorpora un chat opcional de GPT-6 Luna conectado al motor local. Cloudflare R2 y WhatsApp oficial se incorporarán después.
+
+El servicio tiene su propio entorno uv en `motor_documental/backend/`, para conservar las dependencias y la versión Python de las demás materias. Consultar el [README del producto](motor_documental/README.md), su [proceso de desarrollo](motor_documental/DEVELOPMENT.md) y la [rúbrica del segundo parcial](motor_documental/docs/09_matriz_rubrica.md).
 
 Las rutas compartidas de la materia son:
 

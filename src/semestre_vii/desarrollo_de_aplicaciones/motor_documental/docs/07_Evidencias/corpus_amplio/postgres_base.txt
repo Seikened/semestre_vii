@@ -1,0 +1,10 @@
+               nombre               | documentos | paginas | paginas_ocr | fragmentos | dimension 
+------------------------------------+------------+---------+-------------+------------+-----------
+ Evaluación ampliada, 240 ficticios |        240 |    1640 |         464 |       5527 |       384
+(1 row)
+
+ base_total 
+------------
+ 32 MB
+(1 row)
+

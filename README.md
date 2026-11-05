@@ -60,6 +60,10 @@ uv run python -m semestre_vii.mineria_de_datos.actividades.ecobici --year 2025
 
 La actividad genera sus datos en `data/mineria_de_datos/ecobici/`; la base DuckDB y los CSV descargados permanecen locales.
 
+## Desarrollo de Aplicaciones
+
+El [motor documental inmobiliario](src/semestre_vii/desarrollo_de_aplicaciones/motor_documental/README.md) reemplaza el proyecto de gasolineras. Trabaja con contratos ficticios y embeddings locales, con un chat opcional de GPT-6 Luna conectado a la búsqueda del motor. El servicio tiene un entorno propio administrado con uv.
+
 ## Visión de máquina
 
 `semestre_vii.vision_de_maquina.vision_node` contiene una API Fluent e inmutable para experimentar con imágenes como tensores PyTorch en layout `CHW`. La superficie pública sigue una filosofía parecida a Polars: se encadenan operaciones sobre objetos de dominio y se cruza a NumPy o PyTorch sólo de forma explícita cuando hace falta.

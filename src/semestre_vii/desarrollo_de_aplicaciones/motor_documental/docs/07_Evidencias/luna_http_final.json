@@ -1,0 +1,256 @@
+[
+  {
+    "caso": "ocr_intrapagina",
+    "fecha": "2026-11-02T18:54:33.986101-06:00",
+    "entrada": {
+      "texto": "En SIM0170, ¿cuál es el límite de reparaciones y qué se necesita para gastar más?",
+      "modo": "hibrida",
+      "coleccion_id": "a865c442-6358-4f2d-a19f-20997ac9d225",
+      "historial": []
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "El límite sin autorización adicional es de 5100 pesos ficticios por evento. Para gastar más se requiere aprobación escrita.\n\n[1]",
+      "resultado": {
+        "consulta": "SIM0170 \"reparaciones\"",
+        "modo": "hibrida",
+        "coincidencias": [
+          {
+            "documento_id": "4d033085-b69f-4ec7-a7ba-2c72596b616f",
+            "titulo": "SIM0170 | Compraventa ficticio | Unidad Jacaranda 170",
+            "nombre_original": "SIM0170_mixto.pdf",
+            "pagina": 4,
+            "metodo": "ocr",
+            "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0170 | Compraventa ficticio | Unidad Jacaranda 170 Partes ficticias: Persona Cedente 170 del Archivo Imaginario y Persona Receptora 226 de Puerto Inventado. Cláusula 13. Límite de reparaciones El límite de reparaciones sin autorización adicional es de 5100 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita. Este apartado corresponde a Unidad Jacaranda 170, folio SIM0170. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0170-13. Cláusula 14. Conservación ordinaria La revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas partes ficticias. Este apartado corresponde",
+            "puntuacion": 0.03252247488101533
+          }
+        ]
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "fuente_esperada": true,
+    "pasajes_cotejados": true
+  },
+  {
+    "caso": "cedro",
+    "fecha": "2026-11-02T18:54:38.002800-06:00",
+    "entrada": {
+      "texto": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?",
+      "modo": "hibrida",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "historial": []
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "Debes avisar con 60 días naturales de anticipación. La penalización equivale a dos mensualidades de renta; la renta mensual es de 18,000 pesos, así que serían 36,000 pesos. Además, el documento indica un mantenimiento mensual de 900 pesos, pero no especifica si se cobra tras desocupar.\n\n[1] [2]",
+      "resultado": {
+        "consulta": "Cedro \"desocupar antes de tiempo\"",
+        "modo": "hibrida",
+        "coincidencias": [
+          {
+            "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+            "titulo": "FIC-003 mixto",
+            "nombre_original": "FIC-003_mixto.pdf",
+            "pagina": 1,
+            "metodo": "texto",
+            "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 1 Partes: Persona Épsilon y Persona Zeta, identidades inventadas. Inmueble: local comercial Cedro, plaza ficticia Horizonte, local L-04. Cláusula 2 Renta mensual: 18000 pesos ficticios. El uso autorizado es una librería. El plazo es de veinticuatro meses a partir del 1 de marzo de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+            "puntuacion": 0.01639344262295082
+          },
+          {
+            "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+            "titulo": "FIC-003 mixto",
+            "nombre_original": "FIC-003_mixto.pdf",
+            "pagina": 2,
+            "metodo": "ocr",
+            "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+            "puntuacion": 0.016129032258064516
+          }
+        ]
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "fuente_esperada": true,
+    "pasajes_cotejados": true
+  },
+  {
+    "caso": "seguimiento",
+    "fecha": "2026-11-02T18:54:41.027128-06:00",
+    "entrada": {
+      "texto": "¿Y con cuánto tiempo debo avisar?",
+      "modo": "hibrida",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "historial": [
+        {
+          "rol": "user",
+          "texto": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?"
+        },
+        {
+          "rol": "assistant",
+          "texto": "Debes avisar con 60 días naturales de anticipación. La penalización equivale a dos mensualidades de renta; la renta mensual es de 18,000 pesos, así que serían 36,000 pesos. Además, el documento indica un mantenimiento mensual de 900 pesos, pero no especifica si se cobra tras desocupar.\n\n[1] [2]"
+        }
+      ]
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "Debes avisar con sesenta días naturales de anticipación.\n\n[1]",
+      "resultado": {
+        "consulta": "Cedro \"aviso\"",
+        "modo": "hibrida",
+        "coincidencias": [
+          {
+            "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+            "titulo": "FIC-003 mixto",
+            "nombre_original": "FIC-003_mixto.pdf",
+            "pagina": 2,
+            "metodo": "ocr",
+            "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+            "puntuacion": 0.03252247488101533
+          }
+        ]
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "fuente_esperada": true,
+    "pasajes_cotejados": true
+  },
+  {
+    "caso": "escaneado",
+    "fecha": "2026-11-02T18:54:45.457441-06:00",
+    "entrada": {
+      "texto": "¿Qué multa corresponde si se entrega tarde el departamento Bruma?",
+      "modo": "hibrida",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "historial": []
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "La penalización por retraso de la parte vendedora es de 1,500 pesos ficticios por día, hasta un máximo de veinte días.\n\n[1]",
+      "resultado": {
+        "consulta": "Bruma entrega tardía",
+        "modo": "hibrida",
+        "coincidencias": [
+          {
+            "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+            "titulo": "FIC-002 escaneado",
+            "nombre_original": "FIC-002_escaneado.pdf",
+            "pagina": 2,
+            "metodo": "ocr",
+            "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+            "puntuacion": 0.01639344262295082
+          }
+        ]
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "fuente_esperada": true,
+    "pasajes_cotejados": true
+  },
+  {
+    "caso": "aurora",
+    "fecha": "2026-11-02T18:54:51.759743-06:00",
+    "entrada": {
+      "texto": "¿Cuándo se devuelve el depósito de Aurora?",
+      "modo": "hibrida",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "historial": []
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "El depósito se devuelve dentro de treinta días naturales después de entregar la vivienda; se descuentan los daños documentados.\n\n[1]",
+      "resultado": {
+        "consulta": "Aurora depósito devolución",
+        "modo": "hibrida",
+        "coincidencias": [
+          {
+            "documento_id": "f9fdeba1-a7c6-4638-8405-dcaff3110bb5",
+            "titulo": "FIC-001 digital",
+            "nombre_original": "FIC-001_digital.pdf",
+            "pagina": 2,
+            "metodo": "texto",
+            "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 3 Depósito en garantía: 12500 pesos ficticios. Se devuelve dentro de treinta días naturales después de entregar la vivienda, descontando daños documentados. Cláusula 4 Mascotas: se permite un gato doméstico. Queda prohibido subarrendar la vivienda sin autorización escrita. Página 2. Todo el contenido y sus partes son inventados.",
+            "puntuacion": 0.01639344262295082
+          }
+        ]
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "fuente_esperada": true,
+    "pasajes_cotejados": true
+  },
+  {
+    "caso": "sin_evidencia",
+    "fecha": "2026-11-02T18:54:58.358131-06:00",
+    "entrada": {
+      "texto": "¿Cuál es la renta del contrato INEXISTENTEZZQ9999 del castillo lunar?",
+      "modo": "hibrida",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "historial": []
+    },
+    "status": 503,
+    "salida": {
+      "codigo": "LUNA_NO_DISPONIBLE",
+      "detalle": "No fue posible contactar a Luna. La búsqueda local sigue disponible."
+    }
+  },
+  {
+    "caso": "sin_evidencia_reintento_manual",
+    "fecha": "2026-11-02T19:01:21.788395-06:00",
+    "status": 200,
+    "esperado": 200,
+    "correcto": true,
+    "salida": {
+      "respuesta": "No encontré evidencia suficiente para responder con los documentos seleccionados. Indica el folio o el inmueble y comprueba que el contrato esté en esta colección.",
+      "resultado": {
+        "consulta": "INEXISTENTEZZQ9999 \"renta\"",
+        "modo": "hibrida",
+        "coincidencias": []
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "sin_fuentes": true
+  },
+  {
+    "caso": "sin_clave_local",
+    "fecha": "2026-11-02T19:01:21.863473-06:00",
+    "status": 401,
+    "esperado": 401,
+    "correcto": true,
+    "salida": {
+      "codigo": "ACCESO_DENEGADO",
+      "detalle": "Se requiere una API key válida."
+    }
+  },
+  {
+    "caso": "pregunta_vacia",
+    "fecha": "2026-11-02T19:01:21.888587-06:00",
+    "status": 422,
+    "esperado": 422,
+    "correcto": true,
+    "salida": {
+      "codigo": "ENTRADA_INVALIDA",
+      "detalle": "Revisa los datos y formatos enviados."
+    }
+  },
+  {
+    "caso": "rol_no_permitido",
+    "fecha": "2026-11-02T19:01:21.892685-06:00",
+    "status": 422,
+    "esperado": 422,
+    "correcto": true,
+    "salida": {
+      "codigo": "ENTRADA_INVALIDA",
+      "detalle": "Revisa los datos y formatos enviados."
+    }
+  },
+  {
+    "caso": "historial_excesivo",
+    "fecha": "2026-11-02T19:01:21.902554-06:00",
+    "status": 422,
+    "esperado": 422,
+    "correcto": true,
+    "salida": {
+      "codigo": "ENTRADA_INVALIDA",
+      "detalle": "Revisa los datos y formatos enviados."
+    }
+  }
+]

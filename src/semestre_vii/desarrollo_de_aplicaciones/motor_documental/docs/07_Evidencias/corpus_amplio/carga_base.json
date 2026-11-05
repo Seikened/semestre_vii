@@ -1,0 +1,2167 @@
+{
+  "fecha": "2026-11-02T15:27:32.765151-06:00",
+  "coleccion_id": "a865c442-6358-4f2d-a19f-20997ac9d225",
+  "documentos": [
+    {
+      "archivo": "SIM0001_digital.pdf",
+      "documento_id": "3766addb-1c95-4fec-ad51-e9e3323b1238",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 3.135646417999851,
+      "reutilizado": true,
+      "segundos_verificacion": 0.12018991700006154
+    },
+    {
+      "archivo": "SIM0002_digital.pdf",
+      "documento_id": "15fc2a16-50e5-4cce-bc90-754f12f75f91",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8844494589998249,
+      "reutilizado": true,
+      "segundos_verificacion": 0.016538958000182902
+    },
+    {
+      "archivo": "SIM0003_digital.pdf",
+      "documento_id": "4426a42c-3647-47bf-b6d9-49ea099965be",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 4.245396210000308,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01327983300006963
+    },
+    {
+      "archivo": "SIM0004_digital.pdf",
+      "documento_id": "8fb83047-1705-46a8-b32b-c779a155b14f",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9166279579999355,
+      "reutilizado": true,
+      "segundos_verificacion": 0.014165167000101064
+    },
+    {
+      "archivo": "SIM0005_digital.pdf",
+      "documento_id": "26c23737-d6f6-4f12-aded-5bc211007779",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 3.0228139590003593,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008934916999805864
+    },
+    {
+      "archivo": "SIM0006_digital.pdf",
+      "documento_id": "349a2983-46bd-4be4-b1e9-228adc15a947",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.354630000999805,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009445959000004223
+    },
+    {
+      "archivo": "SIM0007_digital.pdf",
+      "documento_id": "b2e54d81-4997-4097-89db-265d3ea591cc",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.2863762509996377,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009030999999595224
+    },
+    {
+      "archivo": "SIM0008_digital.pdf",
+      "documento_id": "0d95d7ca-e900-4ceb-b13d-6089581d7d79",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8305185429999256,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007481583000298997
+    },
+    {
+      "archivo": "SIM0009_digital.pdf",
+      "documento_id": "140bc9b3-9977-404c-96b5-2de73b835cda",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.1206053759997303,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007912250000117638
+    },
+    {
+      "archivo": "SIM0010_digital.pdf",
+      "documento_id": "a7753156-23cb-4c30-b6f3-0a82825249b5",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.79864012500002,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008032959000047413
+    },
+    {
+      "archivo": "SIM0011_digital.pdf",
+      "documento_id": "19ad81f3-1e84-4865-82ed-8bf1d2d943bc",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.807882126000095,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008597208000082901
+    },
+    {
+      "archivo": "SIM0012_digital.pdf",
+      "documento_id": "ef68c5b8-4608-4740-ad56-b1a07080a7d4",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7296845430000758,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008002374999705353
+    },
+    {
+      "archivo": "SIM0013_digital.pdf",
+      "documento_id": "edf0365e-157b-4a63-9085-f2717de12144",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9407284590001836,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008909665999908611
+    },
+    {
+      "archivo": "SIM0014_digital.pdf",
+      "documento_id": "2a803b4a-9544-4c88-bea1-c811ad1a7762",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8315474589999212,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008256625000285567
+    },
+    {
+      "archivo": "SIM0015_digital.pdf",
+      "documento_id": "c0b2e704-aa0e-4778-bed2-5fc906f13a1c",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.0797967919997973,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0074061250002159795
+    },
+    {
+      "archivo": "SIM0016_digital.pdf",
+      "documento_id": "6ac6934e-fb79-46a4-8eed-f5c6718fd15c",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.3824569179996615,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006874582999898848
+    },
+    {
+      "archivo": "SIM0017_digital.pdf",
+      "documento_id": "6d94921b-2c31-427d-a09f-a7f8e82ae553",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.032673792999958,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007217666000087775
+    },
+    {
+      "archivo": "SIM0018_digital.pdf",
+      "documento_id": "ac4b1dc9-01e9-4934-9707-0306bff52eae",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.915429875999962,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007748624999749154
+    },
+    {
+      "archivo": "SIM0019_digital.pdf",
+      "documento_id": "b9975e1f-8317-46f5-90c2-ca7e67fedebb",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8877974999995786,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008611750000000029
+    },
+    {
+      "archivo": "SIM0020_digital.pdf",
+      "documento_id": "81e5a0b5-2ded-450c-a088-95d170a9da3c",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7981564590004382,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006879083000058017
+    },
+    {
+      "archivo": "SIM0021_digital.pdf",
+      "documento_id": "4e19a507-8e88-495a-b807-a96ddc156592",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.865215668000019,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007404082999983075
+    },
+    {
+      "archivo": "SIM0022_digital.pdf",
+      "documento_id": "4b1be679-56f1-41b1-a3df-7d725b409eed",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7856346260000464,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006567749999703665
+    },
+    {
+      "archivo": "SIM0023_digital.pdf",
+      "documento_id": "7c141a0e-6ff5-4600-b358-f0807fd09997",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8283660430001873,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007539249999808817
+    },
+    {
+      "archivo": "SIM0024_digital.pdf",
+      "documento_id": "bb48f4fb-afd1-43d2-9c20-a64038c7e884",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7494596669998828,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007938833000025625
+    },
+    {
+      "archivo": "SIM0025_digital.pdf",
+      "documento_id": "f049fa66-39aa-4a9a-9fdc-7105c5639138",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9447880010002336,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00706850000005943
+    },
+    {
+      "archivo": "SIM0026_digital.pdf",
+      "documento_id": "e319d015-faa8-4091-ac63-46a083cae983",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.873396418000084,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007315167000342626
+    },
+    {
+      "archivo": "SIM0027_digital.pdf",
+      "documento_id": "ca5ca548-b3ca-48d8-a680-f44ff7966f4a",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8081820010002048,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006666959000085626
+    },
+    {
+      "archivo": "SIM0028_digital.pdf",
+      "documento_id": "a67d2eff-df59-4b86-ae77-7fab852c22da",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7292468339996958,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00653737499987983
+    },
+    {
+      "archivo": "SIM0029_digital.pdf",
+      "documento_id": "cd1b9b0c-8fec-4219-bb26-419584a42df3",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9259440010000617,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007967667000229994
+    },
+    {
+      "archivo": "SIM0030_digital.pdf",
+      "documento_id": "39fbf702-2cdd-4666-8e4e-dd0d9858cc91",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7847687510002288,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006752250000317872
+    },
+    {
+      "archivo": "SIM0031_digital.pdf",
+      "documento_id": "9860ceb9-51a0-4d28-9970-59c1b6a7d9b4",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7913572510001359,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008907583000109298
+    },
+    {
+      "archivo": "SIM0032_digital.pdf",
+      "documento_id": "07d3887d-3f75-47d6-9eaf-f2d93bd94442",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.749971626000388,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006724207999923237
+    },
+    {
+      "archivo": "SIM0033_digital.pdf",
+      "documento_id": "00d5ced2-00af-4a46-805d-79f8e81c1865",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8917371260004074,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007473250000202825
+    },
+    {
+      "archivo": "SIM0034_digital.pdf",
+      "documento_id": "3ef86338-447a-4f0b-982b-9942181fc7fd",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7539215010001499,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008420124999702239
+    },
+    {
+      "archivo": "SIM0035_digital.pdf",
+      "documento_id": "cff73415-5001-40c9-8ea4-1da6af925f66",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.839446584000143,
+      "reutilizado": true,
+      "segundos_verificacion": 0.010998875000041153
+    },
+    {
+      "archivo": "SIM0036_digital.pdf",
+      "documento_id": "f2eb1425-0d25-49e4-b2c8-67df2f35d6f2",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8589042089997747,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006384958000126062
+    },
+    {
+      "archivo": "SIM0037_digital.pdf",
+      "documento_id": "3317ff4a-a863-4af5-a1b4-4c7a5c463056",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9437091259997032,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007361082999977953
+    },
+    {
+      "archivo": "SIM0038_digital.pdf",
+      "documento_id": "c4f05818-3d2b-4713-94d4-6af2eaeb9d6b",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8622665009997945,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008256667000296147
+    },
+    {
+      "archivo": "SIM0039_digital.pdf",
+      "documento_id": "ceca43dd-430a-4fd8-afe2-0fadb9114f02",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9168532090002373,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008097459000055096
+    },
+    {
+      "archivo": "SIM0040_digital.pdf",
+      "documento_id": "f9ed9341-e669-43b0-8f9c-85272a13ced9",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8693282919998637,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0070425829999294365
+    },
+    {
+      "archivo": "SIM0041_digital.pdf",
+      "documento_id": "b7deb343-921f-4ce3-84fb-bca064f203e8",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9690465839998978,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007753124999908323
+    },
+    {
+      "archivo": "SIM0042_digital.pdf",
+      "documento_id": "6566506d-061b-4251-9a34-f42d3617a4fa",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9524382929998865,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006505917000140471
+    },
+    {
+      "archivo": "SIM0043_digital.pdf",
+      "documento_id": "8aed0de5-c076-44b1-98c3-2c2f8e870118",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8579659170000014,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009025124999880063
+    },
+    {
+      "archivo": "SIM0044_digital.pdf",
+      "documento_id": "5850fd1f-0f56-40f2-869b-daa637dc54ef",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.920770708999953,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00724099999979444
+    },
+    {
+      "archivo": "SIM0045_digital.pdf",
+      "documento_id": "4cfcd370-e7d2-4f2c-a874-73bcab3a7a2f",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 4.438543251999818,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008788999999978842
+    },
+    {
+      "archivo": "SIM0046_digital.pdf",
+      "documento_id": "480cf7a1-0ae5-4be0-a627-6b6f5da4163a",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.2623537089998536,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007044500000120024
+    },
+    {
+      "archivo": "SIM0047_digital.pdf",
+      "documento_id": "981a6f75-763d-46ca-8c43-b2d2d70063e7",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.1688303349997113,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008802958000160288
+    },
+    {
+      "archivo": "SIM0048_digital.pdf",
+      "documento_id": "36f2c80f-cd9c-4fc4-bde8-91af848b7974",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.136636291999821,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007901957999820297
+    },
+    {
+      "archivo": "SIM0049_digital.pdf",
+      "documento_id": "509dbe8c-ce7e-4509-a58a-3ca88ca7b968",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.3455810840000595,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006252708999909373
+    },
+    {
+      "archivo": "SIM0050_digital.pdf",
+      "documento_id": "a5200e19-a0c5-4250-9c6e-395b45cb5485",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.353414791999967,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007577542000035464
+    },
+    {
+      "archivo": "SIM0051_digital.pdf",
+      "documento_id": "136c238e-c836-4404-a4c5-63ff8d3a867f",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9133250849999968,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007477916999960144
+    },
+    {
+      "archivo": "SIM0052_digital.pdf",
+      "documento_id": "88eb5dc8-04c8-4243-b671-1269dea8a8fb",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.808749168000304,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006716125000366446
+    },
+    {
+      "archivo": "SIM0053_digital.pdf",
+      "documento_id": "25ca396f-fd33-43ca-992a-ae0fc5de11db",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.2614331670001775,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007507750000058877
+    },
+    {
+      "archivo": "SIM0054_digital.pdf",
+      "documento_id": "4182745e-b016-40e3-8032-6965e1f8989b",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.026472542999727,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008567957999730424
+    },
+    {
+      "archivo": "SIM0055_digital.pdf",
+      "documento_id": "e0fccd93-adf6-40db-8529-b345e160d987",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9712806669999736,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006469874999766034
+    },
+    {
+      "archivo": "SIM0056_digital.pdf",
+      "documento_id": "eeace8d0-c096-45cb-a418-db84899302df",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8674081259996456,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007507792000069458
+    },
+    {
+      "archivo": "SIM0057_digital.pdf",
+      "documento_id": "e6c3c0a4-6187-48ad-871f-e724095d4760",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.196906084999682,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007352874999924097
+    },
+    {
+      "archivo": "SIM0058_digital.pdf",
+      "documento_id": "2fdbc4df-f536-4585-aa17-275de710ec10",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8992931669999962,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007451458000105049
+    },
+    {
+      "archivo": "SIM0059_digital.pdf",
+      "documento_id": "7962f591-a612-4510-8674-408f2d68e3ec",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.08528808400024,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007021040999916295
+    },
+    {
+      "archivo": "SIM0060_digital.pdf",
+      "documento_id": "3c80a151-bd13-466e-855f-282b43cc5764",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.853645750999931,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007142582999676961
+    },
+    {
+      "archivo": "SIM0061_digital.pdf",
+      "documento_id": "cc75c769-abd7-4693-a2ff-932f600ee838",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9626730840000164,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007023084000138624
+    },
+    {
+      "archivo": "SIM0062_digital.pdf",
+      "documento_id": "91235f75-cbd1-4326-9446-cca9bf0dce9b",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8796747930000492,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008667665999837482
+    },
+    {
+      "archivo": "SIM0063_digital.pdf",
+      "documento_id": "834d3bcf-0eb6-420d-86b4-32ee1f2215fe",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8692044590002297,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007423791000292113
+    },
+    {
+      "archivo": "SIM0064_digital.pdf",
+      "documento_id": "214721ea-df2b-4e57-a6d6-fd9f3536ae29",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.827276041999994,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007778625000355532
+    },
+    {
+      "archivo": "SIM0065_digital.pdf",
+      "documento_id": "817daa5f-11bf-40f2-9c1b-5853d1437c8c",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.022810333999587,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0066060409999408876
+    },
+    {
+      "archivo": "SIM0066_digital.pdf",
+      "documento_id": "7ead5c80-7626-477d-bd8a-6eb1e767f80c",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9060406680000597,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008385000000089349
+    },
+    {
+      "archivo": "SIM0067_digital.pdf",
+      "documento_id": "544eaf70-fc83-41a4-94cc-352935753eca",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9039507929996944,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006374083000082464
+    },
+    {
+      "archivo": "SIM0068_digital.pdf",
+      "documento_id": "fa69b7b2-60e5-4631-acf9-c51cde31bce6",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8650925010001629,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008421917000305257
+    },
+    {
+      "archivo": "SIM0069_digital.pdf",
+      "documento_id": "b69ad649-0b2b-43de-a450-a1361e12ac3c",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.175064875999851,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007126999999854888
+    },
+    {
+      "archivo": "SIM0070_digital.pdf",
+      "documento_id": "24f081bb-c76e-4841-9637-dedd34b40ecf",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9430112929999268,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007156540999858407
+    },
+    {
+      "archivo": "SIM0071_digital.pdf",
+      "documento_id": "b0f04f10-0b33-47a1-971a-57a35112e0c5",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9893155009999646,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0067269999999552965
+    },
+    {
+      "archivo": "SIM0072_digital.pdf",
+      "documento_id": "0d590b7f-750d-456e-ad0a-a1f81ecf4d4b",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.0077212930000314,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008106541999950423
+    },
+    {
+      "archivo": "SIM0073_digital.pdf",
+      "documento_id": "a31699d1-6411-452a-9a90-23f4cee4db6f",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.366968500999974,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007110375000138447
+    },
+    {
+      "archivo": "SIM0074_digital.pdf",
+      "documento_id": "2008df56-606c-4774-bc73-e77d97f46c7e",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9790266670001984,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00836683300030927
+    },
+    {
+      "archivo": "SIM0075_digital.pdf",
+      "documento_id": "086e49c5-6c65-4a76-b23a-1aca312e2a9f",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9670265429999745,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007459166999979061
+    },
+    {
+      "archivo": "SIM0076_digital.pdf",
+      "documento_id": "dcd4f9de-95b5-4f9e-9d85-4c4225c1d300",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8885747929998615,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009318291999989015
+    },
+    {
+      "archivo": "SIM0077_digital.pdf",
+      "documento_id": "48ea59c1-9f3f-46ae-9041-97ce3a87c2d6",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.937516792000224,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006245375000162312
+    },
+    {
+      "archivo": "SIM0078_digital.pdf",
+      "documento_id": "05b4e64a-4318-469a-ae5f-0eb4fd2b6026",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9616628759999912,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007104083000285755
+    },
+    {
+      "archivo": "SIM0079_digital.pdf",
+      "documento_id": "64fe75cc-a8df-4380-aded-66bdcde06f95",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9390270839999175,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007112165999842546
+    },
+    {
+      "archivo": "SIM0080_digital.pdf",
+      "documento_id": "5d99999d-3bb6-4d2e-844c-0366e50e0a47",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.1003364600001078,
+      "reutilizado": true,
+      "segundos_verificacion": 0.010676500000045053
+    },
+    {
+      "archivo": "SIM0081_digital.pdf",
+      "documento_id": "e68b550a-422e-4eda-9c4b-1e5e362353bf",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.1145641260000048,
+      "reutilizado": true,
+      "segundos_verificacion": 0.014324166999813315
+    },
+    {
+      "archivo": "SIM0082_digital.pdf",
+      "documento_id": "39589dee-4db0-46e9-9469-ca1df11c6f28",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9334790010002507,
+      "reutilizado": true,
+      "segundos_verificacion": 0.013638624999657623
+    },
+    {
+      "archivo": "SIM0083_digital.pdf",
+      "documento_id": "0d77bfe8-4305-4ea5-a4dd-4cbf7b84f59a",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.0283234590001484,
+      "reutilizado": true,
+      "segundos_verificacion": 0.011933166999824607
+    },
+    {
+      "archivo": "SIM0084_digital.pdf",
+      "documento_id": "df987c77-cce9-447b-ace7-8e78b7985659",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8552520839998579,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008924332999868057
+    },
+    {
+      "archivo": "SIM0085_digital.pdf",
+      "documento_id": "739c08fd-b1bf-4a07-8e9f-368034015bbc",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9723107089998848,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007329791999836743
+    },
+    {
+      "archivo": "SIM0086_digital.pdf",
+      "documento_id": "adb52844-b216-4ebe-9d08-f6a2bf0a3bdf",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8744196259999626,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007971958999860362
+    },
+    {
+      "archivo": "SIM0087_digital.pdf",
+      "documento_id": "480d0203-02dd-411b-b053-240bf027ca96",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8998410839999451,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006501458000002458
+    },
+    {
+      "archivo": "SIM0088_digital.pdf",
+      "documento_id": "2a1163fb-467c-4f5b-95bc-4ab00a23b15e",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.008252126000116,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006651500000316446
+    },
+    {
+      "archivo": "SIM0089_digital.pdf",
+      "documento_id": "48883f32-a31e-4977-b288-8425d500c6ba",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.8385438769996654,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0068398749999687425
+    },
+    {
+      "archivo": "SIM0090_digital.pdf",
+      "documento_id": "e0f615ff-1d6e-4c02-8e41-de240cc3d386",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9865855010002633,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00883904199963581
+    },
+    {
+      "archivo": "SIM0091_digital.pdf",
+      "documento_id": "f16a451a-f2cc-484e-b98b-f8b7150b8ec7",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9250597499999458,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007354959000167582
+    },
+    {
+      "archivo": "SIM0092_digital.pdf",
+      "documento_id": "17abb6e9-5e3e-42ae-84fa-bf0d5ba3086a",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.829226042999835,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0072642919999452715
+    },
+    {
+      "archivo": "SIM0093_digital.pdf",
+      "documento_id": "62813ee2-b184-482c-a82f-12dd459d8bd7",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9560907090003639,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0068769170002269675
+    },
+    {
+      "archivo": "SIM0094_digital.pdf",
+      "documento_id": "ca765e53-db44-4c7b-805c-7b58dea98a49",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8703709169999456,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0071630829997957335
+    },
+    {
+      "archivo": "SIM0095_digital.pdf",
+      "documento_id": "55d42e44-6e27-4c76-8d85-1879781ebd89",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8907234999996945,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008606207999946491
+    },
+    {
+      "archivo": "SIM0096_digital.pdf",
+      "documento_id": "639a20a3-5ef1-4de0-9151-125f7510961f",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7946477509999568,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006950417000098241
+    },
+    {
+      "archivo": "SIM0097_digital.pdf",
+      "documento_id": "56d4b679-3e85-484b-a79f-1f36c320f4b2",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9119145009999556,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007593207999889273
+    },
+    {
+      "archivo": "SIM0098_digital.pdf",
+      "documento_id": "c1439e55-9f5a-43d2-82c9-38b1e9617aea",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.87091458399982,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0069439580001926515
+    },
+    {
+      "archivo": "SIM0099_digital.pdf",
+      "documento_id": "deb871e0-ed49-4f4b-a197-d7819b5f4ca3",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8739505840003403,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007139833999644907
+    },
+    {
+      "archivo": "SIM0100_digital.pdf",
+      "documento_id": "76f4aba7-1618-4f36-b2f5-0d3786a8db58",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8277756679999584,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008717707999949198
+    },
+    {
+      "archivo": "SIM0101_digital.pdf",
+      "documento_id": "693a1cb4-7f5b-472d-b2e1-faaab717b253",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.013413042999673,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006569958999989467
+    },
+    {
+      "archivo": "SIM0102_digital.pdf",
+      "documento_id": "94f8bf0f-de9f-4799-b6df-90985a459db5",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.859002459000294,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0070827909999025
+    },
+    {
+      "archivo": "SIM0103_digital.pdf",
+      "documento_id": "14d9f3c3-cfc6-45da-a9ef-a136bb35a4fb",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9201750010001888,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008236874999965949
+    },
+    {
+      "archivo": "SIM0104_digital.pdf",
+      "documento_id": "6fcc3b51-9234-40f3-a0dc-b9de2207e22f",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8297182090000206,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007239665999804856
+    },
+    {
+      "archivo": "SIM0105_digital.pdf",
+      "documento_id": "e8954139-ef59-4cc9-b154-464d815356a7",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8700970419999976,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007694500000070548
+    },
+    {
+      "archivo": "SIM0106_digital.pdf",
+      "documento_id": "b88297eb-d4c1-4923-a198-17493c486295",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7747306259998368,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006757167000159825
+    },
+    {
+      "archivo": "SIM0107_digital.pdf",
+      "documento_id": "d6d09de4-7b42-4aea-a3fb-20757b9120e7",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.9246661669999412,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00710879100006423
+    },
+    {
+      "archivo": "SIM0108_digital.pdf",
+      "documento_id": "de4f88c8-ad7c-40a0-bf2e-d61ca951a9b8",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.780325583999911,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006697416999941197
+    },
+    {
+      "archivo": "SIM0109_digital.pdf",
+      "documento_id": "7934172a-3b6a-4cdc-9c30-e0e1606875df",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8888199170000917,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006827374999829772
+    },
+    {
+      "archivo": "SIM0110_digital.pdf",
+      "documento_id": "4e9f8d41-da04-4aa8-add3-b0947b8c6762",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8228441250003016,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006993166000029305
+    },
+    {
+      "archivo": "SIM0111_digital.pdf",
+      "documento_id": "65e6ae3b-ff10-4a8e-926a-2ebcfc8c8c1e",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8509050839998054,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007540250000147353
+    },
+    {
+      "archivo": "SIM0112_digital.pdf",
+      "documento_id": "e640ca22-d8cf-47a5-9775-6649d2c412d4",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.7932129599998916,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006971208000322804
+    },
+    {
+      "archivo": "SIM0113_digital.pdf",
+      "documento_id": "a213e7b0-4605-4b24-ad7d-decfb72cd6df",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8730503340002542,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006702041000153258
+    },
+    {
+      "archivo": "SIM0114_digital.pdf",
+      "documento_id": "548508ad-dedb-4ed1-8ac0-4cb2d72e40f4",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8323083339996629,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008049459000176284
+    },
+    {
+      "archivo": "SIM0115_digital.pdf",
+      "documento_id": "4e969da6-d71e-4743-8cf7-6d64613cd6e0",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.909137584000291,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008236790999944787
+    },
+    {
+      "archivo": "SIM0116_digital.pdf",
+      "documento_id": "d539e373-0d19-421c-85bc-5c4c1b7de558",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8079838339999696,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006644500000220432
+    },
+    {
+      "archivo": "SIM0117_digital.pdf",
+      "documento_id": "3e0357a9-290f-4939-9fa0-7f3b2822d331",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.8953520850000132,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007722624999587424
+    },
+    {
+      "archivo": "SIM0118_digital.pdf",
+      "documento_id": "838f356a-c6ad-4de3-9f45-1c82adc9a178",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.80609216799985,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0064227500001834414
+    },
+    {
+      "archivo": "SIM0119_digital.pdf",
+      "documento_id": "98ca76e3-ed79-4c91-a855-ac7362dde9c4",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.040198125999723,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008200834000035684
+    },
+    {
+      "archivo": "SIM0120_digital.pdf",
+      "documento_id": "29c5ee04-5a3c-4f85-a38a-d563bc4780d3",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 2.2113403339999422,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0064322500002163
+    },
+    {
+      "archivo": "SIM0121_escaneado.pdf",
+      "documento_id": "8935c727-a551-459b-8e1b-0a20ed46b2db",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 12.23854788000017,
+      "reutilizado": true,
+      "segundos_verificacion": 0.016947916999924928
+    },
+    {
+      "archivo": "SIM0122_escaneado.pdf",
+      "documento_id": "e2685d9d-a039-4f15-9d61-f6948f7ab92c",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.466512047999913,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01300783400029104
+    },
+    {
+      "archivo": "SIM0123_escaneado.pdf",
+      "documento_id": "64fb1562-9d11-4b8f-9314-0f8b6b4af3a5",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.796676546999606,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01035249999995358
+    },
+    {
+      "archivo": "SIM0124_escaneado.pdf",
+      "documento_id": "0d0d95d2-3065-4890-87c4-81c9fec65345",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 9.868067962000168,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009896125000068423
+    },
+    {
+      "archivo": "SIM0125_escaneado.pdf",
+      "documento_id": "f554fbc9-8502-46bb-88f8-7fa550d9086f",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 13.97574667300023,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01095549999990908
+    },
+    {
+      "archivo": "SIM0126_escaneado.pdf",
+      "documento_id": "68de5f4a-0822-4a61-b9a4-b08a6f022578",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 20.96695525899986,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01091645900032745
+    },
+    {
+      "archivo": "SIM0127_escaneado.pdf",
+      "documento_id": "9a99022e-6cec-4b6c-906d-71568c9adc11",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 12.582083881000017,
+      "reutilizado": true,
+      "segundos_verificacion": 0.013898832999984734
+    },
+    {
+      "archivo": "SIM0128_escaneado.pdf",
+      "documento_id": "7d214b91-939e-4eb4-b3c0-ec589c47a012",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.993030880999868,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009525540999675286
+    },
+    {
+      "archivo": "SIM0129_escaneado.pdf",
+      "documento_id": "f0ba5389-c742-4b27-be93-a3d1fb62937e",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.03483033900011,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00880887499988603
+    },
+    {
+      "archivo": "SIM0130_escaneado.pdf",
+      "documento_id": "4267ec60-9d9d-40e4-ba5b-76ed965d7c37",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.830890504999843,
+      "reutilizado": true,
+      "segundos_verificacion": 0.013170000000172877
+    },
+    {
+      "archivo": "SIM0131_escaneado.pdf",
+      "documento_id": "c6ba5208-29d4-4514-8095-fdf39dbfb300",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.444685963000211,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012148291999892535
+    },
+    {
+      "archivo": "SIM0132_escaneado.pdf",
+      "documento_id": "a54cd113-8307-4922-bf15-a5c02515fd45",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.073251172000255,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012757249999594933
+    },
+    {
+      "archivo": "SIM0133_escaneado.pdf",
+      "documento_id": "baac10f9-8f1a-42b0-95a8-22af65c10f00",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.909889505000137,
+      "reutilizado": true,
+      "segundos_verificacion": 0.010448458999690047
+    },
+    {
+      "archivo": "SIM0134_escaneado.pdf",
+      "documento_id": "ca17877d-4b9f-43a4-a3fe-882192f4719c",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.814051087999815,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012580666999838286
+    },
+    {
+      "archivo": "SIM0135_escaneado.pdf",
+      "documento_id": "ba2271eb-75ad-4d24-b378-8dc53aed48a6",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.31231883800001,
+      "reutilizado": true,
+      "segundos_verificacion": 0.010913083000104962
+    },
+    {
+      "archivo": "SIM0136_escaneado.pdf",
+      "documento_id": "1e27c04c-cc35-4675-8c0d-63be23e65b75",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.554843378999976,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01016349999963495
+    },
+    {
+      "archivo": "SIM0137_escaneado.pdf",
+      "documento_id": "225b18f1-9ee9-42d7-a56c-ee8dc8c24762",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.998800797000058,
+      "reutilizado": true,
+      "segundos_verificacion": 0.011756041000353434
+    },
+    {
+      "archivo": "SIM0138_escaneado.pdf",
+      "documento_id": "ee00e01c-2fab-4487-b8f2-aff5d27c1439",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 12.2548424229999,
+      "reutilizado": true,
+      "segundos_verificacion": 0.013365041999804816
+    },
+    {
+      "archivo": "SIM0139_escaneado.pdf",
+      "documento_id": "e1b2e6f0-7bbb-49b6-830d-04a9f79f5764",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 22.635045927000192,
+      "reutilizado": true,
+      "segundos_verificacion": 0.010867082999993727
+    },
+    {
+      "archivo": "SIM0140_escaneado.pdf",
+      "documento_id": "bc9cf133-5a12-46e6-8975-9609e78377fa",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 20.61826763499994,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01887112500025978
+    },
+    {
+      "archivo": "SIM0141_escaneado.pdf",
+      "documento_id": "8c4846bb-9eb9-43fc-9785-3623aabf8114",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 14.412414715000068,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0203470000001289
+    },
+    {
+      "archivo": "SIM0142_escaneado.pdf",
+      "documento_id": "8745e3f7-82ba-4998-8109-7661cf2ab6dd",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 12.540369963000103,
+      "reutilizado": true,
+      "segundos_verificacion": 0.013265083000078448
+    },
+    {
+      "archivo": "SIM0143_escaneado.pdf",
+      "documento_id": "39d22de1-981f-456c-aab2-6f8fdf5ce6e5",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 12.165054381000118,
+      "reutilizado": true,
+      "segundos_verificacion": 0.017793375000110245
+    },
+    {
+      "archivo": "SIM0144_escaneado.pdf",
+      "documento_id": "10f68d94-5029-4ba8-bc48-58382d9849b2",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.135281296000358,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01679633300000205
+    },
+    {
+      "archivo": "SIM0145_escaneado.pdf",
+      "documento_id": "206b81f1-e2f1-4a0c-9e4d-12b1deee4568",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.627711922000344,
+      "reutilizado": true,
+      "segundos_verificacion": 0.018419750000248314
+    },
+    {
+      "archivo": "SIM0146_escaneado.pdf",
+      "documento_id": "ee2656d9-8518-405e-ad38-623aa9f171c8",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.110799672000212,
+      "reutilizado": true,
+      "segundos_verificacion": 0.030898458000137907
+    },
+    {
+      "archivo": "SIM0147_escaneado.pdf",
+      "documento_id": "a553a8e4-fed6-4e50-9feb-63a181d00397",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.524836170999606,
+      "reutilizado": true,
+      "segundos_verificacion": 0.03557687500006068
+    },
+    {
+      "archivo": "SIM0148_escaneado.pdf",
+      "documento_id": "f6660e9e-e454-402d-b054-3c03e5d28c44",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.683075422000002,
+      "reutilizado": true,
+      "segundos_verificacion": 0.013149458000043523
+    },
+    {
+      "archivo": "SIM0149_escaneado.pdf",
+      "documento_id": "76b2f221-56b3-412c-a9fb-dd9e5a4b9c8d",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 11.693475381000098,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012083624999831954
+    },
+    {
+      "archivo": "SIM0150_escaneado.pdf",
+      "documento_id": "b9e37bd4-a29b-47c1-9fb5-8957dfe0b087",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.54907771299986,
+      "reutilizado": true,
+      "segundos_verificacion": 0.017902999999932945
+    },
+    {
+      "archivo": "SIM0151_escaneado.pdf",
+      "documento_id": "1974a200-fd35-47ab-9c92-765b45e49adb",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.639190004999818,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01565420799988715
+    },
+    {
+      "archivo": "SIM0152_escaneado.pdf",
+      "documento_id": "ea007599-ca55-4db9-adbd-54fab3680161",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.64113175500006,
+      "reutilizado": true,
+      "segundos_verificacion": 0.011630125000010594
+    },
+    {
+      "archivo": "SIM0153_escaneado.pdf",
+      "documento_id": "ed59106f-4728-4aff-8d2c-0ea71e873304",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.711011796000093,
+      "reutilizado": true,
+      "segundos_verificacion": 0.018019958999957453
+    },
+    {
+      "archivo": "SIM0154_escaneado.pdf",
+      "documento_id": "a15733d6-5277-47ba-b22e-90b18c7d3638",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.181122379000044,
+      "reutilizado": true,
+      "segundos_verificacion": 0.013765374999820779
+    },
+    {
+      "archivo": "SIM0155_escaneado.pdf",
+      "documento_id": "19b337c2-b1cd-4e4e-8f8b-adfd18dec5d7",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.682962880000105,
+      "reutilizado": true,
+      "segundos_verificacion": 0.02371045800009597
+    },
+    {
+      "archivo": "SIM0156_escaneado.pdf",
+      "documento_id": "6d933d87-1887-4a22-b7f2-c7d7d089cfad",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.463357504000214,
+      "reutilizado": true,
+      "segundos_verificacion": 0.015227082999899721
+    },
+    {
+      "archivo": "SIM0157_escaneado.pdf",
+      "documento_id": "e38c12eb-ad6b-42da-81df-37d54df34af4",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.221722838000005,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0300323749997915
+    },
+    {
+      "archivo": "SIM0158_escaneado.pdf",
+      "documento_id": "953cf819-3f61-48b2-929d-ff963a190852",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.27737325399994,
+      "reutilizado": true,
+      "segundos_verificacion": 0.014604208000037033
+    },
+    {
+      "archivo": "SIM0159_escaneado.pdf",
+      "documento_id": "92e59590-bdd6-48f8-8d15-d5229fcf0435",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 10.043530629999623,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012659542000164947
+    },
+    {
+      "archivo": "SIM0160_escaneado.pdf",
+      "documento_id": "a990a2a2-a42b-4a5e-945c-f553f526d989",
+      "paginas": 8,
+      "paginas_ocr": 8,
+      "segundos": 9.969397087999823,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0166297079999822
+    },
+    {
+      "archivo": "SIM0161_mixto.pdf",
+      "documento_id": "ddf03742-aff5-4253-b091-932a9dd05f96",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 5.92050462799989,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012075999999979103
+    },
+    {
+      "archivo": "SIM0162_mixto.pdf",
+      "documento_id": "18d617d3-37eb-4c40-9e22-1850f75b90f4",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.513598628000182,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012345582999842009
+    },
+    {
+      "archivo": "SIM0163_mixto.pdf",
+      "documento_id": "32afe923-9c79-4ab1-96b0-29fc7f8a3952",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.277367502999823,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00989241699971899
+    },
+    {
+      "archivo": "SIM0164_mixto.pdf",
+      "documento_id": "f0985235-b6c3-49b1-b176-abcd13c2821d",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.176985461000186,
+      "reutilizado": true,
+      "segundos_verificacion": 0.014533334000134346
+    },
+    {
+      "archivo": "SIM0165_mixto.pdf",
+      "documento_id": "0a8cbd74-dd05-4401-9ecb-af492dfa39ff",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.125520878000316,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01126108300013584
+    },
+    {
+      "archivo": "SIM0166_mixto.pdf",
+      "documento_id": "98cbb118-af6f-4694-b6c4-28109df21d82",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.204847669999708,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012816250000014406
+    },
+    {
+      "archivo": "SIM0167_mixto.pdf",
+      "documento_id": "24b2ecca-4aef-44f5-b10f-81a1f66c80e5",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.3047590020000825,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008358292000139045
+    },
+    {
+      "archivo": "SIM0168_mixto.pdf",
+      "documento_id": "7f97059d-4839-443e-aafe-4863c707f220",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 5.9590183359996445,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008959792000041489
+    },
+    {
+      "archivo": "SIM0169_mixto.pdf",
+      "documento_id": "bf6cc948-f92b-4b91-9023-8e30230132e2",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.140057503000207,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01856983300012871
+    },
+    {
+      "archivo": "SIM0170_mixto.pdf",
+      "documento_id": "6982a5b8-7d22-48f7-9578-cdcdfe03ccd3",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.2237020000002303,
+      "reutilizado": true,
+      "segundos_verificacion": 0.011565166999844223
+    },
+    {
+      "archivo": "SIM0171_mixto.pdf",
+      "documento_id": "884daec7-a6d9-4724-ba01-e85fce75d6a1",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 5.890298919000088,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008250333000432875
+    },
+    {
+      "archivo": "SIM0172_mixto.pdf",
+      "documento_id": "118ce337-cb75-40d5-bd49-af7cc3680770",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 5.832107420000284,
+      "reutilizado": true,
+      "segundos_verificacion": 0.010865208999803144
+    },
+    {
+      "archivo": "SIM0173_mixto.pdf",
+      "documento_id": "79e28baa-e304-469e-a375-75d9a811f172",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.605003335999754,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009050582999861945
+    },
+    {
+      "archivo": "SIM0174_mixto.pdf",
+      "documento_id": "b74bb002-0346-411c-821b-e09a593d2844",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.004423795000093,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012180833000002167
+    },
+    {
+      "archivo": "SIM0175_mixto.pdf",
+      "documento_id": "21eb260a-9559-4b61-9d02-9e0f43b21e39",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.166223128000183,
+      "reutilizado": true,
+      "segundos_verificacion": 0.010603540999909455
+    },
+    {
+      "archivo": "SIM0176_mixto.pdf",
+      "documento_id": "dd6c14c1-8b1f-44cb-80c4-ea57774c909b",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.096126877000188,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008921041000121477
+    },
+    {
+      "archivo": "SIM0177_mixto.pdf",
+      "documento_id": "16a4430e-ed87-48d1-99dd-5cea088d833f",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.410632294000152,
+      "reutilizado": true,
+      "segundos_verificacion": 0.013888459000099829
+    },
+    {
+      "archivo": "SIM0178_mixto.pdf",
+      "documento_id": "6a9040dd-aa73-4528-8a88-d7727068c706",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.0549504189998515,
+      "reutilizado": true,
+      "segundos_verificacion": 0.010910291000072903
+    },
+    {
+      "archivo": "SIM0179_mixto.pdf",
+      "documento_id": "65b2b973-8634-4b91-8b9c-742078ef66ab",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.225964752999971,
+      "reutilizado": true,
+      "segundos_verificacion": 0.010801874999742722
+    },
+    {
+      "archivo": "SIM0180_mixto.pdf",
+      "documento_id": "0d042fd9-ca29-42fc-aeb7-0b653cf5f17e",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.3135306670001228,
+      "reutilizado": true,
+      "segundos_verificacion": 0.011804582999957347
+    },
+    {
+      "archivo": "SIM0181_mixto.pdf",
+      "documento_id": "7ec9bc5c-bdb6-4edd-890a-9296eeaffdc8",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.130340627999885,
+      "reutilizado": true,
+      "segundos_verificacion": 0.011243957999795384
+    },
+    {
+      "archivo": "SIM0182_mixto.pdf",
+      "documento_id": "1fc80e08-6a96-4a3d-9c20-b7f571ada702",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.026148502000069,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009862291999979789
+    },
+    {
+      "archivo": "SIM0183_mixto.pdf",
+      "documento_id": "3d7de1dd-42ca-4d77-9842-b14c52fc628b",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.466947211999923,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008624957999927574
+    },
+    {
+      "archivo": "SIM0184_mixto.pdf",
+      "documento_id": "181d17f0-1417-43e2-8434-888cf86a4e08",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 5.928981835999821,
+      "reutilizado": true,
+      "segundos_verificacion": 0.011358834000020579
+    },
+    {
+      "archivo": "SIM0185_mixto.pdf",
+      "documento_id": "4134140c-aab5-4c40-84fd-ccf15835da72",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.181640753000011,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007095208000009734
+    },
+    {
+      "archivo": "SIM0186_mixto.pdf",
+      "documento_id": "e9e15bbf-71da-4ec3-b40c-17b57b7c85a0",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.036511544999939,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00787933299989163
+    },
+    {
+      "archivo": "SIM0187_mixto.pdf",
+      "documento_id": "60ed61d3-a92a-4c51-aa96-cd52caa5203a",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.011903545000223,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008933250000154658
+    },
+    {
+      "archivo": "SIM0188_mixto.pdf",
+      "documento_id": "0ec3501f-11c8-4657-b53c-927479cbb8e3",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.285516252999969,
+      "reutilizado": true,
+      "segundos_verificacion": 0.012467416999697889
+    },
+    {
+      "archivo": "SIM0189_mixto.pdf",
+      "documento_id": "9eb1c15d-f77d-4ccf-8c48-12ebfa0720f4",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.166505627999868,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01251174999970317
+    },
+    {
+      "archivo": "SIM0190_mixto.pdf",
+      "documento_id": "3552fe80-e63f-4bc3-ab02-48d103732eb8",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.2085710009996546,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009766583999862632
+    },
+    {
+      "archivo": "SIM0191_mixto.pdf",
+      "documento_id": "050e7ec0-58bb-454e-85f8-2d075ddbedb6",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.431025711000075,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007196666999789159
+    },
+    {
+      "archivo": "SIM0192_mixto.pdf",
+      "documento_id": "24e1af91-c88b-4bc6-b030-88c5c8918f48",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.3273173779998615,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008052208999743016
+    },
+    {
+      "archivo": "SIM0193_mixto.pdf",
+      "documento_id": "7b37cfa9-3141-4f57-97be-78f3bbec3938",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.087988378000318,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009351833000437182
+    },
+    {
+      "archivo": "SIM0194_mixto.pdf",
+      "documento_id": "7e419d46-6f61-4540-8d86-f4bd580c4279",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.31923879399983,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008658125000238215
+    },
+    {
+      "archivo": "SIM0195_mixto.pdf",
+      "documento_id": "1dcf44ee-99b9-4073-969a-cba8430ef085",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.600945711999884,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008115791999898647
+    },
+    {
+      "archivo": "SIM0196_mixto.pdf",
+      "documento_id": "c507bd21-90c3-437f-8e4d-b986181b0bdd",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 5.840816960999746,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00794958400001633
+    },
+    {
+      "archivo": "SIM0197_mixto.pdf",
+      "documento_id": "5c8a6651-6e18-4947-842c-73712db39707",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.905667128000005,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00903441600030419
+    },
+    {
+      "archivo": "SIM0198_mixto.pdf",
+      "documento_id": "97a7d481-b004-4608-ab77-ff43a89d71a3",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.7906085439999515,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00997125000003507
+    },
+    {
+      "archivo": "SIM0199_mixto.pdf",
+      "documento_id": "5e2d7d2e-25a4-42fe-bd8e-def55b359d51",
+      "paginas": 8,
+      "paginas_ocr": 4,
+      "segundos": 6.1559505029999855,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009596749999673193
+    },
+    {
+      "archivo": "SIM0200_mixto.pdf",
+      "documento_id": "1ea385af-edb0-48c4-b876-06d00750bc91",
+      "paginas": 8,
+      "paginas_ocr": 0,
+      "segundos": 1.2041199590003089,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008188709000023664
+    },
+    {
+      "archivo": "SIM0201_txt.txt",
+      "documento_id": "2e03f6d4-d539-4c12-9936-45cd57eca642",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.5339505009997083,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0090399159998924
+    },
+    {
+      "archivo": "SIM0202_txt.txt",
+      "documento_id": "25e50c70-a824-4ec7-963c-2b3977f8df1e",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.2801523749999433,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008555249999972148
+    },
+    {
+      "archivo": "SIM0203_txt.txt",
+      "documento_id": "19973d63-f9aa-466d-a441-4888baccbb94",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.333545709000191,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006135999999969499
+    },
+    {
+      "archivo": "SIM0204_txt.txt",
+      "documento_id": "2b82f9ec-aad0-43f0-a9cb-99607983b354",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.3490167929999188,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007089874999564927
+    },
+    {
+      "archivo": "SIM0205_txt.txt",
+      "documento_id": "5625ec20-6a82-4e0e-a96e-734fde582e15",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4565262510000139,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007085166000251775
+    },
+    {
+      "archivo": "SIM0206_txt.txt",
+      "documento_id": "b1a1759c-6301-4863-9054-ebd25957f571",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.6012602509999851,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0060128750001240405
+    },
+    {
+      "archivo": "SIM0207_txt.txt",
+      "documento_id": "5bb5e8fc-a5ec-4040-95c8-99ba2f76df85",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4366675430001123,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006135915999948338
+    },
+    {
+      "archivo": "SIM0208_txt.txt",
+      "documento_id": "1b5cea52-c111-4358-b902-52ec1386b01d",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4043086669998956,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006437624999762193
+    },
+    {
+      "archivo": "SIM0209_txt.txt",
+      "documento_id": "b55946c8-c113-4e0e-95cf-77df60c81b79",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.46018233399991,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006733917000019574
+    },
+    {
+      "archivo": "SIM0210_txt.txt",
+      "documento_id": "f40e4651-2139-4f8d-b078-3cac37d9b26b",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.3503653759998997,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0065881249997801206
+    },
+    {
+      "archivo": "SIM0211_txt.txt",
+      "documento_id": "1dd5f7a9-93ba-4499-af7c-0e2753297520",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.3734885840003699,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007394624999960797
+    },
+    {
+      "archivo": "SIM0212_txt.txt",
+      "documento_id": "fec23fdf-4c44-4e7f-9d92-3f2f43548407",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.356020209000235,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00781837499971516
+    },
+    {
+      "archivo": "SIM0213_txt.txt",
+      "documento_id": "65c8fd87-db4c-4af6-b7ee-7ee411b54627",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4708395839998047,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006888625000101456
+    },
+    {
+      "archivo": "SIM0214_txt.txt",
+      "documento_id": "76612ee8-c50d-4e87-984d-d3d427f6d496",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4193975840003077,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007081084000219562
+    },
+    {
+      "archivo": "SIM0215_txt.txt",
+      "documento_id": "89403767-1467-4490-8b54-a422a783790a",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.427460042000348,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007352374999754829
+    },
+    {
+      "archivo": "SIM0216_txt.txt",
+      "documento_id": "750a8d3f-a136-4653-9ea6-c311f5c20c8b",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4237699999998767,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00699320900002931
+    },
+    {
+      "archivo": "SIM0217_txt.txt",
+      "documento_id": "cdb67afe-6040-4059-81c2-2970145b1ddc",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4506636259998231,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00736708299973543
+    },
+    {
+      "archivo": "SIM0218_txt.txt",
+      "documento_id": "5620e7bb-f0bc-42b3-81cb-8628d80dedce",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.3409770009998283,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007511290999900666
+    },
+    {
+      "archivo": "SIM0219_txt.txt",
+      "documento_id": "f212b6f9-d4ad-4592-8367-120f6c288226",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4593194179997226,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0069595830000253045
+    },
+    {
+      "archivo": "SIM0220_txt.txt",
+      "documento_id": "bf4764c8-cb4a-46c1-b53c-4fa97863e7b2",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.398785584000052,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007575291999728506
+    },
+    {
+      "archivo": "SIM0221_txt.txt",
+      "documento_id": "ae792bef-edb1-427b-9170-2aeedf2e4fe9",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.5681160419999287,
+      "reutilizado": true,
+      "segundos_verificacion": 0.0071586250001018925
+    },
+    {
+      "archivo": "SIM0222_txt.txt",
+      "documento_id": "61f68563-4b25-4486-aa34-07e3692b507d",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.6707382499998857,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007631583999682334
+    },
+    {
+      "archivo": "SIM0223_txt.txt",
+      "documento_id": "01d970e9-c04b-4446-b3a0-385a48b755d8",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4106761259999985,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007751415999791789
+    },
+    {
+      "archivo": "SIM0224_txt.txt",
+      "documento_id": "8a7a7014-40aa-4ee6-ab62-d1629adb3f94",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.3366286260002198,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006484249999630265
+    },
+    {
+      "archivo": "SIM0225_txt.txt",
+      "documento_id": "c9adcd99-1275-4c9c-8c1e-3dd22fdffb2e",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4119488759997694,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007591208000121696
+    },
+    {
+      "archivo": "SIM0226_txt.txt",
+      "documento_id": "fbe98f20-dfa4-4191-8691-bef9dff8a1f9",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.3755931260002399,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006195541999659326
+    },
+    {
+      "archivo": "SIM0227_txt.txt",
+      "documento_id": "c20b6e52-d93c-457b-a2d1-bfbc76d7ac27",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.438334959000258,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007126292000066314
+    },
+    {
+      "archivo": "SIM0228_txt.txt",
+      "documento_id": "84f201a9-33de-4eec-9634-b71e6e5b15cb",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.3853241259998867,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007782499999848369
+    },
+    {
+      "archivo": "SIM0229_txt.txt",
+      "documento_id": "590d1786-e6f2-4a26-90bc-b37688428cd6",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4767162090001875,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006456374999743275
+    },
+    {
+      "archivo": "SIM0230_txt.txt",
+      "documento_id": "cd268aa9-25aa-48b3-968a-615045453cae",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.424895459000254,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007680707999952574
+    },
+    {
+      "archivo": "SIM0231_txt.txt",
+      "documento_id": "776955e9-25f2-470e-829e-6d18b2b355c2",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 2.0132714589999523,
+      "reutilizado": true,
+      "segundos_verificacion": 0.006636333000187733
+    },
+    {
+      "archivo": "SIM0232_txt.txt",
+      "documento_id": "d981b584-5809-4887-9f57-2aa8dbd641fa",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.8348116259999188,
+      "reutilizado": true,
+      "segundos_verificacion": 0.01193854100029057
+    },
+    {
+      "archivo": "SIM0233_txt.txt",
+      "documento_id": "7a662747-4b44-4016-8704-bee8b80b61c3",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 2.1157557100000304,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009634208000079525
+    },
+    {
+      "archivo": "SIM0234_txt.txt",
+      "documento_id": "6fb898db-3dcd-4970-959d-39de82ae195e",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4168218760000855,
+      "reutilizado": true,
+      "segundos_verificacion": 0.007254500000271946
+    },
+    {
+      "archivo": "SIM0235_txt.txt",
+      "documento_id": "3b15f370-20c5-493a-af0f-b47603a3c463",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.9482207089999974,
+      "reutilizado": true,
+      "segundos_verificacion": 0.008480958999825816
+    },
+    {
+      "archivo": "SIM0236_txt.txt",
+      "documento_id": "81f9c97f-b5c0-4d6a-9138-52cfac759893",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.8403062920001503,
+      "reutilizado": true,
+      "segundos_verificacion": 0.009383000000070751
+    },
+    {
+      "archivo": "SIM0237_txt.txt",
+      "documento_id": "02bdaceb-5a14-498f-b144-951d5659172d",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.7122577099999035,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00995216600040294
+    },
+    {
+      "archivo": "SIM0238_txt.txt",
+      "documento_id": "1d695b89-d550-4a2f-8e4a-d28386716aca",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.4070715419998123,
+      "reutilizado": true,
+      "segundos_verificacion": 0.013091875000100117
+    },
+    {
+      "archivo": "SIM0239_txt.txt",
+      "documento_id": "1f5b88b0-bed5-49df-9285-c24e9ea743b1",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.5427876250000736,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00971345800007839
+    },
+    {
+      "archivo": "SIM0240_txt.txt",
+      "documento_id": "bbf887b2-0ad9-464b-9c09-877ddf797364",
+      "paginas": 1,
+      "paginas_ocr": 0,
+      "segundos": 1.9331557919999796,
+      "reutilizado": true,
+      "segundos_verificacion": 0.00944183299998258
+    }
+  ],
+  "pendiente": null
+}

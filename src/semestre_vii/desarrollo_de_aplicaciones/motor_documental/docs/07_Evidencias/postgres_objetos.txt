@@ -1,0 +1,34 @@
+          List of relations
+ Schema |    Name     | Type  | Owner 
+--------+-------------+-------+-------
+ public | colecciones | table | motor
+ public | documentos  | table | motor
+ public | fragmentos  | table | motor
+ public | paginas     | table | motor
+(4 rows)
+
+                           List of relations
+ Schema |              Name               | Type  | Owner |    Table    
+--------+---------------------------------+-------+-------+-------------
+ public | colecciones_nombre_key          | index | motor | colecciones
+ public | colecciones_pkey                | index | motor | colecciones
+ public | documentos_coleccion_idx        | index | motor | documentos
+ public | documentos_pkey                 | index | motor | documentos
+ public | fragmentos_busqueda_gin         | index | motor | fragmentos
+ public | fragmentos_pagina_id_orden_key  | index | motor | fragmentos
+ public | fragmentos_pkey                 | index | motor | fragmentos
+ public | paginas_documento_id_numero_key | index | motor | paginas
+ public | paginas_pkey                    | index | motor | paginas
+(9 rows)
+
+               List of relations
+ Schema |          Name          | Type | Owner 
+--------+------------------------+------+-------
+ public | documentos_disponibles | view | motor
+(1 row)
+
+ activos | paginas | ocr 
+---------+---------+-----
+       6 |      12 |   6
+(1 row)
+
