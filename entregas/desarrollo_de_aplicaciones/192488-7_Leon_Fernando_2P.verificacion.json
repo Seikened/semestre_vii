@@ -1,0 +1,45 @@
+{
+  "archivo": "entregas/desarrollo_de_aplicaciones/192488-7_Leon_Fernando_2P.zip",
+  "sha256": "671c0b2095298cfb8bf3bccbb24d69715ac384a5c66b7a6c6d930ad7b3fea781",
+  "archivos": 488,
+  "bytes": 9868596,
+  "secretos_o_dependencias_detectados": [],
+  "fecha": "2026-11-02T23:57:57.423302-06:00",
+  "cambio": "Cierre B5: limpiar validación al sustituir archivo y conservar biblioteca ante actualización fallida.",
+  "archivos_corregidos_b5": [
+    "frontend/app/app.vue",
+    "frontend/app/components/DocumentoModal.vue"
+  ],
+  "lint": "correcto",
+  "typecheck": "correcto",
+  "build_produccion": "correcto en instalación principal y copia del ZIP",
+  "archivos_ejecutables_identicos_al_recorrido_b5": 69,
+  "copia_zip_3100": {
+    "web": 200,
+    "salud": {
+      "estado": "disponible",
+      "modelo": "intfloat/multilingual-e5-small",
+      "dimension": 384
+    },
+    "documentos": 9,
+    "documentos_b5": 3,
+    "primera_fuente": {
+      "archivo": "05_mixto.pdf",
+      "pagina": 2,
+      "metodo": "ocr"
+    },
+    "original_pdf": 200,
+    "consulta_textual_sin_coincidencias": 0
+  },
+  "instalacion_principal": "Web 3000 y salud 8000 responden 200; interfaz recompilada y reiniciada; API y datos conservados.",
+  "volumenes": "Reutilizados; creación inicial registrada en c2_a_asterisco_http.json. B5 añadió tres documentos ficticios a los seis iniciales.",
+  "proveedor": "Sin clave ni llamadas a OpenAI en la copia de verificación.",
+  "recorridos_chrome": "Carga TXT y PDF mixto, OCR por página, cita y original, biblioteca vacía, búsqueda sin coincidencias, archivo vacío, PDF inválido, caída real de API, recuperación y error en móvil.",
+  "capturas": "04_Codigo/docs/07_Evidencias/b5_final/",
+  "arrastre_simple": "Fernando confirmó indexación al soltar; se observó un PDF indexado. No se acredita como gesto automatizado.",
+  "sin_verificacion_fisica": [
+    "Rechazo de arrastre múltiple",
+    "Segundo arrastre durante indexación"
+  ],
+  "entrega_oficial": "OneDrive, correo, ensayo y exposición pendientes. No se publicó ni envió el paquete."
+}

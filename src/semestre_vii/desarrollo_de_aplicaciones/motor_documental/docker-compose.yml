@@ -1,0 +1,84 @@
+name: motor-documental
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    entrypoint: ["/bin/sh", "/iniciar.sh"]
+    networks: [datos]
+    environment:
+      POSTGRES_DB: documental
+      POSTGRES_USER: motor
+      POSTGRES_PASSWORD_FILE: /credenciales/postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      - credenciales:/credenciales
+      - clave_api:/clave_api
+      - ./db/iniciar.sh:/iniciar.sh:ro
+      - ./db/objetos_bd.sql:/docker-entrypoint-initdb.d/01_esquema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U motor -d documental"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  api:
+    networks: [presentacion, datos]
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      API_KEY_FILE: /clave_api/clave
+      DB_PASSWORD_FILE: /credenciales/postgres
+      ORIGEN_WEB: http://localhost:${WEB_PORT:-3000}
+      HF_HOME: /modelos
+    secrets: [luna_api_key]
+    volumes:
+      - credenciales:/credenciales:ro
+      - clave_api:/clave_api:ro
+      - originales:/datos/originales
+      - modelos:/modelos
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - |
+          from urllib.request import urlopen
+          urlopen('http://127.0.0.1:8000/salud', timeout=5)
+      interval: 10s
+      timeout: 8s
+      start_period: 120s
+      retries: 60
+  web:
+    networks: [presentacion]
+    build: ./frontend
+    environment:
+      NUXT_MOTOR_URL: http://api:8000
+      NUXT_API_KEY_FILE: /clave_api/clave
+      HOST: 0.0.0.0
+      PORT: 3000
+    volumes:
+      - clave_api:/clave_api:ro
+    ports:
+      - "127.0.0.1:${WEB_PORT:-3000}:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  postgres:
+  credenciales:
+  clave_api:
+  originales:
+  modelos:
+
+networks:
+  presentacion:
+  datos:
+    internal: true
+
+secrets:
+  luna_api_key:
+    file: ${LUNA_API_KEY_FILE:-./luna_api_key.example}

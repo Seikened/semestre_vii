@@ -1,0 +1,26 @@
+{
+  "fecha": "2026-11-02T14:49:23.641482-06:00",
+  "comprobaciones": [
+    {
+      "ruta": "/api/motor/colecciones",
+      "origen": "null",
+      "esperado": 403,
+      "recibido": 403,
+      "correcto": true
+    },
+    {
+      "ruta": "/api/motor/colecciones",
+      "origen": "https://example.com",
+      "esperado": 403,
+      "recibido": 403,
+      "correcto": true
+    },
+    {
+      "ruta": "/api/motor/configuracion",
+      "origen": null,
+      "esperado": 404,
+      "recibido": 404,
+      "correcto": true
+    }
+  ]
+}

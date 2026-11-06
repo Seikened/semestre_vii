@@ -1,0 +1,26 @@
+{
+  "fecha": "2026-11-02T16:18:15.288417-06:00",
+  "coleccion_id": "a865c442-6358-4f2d-a19f-20997ac9d225",
+  "retirados": [
+    {
+      "archivo": "SIM0200_mixto.pdf",
+      "id_anterior": "1ea385af-edb0-48c4-b876-06d00750bc91",
+      "respuesta": ""
+    },
+    {
+      "archivo": "SIM0190_mixto.pdf",
+      "id_anterior": "3552fe80-e63f-4bc3-ab02-48d103732eb8",
+      "respuesta": ""
+    },
+    {
+      "archivo": "SIM0180_mixto.pdf",
+      "id_anterior": "0d042fd9-ca29-42fc-aeb7-0b653cf5f17e",
+      "respuesta": ""
+    },
+    {
+      "archivo": "SIM0170_mixto.pdf",
+      "id_anterior": "6982a5b8-7d22-48f7-9578-cdcdfe03ccd3",
+      "respuesta": ""
+    }
+  ]
+}

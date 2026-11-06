@@ -1,0 +1,17 @@
+{
+  "paquetes": {
+    "pymupdf": "1.28.2",
+    "sentence-transformers": "5.7.0",
+    "torch": "2.15.0+cpu",
+    "pgvector": "0.5.1",
+    "psycopg": "3.3.6"
+  },
+  "modelo": "intfloat/multilingual-e5-small",
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "dimension": 384,
+  "hilos_omp": "2",
+  "ocr": "Tesseract spa+eng; full=True con menos de 60 caracteres nativos; full=False con texto nativo e imagen visible >=25% de la página",
+  "extractor_sha256": "39ce7e3937f28d0f2e5c9ad1c19bcc1c21b95ecd6d325cf066e16cb116c42e01",
+  "fecha": "2026-11-02T16:21:30.701156-06:00",
+  "imagen_api": "sha256:2fc0fdae5c1e844f477b532930d262b65f2ff01f9555c64da63f20b57074bf14"
+}

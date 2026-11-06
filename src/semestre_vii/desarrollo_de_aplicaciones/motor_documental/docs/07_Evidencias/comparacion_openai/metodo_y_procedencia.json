@@ -1,0 +1,29 @@
+{
+  "peticiones_principales": 612,
+  "textos_distintos": 204,
+  "controles_negativos_adicionales": 6,
+  "request_ids_unicos": 612,
+  "resultados_por_peticion": [
+    5
+  ],
+  "bloques_por_resultado": [
+    1
+  ],
+  "pagina_openai": "no disponible como campo de búsqueda",
+  "chunking_observado": {
+    "type": "static",
+    "static": {
+      "max_chunk_size_tokens": 800,
+      "chunk_overlap_tokens": 400
+    }
+  },
+  "codigo_sha256": {
+    "cliente_openai.py": "4e54c5e66cf508594c24e7151d88a50c66c9e5a3c4d08203898af58fdd327f45",
+    "modelos_openai.py": "8096b98b91570addfcf9ad827db576733e3b55dfb4fb5dfd747e6684cc04a5c5",
+    "evaluar_openai.py": "77777a9123573146347a67a0d68fb6df58a4c3c2377dac2f468872f4128ed44d",
+    "resumir_openai.py": "636697250f5d8a4233ad89f8dc6f1287857d272c098c1d9ee4b2d5d71c9877af",
+    "diagnosticar_openai.py": "da81fc2b49306eeddf0d1535b1183cd6f5edbe8f38a08c3b6f8987a942558f37"
+  },
+  "respuestas_completas": "data/desarrollo_de_aplicaciones/evaluacion_documental/comparacion_openai/respuestas",
+  "credencial_incluida": false
+}

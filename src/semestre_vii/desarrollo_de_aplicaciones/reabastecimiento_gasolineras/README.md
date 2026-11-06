@@ -1,5 +1,7 @@
 # Pronóstico y reabastecimiento de gasolineras
 
+**Proyecto descartado el 2 de noviembre de 2026.** Se conserva como antecedente. El proyecto vigente es el [motor documental inmobiliario](../motor_documental/README.md); las decisiones que siguen pertenecen al alcance anterior.
+
 **Desarrollo de Aplicaciones — Semestre VII.**
 
 Sistema académico de apoyo al reabastecimiento de combustible para una distribuidora que atiende aproximadamente **120 gasolineras**. La aplicación integra autenticación, operación de sucursales, revisión administrativa y un motor de forecasting con evaluación continua.

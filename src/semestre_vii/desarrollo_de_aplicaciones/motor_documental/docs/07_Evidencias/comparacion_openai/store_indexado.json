@@ -1,0 +1,13 @@
+{
+  "id": "vs_6ae911da598c81918e58f3cd6138f3c6",
+  "name": "Evaluación motor documental | 240 ficticios | 2026-11-02",
+  "status": "completed",
+  "file_counts": {
+    "in_progress": 0,
+    "completed": 240,
+    "failed": 0,
+    "cancelled": 0,
+    "total": 240
+  },
+  "usage_bytes": 7461014
+}

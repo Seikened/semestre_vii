@@ -1,0 +1,189 @@
+ Image motor-documental-entrega-api Building 
+ Image motor-documental-entrega-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.42kB done
+#1 DONE 0.0s
+
+#2 [web internal] load build definition from Dockerfile
+#2 transferring dockerfile: 447B 0.0s done
+#2 DONE 0.0s
+
+#3 [api internal] load build definition from Dockerfile
+#3 transferring dockerfile: 778B done
+#3 DONE 0.0s
+
+#4 [web internal] load metadata for docker.io/library/node:24-bookworm-slim
+#4 ...
+
+#5 [auth] library/python:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#6 [auth] library/node:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#7 [auth] astral-sh/uv:pull token for ghcr.io
+#7 DONE 0.0s
+
+#8 [api internal] load metadata for ghcr.io/astral-sh/uv:0.13.6
+#8 ...
+
+#9 [api internal] load metadata for docker.io/library/python:3.12-slim
+#9 DONE 0.8s
+
+#4 [web internal] load metadata for docker.io/library/node:24-bookworm-slim
+#4 DONE 0.8s
+
+#10 [web internal] load .dockerignore
+#10 transferring context: 73B done
+#10 DONE 0.0s
+
+#11 [web construir 1/7] FROM docker.io/library/node:24-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c
+#11 resolve docker.io/library/node:24-bookworm-slim@sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c 0.0s done
+#11 DONE 0.0s
+
+#12 [web internal] load build context
+#12 transferring context: 793B done
+#12 DONE 0.0s
+
+#13 [web stage-1 2/3] WORKDIR /app
+#13 CACHED
+
+#14 [web construir 2/7] RUN npm install -g pnpm@11.22.0
+#14 CACHED
+
+#15 [web construir 6/7] COPY . .
+#15 CACHED
+
+#16 [web construir 4/7] COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+#16 CACHED
+
+#17 [web construir 7/7] RUN pnpm rebuild && pnpm exec nuxt prepare && pnpm build
+#17 CACHED
+
+#18 [web construir 3/7] WORKDIR /app
+#18 CACHED
+
+#19 [web construir 5/7] RUN pnpm install --frozen-lockfile --ignore-scripts
+#19 CACHED
+
+#20 [web stage-1 3/3] COPY --from=construir /app/.output ./.output
+#20 CACHED
+
+#21 [web] exporting to image
+#21 exporting layers
+#21 ...
+
+#8 [api internal] load metadata for ghcr.io/astral-sh/uv:0.13.6
+#8 DONE 0.9s
+
+#22 [api internal] load .dockerignore
+#22 transferring context: 105B 0.0s done
+#22 DONE 0.1s
+
+#21 [web] exporting to image
+#21 exporting layers done
+#21 exporting manifest sha256:7d5f0339f2cfe449a5f9ef4de3c4f54c504ef18e71215084acbe332d7831b73f done
+#21 exporting config sha256:074f6f8508b117bacc76e2294487675be360fdc2cb8a0386b06364f4d641c045 0.0s done
+#21 exporting attestation manifest sha256:ad3bf1eb67fda3cc6c9cc81c4a1280b93c3875bf31f8b8dcbe58d50a87ca0301 0.0s done
+#21 exporting manifest list sha256:97107c08251b649293d19f180e4490eb7d24d6d04a0efc750a7ac840425dd043 0.0s done
+#21 naming to docker.io/library/motor-documental-entrega-web:latest 0.0s done
+#21 unpacking to docker.io/library/motor-documental-entrega-web:latest done
+#21 DONE 0.2s
+
+#23 [api stage-0 1/9] FROM docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30
+#23 resolve docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30 0.0s done
+#23 DONE 0.0s
+
+#24 [api] FROM ghcr.io/astral-sh/uv:0.13.6@sha256:af22a52f5eafef3d78e551599d405c02df61919d18028f0cea8eda93bc9986d0
+#24 resolve ghcr.io/astral-sh/uv:0.13.6@sha256:af22a52f5eafef3d78e551599d405c02df61919d18028f0cea8eda93bc9986d0 0.0s done
+#24 DONE 0.1s
+
+#25 [api internal] load build context
+#25 transferring context: 776.51kB 0.0s done
+#25 DONE 0.1s
+
+#26 [api stage-0 2/9] COPY --from=ghcr.io/astral-sh/uv:0.13.6 /uv /usr/local/bin/uv
+#26 CACHED
+
+#27 [api stage-0 3/9] RUN apt-get update && apt-get install -y --no-install-recommends     tesseract-ocr-spa tesseract-ocr-eng libglib2.0-0 libgl1 libgomp1     && apt-get clean
+#27 CACHED
+
+#28 [api stage-0 4/9] WORKDIR /proyecto
+#28 CACHED
+
+#29 [api stage-0 5/9] COPY api/pyproject.toml api/uv.lock ./backend/
+#29 CACHED
+
+#30 [api stage-0 7/9] COPY api/app ./backend/app
+#30 CACHED
+
+#31 [api stage-0 6/9] RUN uv sync --project backend --frozen --no-dev --no-install-project
+#31 CACHED
+
+#32 [api stage-0 8/9] RUN uv sync --project backend --frozen --no-dev
+#32 CACHED
+
+#33 [api stage-0 9/9] COPY demo ./demo
+#33 DONE 0.1s
+
+#34 [web] resolving provenance for metadata file
+#34 DONE 0.0s
+
+#35 [api] exporting to image
+#35 exporting layers 0.0s done
+#35 exporting manifest sha256:625273229e06cb460d6a470d89f0d9a203357e25b178531c5eeffaaa15bb49fb done
+#35 exporting config sha256:d0e7e94f634c670d01bea6abc553034880e5961758eb5c9701dde432af02a83b done
+#35 exporting attestation manifest sha256:23932de8744cdccd97236d7286be5056fee3dbbab3f866b446be4632bbb8965d done
+#35 exporting manifest list sha256:628917025627f609aaa65b4dd1a0f10ff8b23b257e966ae16023d246fb1d3a5c done
+#35 naming to docker.io/library/motor-documental-entrega-api:latest done
+#35 unpacking to docker.io/library/motor-documental-entrega-api:latest 0.0s done
+#35 DONE 0.1s
+
+#36 [api] resolving provenance for metadata file
+#36 DONE 0.0s
+ Image motor-documental-entrega-api Built 
+ Image motor-documental-entrega-web Built 
+ Volume motor-documental-entrega_postgres Creating 
+ Network motor-documental-entrega_presentacion Creating 
+ Volume motor-documental-entrega_originales Creating 
+ Network motor-documental-entrega_datos Creating 
+ Volume motor-documental-entrega_credenciales Creating 
+ Volume motor-documental-entrega_clave_api Creating 
+ Volume motor-documental-entrega_clave_api Creating 
+ Volume motor-documental-entrega_modelos Creating 
+ Volume motor-documental-entrega_modelos Creating 
+ Volume motor-documental-entrega_postgres Creating 
+ Network motor-documental-entrega_presentacion Creating 
+ Volume motor-documental-entrega_credenciales Creating 
+ Network motor-documental-entrega_datos Creating 
+ Volume motor-documental-entrega_originales Creating 
+ Volume motor-documental-entrega_originales Created 
+ Volume motor-documental-entrega_originales Created 
+ Volume motor-documental-entrega_modelos Created 
+ Volume motor-documental-entrega_modelos Created 
+ Volume motor-documental-entrega_clave_api Created 
+ Volume motor-documental-entrega_clave_api Created 
+ Volume motor-documental-entrega_postgres Created 
+ Volume motor-documental-entrega_postgres Created 
+ Volume motor-documental-entrega_credenciales Created 
+ Volume motor-documental-entrega_credenciales Created 
+ Network motor-documental-entrega_datos Created 
+ Network motor-documental-entrega_datos Created 
+ Container motor-documental-entrega-db-1 Creating 
+ Network motor-documental-entrega_presentacion Created 
+ Network motor-documental-entrega_presentacion Created 
+ Container motor-documental-entrega-db-1 Created 
+ Container motor-documental-entrega-api-1 Creating 
+ Container motor-documental-entrega-api-1 Created 
+ Container motor-documental-entrega-web-1 Creating 
+ Container motor-documental-entrega-web-1 Created 
+ Container motor-documental-entrega-db-1 Starting 
+ Container motor-documental-entrega-db-1 Started 
+ Container motor-documental-entrega-db-1 Waiting 
+ Container motor-documental-entrega-db-1 Healthy 
+ Container motor-documental-entrega-api-1 Starting 
+ Container motor-documental-entrega-api-1 Started 
+ Container motor-documental-entrega-api-1 Waiting 
+ Container motor-documental-entrega-api-1 Healthy 
+ Container motor-documental-entrega-web-1 Starting 
+ Container motor-documental-entrega-web-1 Started 

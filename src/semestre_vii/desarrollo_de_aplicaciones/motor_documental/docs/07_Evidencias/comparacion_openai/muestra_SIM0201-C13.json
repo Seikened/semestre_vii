@@ -1,0 +1,109 @@
+{
+  "local": {
+    "caso_id": "SIM0201-C13",
+    "archivo": "SIM0201_txt.txt",
+    "formato": "txt",
+    "pagina": 1,
+    "variante": "libre",
+    "modo": "hibrida",
+    "consulta": "¿Hasta cuánto se pueden autorizar reparaciones sin pedir otra aprobación para Local Ámbar?",
+    "posicion_pagina": 1,
+    "posicion_documento": 1,
+    "cita_en_top5": false,
+    "cita_literal_en_top5": false,
+    "segundos": 0.04983695800001442,
+    "fuentes": [
+      "SIM0201_txt.txt#p1",
+      "SIM0138_escaneado.pdf#p4",
+      "SIM0150_escaneado.pdf#p4",
+      "SIM0234_txt.txt#p1",
+      "SIM0186_mixto.pdf#p4"
+    ]
+  },
+  "openai": {
+    "vector_store_id": "vs_6ae911da598c81918e58f3cd6138f3c6",
+    "corpus_sha256": "7862783a581a978e6d93e5eb75ec29c240475a58c940d6841c731d9b21377ae3",
+    "caso_id": "SIM0201-C13",
+    "variante": "libre",
+    "modo_local": "hibrida",
+    "archivo_esperado": "SIM0201_txt.txt",
+    "peticion": {
+      "query": "¿Hasta cuánto se pueden autorizar reparaciones sin pedir otra aprobación para Local Ámbar?",
+      "max_num_results": 5,
+      "rewrite_query": false,
+      "ranking_options": {
+        "ranker": "auto",
+        "score_threshold": 0.0
+      }
+    },
+    "respuesta": {
+      "object": "vector_store.search_results.page",
+      "data": [
+        {
+          "file_id": "file-BokYd3AN1wNNuBK44z3waE",
+          "filename": "SIM0201_txt.txt",
+          "score": 0.9432409523794703,
+          "content": [
+            {
+              "type": "text",
+              "text": "El importe principal acordado es de 17500 pesos ficticios. No incluye conceptos adicionales que no consten por escrito. Este apartado corresponde a Local Ámbar, folio SIM0201. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0201-09.\n\nCláusula 10. Calendario de pagos.\n\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este apartado corresponde a Local Ámbar, folio SIM0201. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0201-10.\n\nCláusula 11. Comprobantes y recibos.\n\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas partes ficticias. Este apartado corresponde a Local Ámbar, folio SIM0201. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0201-11.\n\nCláusula 12. Actualización de importes.\n\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Local Ámbar, folio SIM0201. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0201-12.\n\nCláusula 13. Límite de reparaciones.\n\nEl límite de reparaciones sin autorización adicional es de 5400 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita. Este apartado corresponde a Local Ámbar, folio SIM0201. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0201-13.\n\nCláusula 14. Conservación ordinaria.\n\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este apartado corresponde a Local Ámbar, folio SIM0201. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0201-14."
+            }
+          ]
+        },
+        {
+          "file_id": "file-BokYd3AN1wNNuBK44z3waE",
+          "filename": "SIM0201_txt.txt",
+          "score": 0.9272569571870567,
+          "content": [
+            {
+              "type": "text",
+              "text": "Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Local Ámbar, folio SIM0201. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0201-12.\n\nCláusula 13. Límite de reparaciones.\n\nEl límite de reparaciones sin autorización adicional es de 5400 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita. Este apartado corresponde a Local Ámbar, folio SIM0201. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0201-13.\n\nCláusula 14. Conservación ordinaria.\n\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este apartado corresponde a Local Ámbar, folio SIM0201. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0201-14.\n\nCláusula 15. Servicios del inmueble.\n\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas partes ficticias. Este apartado corresponde a Local Ámbar, folio SIM0201. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0201-15.\n\nCláusula 16. Autorizaciones previas.\n\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Local Ámbar, folio SIM0201. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0201-16.\n\nCláusula 17. Constitución de garantía.\n\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que modifican. Este apartado corresponde a Local Ámbar, folio SIM0201. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0201-17.\n\nCláusula 18. Devolución de garantía."
+            }
+          ]
+        },
+        {
+          "file_id": "file-MhccJKX2GWV11yesT3ubrY",
+          "filename": "SIM0234_txt.txt",
+          "score": 0.9037313294005097,
+          "content": [
+            {
+              "type": "text",
+              "text": "El límite de reparaciones sin autorización adicional es de 6700 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita. Este apartado corresponde a Unidad Ámbar 234, folio SIM0234. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0234-13.\n\nCláusula 14. Conservación ordinaria.\n\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas partes ficticias. Este apartado corresponde a Unidad Ámbar 234, folio SIM0234. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0234-14.\n\nCláusula 15. Servicios del inmueble.\n\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Ámbar 234, folio SIM0234. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0234-15.\n\nCláusula 16. Autorizaciones previas.\n\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que modifican. Este apartado corresponde a Unidad Ámbar 234, folio SIM0234. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0234-16.\n\nCláusula 17. Constitución de garantía.\n\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Ámbar 234, folio SIM0234. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0234-17.\n\nCláusula 18. Devolución de garantía."
+            }
+          ]
+        },
+        {
+          "file_id": "file-DsM9Jusdq1Jgz57jw1prEY",
+          "filename": "SIM0226_txt.txt",
+          "score": 0.9032270058535797,
+          "content": [
+            {
+              "type": "text",
+              "text": "Cláusula 13. Límite de reparaciones.\n\nEl límite de reparaciones sin autorización adicional es de 3800 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita. Este apartado corresponde a Unidad Coral 226, folio SIM0226. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0226-13.\n\nCláusula 14. Conservación ordinaria.\n\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas partes ficticias. Este apartado corresponde a Unidad Coral 226, folio SIM0226. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0226-14.\n\nCláusula 15. Servicios del inmueble.\n\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Coral 226, folio SIM0226. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0226-15.\n\nCláusula 16. Autorizaciones previas.\n\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que modifican. Este apartado corresponde a Unidad Coral 226, folio SIM0226. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0226-16.\n\nCláusula 17. Constitución de garantía.\n\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Coral 226, folio SIM0226. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0226-17.\n\nCláusula 18. Devolución de garantía."
+            }
+          ]
+        },
+        {
+          "file_id": "file-LuyNyAhBDFzMNvsi5xe4k5",
+          "filename": "SIM0231_txt.txt",
+          "score": 0.9023892733546837,
+          "content": [
+            {
+              "type": "text",
+              "text": "Cláusula 13. Límite de reparaciones.\n\nEl límite de reparaciones sin autorización adicional es de 6200 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita. Este apartado corresponde a Unidad Álamo 231, folio SIM0231. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0231-13.\n\nCláusula 14. Conservación ordinaria.\n\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Unidad Álamo 231, folio SIM0231. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0231-14.\n\nCláusula 15. Servicios del inmueble.\n\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que modifican. Este apartado corresponde a Unidad Álamo 231, folio SIM0231. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0231-15.\n\nCláusula 16. Autorizaciones previas.\n\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Álamo 231, folio SIM0231. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0231-16.\n\nCláusula 17. Constitución de garantía.\n\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas partes ficticias. Este apartado corresponde a Unidad Álamo 231, folio SIM0231. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0231-17.\n\nCláusula 18. Devolución de garantía."
+            }
+          ]
+        }
+      ],
+      "search_query": [
+        "¿Hasta cuánto se pueden autorizar reparaciones sin pedir otra aprobación para Local Ámbar?"
+      ],
+      "has_more": false
+    },
+    "request_id": "req_cadb3142b5b04d34816f41d2d9b8ceb8",
+    "segundos": 1.0994066669954918,
+    "posicion_documento": 1,
+    "cita_normalizada_en_top5": true,
+    "cita_literal_en_top5": true
+  }
+}

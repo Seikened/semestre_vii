@@ -1,0 +1,78 @@
+{
+  "vector_store_id": "vs_6ae911da598c81918e58f3cd6138f3c6",
+  "modo_local": "vector",
+  "peticion": {
+    "query": "Número de cuenta extraterrestre ZZQ9999",
+    "max_num_results": 5,
+    "rewrite_query": false,
+    "ranking_options": {
+      "ranker": "auto",
+      "score_threshold": 0.0
+    }
+  },
+  "respuesta": {
+    "object": "vector_store.search_results.page",
+    "data": [
+      {
+        "file_id": "file-734ZoLDuoALMna9rZY1vih",
+        "filename": "SIM0009_digital.pdf",
+        "score": 0.06322172472355847,
+        "content": [
+          {
+            "type": "text",
+            "text": "Página 4 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0009 | Arrendamiento ficticio | Unidad Magnolia 009\nPartes ficticias: Persona Cedente 009 del Archivo Imaginario y Persona Receptora 063 de Puerto\nInventado.\n\n\nCláusula 17. Constitución de garantía\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Magnolia 009, folio\nSIM0009. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0009-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 33 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Unidad Magnolia 009, folio SIM0009.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0009-18.\n\nCláusula 19. Deducciones documentadas\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Magnolia 009, folio SIM0009. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0009-19.\n\nCláusula 20. Entrega de llaves\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Magnolia 009, folio SIM0009. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0009-20.\n\nPágina 5 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0009 | Arrendamiento ficticio | Unidad Magnolia 009\nPartes ficticias: Persona Cedente 009 del Archivo Imaginario y Persona Receptora 063 de Puerto\nInventado."
+          }
+        ]
+      },
+      {
+        "file_id": "file-QWs4VfhPmTXNgjyNqYCMyy",
+        "filename": "SIM0024_digital.pdf",
+        "score": 0.0585676010905107,
+        "content": [
+          {
+            "type": "text",
+            "text": "Página 4 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0024 | Escritura simulada ficticio | Unidad Cobre 024\nPartes ficticias: Persona Cedente 024 del Archivo Imaginario y Persona Receptora 168 de Puerto\nInventado.\n\n\nCláusula 17. Constitución de garantía\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Cobre 024, folio SIM0024. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0024-17.\n\nCláusula 18. Devolución de garantía\nLa garantía se devuelve dentro de 13 días naturales después de entregar las llaves y firmar el inventario,\ndescontando solo daños documentados. Este apartado corresponde a Unidad Cobre 024, folio SIM0024. La\npersona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las\ndiferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0024-18.\n\nCláusula 19. Deducciones documentadas\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Cobre 024, folio SIM0024.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0024-19.\n\nCláusula 20. Entrega de llaves\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Cobre 024, folio SIM0024. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0024-20.\n\nPágina 5 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0024 | Escritura simulada ficticio | Unidad Cobre 024\nPartes ficticias: Persona Cedente 024 del Archivo Imaginario y Persona Receptora 168 de Puerto\nInventado."
+          }
+        ]
+      },
+      {
+        "file_id": "file-N3kZZgXc5watVGVZMKwBAt",
+        "filename": "SIM0044_digital.pdf",
+        "score": 0.05766713272349858,
+        "content": [
+          {
+            "type": "text",
+            "text": "Página 6 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0044 | Escritura simulada ficticio | Unidad Sauce 044\nPartes ficticias: Persona Cedente 044 del Archivo Imaginario y Persona Receptora 067 de Puerto\nInventado.\n\n\nCláusula 25. Cesión a terceros\nNo se permite ceder el uso del inmueble a terceros sin autorización escrita. Una visita temporal no\nconstituye una cesión del acuerdo. Este apartado corresponde a Unidad Sauce 044, folio SIM0044. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0044-25.\n\nCláusula 26. Modificaciones interiores\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Sauce 044, folio\nSIM0044. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0044-26.\n\nCláusula 27. Reglas de convivencia\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Sauce 044, folio SIM0044.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0044-27.\n\nCláusula 28. Inspecciones programadas\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Sauce 044, folio SIM0044. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0044-28.\n\nPágina 7 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0044 | Escritura simulada ficticio | Unidad Sauce 044\nPartes ficticias: Persona Cedente 044 del Archivo Imaginario y Persona Receptora 067 de Puerto\nInventado."
+          }
+        ]
+      },
+      {
+        "file_id": "file-734ZoLDuoALMna9rZY1vih",
+        "filename": "SIM0009_digital.pdf",
+        "score": 0.04396254106447106,
+        "content": [
+          {
+            "type": "text",
+            "text": "Cláusula 6. Uso autorizado\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Magnolia 009, folio\nSIM0009. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la\ncláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se\nrechazan instrucciones verbales contradictorias. La referencia de control es FICT-0009-06.\n\nCláusula 7. Duración del acuerdo\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Magnolia 009, folio SIM0009. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0009-07.\n\nCláusula 8. Revisión de instalaciones\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Magnolia 009, folio SIM0009. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0009-08.\n\nPágina 2 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0009 | Arrendamiento ficticio | Unidad Magnolia 009\nPartes ficticias: Persona Cedente 009 del Archivo Imaginario y Persona Receptora 063 de Puerto\nInventado.\n\n\nCláusula 9. Importe principal\nEl importe principal acordado es de 66875 pesos ficticios. No incluye conceptos adicionales que no consten\npor escrito. Este apartado corresponde a Unidad Magnolia 009, folio SIM0009. La persona encargada del\nexpediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán\ncomo observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La\nreferencia de control es FICT-0009-09.\n\nCláusula 10. Calendario de pagos\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Magnolia 009, folio\nSIM0009. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la\ncláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se\nrechazan instrucciones verbales contradictorias. La referencia de control es FICT-0009-10."
+          }
+        ]
+      },
+      {
+        "file_id": "file-VmM7hgRWdpenfkMUVu4EPR",
+        "filename": "SIM0069_digital.pdf",
+        "score": 0.04388270060971622,
+        "content": [
+          {
+            "type": "text",
+            "text": "Página 2 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0069 | Arrendamiento ficticio | Unidad Magnolia 069\nPartes ficticias: Persona Cedente 069 del Archivo Imaginario y Persona Receptora 001 de Puerto\nInventado.\n\n\nCláusula 9. Importe principal\nEl importe principal acordado es de 19625 pesos ficticios. No incluye conceptos adicionales que no consten\npor escrito. Este apartado corresponde a Unidad Magnolia 069, folio SIM0069. La persona encargada del\nexpediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán\ncomo observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La\nreferencia de control es FICT-0069-09.\n\nCláusula 10. Calendario de pagos\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Magnolia 069, folio\nSIM0069. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la\ncláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se\nrechazan instrucciones verbales contradictorias. La referencia de control es FICT-0069-10.\n\nCláusula 11. Comprobantes y recibos\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Magnolia 069, folio SIM0069. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0069-11.\n\nCláusula 12. Actualización de importes\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Magnolia 069, folio SIM0069. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0069-12.\n\nPágina 3 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0069 | Arrendamiento ficticio | Unidad Magnolia 069\nPartes ficticias: Persona Cedente 069 del Archivo Imaginario y Persona Receptora 001 de Puerto\nInventado."
+          }
+        ]
+      }
+    ],
+    "search_query": [
+      "Número de cuenta extraterrestre ZZQ9999"
+    ],
+    "has_more": false
+  },
+  "request_id": "req_d3f03631a311456ea18226e1a827f8d3"
+}

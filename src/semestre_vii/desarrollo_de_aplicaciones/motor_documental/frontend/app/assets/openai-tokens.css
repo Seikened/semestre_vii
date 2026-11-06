@@ -1,0 +1,75 @@
+/* Adaptado de OpenAI Apps SDK UI, licencia MIT en THIRD_PARTY_NOTICES.md. */
+:root {
+  --oa-border: light-dark(rgb(13 13 13 / 10%), rgb(255 255 255 / 12%));
+  --oa-border-subtle: light-dark(rgb(13 13 13 / 5%), rgb(255 255 255 / 6%));
+  --oa-outline-border: light-dark(rgb(13 13 13 / 16%), rgb(255 255 255 / 25%));
+  --oa-outline-border-hover: light-dark(rgb(13 13 13 / 20%), rgb(255 255 255 / 30%));
+  --oa-outline-hover: light-dark(rgb(13 13 13 / 2%), rgb(255 255 255 / 4%));
+  --oa-outline-active: light-dark(rgb(13 13 13 / 4%), rgb(255 255 255 / 6%));
+  --oa-input-border-hover: light-dark(rgb(13 13 13 / 25%), rgb(255 255 255 / 30%));
+  --oa-input-border-focus: light-dark(rgb(13 13 13 / 50%), rgb(255 255 255 / 50%));
+  --oa-ghost-hover: light-dark(rgb(13 13 13 / 8%), rgb(255 255 255 / 12%));
+  --oa-ghost-active: light-dark(rgb(13 13 13 / 12%), rgb(255 255 255 / 16%));
+  --oa-primary: light-dark(#181818, #f3f3f3);
+  --oa-primary-hover: light-dark(#303030, #ededed);
+  --oa-primary-active: light-dark(#414141, #dcdcdc);
+  --oa-soft: light-dark(#ededed, #303030);
+  --oa-soft-hover: light-dark(#dfdfdf, #393939);
+  --oa-soft-active: light-dark(#cdcdcd, #414141);
+  --oa-ring: light-dark(#0169cc, #0285ff);
+  --oa-disabled-background: light-dark(rgb(13 13 13 / 5%), rgb(255 255 255 / 5%));
+  --oa-disabled-border: light-dark(rgb(13 13 13 / 6%), rgb(255 255 255 / 6%));
+  --oa-disabled-text: light-dark(#8f8f8f, #5d5d5d);
+  --oa-radius-control: 8px;
+  --oa-radius-menu: 12px;
+  --oa-radius-panel: 16px;
+  --oa-radius-composer: 24px;
+  --oa-transition: 150ms ease;
+}
+
+.oa-button {
+  transition: background-color var(--oa-transition), box-shadow var(--oa-transition), color var(--oa-transition), opacity var(--oa-transition);
+}
+.oa-button-solid { background: var(--oa-primary); color: var(--ui-text-inverted); }
+.oa-button-outline { background: transparent; color: var(--ui-text); box-shadow: inset 0 0 0 1px var(--oa-outline-border); }
+.oa-button-soft { background: var(--oa-soft); color: var(--ui-text); }
+.oa-button-ghost { background: transparent; color: var(--ui-text); }
+@media (hover: hover) {
+  .oa-button-solid:not(:disabled, [aria-disabled="true"]):hover { background: var(--oa-primary-hover); }
+  .oa-button-outline:not(:disabled, [aria-disabled="true"]):hover { background: var(--oa-outline-hover); box-shadow: inset 0 0 0 1px var(--oa-outline-border-hover); }
+  .oa-button-soft:not(:disabled, [aria-disabled="true"]):hover { background: var(--oa-soft-hover); }
+  .oa-button-ghost:not(:disabled, [aria-disabled="true"]):hover { background: var(--oa-ghost-hover); }
+}
+.oa-button-solid:not(:disabled, [aria-disabled="true"]):active { background: var(--oa-primary-active); }
+.oa-button-outline:not(:disabled, [aria-disabled="true"]):active { background: var(--oa-outline-active); }
+.oa-button-soft:not(:disabled, [aria-disabled="true"]):active { background: var(--oa-soft-active); }
+.oa-button-ghost:not(:disabled, [aria-disabled="true"]):active { background: var(--oa-ghost-active); }
+.oa-button:focus-visible { outline: 2px solid var(--oa-ring); outline-offset: 2px; }
+.oa-button:disabled, .oa-button[aria-disabled="true"] { background: var(--oa-disabled-background); color: var(--oa-disabled-text); opacity: 1; }
+.oa-button-outline:disabled, .oa-button-outline[aria-disabled="true"] { box-shadow: inset 0 0 0 1px var(--oa-disabled-border); }
+.oa-control {
+  border-radius: var(--oa-radius-control);
+  box-shadow: inset 0 0 0 1px var(--oa-outline-border);
+  transition: background-color var(--oa-transition), box-shadow var(--oa-transition), color var(--oa-transition);
+}
+@media (hover: hover) {
+  .oa-control:not(:disabled):hover { box-shadow: inset 0 0 0 1px var(--oa-input-border-hover); }
+}
+.oa-control:not(:disabled):focus, .oa-control:not(:disabled):focus-visible, .oa-control[data-state="open"] {
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--oa-input-border-focus);
+}
+.oa-control[aria-invalid="true"] { box-shadow: inset 0 0 0 1px var(--ui-error); }
+.oa-control-ghost { box-shadow: none; }
+.oa-control.oa-control-ghost:not(:disabled):focus, .oa-control.oa-control-ghost[data-state="open"] { outline: none; box-shadow: none; }
+@media (hover: hover) {
+  .oa-control.oa-control-ghost:not(:disabled):hover { background: var(--oa-ghost-hover); box-shadow: none; }
+}
+.oa-control.oa-control-ghost:not(:disabled):focus-visible { outline: 2px solid var(--oa-ring); outline-offset: 2px; box-shadow: none; }
+.oa-control:disabled { color: var(--oa-disabled-text); opacity: 1; }
+.oa-menu { border-radius: var(--oa-radius-menu); box-shadow: 0 8px 24px rgb(0 0 0 / 10%); border: 1px solid var(--oa-border); }
+.oa-menu-item[data-highlighted]::before { background: var(--oa-ghost-hover); }
+.oa-message-user { border-radius: 20px; background: var(--ui-bg-accented); }
+@media (prefers-reduced-motion: reduce) {
+  .oa-button, .oa-control { transition: none; }
+}

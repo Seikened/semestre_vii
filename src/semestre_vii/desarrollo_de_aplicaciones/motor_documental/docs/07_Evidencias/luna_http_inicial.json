@@ -1,0 +1,190 @@
+[
+  {
+    "fecha": "2026-11-02T18:50:25.856525-06:00",
+    "entrada": {
+      "texto": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?",
+      "modo": "hibrida",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "historial": []
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "Para desocupar antes de tiempo, debes avisar con 60 días naturales de anticipación y pagar una penalización equivalente a dos mensualidades de renta. La renta mensual del local Cedro es de 18,000 pesos ficticios, por lo que la penalización sería de 36,000 pesos ficticios. También se indican 900 pesos ficticios mensuales de mantenimiento a cargo del arrendatario.\n\n[1] [2]",
+      "resultado": {
+        "consulta": "Contrato del local Cedro: qué debe pagar el arrendatario si desocupa o termina el arrendamiento antes del plazo, penalidad, renta, aviso y condiciones.",
+        "modo": "hibrida",
+        "coincidencias": [
+          {
+            "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+            "titulo": "FIC-003 mixto",
+            "nombre_original": "FIC-003_mixto.pdf",
+            "pagina": 2,
+            "metodo": "ocr",
+            "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+            "puntuacion": 0.01639344262295082
+          },
+          {
+            "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+            "titulo": "FIC-003 mixto",
+            "nombre_original": "FIC-003_mixto.pdf",
+            "pagina": 1,
+            "metodo": "texto",
+            "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 1 Partes: Persona Épsilon y Persona Zeta, identidades inventadas. Inmueble: local comercial Cedro, plaza ficticia Horizonte, local L-04. Cláusula 2 Renta mensual: 18000 pesos ficticios. El uso autorizado es una librería. El plazo es de veinticuatro meses a partir del 1 de marzo de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+            "puntuacion": 0.016129032258064516
+          }
+        ]
+      },
+      "modelo": "gpt-6-luna"
+    }
+  },
+  {
+    "caso": "seguimiento",
+    "fecha": "2026-11-02T18:51:08.927147-06:00",
+    "entrada": {
+      "texto": "¿Y con cuánto tiempo debo avisar?",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "historial": [
+        {
+          "rol": "user",
+          "texto": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?"
+        },
+        {
+          "rol": "assistant",
+          "texto": "Para desocupar antes de tiempo, debes avisar con 60 días naturales de anticipación y pagar una penalización equivalente a dos mensualidades de renta. La renta mensual del local Cedro es de 18,000 pesos ficticios, por lo que la penalización sería de 36,000 pesos ficticios. También se indican 900 pesos ficticios mensuales de mantenimiento a cargo del arrendatario.\n\n[1] [2]"
+        }
+      ]
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "Debes avisar con sesenta días naturales de anticipación.\n\n[1]",
+      "resultado": {
+        "consulta": "Contrato del local Cedro: plazo de aviso requerido para desocupar o terminar anticipadamente el arrendamiento.",
+        "modo": "hibrida",
+        "coincidencias": [
+          {
+            "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+            "titulo": "FIC-003 mixto",
+            "nombre_original": "FIC-003_mixto.pdf",
+            "pagina": 2,
+            "metodo": "ocr",
+            "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+            "puntuacion": 0.01639344262295082
+          }
+        ]
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "fuente_esperada": true,
+    "pasajes_cotejados": true
+  },
+  {
+    "caso": "escaneado",
+    "fecha": "2026-11-02T18:51:11.930095-06:00",
+    "entrada": {
+      "texto": "¿Qué multa corresponde si se entrega tarde el departamento Bruma?",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91"
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "Si la parte vendedora entrega tarde el departamento Bruma, la penalización es de 1,500 pesos ficticios por día, hasta veinte días.\n\n[1]",
+      "resultado": {
+        "consulta": "multa o penalización por entrega tardía del departamento Bruma; cláusula, monto, plazo y condiciones",
+        "modo": "hibrida",
+        "coincidencias": [
+          {
+            "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+            "titulo": "FIC-002 escaneado",
+            "nombre_original": "FIC-002_escaneado.pdf",
+            "pagina": 2,
+            "metodo": "ocr",
+            "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+            "puntuacion": 0.01639344262295082
+          }
+        ]
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "fuente_esperada": true,
+    "pasajes_cotejados": true
+  },
+  {
+    "caso": "ocr_intrapagina",
+    "fecha": "2026-11-02T18:51:16.270517-06:00",
+    "entrada": {
+      "texto": "En SIM0170, ¿cuál es el límite de reparaciones y qué se necesita para gastar más?",
+      "coleccion_id": "a865c442-6358-4f2d-a19f-20997ac9d225"
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "No encontré evidencia suficiente para responder con los documentos seleccionados. Indica el folio o el inmueble y comprueba que el contrato esté en esta colección.",
+      "resultado": {
+        "consulta": "Contrato SIM0170: límite de reparaciones y condiciones o autorización necesaria para gastar más que ese límite.",
+        "modo": "hibrida",
+        "coincidencias": []
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "fuente_esperada": false,
+    "pasajes_cotejados": true
+  },
+  {
+    "caso": "sin_evidencia",
+    "fecha": "2026-11-02T18:51:20.191604-06:00",
+    "entrada": {
+      "texto": "¿Cuál es la renta del contrato INEXISTENTEZZQ9999 del castillo lunar?",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91"
+    },
+    "status": 200,
+    "salida": {
+      "respuesta": "No encontré evidencia suficiente para responder con los documentos seleccionados. Indica el folio o el inmueble y comprueba que el contrato esté en esta colección.",
+      "resultado": {
+        "consulta": "Renta del contrato INEXISTENTEZZQ9999 relacionado con el castillo lunar.",
+        "modo": "hibrida",
+        "coincidencias": []
+      },
+      "modelo": "gpt-6-luna"
+    },
+    "fuente_esperada": true,
+    "pasajes_cotejados": true
+  },
+  {
+    "caso": "sin_clave_local",
+    "status": 401,
+    "esperado": 401,
+    "correcto": true,
+    "salida": {
+      "codigo": "ACCESO_DENEGADO",
+      "detalle": "Se requiere una API key válida."
+    }
+  },
+  {
+    "caso": "pregunta_vacia",
+    "status": 422,
+    "esperado": 422,
+    "correcto": true,
+    "salida": {
+      "codigo": "ENTRADA_INVALIDA",
+      "detalle": "Revisa los datos y formatos enviados."
+    }
+  },
+  {
+    "caso": "rol_no_permitido",
+    "status": 422,
+    "esperado": 422,
+    "correcto": true,
+    "salida": {
+      "codigo": "ENTRADA_INVALIDA",
+      "detalle": "Revisa los datos y formatos enviados."
+    }
+  },
+  {
+    "caso": "historial_excesivo",
+    "status": 422,
+    "esperado": 422,
+    "correcto": true,
+    "salida": {
+      "codigo": "ENTRADA_INVALIDA",
+      "detalle": "Revisa los datos y formatos enviados."
+    }
+  }
+]

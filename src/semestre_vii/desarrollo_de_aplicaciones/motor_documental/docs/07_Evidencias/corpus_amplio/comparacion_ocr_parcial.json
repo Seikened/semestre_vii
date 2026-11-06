@@ -1,0 +1,679 @@
+{
+  "corpus_sha256": "7862783a581a978e6d93e5eb75ec29c240475a58c940d6841c731d9b21377ae3",
+  "consultas_identicas": 612,
+  "ocr_antes": 464,
+  "ocr_despues": 480,
+  "consultas": [
+    {
+      "variante": "libre",
+      "modo": "texto",
+      "antes": {
+        "casos": 68,
+        "pagina_1": 3,
+        "pagina_5": 4,
+        "cita_normalizada_5": 4,
+        "cita_literal_5": 3
+      },
+      "despues": {
+        "casos": 68,
+        "pagina_1": 3,
+        "pagina_5": 4,
+        "cita_normalizada_5": 4,
+        "cita_literal_5": 3
+      }
+    },
+    {
+      "variante": "libre",
+      "modo": "vector",
+      "antes": {
+        "casos": 68,
+        "pagina_1": 54,
+        "pagina_5": 63,
+        "cita_normalizada_5": 53,
+        "cita_literal_5": 52
+      },
+      "despues": {
+        "casos": 68,
+        "pagina_1": 57,
+        "pagina_5": 67,
+        "cita_normalizada_5": 57,
+        "cita_literal_5": 56
+      }
+    },
+    {
+      "variante": "libre",
+      "modo": "hibrida",
+      "antes": {
+        "casos": 68,
+        "pagina_1": 54,
+        "pagina_5": 63,
+        "cita_normalizada_5": 53,
+        "cita_literal_5": 52
+      },
+      "despues": {
+        "casos": 68,
+        "pagina_1": 57,
+        "pagina_5": 67,
+        "cita_normalizada_5": 57,
+        "cita_literal_5": 56
+      }
+    },
+    {
+      "variante": "natural_con_folio",
+      "modo": "texto",
+      "antes": {
+        "casos": 68,
+        "pagina_1": 4,
+        "pagina_5": 4,
+        "cita_normalizada_5": 4,
+        "cita_literal_5": 3
+      },
+      "despues": {
+        "casos": 68,
+        "pagina_1": 4,
+        "pagina_5": 4,
+        "cita_normalizada_5": 4,
+        "cita_literal_5": 3
+      }
+    },
+    {
+      "variante": "natural_con_folio",
+      "modo": "vector",
+      "antes": {
+        "casos": 68,
+        "pagina_1": 56,
+        "pagina_5": 63,
+        "cita_normalizada_5": 53,
+        "cita_literal_5": 52
+      },
+      "despues": {
+        "casos": 68,
+        "pagina_1": 60,
+        "pagina_5": 67,
+        "cita_normalizada_5": 57,
+        "cita_literal_5": 56
+      }
+    },
+    {
+      "variante": "natural_con_folio",
+      "modo": "hibrida",
+      "antes": {
+        "casos": 68,
+        "pagina_1": 56,
+        "pagina_5": 63,
+        "cita_normalizada_5": 53,
+        "cita_literal_5": 52
+      },
+      "despues": {
+        "casos": 68,
+        "pagina_1": 60,
+        "pagina_5": 67,
+        "cita_normalizada_5": 57,
+        "cita_literal_5": 56
+      }
+    },
+    {
+      "variante": "precisa",
+      "modo": "texto",
+      "antes": {
+        "casos": 68,
+        "pagina_1": 64,
+        "pagina_5": 64,
+        "cita_normalizada_5": 55,
+        "cita_literal_5": 54
+      },
+      "despues": {
+        "casos": 68,
+        "pagina_1": 68,
+        "pagina_5": 68,
+        "cita_normalizada_5": 59,
+        "cita_literal_5": 58
+      }
+    },
+    {
+      "variante": "precisa",
+      "modo": "vector",
+      "antes": {
+        "casos": 68,
+        "pagina_1": 13,
+        "pagina_5": 28,
+        "cita_normalizada_5": 22,
+        "cita_literal_5": 22
+      },
+      "despues": {
+        "casos": 68,
+        "pagina_1": 14,
+        "pagina_5": 32,
+        "cita_normalizada_5": 26,
+        "cita_literal_5": 26
+      }
+    },
+    {
+      "variante": "precisa",
+      "modo": "hibrida",
+      "antes": {
+        "casos": 68,
+        "pagina_1": 54,
+        "pagina_5": 64,
+        "cita_normalizada_5": 55,
+        "cita_literal_5": 54
+      },
+      "despues": {
+        "casos": 68,
+        "pagina_1": 58,
+        "pagina_5": 68,
+        "cita_normalizada_5": 59,
+        "cita_literal_5": 58
+      }
+    }
+  ],
+  "controles_breves": {
+    "antes": {
+      "normalizados": 64,
+      "literales": 63
+    },
+    "despues": {
+      "normalizados": 68,
+      "literales": 67
+    }
+  },
+  "parrafos_por_formato": {
+    "base": {
+      "digital": {
+        "paginas": 960,
+        "anclas": 3840,
+        "preservadas": 3840,
+        "literales": 3840,
+        "metodo_correcto": 960
+      },
+      "escaneado": {
+        "paginas": 320,
+        "anclas": 1280,
+        "preservadas": 1074,
+        "literales": 775,
+        "metodo_correcto": 320
+      },
+      "mixto": {
+        "paginas": 320,
+        "anclas": 1280,
+        "preservadas": 1129,
+        "literales": 1009,
+        "metodo_correcto": 304
+      },
+      "txt": {
+        "paginas": 40,
+        "anclas": 1280,
+        "preservadas": 1280,
+        "literales": 1280,
+        "metodo_correcto": 40
+      }
+    },
+    "ocr_parcial": {
+      "digital": {
+        "paginas": 960,
+        "anclas": 3840,
+        "preservadas": 3840,
+        "literales": 3840,
+        "metodo_correcto": 960
+      },
+      "escaneado": {
+        "paginas": 320,
+        "anclas": 1280,
+        "preservadas": 1074,
+        "literales": 775,
+        "metodo_correcto": 320
+      },
+      "mixto": {
+        "paginas": 320,
+        "anclas": 1280,
+        "preservadas": 1168,
+        "literales": 1048,
+        "metodo_correcto": 320
+      },
+      "txt": {
+        "paginas": 40,
+        "anclas": 1280,
+        "preservadas": 1280,
+        "literales": 1280,
+        "metodo_correcto": 40
+      }
+    }
+  },
+  "cambios_consulta": [
+    {
+      "caso_id": "SIM0017-C13",
+      "variante": "precisa",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": 3,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      },
+      "despues": {
+        "posicion_pagina": 4,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C13",
+      "variante": "libre",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C13",
+      "variante": "libre",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C13",
+      "variante": "natural_con_folio",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C13",
+      "variante": "natural_con_folio",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C13",
+      "variante": "precisa",
+      "modo": "texto",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C13",
+      "variante": "precisa",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 2,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C13",
+      "variante": "precisa",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C21",
+      "variante": "libre",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C21",
+      "variante": "libre",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C21",
+      "variante": "natural_con_folio",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C21",
+      "variante": "natural_con_folio",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C21",
+      "variante": "precisa",
+      "modo": "texto",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C21",
+      "variante": "precisa",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 4,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0170-C21",
+      "variante": "precisa",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C13",
+      "variante": "libre",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C13",
+      "variante": "libre",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C13",
+      "variante": "natural_con_folio",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C13",
+      "variante": "natural_con_folio",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C13",
+      "variante": "precisa",
+      "modo": "texto",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C13",
+      "variante": "precisa",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C13",
+      "variante": "precisa",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C21",
+      "variante": "libre",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 2,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C21",
+      "variante": "libre",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 2,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C21",
+      "variante": "natural_con_folio",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C21",
+      "variante": "natural_con_folio",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C21",
+      "variante": "precisa",
+      "modo": "texto",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C21",
+      "variante": "precisa",
+      "modo": "vector",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 2,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    },
+    {
+      "caso_id": "SIM0190-C21",
+      "variante": "precisa",
+      "modo": "hibrida",
+      "antes": {
+        "posicion_pagina": null,
+        "cita_en_top5": false,
+        "cita_literal_en_top5": false
+      },
+      "despues": {
+        "posicion_pagina": 1,
+        "cita_en_top5": true,
+        "cita_literal_en_top5": true
+      }
+    }
+  ]
+}

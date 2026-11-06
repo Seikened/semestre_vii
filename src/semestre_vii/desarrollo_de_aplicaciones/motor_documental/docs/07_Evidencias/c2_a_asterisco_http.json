@@ -1,0 +1,148 @@
+{
+  "fecha": "2026-11-02T22:12:45.230168-06:00",
+  "zip_sha256": "14f541aa416529aa9953a512ef319d3a866299d0b14a391af52046ce27db4c0d",
+  "proyecto": "motor-documental-c2-a-asterisco",
+  "volumenes": "nuevos para este proyecto",
+  "proveedor": "sin clave, sin llamadas OpenAI",
+  "web": 200,
+  "salud": {
+    "estado": "disponible",
+    "modelo": "intfloat/multilingual-e5-small",
+    "dimension": 384
+  },
+  "documentos": [
+    {
+      "id": "6aee24d4-2a3f-4c3c-84c6-cf9a96305495",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "titulo": "FIC-006 mixto",
+      "nombre_original": "FIC-006_mixto.pdf",
+      "extension": "pdf",
+      "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "creado_en": "2026-11-03T04:12:15.178106Z",
+      "paginas": 2,
+      "paginas_ocr": 1
+    },
+    {
+      "id": "00d946a4-aa1c-463c-834e-1983ed9a7f2c",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "titulo": "FIC-005 escaneado",
+      "nombre_original": "FIC-005_escaneado.pdf",
+      "extension": "pdf",
+      "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "creado_en": "2026-11-03T04:12:14.721885Z",
+      "paginas": 2,
+      "paginas_ocr": 2
+    },
+    {
+      "id": "fc887374-b1b4-4906-b173-fa5f0292f154",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "titulo": "FIC-004 digital",
+      "nombre_original": "FIC-004_digital.pdf",
+      "extension": "pdf",
+      "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "creado_en": "2026-11-03T04:12:13.924169Z",
+      "paginas": 2,
+      "paginas_ocr": 0
+    },
+    {
+      "id": "0e978aeb-498f-4b41-b13a-972e38fa74bd",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "titulo": "FIC-003 mixto",
+      "nombre_original": "FIC-003_mixto.pdf",
+      "extension": "pdf",
+      "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "creado_en": "2026-11-03T04:12:13.220013Z",
+      "paginas": 2,
+      "paginas_ocr": 1
+    },
+    {
+      "id": "4201a88f-50ca-468a-9d5b-35914ce64b20",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "titulo": "FIC-002 escaneado",
+      "nombre_original": "FIC-002_escaneado.pdf",
+      "extension": "pdf",
+      "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "creado_en": "2026-11-03T04:12:12.802475Z",
+      "paginas": 2,
+      "paginas_ocr": 2
+    },
+    {
+      "id": "ceab11ec-1778-44ba-a615-109d41ef1901",
+      "coleccion_id": "8c9fac40-7aee-4aa6-a08c-3e1ad438da91",
+      "titulo": "FIC-001 digital",
+      "nombre_original": "FIC-001_digital.pdf",
+      "extension": "pdf",
+      "modelo": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "creado_en": "2026-11-03T04:12:11.749688Z",
+      "paginas": 2,
+      "paginas_ocr": 0
+    }
+  ],
+  "busqueda": {
+    "consulta": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?",
+    "modo": "hibrida",
+    "coincidencias": [
+      {
+        "documento_id": "0e978aeb-498f-4b41-b13a-972e38fa74bd",
+        "titulo": "FIC-003 mixto",
+        "nombre_original": "FIC-003_mixto.pdf",
+        "pagina": 1,
+        "metodo": "texto",
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 1 Partes: Persona Épsilon y Persona Zeta, identidades inventadas. Inmueble: local comercial Cedro, plaza ficticia Horizonte, local L-04. Cláusula 2 Renta mensual: 18000 pesos ficticios. El uso autorizado es una librería. El plazo es de veinticuatro meses a partir del 1 de marzo de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.01639344262295082
+      },
+      {
+        "documento_id": "0e978aeb-498f-4b41-b13a-972e38fa74bd",
+        "titulo": "FIC-003 mixto",
+        "nombre_original": "FIC-003_mixto.pdf",
+        "pagina": 2,
+        "metodo": "ocr",
+        "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.016129032258064516
+      },
+      {
+        "documento_id": "00d946a4-aa1c-463c-834e-1983ed9a7f2c",
+        "titulo": "FIC-005 escaneado",
+        "nombre_original": "FIC-005_escaneado.pdf",
+        "pagina": 1,
+        "metodo": "ocr",
+        "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela Cláusula 1 Partes: Persona Theta y Persona lota, identidades inventadas. Inmueble: terreno Estela, lote ficticio T-09, superficie de 320 metros cuadrados. Cláusula 2 Reserva: 25000 pesos ficticios por un plazo de quince días naturales, desde el 5 de abril de 2027. El precio de referencia es 850000 pesos ficticios. Página 1. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.015873015873015872
+      },
+      {
+        "documento_id": "ceab11ec-1778-44ba-a615-109d41ef1901",
+        "titulo": "FIC-001 digital",
+        "nombre_original": "FIC-001_digital.pdf",
+        "pagina": 2,
+        "metodo": "texto",
+        "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 3 Depósito en garantía: 12500 pesos ficticios. Se devuelve dentro de treinta días naturales después de entregar la vivienda, descontando daños documentados. Cláusula 4 Mascotas: se permite un gato doméstico. Queda prohibido subarrendar la vivienda sin autorización escrita. Página 2. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.015625
+      },
+      {
+        "documento_id": "4201a88f-50ca-468a-9d5b-35914ce64b20",
+        "titulo": "FIC-002 escaneado",
+        "nombre_original": "FIC-002_escaneado.pdf",
+        "pagina": 2,
+        "metodo": "ocr",
+        "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+        "puntuacion": 0.015384615384615385
+      }
+    ]
+  },
+  "posicion_fuente_correcta": 2,
+  "observacion_ranking": "La pregunta natural recupera la cláusula en posición 2; no se acredita primer resultado correcto.",
+  "original_pdf": 200,
+  "sin_coincidencias": {
+    "consulta": "expedienteinexistentexyzq123",
+    "modo": "texto",
+    "coincidencias": []
+  },
+  "chat_sin_clave": {
+    "status": 503,
+    "cuerpo": {
+      "codigo": "LUNA_NO_CONFIGURADA",
+      "detalle": "Configura la clave privada de Luna para conversar."
+    }
+  },
+  "estado": "comprobaciones correctas"
+}

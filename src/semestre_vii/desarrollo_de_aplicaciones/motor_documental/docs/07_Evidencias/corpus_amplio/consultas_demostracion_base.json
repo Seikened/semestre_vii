@@ -1,0 +1,163 @@
+[
+  {
+    "caso": "SIM0001-C18",
+    "consulta": "SIM0001 \"Devolución de garantía\"",
+    "modo": "texto",
+    "cita_esperada": "La garantía se devuelve dentro de 37 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados.",
+    "resultado": {
+      "consulta": "SIM0001 \"Devolución de garantía\"",
+      "modo": "texto",
+      "coincidencias": [
+        {
+          "documento_id": "3766addb-1c95-4fec-ad51-e9e3323b1238",
+          "titulo": "SIM0001 | Arrendamiento ficticio | Villa Jacaranda",
+          "nombre_original": "SIM0001_digital.pdf",
+          "pagina": 5,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0001 | Arrendamiento ficticio | Villa Jacaranda Partes ficticias: Fernando León Franco y Fabián León Franco. Cláusula 17. Constitución de garantía Los avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que modifican. Este apartado corresponde a Villa Jacaranda, folio SIM0001. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0001-17. Cláusula 18. Devolución de garantía La garantía se devuelve dentro de 37 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este apartado corresponde a Villa Jacaranda,",
+          "puntuacion": 0.0022222223
+        }
+      ]
+    }
+  },
+  {
+    "caso": "SIM0121-C18",
+    "consulta": "SIM0121 \"Devolución de garantía\"",
+    "modo": "texto",
+    "cita_esperada": "La garantía se devuelve dentro de 43 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados.",
+    "resultado": {
+      "consulta": "SIM0121 \"Devolución de garantía\"",
+      "modo": "texto",
+      "coincidencias": [
+        {
+          "documento_id": "8935c727-a551-459b-8e1b-0a20ed46b2db",
+          "titulo": "SIM0121 | Arrendamiento ficticio | Departamento Ópalo",
+          "nombre_original": "SIM0121_escaneado.pdf",
+          "pagina": 5,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0121 | Arrendamiento ficticio | Departamento Opalo Partes ficticias: Fernando León Franco y Fabián León Franco. Cláusula 17. Constitución de garantía Los avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que modifican. Este apartado corresponde a Departamento Ópalo, folio SIM0121. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0121-17. Cláusula 18. Devolución de garantía La garantía se devuelve dentro de 43 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este apartado corresponde a Departamento",
+          "puntuacion": 0.0022222223
+        }
+      ]
+    }
+  },
+  {
+    "caso": "SIM0161-C21",
+    "consulta": "SIM0161 \"Terminación anticipada\"",
+    "modo": "texto",
+    "cita_esperada": "La terminación anticipada requiere aviso con 80 días naturales y una compensación de 3 mensualidades ficticias. No basta abandonar el inmueble.",
+    "resultado": {
+      "consulta": "SIM0161 \"Terminación anticipada\"",
+      "modo": "texto",
+      "coincidencias": [
+        {
+          "documento_id": "ddf03742-aff5-4253-b091-932a9dd05f96",
+          "titulo": "SIM0161 | Arrendamiento ficticio | Bodega Nácar",
+          "nombre_original": "SIM0161_mixto.pdf",
+          "pagina": 6,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIMO161 | Arrendamiento ficticio | Bodega Nacar Partes ficticias: Fernando León Franco y Fabián León Franco. Cláusula 21. Terminación anticipada La terminación anticipada requiere aviso con 80 días naturales y una compensación de 3 mensualidades ficticias. No basta abandonar el inmueble. Este apartado corresponde a Bodega Nácar, folio SIM0161. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0161-21. Cláusula 22. Notificación de salida La entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este apartado corresponde a Bodega Nácar, folio",
+          "puntuacion": 0.0038461538
+        }
+      ]
+    }
+  },
+  {
+    "caso": "SIM0201-C18",
+    "consulta": "SIM0201 \"Devolución de garantía\"",
+    "modo": "texto",
+    "cita_esperada": "La garantía se devuelve dentro de 41 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados.",
+    "resultado": {
+      "consulta": "SIM0201 \"Devolución de garantía\"",
+      "modo": "texto",
+      "coincidencias": [
+        {
+          "documento_id": "2e03f6d4-d539-4c12-9936-45cd57eca642",
+          "titulo": "SIM0201 | Arrendamiento ficticio | Local Ámbar",
+          "nombre_original": "SIM0201_txt.txt",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "distintas bajo una sola referencia. La referencia de control es FICT-0201-16. Cláusula 17. Constitución de garantía. Los avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que modifican. Este apartado corresponde a Local Ámbar, folio SIM0201. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0201-17. Cláusula 18. Devolución de garantía. La garantía se devuelve dentro de 41 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este apartado corresponde a Local Ámbar, folio SIM0201. Toda modificación de esta condición requiere un anexo escrito que",
+          "puntuacion": 0.0055555557
+        }
+      ]
+    }
+  },
+  {
+    "caso": "SIM0201-C13",
+    "consulta": "SIM0201 \"Límite de reparaciones\"",
+    "modo": "texto",
+    "cita_esperada": "El límite de reparaciones sin autorización adicional es de 5400 pesos ficticios por evento. Un gasto mayor requiere aprobación escrita.",
+    "resultado": {
+      "consulta": "SIM0201 \"Límite de reparaciones\"",
+      "modo": "texto",
+      "coincidencias": [
+        {
+          "documento_id": "2e03f6d4-d539-4c12-9936-45cd57eca642",
+          "titulo": "SIM0201 | Arrendamiento ficticio | Local Ámbar",
+          "nombre_original": "SIM0201_txt.txt",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "Ámbar, folio SIM0201. Las partes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es FICT-0201-11. Cláusula 12. Actualización de importes. Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Local Ámbar, folio SIM0201. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0201-12. Cláusula 13. Límite de reparaciones. El límite de reparaciones sin autorización adicional es de 5400 pesos ficticios por",
+          "puntuacion": 0.0021739132
+        }
+      ]
+    }
+  },
+  {
+    "caso": "demostracion_nombres",
+    "consulta": "En el arrendamiento de Villa Jacaranda entre Fernando León Franco y Fabián León Franco, ¿en cuántos días se devuelve la garantía?",
+    "modo": "hibrida",
+    "resultado": {
+      "consulta": "En el arrendamiento de Villa Jacaranda entre Fernando León Franco y Fabián León Franco, ¿en cuántos días se devuelve la garantía?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "3766addb-1c95-4fec-ad51-e9e3323b1238",
+          "titulo": "SIM0001 | Arrendamiento ficticio | Villa Jacaranda",
+          "nombre_original": "SIM0001_digital.pdf",
+          "pagina": 5,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0001 | Arrendamiento ficticio | Villa Jacaranda Partes ficticias: Fernando León Franco y Fabián León Franco. Cláusula 17. Constitución de garantía Los avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán identificar expresamente el punto que modifican. Este apartado corresponde a Villa Jacaranda, folio SIM0001. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0001-17. Cláusula 18. Devolución de garantía La garantía se devuelve dentro de 37 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este apartado corresponde a Villa Jacaranda,",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "3766addb-1c95-4fec-ad51-e9e3323b1238",
+          "titulo": "SIM0001 | Arrendamiento ficticio | Villa Jacaranda",
+          "nombre_original": "SIM0001_digital.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0001 | Arrendamiento ficticio | Villa Jacaranda Partes ficticias: Fernando León Franco y Fabián León Franco. Cláusula 1. Identificación de las partes La parte cedente es Fernando León Franco y la parte receptora es Fabián León Franco. Actúan exclusivamente como personajes de una simulación, sin representar una operación jurídica real. Este apartado corresponde a Villa Jacaranda, folio SIM0001. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0001-01. Cláusula 2. Objeto del acuerdo La entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "15fc2a16-50e5-4cce-bc90-754f12f75f91",
+          "titulo": "SIM0002 | Compraventa ficticio | Villa Jacaranda Norte",
+          "nombre_original": "SIM0002_digital.pdf",
+          "pagina": 5,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0002 | Compraventa ficticio | Villa Jacaranda Norte Partes ficticias: Fernando León Franco y Fabián León Franco. Cláusula 17. Constitución de garantía La entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este apartado corresponde a Villa Jacaranda Norte, folio SIM0002. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan instrucciones verbales contradictorias. La referencia de control es FICT-0002-17. Cláusula 18. Devolución de garantía La garantía se devuelve dentro de 24 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este apartado corresponde a",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "8fb83047-1705-46a8-b32b-c779a155b14f",
+          "titulo": "SIM0004 | Escritura simulada ficticio | Villa Jacaranda Anexo",
+          "nombre_original": "SIM0004_digital.pdf",
+          "pagina": 5,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0004 | Escritura simulada ficticio | Villa Jacaranda Anexo Partes ficticias: Fernando León Franco y Fabián León Franco. Cláusula 17. Constitución de garantía Se conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el expediente de la propiedad. Este apartado corresponde a Villa Jacaranda Anexo, folio SIM0004. La documentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán por separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas bajo una sola referencia. La referencia de control es FICT-0004-17. Cláusula 18. Devolución de garantía La garantía se devuelve dentro de 16 días naturales después de entregar las llaves y firmar el inventario, descontando solo daños documentados. Este apartado corresponde a Villa Jacaranda",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "3766addb-1c95-4fec-ad51-e9e3323b1238",
+          "titulo": "SIM0001 | Arrendamiento ficticio | Villa Jacaranda",
+          "nombre_original": "SIM0001_digital.pdf",
+          "pagina": 6,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL. SIM0001 | Arrendamiento ficticio | Villa Jacaranda Partes ficticias: Fernando León Franco y Fabián León Franco. Cláusula 21. Terminación anticipada La terminación anticipada requiere aviso con 46 días naturales y una compensación de 2 mensualidades ficticias. No basta abandonar el inmueble. Este apartado corresponde a Villa Jacaranda, folio SIM0001. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión original del documento. La referencia de control es FICT-0001-21. Cláusula 22. Notificación de salida La entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario, daños y mejoras previamente autorizadas. Este apartado corresponde a Villa Jacaranda,",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    }
+  }
+]

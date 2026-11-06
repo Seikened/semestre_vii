@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-11-02T19:01:33.583842-06:00",
+  "instalacion": "volumenes nuevos con imagenes locales y secreto de ejemplo vacio",
+  "documentos_http": 200,
+  "documentos": 6,
+  "chat_http": 503,
+  "chat": {
+    "codigo": "LUNA_NO_CONFIGURADA",
+    "detalle": "Configura la clave privada de Luna para conversar."
+  },
+  "buscar_http": 200,
+  "cedro_pagina_2": true,
+  "web_http": 200,
+  "clave_proveedor_en_html": false,
+  "secreto_luna_montado": {
+    "api": true,
+    "web": false
+  }
+}

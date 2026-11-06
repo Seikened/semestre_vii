@@ -1,0 +1,62 @@
+[
+  {
+    "consulta": "Contrato INEXISTENTEZZQ9999 del castillo lunar",
+    "modo": "texto",
+    "resultados": 0,
+    "archivos": []
+  },
+  {
+    "consulta": "Contrato INEXISTENTEZZQ9999 del castillo lunar",
+    "modo": "vector",
+    "resultados": 5,
+    "archivos": [
+      "SIM0097_digital.pdf",
+      "SIM0049_digital.pdf",
+      "SIM0121_escaneado.pdf",
+      "SIM0049_digital.pdf",
+      "SIM0094_digital.pdf"
+    ]
+  },
+  {
+    "consulta": "Contrato INEXISTENTEZZQ9999 del castillo lunar",
+    "modo": "hibrida",
+    "resultados": 5,
+    "archivos": [
+      "SIM0097_digital.pdf",
+      "SIM0049_digital.pdf",
+      "SIM0121_escaneado.pdf",
+      "SIM0049_digital.pdf",
+      "SIM0094_digital.pdf"
+    ]
+  },
+  {
+    "consulta": "Número de cuenta extraterrestre ZZQ9999",
+    "modo": "texto",
+    "resultados": 0,
+    "archivos": []
+  },
+  {
+    "consulta": "Número de cuenta extraterrestre ZZQ9999",
+    "modo": "vector",
+    "resultados": 5,
+    "archivos": [
+      "SIM0099_digital.pdf",
+      "SIM0049_digital.pdf",
+      "SIM0097_digital.pdf",
+      "SIM0069_digital.pdf",
+      "SIM0199_mixto.pdf"
+    ]
+  },
+  {
+    "consulta": "Número de cuenta extraterrestre ZZQ9999",
+    "modo": "hibrida",
+    "resultados": 5,
+    "archivos": [
+      "SIM0099_digital.pdf",
+      "SIM0049_digital.pdf",
+      "SIM0097_digital.pdf",
+      "SIM0069_digital.pdf",
+      "SIM0199_mixto.pdf"
+    ]
+  }
+]

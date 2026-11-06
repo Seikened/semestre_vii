@@ -1,0 +1,25 @@
+{
+  "fecha": "2026-11-02T16:48:07.136471-06:00",
+  "vector_store_id": "vs_6ae911da598c81918e58f3cd6138f3c6",
+  "nombre": "Evaluación motor documental | 240 ficticios | 2026-11-02",
+  "estado_observado_ui": "vacío, 0 KB",
+  "archivos_locales_verificados": 240,
+  "corpus_sha256": "7862783a581a978e6d93e5eb75ec29c240475a58c940d6841c731d9b21377ae3",
+  "consultas_fijadas_e_identicas_al_informe_local": 612,
+  "informe_local_sha256": "4f5976049b2545e0dca494625ad99f52b6b95f06cbc800dbd9b0d81fb322d9ff",
+  "resultado_openai": null,
+  "pendiente": [
+    "API key del proyecto para automatizar la carga y ejecutar búsquedas sin LLM.",
+    "Indexación de los 240 originales y comprobación de estados reales.",
+    "Ejecución y conservación de respuestas reales de búsqueda."
+  ],
+  "bloqueo_carga_ui": "El selector automático requiere Allow access to file URLs. El selector nativo no completó la selección.",
+  "notas_comparabilidad": [
+    "Los 240 archivos conservan exactamente los bytes originales; no añadir OCR previo al subirlos.",
+    "Los nombres de modo pertenecen al motor local. No asumir que OpenAI ofrece controles equivalentes de modo textual y vectorial.",
+    "Mantener las 612 filas originales; identificar explícitamente los parámetros efectivos de cada petición OpenAI.",
+    "No atribuir números de página nativos a una respuesta OpenAI que no los incluya. Comparar documento esperado y cita literal completa, conservando los pasajes originales.",
+    "No excluir del denominador un archivo que falle al indexarse. Conservar error y estado real de ingesta.",
+    "No generar respuestas con un LLM durante esta comparación."
+  ]
+}

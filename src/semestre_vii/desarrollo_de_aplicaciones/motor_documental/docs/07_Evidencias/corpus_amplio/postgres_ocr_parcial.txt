@@ -1,0 +1,5 @@
+ documentos | paginas | paginas_ocr | fragmentos | dimension_min | dimension_max 
+------------+---------+-------------+------------+---------------+---------------
+        240 |    1640 |         480 |       5559 |           384 |           384
+(1 row)
+

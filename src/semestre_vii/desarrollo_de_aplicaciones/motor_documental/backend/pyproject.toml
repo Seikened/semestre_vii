@@ -1,0 +1,41 @@
+[project]
+name = "motor-documental"
+version = "0.1.0"
+description = "Extracción y recuperación de contratos ficticios"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "fastapi>=0.135,<1",
+    "docling>=2.0,<3",
+    "numpy>=2,<3",
+    "onnxruntime>=1.23,<2",
+    "pydantic>=2,<3",
+    "pgvector>=0.4,<1",
+    "psycopg[binary]>=3.3,<4",
+    "python-multipart>=0.0.22,<1",
+    "pymupdf>=1.26,<2",
+    "sentence-transformers>=5,<6",
+    "torch>=2,<3",
+    "torchvision>=0.25,<1",
+    "uvicorn>=0.41,<1",
+    "openai>=2,<3",
+]
+
+[dependency-groups]
+demo = ["reportlab>=4,<5"]
+
+[build-system]
+requires = ["uv_build>=0.9,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "app"
+module-root = ""
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+torchvision = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]

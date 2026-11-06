@@ -1,0 +1,15 @@
+{
+  "paquetes": {
+    "pymupdf": "1.28.2",
+    "sentence-transformers": "5.7.0",
+    "torch": "2.15.0+cpu",
+    "pgvector": "0.5.1",
+    "psycopg": "3.3.6"
+  },
+  "modelo": "intfloat/multilingual-e5-small",
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "dimension": 384,
+  "hilos_omp": "2",
+  "ocr": "Tesseract spa+eng, página completa a 200 dpi",
+  "extractor_sha256": "caed2b11d843bf00ca190e3f6996fd6adcf7788564c8d0eb1234bc1a5972a2cf"
+}

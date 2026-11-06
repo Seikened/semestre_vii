@@ -1,0 +1,4 @@
+NAME                           IMAGE                        COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+motor-documental-copia-api-1   motor-documental-copia-api   "uvicorn app.main:ap…"   api       59 seconds ago   Up 53 seconds (healthy)   127.0.0.1:8000->8000/tcp
+motor-documental-copia-db-1    pgvector/pgvector:pg16       "/bin/sh /iniciar.sh"    db        59 seconds ago   Up 59 seconds (healthy)   5432/tcp
+motor-documental-copia-web-1   motor-documental-copia-web   "docker-entrypoint.s…"   web       59 seconds ago   Up 11 seconds             127.0.0.1:3000->3000/tcp

@@ -1,0 +1,78 @@
+{
+  "vector_store_id": "vs_6ae911da598c81918e58f3cd6138f3c6",
+  "modo_local": "hibrida",
+  "peticion": {
+    "query": "Contrato INEXISTENTEZZQ9999 del castillo lunar",
+    "max_num_results": 5,
+    "rewrite_query": false,
+    "ranking_options": {
+      "ranker": "auto",
+      "score_threshold": 0.0
+    }
+  },
+  "respuesta": {
+    "object": "vector_store.search_results.page",
+    "data": [
+      {
+        "file_id": "file-TzvvWMjVtdwZzZgCvnqSSJ",
+        "filename": "SIM0089_digital.pdf",
+        "score": 0.6574835086778364,
+        "content": [
+          {
+            "type": "text",
+            "text": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0089 | Arrendamiento ficticio | Unidad Nácar 089\nPartes ficticias: Persona Cedente 089 del Archivo Imaginario y Persona Receptora 141 de Puerto\nInventado.\n\n\nCláusula 1. Identificación de las partes\nLa parte cedente es Persona Cedente 089 del Archivo Imaginario y la parte receptora es Persona\nReceptora 141 de Puerto Inventado. Actúan exclusivamente como personajes de una simulación, sin\nrepresentar una operación jurídica real. Este apartado corresponde a Unidad Nácar 089, folio SIM0089. La\npersona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las\ndiferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0089-01.\n\nCláusula 2. Objeto del acuerdo\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Nácar 089, folio SIM0089.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0089-02.\n\nCláusula 3. Descripción del inmueble\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Nácar 089, folio SIM0089. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0089-03.\n\nCláusula 4. Documentación e inventario\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Nácar 089, folio SIM0089. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0089-04.\n\nPágina 1 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0089 | Arrendamiento ficticio | Unidad Nácar 089\nPartes ficticias: Persona Cedente 089 del Archivo Imaginario y Persona Receptora 141 de Puerto\nInventado."
+          }
+        ]
+      },
+      {
+        "file_id": "file-5kXoN12EeKk9xjvkS5rgZV",
+        "filename": "SIM0051_digital.pdf",
+        "score": 0.6518101102994369,
+        "content": [
+          {
+            "type": "text",
+            "text": "Página 6 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0051 | Administración ficticio | Unidad Álamo 051\nPartes ficticias: Persona Cedente 051 del Archivo Imaginario y Persona Receptora 116 de Puerto\nInventado.\n\n\nCláusula 25. Cesión a terceros\nNo se permite ceder el uso del inmueble a terceros sin autorización escrita. Una visita temporal no\nconstituye una cesión del acuerdo. Este apartado corresponde a Unidad Álamo 051, folio SIM0051. Las\npartes conservarán una copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier\nmovimiento. Una anotación aislada no modifica las condiciones pactadas en las demás secciones. La\nreferencia de control es FICT-0051-25.\n\nCláusula 26. Modificaciones interiores\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Álamo 051, folio SIM0051. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0051-26.\n\nCláusula 27. Reglas de convivencia\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Álamo 051, folio\nSIM0051. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0051-27.\n\nCláusula 28. Inspecciones programadas\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Álamo 051, folio SIM0051.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0051-28.\n\nPágina 7 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0051 | Administración ficticio | Unidad Álamo 051\nPartes ficticias: Persona Cedente 051 del Archivo Imaginario y Persona Receptora 116 de Puerto\nInventado."
+          }
+        ]
+      },
+      {
+        "file_id": "file-734ZoLDuoALMna9rZY1vih",
+        "filename": "SIM0009_digital.pdf",
+        "score": 0.6380184948696864,
+        "content": [
+          {
+            "type": "text",
+            "text": "Cláusula 19. Deducciones documentadas\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Magnolia 009, folio SIM0009. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0009-19.\n\nCláusula 20. Entrega de llaves\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Magnolia 009, folio SIM0009. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0009-20.\n\nPágina 5 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0009 | Arrendamiento ficticio | Unidad Magnolia 009\nPartes ficticias: Persona Cedente 009 del Archivo Imaginario y Persona Receptora 063 de Puerto\nInventado.\n\n\nCláusula 21. Terminación anticipada\nLa terminación anticipada requiere aviso con 35 días naturales y una compensación de 1 mensualidades\nficticias. No basta abandonar el inmueble. Este apartado corresponde a Unidad Magnolia 009, folio\nSIM0009. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0009-21.\n\nCláusula 22. Notificación de salida\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Magnolia 009, folio\nSIM0009. Toda modificación de esta condición requiere un anexo escrito que mencione expresamente la\ncláusula afectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se\nrechazan instrucciones verbales contradictorias. La referencia de control es FICT-0009-22.\n\nCláusula 23. Cierre de obligaciones\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Magnolia 009, folio SIM0009. Las partes conservarán\nuna copia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una\nanotación aislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0009-23."
+          }
+        ]
+      },
+      {
+        "file_id": "file-T23Hrc3PnTeBXZsUehjk6Z",
+        "filename": "SIM0013_digital.pdf",
+        "score": 0.6371232225800081,
+        "content": [
+          {
+            "type": "text",
+            "text": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0013 | Arrendamiento ficticio | Unidad Olmo 013\nPartes ficticias: Persona Cedente 013 del Archivo Imaginario y Persona Receptora 091 de Puerto\nInventado.\n\n\nCláusula 1. Identificación de las partes\nLa parte cedente es Persona Cedente 013 del Archivo Imaginario y la parte receptora es Persona\nReceptora 091 de Puerto Inventado. Actúan exclusivamente como personajes de una simulación, sin\nrepresentar una operación jurídica real. Este apartado corresponde a Unidad Olmo 013, folio SIM0013. La\npersona encargada del expediente verificará que el inventario coincida con el acta de entrega. Las\ndiferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0013-01.\n\nCláusula 2. Objeto del acuerdo\nLa entrega de bienes se cotejará con el anexo de conservación. Las partes distinguirán desgaste ordinario,\ndaños y mejoras previamente autorizadas. Este apartado corresponde a Unidad Olmo 013, folio SIM0013.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0013-02.\n\nCláusula 3. Descripción del inmueble\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Olmo 013, folio SIM0013. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0013-03.\n\nCláusula 4. Documentación e inventario\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Olmo 013, folio SIM0013. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0013-04.\n\nPágina 1 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0013 | Arrendamiento ficticio | Unidad Olmo 013\nPartes ficticias: Persona Cedente 013 del Archivo Imaginario y Persona Receptora 091 de Puerto\nInventado."
+          }
+        ]
+      },
+      {
+        "file_id": "file-JFRaHjtAFUFwjLSX5xgSpY",
+        "filename": "SIM0022_digital.pdf",
+        "score": 0.6347153548153558,
+        "content": [
+          {
+            "type": "text",
+            "text": "DOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0022 | Compraventa ficticio | Unidad Coral 022\nPartes ficticias: Persona Cedente 022 del Archivo Imaginario y Persona Receptora 154 de Puerto\nInventado.\n\n\nCláusula 1. Identificación de las partes\nLa parte cedente es Persona Cedente 022 del Archivo Imaginario y la parte receptora es Persona\nReceptora 154 de Puerto Inventado. Actúan exclusivamente como personajes de una simulación, sin\nrepresentar una operación jurídica real. Este apartado corresponde a Unidad Coral 022, folio SIM0022.\nToda modificación de esta condición requiere un anexo escrito que mencione expresamente la cláusula\nafectada. Mientras no exista ese anexo, se conserva el contenido de este expediente y se rechazan\ninstrucciones verbales contradictorias. La referencia de control es FICT-0022-01.\n\nCláusula 2. Objeto del acuerdo\nLa revisión se realizará mediante inventario comparativo y acta de observaciones, con copia para ambas\npartes ficticias. Este apartado corresponde a Unidad Coral 022, folio SIM0022. Las partes conservarán una\ncopia idéntica de este apartado y cotejarán el folio antes de registrar cualquier movimiento. Una anotación\naislada no modifica las condiciones pactadas en las demás secciones. La referencia de control es\nFICT-0022-02.\n\nCláusula 3. Descripción del inmueble\nSe conservarán los comprobantes relacionados con esta condición y se registrará su recepción en el\nexpediente de la propiedad. Este apartado corresponde a Unidad Coral 022, folio SIM0022. La\ndocumentación de respaldo debe identificar la propiedad y describir el evento correspondiente. Se anotarán\npor separado los conceptos, sus importes y la fecha de recepción, evitando agrupar operaciones distintas\nbajo una sola referencia. La referencia de control es FICT-0022-03.\n\nCláusula 4. Documentación e inventario\nLos avisos se entregarán por escrito con referencia al inmueble. Los acuerdos posteriores deberán\nidentificar expresamente el punto que modifican. Este apartado corresponde a Unidad Coral 022, folio\nSIM0022. La persona encargada del expediente verificará que el inventario coincida con el acta de entrega.\nLas diferencias se incorporarán como observaciones firmadas por las partes ficticias, sin sustituir la versión\noriginal del documento. La referencia de control es FICT-0022-04.\n\nPágina 1 de 8. Personas, importes y operaciones de este acto son inventados.\nDOCUMENTO FICTICIO. SIN VALIDEZ LEGAL.\n\nSIM0022 | Compraventa ficticio | Unidad Coral 022\nPartes ficticias: Persona Cedente 022 del Archivo Imaginario y Persona Receptora 154 de Puerto\nInventado."
+          }
+        ]
+      }
+    ],
+    "search_query": [
+      "Contrato INEXISTENTEZZQ9999 del castillo lunar"
+    ],
+    "has_more": false
+  },
+  "request_id": "req_12d89066f6d9420e93eea152c56e0c85"
+}

@@ -1,0 +1,703 @@
+{
+  "fecha": "2026-11-02T14:40:53.111165-06:00",
+  "comprobaciones": [
+    {
+      "nombre": "GET /salud: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "GET /documentos: HTTP 401",
+      "correcto": true,
+      "detalle": "HTTP 401"
+    },
+    {
+      "nombre": "Error seguro: ACCESO_DENEGADO",
+      "correcto": true,
+      "detalle": "Se requiere una API key válida."
+    },
+    {
+      "nombre": "POST /buscar: HTTP 422",
+      "correcto": true,
+      "detalle": "HTTP 422"
+    },
+    {
+      "nombre": "Error seguro: ENTRADA_INVALIDA",
+      "correcto": true,
+      "detalle": "Revisa los datos y formatos enviados."
+    },
+    {
+      "nombre": "POST /buscar: HTTP 422",
+      "correcto": true,
+      "detalle": "HTTP 422"
+    },
+    {
+      "nombre": "Error seguro: ENTRADA_INVALIDA",
+      "correcto": true,
+      "detalle": "Revisa los datos y formatos enviados."
+    },
+    {
+      "nombre": "GET /documentos: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Corpus inicial",
+      "correcto": true,
+      "detalle": "6 documentos activos"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-001_digital.pdf",
+      "correcto": true,
+      "detalle": "¿Cuándo se devuelve el depósito de la casa Aurora?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-002_escaneado.pdf",
+      "correcto": true,
+      "detalle": "¿Qué multa corresponde si se entrega tarde el departamento Bruma?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-003_mixto.pdf",
+      "correcto": true,
+      "detalle": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-004_digital.pdf",
+      "correcto": true,
+      "detalle": "¿Hasta qué monto puede autorizar reparaciones el administrador de Duna?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-005_escaneado.pdf",
+      "correcto": true,
+      "detalle": "¿Se recupera el apartado de Estela si hay problemas con los papeles de propiedad?"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Fuente en top 5: FIC-006_mixto.pdf",
+      "correcto": true,
+      "detalle": "¿En qué horario puedo entrar a la oficina Faro?"
+    },
+    {
+      "nombre": "GET /documentos/7071e978-410b-4e07-938e-466d57db5fde: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: veinte por ciento al firmar",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/7071e978-410b-4e07-938e-466d57db5fde: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: 1500 pesos ficticios por día",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/7071e978-410b-4e07-938e-466d57db5fde: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: El mobiliario no forma parte de la operación",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/885b4ddd-4970-40d3-816e-85671c1f3414: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: sesenta días naturales de anticipación",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/885b4ddd-4970-40d3-816e-85671c1f3414: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: dos mensualidades de renta",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/2315c73d-609c-4902-b3c2-04c508f088d6: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: superficie de 320 metros cuadrados",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/2315c73d-609c-4902-b3c2-04c508f088d6: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: el apartado se devuelve íntegro",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "GET /documentos/bf22195a-1e03-42fe-84b0-ef4f6014a37b: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "OCR: cuarenta y cinco días",
+      "correcto": true,
+      "detalle": "ocr"
+    },
+    {
+      "nombre": "POST /colecciones: HTTP 201",
+      "correcto": true,
+      "detalle": "HTTP 201"
+    },
+    {
+      "nombre": "POST /colecciones: HTTP 409",
+      "correcto": true,
+      "detalle": "HTTP 409"
+    },
+    {
+      "nombre": "Error seguro: COLECCION_DUPLICADA",
+      "correcto": true,
+      "detalle": "La colección ya existe."
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Colección vacía",
+      "correcto": true,
+      "detalle": "Sin resultados de otras colecciones"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Búsqueda texto",
+      "correcto": true,
+      "detalle": "2 coincidencias"
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Búsqueda vector",
+      "correcto": true,
+      "detalle": "5 coincidencias"
+    },
+    {
+      "nombre": "GET /documentos/d0d0be40-9472-4b73-9e44-8bea3767259a: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 422",
+      "correcto": true,
+      "detalle": "HTTP 422"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_VACIO",
+      "correcto": true,
+      "detalle": "El documento no contiene texto."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 415",
+      "correcto": true,
+      "detalle": "HTTP 415"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_FORMATO",
+      "correcto": true,
+      "detalle": "El archivo TXT debe usar UTF-8."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 415",
+      "correcto": true,
+      "detalle": "HTTP 415"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_FORMATO",
+      "correcto": true,
+      "detalle": "Solo se admiten PDF y TXT UTF-8."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 422",
+      "correcto": true,
+      "detalle": "HTTP 422"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_LECTURA",
+      "correcto": true,
+      "detalle": "El archivo PDF no se puede leer."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 413",
+      "correcto": true,
+      "detalle": "HTTP 413"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_TAMANO",
+      "correcto": true,
+      "detalle": "El archivo supera el límite de 10 MiB."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: COLECCION_NO_ENCONTRADA",
+      "correcto": true,
+      "detalle": "La colección no existe."
+    },
+    {
+      "nombre": "POST /documentos: HTTP 201",
+      "correcto": true,
+      "detalle": "HTTP 201"
+    },
+    {
+      "nombre": "GET /documentos/f5bab7e6-5918-4593-92e8-1e7f5d46b44a/archivo: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "PATCH /documentos/f5bab7e6-5918-4593-92e8-1e7f5d46b44a: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Edición de título",
+      "correcto": true,
+      "detalle": "Contrato Olmo ficticio"
+    },
+    {
+      "nombre": "POST /documentos: HTTP 201",
+      "correcto": true,
+      "detalle": "HTTP 201"
+    },
+    {
+      "nombre": "SC001 vía carga HTTP",
+      "correcto": true,
+      "detalle": "Dos páginas escaneadas procesadas con OCR"
+    },
+    {
+      "nombre": "DELETE /documentos/f5bab7e6-5918-4593-92e8-1e7f5d46b44a: HTTP 204",
+      "correcto": true,
+      "detalle": "HTTP 204"
+    },
+    {
+      "nombre": "GET /documentos/f5bab7e6-5918-4593-92e8-1e7f5d46b44a: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "GET /documentos/f5bab7e6-5918-4593-92e8-1e7f5d46b44a/archivo: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "DELETE /documentos/b119afeb-9b7b-4d84-8bbd-7c86748e19a9: HTTP 204",
+      "correcto": true,
+      "detalle": "HTTP 204"
+    },
+    {
+      "nombre": "GET /documentos/b119afeb-9b7b-4d84-8bbd-7c86748e19a9: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "GET /documentos/b119afeb-9b7b-4d84-8bbd-7c86748e19a9/archivo: HTTP 404",
+      "correcto": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "Error seguro: DOCUMENTO_NO_ENCONTRADO",
+      "correcto": true,
+      "detalle": "El documento no está disponible."
+    },
+    {
+      "nombre": "POST /buscar: HTTP 200",
+      "correcto": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Baja excluye búsqueda",
+      "correcto": true,
+      "detalle": "Colección sin documentos activos"
+    }
+  ],
+  "consultas": [
+    {
+      "consulta": "¿Cuándo se devuelve el depósito de la casa Aurora?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "f9fdeba1-a7c6-4638-8405-dcaff3110bb5",
+          "titulo": "FIC-001 digital",
+          "nombre_original": "FIC-001_digital.pdf",
+          "pagina": 2,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 3 Depósito en garantía: 12500 pesos ficticios. Se devuelve dentro de treinta días naturales después de entregar la vivienda, descontando daños documentados. Cláusula 4 Mascotas: se permite un gato doméstico. Queda prohibido subarrendar la vivienda sin autorización escrita. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "f9fdeba1-a7c6-4638-8405-dcaff3110bb5",
+          "titulo": "FIC-001 digital",
+          "nombre_original": "FIC-001_digital.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 1 Partes: Persona Alfa y Persona Beta, identidades inventadas. Inmueble: casa Aurora, calle Imaginaria 101, ciudad ficticia Puerto Claro. Cláusula 2 Renta mensual: 12500 pesos ficticios, pagaderos durante los primeros cinco días de cada mes. Plazo: doce meses desde el 1 de enero de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "bf22195a-1e03-42fe-84b0-ef4f6014a37b",
+          "titulo": "FIC-006 mixto",
+          "nombre_original": "FIC-006_mixto.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro Cláusula 3 Acceso: lunes a viernes de ocho a veinte horas. Las modificaciones eléctricas requieren autorización previa por escrito. Cláusula 4 Actualización de renta: cuatro por ciento al renovar. Depósito: dos mensualidades, con devolución dentro de cuarenta y cinco días después de la entrega. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+          "titulo": "FIC-002 escaneado",
+          "nombre_original": "FIC-002_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "2315c73d-609c-4902-b3c2-04c508f088d6",
+          "titulo": "FIC-005 escaneado",
+          "nombre_original": "FIC-005_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela Cláusula 3 Condición de devolución: el apartado se devuelve íntegro si la documentación de propiedad presenta inconsistencias antes del vencimiento. Cláusula 4 La reserva no transfiere la propiedad. La firma definitiva depende de verificar la documentación y del acuerdo de ambas partes. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿Qué multa corresponde si se entrega tarde el departamento Bruma?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+          "titulo": "FIC-002 escaneado",
+          "nombre_original": "FIC-002_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+          "titulo": "FIC-002 escaneado",
+          "nombre_original": "FIC-002_escaneado.pdf",
+          "pagina": 1,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 1 Partes: Persona Gamma y Persona Delta, identidades inventadas. Inmueble: departamento Bruma, edificio ficticio Nube, unidad B-12. Cláusula 2 Precio: 2400000 pesos ficticios. Anticipo: veinte por ciento al firmar; saldo: ochenta por ciento al formalizar la operación. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "bf22195a-1e03-42fe-84b0-ef4f6014a37b",
+          "titulo": "FIC-006 mixto",
+          "nombre_original": "FIC-006_mixto.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro Cláusula 1 Partes: Persona Kappa y Persona Lambda, identidades inventadas. Inmueble: oficina Faro, torre ficticia Prisma, nivel 3, espacio O-16. Cláusula 2 Renta mensual: 22000 pesos ficticios. Plazo de doce meses desde el 1 de mayo de 2027. Se incluye un cajón de estacionamiento. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "2315c73d-609c-4902-b3c2-04c508f088d6",
+          "titulo": "FIC-005 escaneado",
+          "nombre_original": "FIC-005_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela Cláusula 3 Condición de devolución: el apartado se devuelve íntegro si la documentación de propiedad presenta inconsistencias antes del vencimiento. Cláusula 4 La reserva no transfiere la propiedad. La firma definitiva depende de verificar la documentación y del acuerdo de ambas partes. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "f9fdeba1-a7c6-4638-8405-dcaff3110bb5",
+          "titulo": "FIC-001 digital",
+          "nombre_original": "FIC-001_digital.pdf",
+          "pagina": 2,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 3 Depósito en garantía: 12500 pesos ficticios. Se devuelve dentro de treinta días naturales después de entregar la vivienda, descontando daños documentados. Cláusula 4 Mascotas: se permite un gato doméstico. Queda prohibido subarrendar la vivienda sin autorización escrita. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿Qué debo pagar si desocupo antes de tiempo el local Cedro?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+          "titulo": "FIC-003 mixto",
+          "nombre_original": "FIC-003_mixto.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 1 Partes: Persona Épsilon y Persona Zeta, identidades inventadas. Inmueble: local comercial Cedro, plaza ficticia Horizonte, local L-04. Cláusula 2 Renta mensual: 18000 pesos ficticios. El uso autorizado es una librería. El plazo es de veinticuatro meses a partir del 1 de marzo de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+          "titulo": "FIC-003 mixto",
+          "nombre_original": "FIC-003_mixto.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "2315c73d-609c-4902-b3c2-04c508f088d6",
+          "titulo": "FIC-005 escaneado",
+          "nombre_original": "FIC-005_escaneado.pdf",
+          "pagina": 1,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela Cláusula 1 Partes: Persona Theta y Persona lota, identidades inventadas. Inmueble: terreno Estela, lote ficticio T-09, superficie de 320 metros cuadrados. Cláusula 2 Reserva: 25000 pesos ficticios por un plazo de quince días naturales, desde el 5 de abril de 2027. El precio de referencia es 850000 pesos ficticios. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "f9fdeba1-a7c6-4638-8405-dcaff3110bb5",
+          "titulo": "FIC-001 digital",
+          "nombre_original": "FIC-001_digital.pdf",
+          "pagina": 2,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 3 Depósito en garantía: 12500 pesos ficticios. Se devuelve dentro de treinta días naturales después de entregar la vivienda, descontando daños documentados. Cláusula 4 Mascotas: se permite un gato doméstico. Queda prohibido subarrendar la vivienda sin autorización escrita. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+          "titulo": "FIC-002 escaneado",
+          "nombre_original": "FIC-002_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿Hasta qué monto puede autorizar reparaciones el administrador de Duna?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "fba0cafa-9230-405a-af60-abf439930ca9",
+          "titulo": "FIC-004 digital",
+          "nombre_original": "FIC-004_digital.pdf",
+          "pagina": 2,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-004 | Administración de propiedad Duna Cláusula 3 Reparaciones: el administrador puede autorizar gastos hasta 3000 pesos ficticios por evento. Los montos superiores requieren autorización escrita del propietario. Cláusula 4 Rescisión: cualquiera de las partes puede terminar el servicio con treinta días naturales de aviso. La entrega de llaves se registra mediante inventario. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.03278688524590164
+        },
+        {
+          "documento_id": "fba0cafa-9230-405a-af60-abf439930ca9",
+          "titulo": "FIC-004 digital",
+          "nombre_original": "FIC-004_digital.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-004 | Administración de propiedad Duna Cláusula 1 Partes: Persona Eta y Administración Umbral Ficticia. Inmueble: casa Duna, avenida Inventada 404, ciudad ficticia Puerto Claro. Cláusula 2 Comisión de administración: ocho por ciento de la renta efectivamente cobrada. El informe de ingresos y gastos se entrega el día diez de cada mes. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "bf22195a-1e03-42fe-84b0-ef4f6014a37b",
+          "titulo": "FIC-006 mixto",
+          "nombre_original": "FIC-006_mixto.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro Cláusula 3 Acceso: lunes a viernes de ocho a veinte horas. Las modificaciones eléctricas requieren autorización previa por escrito. Cláusula 4 Actualización de renta: cuatro por ciento al renovar. Depósito: dos mensualidades, con devolución dentro de cuarenta y cinco días después de la entrega. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+          "titulo": "FIC-003 mixto",
+          "nombre_original": "FIC-003_mixto.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 3 Salida anticipada: debe avisarse con sesenta días naturales de anticipación. La penalización equivale a dos mensualidades de renta. Cláusula 4 Mantenimiento: 900 pesos ficticios mensuales por cuenta del arrendatario. La renovación requiere acuerdo escrito treinta días antes del vencimiento. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "f9fdeba1-a7c6-4638-8405-dcaff3110bb5",
+          "titulo": "FIC-001 digital",
+          "nombre_original": "FIC-001_digital.pdf",
+          "pagina": 2,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 3 Depósito en garantía: 12500 pesos ficticios. Se devuelve dentro de treinta días naturales después de entregar la vivienda, descontando daños documentados. Cláusula 4 Mascotas: se permite un gato doméstico. Queda prohibido subarrendar la vivienda sin autorización escrita. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿Se recupera el apartado de Estela si hay problemas con los papeles de propiedad?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "2315c73d-609c-4902-b3c2-04c508f088d6",
+          "titulo": "FIC-005 escaneado",
+          "nombre_original": "FIC-005_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela Cláusula 3 Condición de devolución: el apartado se devuelve íntegro si la documentación de propiedad presenta inconsistencias antes del vencimiento. Cláusula 4 La reserva no transfiere la propiedad. La firma definitiva depende de verificar la documentación y del acuerdo de ambas partes. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "2315c73d-609c-4902-b3c2-04c508f088d6",
+          "titulo": "FIC-005 escaneado",
+          "nombre_original": "FIC-005_escaneado.pdf",
+          "pagina": 1,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-005 | Reserva de terreno Estela Cláusula 1 Partes: Persona Theta y Persona lota, identidades inventadas. Inmueble: terreno Estela, lote ficticio T-09, superficie de 320 metros cuadrados. Cláusula 2 Reserva: 25000 pesos ficticios por un plazo de quince días naturales, desde el 5 de abril de 2027. El precio de referencia es 850000 pesos ficticios. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+          "titulo": "FIC-002 escaneado",
+          "nombre_original": "FIC-002_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+          "titulo": "FIC-003 mixto",
+          "nombre_original": "FIC-003_mixto.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 1 Partes: Persona Épsilon y Persona Zeta, identidades inventadas. Inmueble: local comercial Cedro, plaza ficticia Horizonte, local L-04. Cláusula 2 Renta mensual: 18000 pesos ficticios. El uso autorizado es una librería. El plazo es de veinticuatro meses a partir del 1 de marzo de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "bf22195a-1e03-42fe-84b0-ef4f6014a37b",
+          "titulo": "FIC-006 mixto",
+          "nombre_original": "FIC-006_mixto.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro Cláusula 1 Partes: Persona Kappa y Persona Lambda, identidades inventadas. Inmueble: oficina Faro, torre ficticia Prisma, nivel 3, espacio O-16. Cláusula 2 Renta mensual: 22000 pesos ficticios. Plazo de doce meses desde el 1 de mayo de 2027. Se incluye un cajón de estacionamiento. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    },
+    {
+      "consulta": "¿En qué horario puedo entrar a la oficina Faro?",
+      "modo": "hibrida",
+      "coincidencias": [
+        {
+          "documento_id": "bf22195a-1e03-42fe-84b0-ef4f6014a37b",
+          "titulo": "FIC-006 mixto",
+          "nombre_original": "FIC-006_mixto.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro Cláusula 3 Acceso: lunes a viernes de ocho a veinte horas. Las modificaciones eléctricas requieren autorización previa por escrito. Cláusula 4 Actualización de renta: cuatro por ciento al renovar. Depósito: dos mensualidades, con devolución dentro de cuarenta y cinco días después de la entrega. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.01639344262295082
+        },
+        {
+          "documento_id": "bf22195a-1e03-42fe-84b0-ef4f6014a37b",
+          "titulo": "FIC-006 mixto",
+          "nombre_original": "FIC-006_mixto.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-006 | Arrendamiento de oficina Faro Cláusula 1 Partes: Persona Kappa y Persona Lambda, identidades inventadas. Inmueble: oficina Faro, torre ficticia Prisma, nivel 3, espacio O-16. Cláusula 2 Renta mensual: 22000 pesos ficticios. Plazo de doce meses desde el 1 de mayo de 2027. Se incluye un cajón de estacionamiento. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.016129032258064516
+        },
+        {
+          "documento_id": "7071e978-410b-4e07-938e-466d57db5fde",
+          "titulo": "FIC-002 escaneado",
+          "nombre_original": "FIC-002_escaneado.pdf",
+          "pagina": 2,
+          "metodo": "ocr",
+          "texto": "DOCUMENTO FICTICIO - DEMOSTRACIÓN ACADÉMICA FIC-002 | Compraventa de departamento Bruma Cláusula 3 Entrega de posesión: 15 de febrero de 2027. Si la parte vendedora retrasa la entrega, la penalización será de 1500 pesos ficticios por día, hasta veinte días. Cláusula 4 El mobiliario no forma parte de la operación. Se incluyen dos espacios de estacionamiento identificados como E-07 y E-08. Página 2. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015873015873015872
+        },
+        {
+          "documento_id": "885b4ddd-4970-40d3-816e-85671c1f3414",
+          "titulo": "FIC-003 mixto",
+          "nombre_original": "FIC-003_mixto.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-003 | Arrendamiento de local Cedro Cláusula 1 Partes: Persona Épsilon y Persona Zeta, identidades inventadas. Inmueble: local comercial Cedro, plaza ficticia Horizonte, local L-04. Cláusula 2 Renta mensual: 18000 pesos ficticios. El uso autorizado es una librería. El plazo es de veinticuatro meses a partir del 1 de marzo de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015625
+        },
+        {
+          "documento_id": "f9fdeba1-a7c6-4638-8405-dcaff3110bb5",
+          "titulo": "FIC-001 digital",
+          "nombre_original": "FIC-001_digital.pdf",
+          "pagina": 1,
+          "metodo": "texto",
+          "texto": "DOCUMENTO FICTICIO · DEMOSTRACIÓN ACADÉMICA FIC-001 | Arrendamiento de vivienda Aurora Cláusula 1 Partes: Persona Alfa y Persona Beta, identidades inventadas. Inmueble: casa Aurora, calle Imaginaria 101, ciudad ficticia Puerto Claro. Cláusula 2 Renta mensual: 12500 pesos ficticios, pagaderos durante los primeros cinco días de cada mes. Plazo: doce meses desde el 1 de enero de 2027. Página 1. Todo el contenido y sus partes son inventados.",
+          "puntuacion": 0.015384615384615385
+        }
+      ]
+    }
+  ]
+}
