@@ -1,27 +1,32 @@
-"""Orquesta una lectura por imagen: fuente, modelo, ticket e interfaz."""
+"""Orquesta una lectura por imagen: fuente, modelo, vista y, si hay, mapa del embedding."""
 
 from pathlib import Path
 from time import perf_counter
 
 import cv2
 
-from ..configuracion import directorio, pesos_entrenados
+from ..configuracion import directorio
 from ..entrenamiento.datos import EXTENSIONES
-from ..modelo.yolo import ModeloYOLO
-from .cobro import Estabilidad, calcular_ticket
-from .interfaz import dibujar, guardar_captura
+from ..motor_embedding.recorte import a_gris
+from .interfaz import guardar_captura
+
+VENTANA = "Panaderia"
+VENTANA_MAPA = "Mapa del embedding"
 
 
 def preprocesar(imagen, grayscale=False):
     if not grayscale:
         return imagen
 
-    gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
-    return cv2.cvtColor(gris, cv2.COLOR_GRAY2BGR)
+    return a_gris(imagen)
 
 
-def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
-             sin_ventana=False, grayscale=False):
+def ejecutar(source, leer, presentacion, modelo, sin_ventana=False, grayscale=False, mapa=None):
+    """`leer` convierte un fotograma BGR en Lectura: YOLO directo o el motor de embedding.
+
+    `presentacion` (VistaCaja o VistaEmbedding) arma lo que se ve; `mapa` (MapaEmbedding)
+    abre una segunda ventana con dónde cae cada pan en la galería.
+    """
     source_text = str(source)
     archivo = Path(source).expanduser()
     es_camara = source_text.isdecimal()
@@ -30,10 +35,8 @@ def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
     if not es_camara and not archivo.is_file():
         raise FileNotFoundError(f"No existe la imagen o el video: {archivo}")
     if sin_ventana and not es_imagen:
-        raise ValueError("--sin-ventana admite una foto; cámara/video requieren interfaz interactiva.")
+        raise ValueError("Sin ventana sólo se admite una foto; cámara y video requieren la interfaz.")
 
-    pesos = pesos_entrenados(model)
-    yolo = ModeloYOLO(pesos, device, conf, imgsz)
     destino = directorio() / "capturas"
 
     if es_imagen:
@@ -42,15 +45,17 @@ def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
             raise ValueError(f"No se puede leer {archivo}")
 
         imagen = preprocesar(imagen, grayscale)
-        lectura = yolo.predecir(imagen)
-        ticket = calcular_ticket(i.clase for i in lectura.instancias)
-        vista = dibujar(imagen, lectura, ticket, False, 0)
+        lectura = leer(imagen)
+        vista, contexto = presentacion.presentar(imagen, lectura, 0)
+        vista_mapa = None if mapa is None else mapa.dibujar(lectura)
 
-        print(guardar_captura(vista, ticket, destino, modelo=str(pesos), fuente=str(archivo)))
+        print(guardar_captura(vista, destino, vista_mapa, modelo=modelo, fuente=str(archivo), **contexto))
 
         if not sin_ventana:
             try:
-                cv2.imshow("Panaderia - estimacion", vista)
+                cv2.imshow(VENTANA, vista)
+                if vista_mapa is not None:
+                    cv2.imshow(VENTANA_MAPA, vista_mapa)
                 cv2.waitKey(0)
             finally:
                 cv2.destroyAllWindows()
@@ -61,10 +66,9 @@ def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
 
     try:
         if not captura.isOpened():
-            raise RuntimeError("No se pudo abrir la cámara/video. Revisa permisos y --source 0/1.")
+            raise RuntimeError("No se pudo abrir la cámara/video. Revisa permisos y el índice de cámara.")
 
-        estabilidad = Estabilidad()
-        pausado, vista, cuadros = False, None, 0
+        pausado, vista, vista_mapa, cuadros = False, None, None, 0
         anterior, fps = perf_counter(), 0.0
 
         while True:
@@ -76,19 +80,21 @@ def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
                     break
 
                 imagen = preprocesar(imagen, grayscale)
-                lectura = yolo.predecir(imagen)
-                ticket = calcular_ticket(i.clase for i in lectura.instancias)
-                estable = estabilidad.actualizar(ticket)
+                lectura = leer(imagen)
 
                 ahora = perf_counter()
                 instantaneo = 1 / max(ahora - anterior, 1e-6)
                 fps = instantaneo if cuadros == 0 else .85 * fps + .15 * instantaneo
                 anterior = ahora
 
-                vista = dibujar(imagen, lectura, ticket, estable, fps)
+                vista, contexto = presentacion.presentar(imagen, lectura, fps)
+                if mapa is not None:
+                    vista_mapa = mapa.dibujar(lectura)
                 cuadros += 1
 
-            cv2.imshow("Panaderia - estimacion", vista)
+            cv2.imshow(VENTANA, vista)
+            if vista_mapa is not None:
+                cv2.imshow(VENTANA_MAPA, vista_mapa)
             tecla = cv2.waitKey(20 if pausado else 1) & 0xFF
 
             if tecla in (ord("q"), 27):
@@ -97,8 +103,8 @@ def ejecutar(source, model=None, device="auto", conf=0.5, imgsz=640,
                 pausado = not pausado
                 anterior = perf_counter()
             if tecla == ord("s"):
-                print(guardar_captura(vista, ticket, destino, modelo=str(pesos), cuadro=cuadros, estable=estable))
-            if cv2.getWindowProperty("Panaderia - estimacion", cv2.WND_PROP_VISIBLE) < 1:
+                print(guardar_captura(vista, destino, vista_mapa, modelo=modelo, cuadro=cuadros, **contexto))
+            if cv2.getWindowProperty(VENTANA, cv2.WND_PROP_VISIBLE) < 1:
                 break
     finally:
         captura.release()

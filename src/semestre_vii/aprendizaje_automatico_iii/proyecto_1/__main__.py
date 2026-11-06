@@ -94,14 +94,13 @@ def main() -> None:
             print(evaluar(args.data, args.model, args.split, args.device, args.conf, args.aceptar_pseudoetiquetas))
         elif args.comando == "caja":
             from .aplicacion.runtime import ejecutar
+            from .configuracion import pesos_entrenados
+            from .modelo.yolo import ModeloYOLO
+            pesos = pesos_entrenados(args.model)
+            yolo = ModeloYOLO(pesos, args.device, args.conf, args.imgsz)
+            from .aplicacion.interfaz import VistaCaja
             ejecutar(
-                source=args.source,
-                model=args.model,
-                device=args.device,
-                conf=args.conf,
-                imgsz=args.imgsz,
-                sin_ventana=args.sin_ventana,
-                grayscale=args.grayscale,
+                args.source, yolo.predecir, VistaCaja(), str(pesos), args.sin_ventana, args.grayscale,
             )
     except ModuleNotFoundError as exc:
         parser.exit(2, f"Falta {exc.name}. Ejecuta: uv add ultralytics opencv-python pyyaml\n")

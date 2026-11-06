@@ -10,6 +10,8 @@ El primer experimento con **YOLO26s-seg + Mexican Bread** se conserva como refer
 
 El segundo experimento usa **YOLO26m-detect + Bread Detector v2**. Su `best.pt` está publicado en `models/` y se conserva como referencia. Detecta 15 clases. `aplicacion/precios.py` relaciona cada etiqueta del detector con un nombre en español y un precio ficticio en centavos, además de conservar las 11 clases del experimento anterior. Por ejemplo, `wheat-bread` se muestra como "Pan de trigo" con un precio de demostración de $15 MXN. Una clase desconocida se cuenta, pero invalida el total.
 
+El tercer experimento, **motor de embedding**, separa las dos preguntas: YOLO26-seg Mexican Bread sólo decide **si hay pan y dónde**, y una galería de embeddings ResNet50 decide **qué pan es**, como en reconocimiento facial. Ver [Motor de embedding en vivo](#motor-de-embedding-en-vivo).
+
 Documentación:
 
 - [Experimento 1: qué funcionó y qué falló](docs/01_experimento_segmentacion_mexican_bread.md)
@@ -43,19 +45,7 @@ yolo26{n,s,m,l,x}_mexican-v3_seg/weights/best.pt
 
 `bread-v2_det` corresponde a **object detection** con Bread Detector v2 y `mexican-v3_seg` a **instance segmentation** con Mexican Bread v3. Cada `best.pt` contiene el modelo entrenado completo y se carga directamente para inferencia; no se combina con los pesos base.
 
-`app.py` usa por defecto YOLO26 extragrande (`x`) con Bread v2 y conserva el color de la imagen:
-
-```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
-```
-
-Para cambiar entre los diez pesos nuevos, ajusta `DATASET` (`bread-v2` o `mexican-v3`) y `TAMANO` (`n`, `s`, `m`, `l` o `x`) al inicio del archivo. También puedes elegirlos al ejecutar la aplicación, sin editar el archivo:
-
-```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py mexican-v3 x
-```
-
-También puede pasarse la ruta de cualquier checkpoint a la CLI:
+`app.py` es ahora la demo del [motor de embedding](#motor-de-embedding-en-vivo). Para usar sólo YOLO, con su propia clase, pasa la ruta de cualquier checkpoint a la CLI:
 
 ```bash
 uv run python -m semestre_vii.aprendizaje_automatico_iii.proyecto_1 caja \
@@ -68,9 +58,90 @@ La frontera `ModeloYOLO` acepta tanto checkpoints `detect` como `segment` y los 
 
 Los checkpoints temporales, incluido `last.pt`, permanecen fuera de Git. Los pesos finales se publican mediante Git LFS.
 
-## Ejecución local, sin credenciales
+## Motor de embedding en vivo
 
-**No se usa el SDK de Roboflow ni API keys.** Las utilidades de descarga sólo abren la página pública en el navegador, esperan el ZIP descargado a tu PC y después lo importan localmente. El entrenamiento y la inferencia siguen siendo locales.
+Dos fases separadas, como en reconocimiento facial: primero se **precarga** una galería con un vector por pan anotado; después, en vivo, cada pan detectado se **consulta** contra esa galería.
+
+```mermaid
+flowchart LR
+    subgraph F1["Fase 1 · precargar.py · una vez, o cada que se agreguen panes"]
+        D[("Mexican Bread v3<br/>gris, 640x640")] --> P1["Polígono anotado<br/>recorte sobre fondo gris"]
+        P1 --> E1["ResNet50 congelada<br/>vector 2048-D, norma L2"]
+        E1 --> G[("galeria.npz<br/>manifiesto.json")]
+    end
+
+    subgraph F2["Fase 2 · app.py · cada cuadro"]
+        C["Cámara a color"] --> GR["Escala de grises<br/>sólo para el motor"]
+        GR --> Y{"Portero YOLO26-seg<br/>¿hay pan?"}
+        Y -- "0 detecciones" --> N["No hay pan"]
+        Y -- "N máscaras" --> R["Recorte por máscara"]
+        R -- "muy pequeño" --> DS["desconocido"]
+        R --> E2["ResNet50<br/>vector 2048-D"]
+        E2 --> K["k-NN coseno<br/>votan los k vecinos"]
+        K --> CL["Clase votada + similitud<br/>contra cada clase"]
+        CL --> V["Vista a color<br/>silueta + panel del embedding"]
+        DS --> V
+        E2 --> M["Mapa del embedding<br/>PCA+LDA 2D + k vecinos"]
+    end
+
+    G -. "vectores de consulta" .-> K
+    G -. "proyección PCA+LDA" .-> M
+```
+
+La cámara se ve a color, pero el portero y el encoder reciben el cuadro en gris, igual que las imágenes de Mexican Bread v3 con las que se entrenó YOLO y se construyó la galería. El dominio lo dicta el campo `gris` del manifiesto, no un ajuste de la demo: para comparar a color hay que precargar otra galería con `CONSTRUCCION__GRIS=false`.
+
+**Mapa del embedding.** Una segunda ventana muestra la galería proyectada a 2D: primero PCA a 50 dimensiones y luego LDA (análisis discriminante lineal), ajustados en el precalentamiento. Sin la PCA previa, LDA en 2048 dimensiones se sobreajusta y los panes nuevos caen fuera de su cluster. Cada punto es un pan de `train`, con el color de su clase, el mismo que la silueta en la cámara; la leyenda lateral los nombra. Si un pan en vivo cae fuera del rango de la galería, se dibuja en el borde con la marca "fuera del mapa". Cada pan en vivo aparece como un punto con borde blanco, y unas líneas lo unen con sus k vecinos reales. La proyección es orientativa: separa los clusters, pero las distancias en 2D no son el coseno; las líneas sí apuntan a los vecinos que decidieron la clase. Con la barra espaciadora se congelan la cámara y el mapa, y con `S` se guardan los dos.
+
+1. **Portero:** YOLO26-seg Mexican Bread con `agnostic_nms`, tamaño `l` por defecto. Fusiona detecciones solapadas de clases distintas en un solo pan y su clase se descarta. Con la entrada en gris y 8 fotos externas (`concha.jpg` y 7 de bolillos), `l` detectó pan en 5 (incluida la concha) y `x` en 7 (sin la concha). `l` tarda unos 95 ms por cuadro en MPS y `x` unos 200 ms.
+2. **Recorte** (`motor_embedding/recorte.py`): pan sobre fondo gris, margen de 6 % y cuadrado. Precarga e inferencia usan exactamente esta función; si difieren, los vectores dejan de ser comparables.
+3. **Encoder** (`motor_embedding/encoder.py`): ResNet50 ImageNet V2 congelada, 2048 dimensiones con norma L2. Unos 20 ms por pan en MPS.
+4. **Galería** (`motor_embedding/vecinos.py`): k-NN exacto por coseno con k=3 y votación. YOLO ya decidió que es pan, así que por defecto no hay rechazo: siempre gana la clase más votada. Además se calcula la similitud con el pan más parecido de **cada** clase, que es lo que muestra hacia dónde se carga la consulta. `desconocido` sólo aparece si el pan es demasiado pequeño para recortarlo, o si se fija un `umbral` y ni el vecino más cercano lo alcanza.
+
+La galería se construye sólo con `train`. `val` mide la exactitud y calibra el umbral: el percentil 5 de la similitud de los aciertos. Ambos quedan en `manifiesto.json`. La exactitud registrada es la del k-NN sin rechazo: con el umbral activo, cerca del 5 % de esos aciertos sale como desconocido. Agregar una clase nueva es volver a precargar con sus fotos; no se reentrena nada. Límite: el portero sólo conoce las 11 clases de Mexican Bread, así que un pan muy distinto puede no detectarse.
+
+**Precarga.** Es el único paso que necesita credencial: descarga Mexican Bread v3 con la API de Roboflow. Copia `.env.example` como `.env` en esta misma carpeta (Git lo ignora) y pega tu `ROBOFLOW_API_KEY`. `precargar.py` lee ese `.env` solo:
+
+```bash
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/precargar.py
+```
+
+El dataset queda en `data/aprendizaje_automatico_iii/proyecto_1/mexican-v3/` y la galería en `data/aprendizaje_automatico_iii/proyecto_1/galerias/resnet50_mexican-v3/`. Si el dataset ya existe, no vuelve a usar la red. Por defecto la galería usa Bolillo, Concha, Cuernito y Dona (`AjustesCarga` en `precargar.py`); con `clases=None` usa las 11 del dataset.
+
+**Ajustes.** Todo lo configurable vive agrupado en `configuracion.py`, con pydantic-settings, en tres clases:
+
+1. `Ajustes`: lo común (dispositivo y carpeta de la galería).
+2. `AjustesDemo`: lo de `app.py` (fuente, portero, umbral). Es la única que lee el CLI.
+3. `AjustesPrecarga`: lo de `precargar.py` (clave de Roboflow y el grupo `construccion`). Nunca lee el CLI, así que la clave no puede quedar en el historial de la terminal.
+
+`app.py` y `precargar.py` las heredan en `AjustesApp` y `AjustesCarga`, con sus parámetros a la vista al inicio del archivo: para cambiar el tamaño del portero o el umbral de la demo, se edita ahí. Gana el primero que esté definido: CLI de `app.py`, variable de entorno, `.env`, la clase del script y por último `configuracion.py`. Una variable como `PORTERO__CONFIANZA` cambia sólo ese campo y respeta el resto de lo fijado en la clase. Los grupos se separan con punto en el CLI y con doble guion bajo en el entorno:
+
+| Clase | Ajuste | Por defecto | CLI de `app.py` | Entorno o `.env` |
+| --- | --- | --- | --- | --- |
+| común | dispositivo | `auto` | `--dispositivo mps` | `DISPOSITIVO` |
+| común | carpeta de la galería | `galerias/resnet50_mexican-v3` | `--galeria <ruta>` | `GALERIA` |
+| demo | fuente | `0` (cámara) | `--fuente foto.jpg` | `FUENTE` |
+| demo | tamaño del portero | `l` | `--portero.tamano x` | `PORTERO__TAMANO` |
+| demo | confianza del portero | `0.35` | `--portero.confianza 0.5` | `PORTERO__CONFIANZA` |
+| demo | imgsz del portero | `640` | `--portero.imgsz 960` | `PORTERO__IMGSZ` |
+| demo | umbral de desconocido | sin rechazo | `--umbral 0.6` | `UMBRAL` |
+| precarga | clave de Roboflow | ninguna | no existe | `ROBOFLOW_API_KEY` |
+| precarga | dataset | `mexican-v3` | no existe | `CONSTRUCCION__DATASET` |
+| precarga | clases | las 4 de la demo | no existe | `CONSTRUCCION__CLASES` |
+| precarga | gris | `true` | no existe | `CONSTRUCCION__GRIS` |
+
+Los tipos cerrados son `StrEnum`: `Tamaño` (configuracion.py), `ClasePan` (esquemas/pan.py, nombres exactos del dataset) y `Tarea` (modelo/yolo.py, `detect` o `segment`). Un valor fuera del catálogo falla al cargar los ajustes o la galería, no a media demo. La clave viaja como `SecretStr`: no aparece en `print`, logs ni tracebacks. `.env.example` lista todas las variables.
+
+**Demo en vivo.** Carga la galería, precalienta YOLO y ResNet con una pasada en vacío y abre la cámara:
+
+```bash
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
+```
+
+El portero es siempre Mexican Bread segmentación: un detector de cajas metería fondo al recorte y la galería son siluetas. Todas las opciones están en la tabla de ajustes y `app.py --help` las lista. La demo no muestra ticket: el panel lateral enseña, por cada pan, la clase votada, cuántos de los k vecinos la eligieron y una barra por clase con la similitud coseno contra el pan más parecido de esa clase. Cuanto más separada está la barra ganadora de la segunda, más clara es la decisión. La similitud no es una probabilidad. El ticket y los precios siguen en el modo `caja` de la CLI.
+
+## Ejecución local de entrenamiento e inferencia
+
+**El entrenamiento y la inferencia no usan el SDK de Roboflow ni API keys.** La única excepción es `precargar.py`, descrita arriba. Las utilidades de descarga sólo abren la página pública en el navegador, esperan el ZIP descargado a tu PC y después lo importan localmente. El entrenamiento y la inferencia siguen siendo locales.
 
 El dataset sigue siendo una entrada necesaria para entrenar: un enlace no contiene los archivos en tu disco. Obtén una exportación ZIP con imágenes y etiquetas YOLO y guárdala en tu PC una vez. Si ya tienes una carpeta exportada, úsala directamente. **Los datasets y archivos intermedios no están incluidos en Git; sólo se publican los mejores pesos en `models/`.**
 
@@ -80,16 +151,34 @@ Esto no promete una instalación completamente desconectada: `uv` necesita obten
 
 ```text
 proyecto_1/
-├── app.py                  # Punto de entrada: esto es lo que se ejecuta
+├── app.py                  # Demo en vivo: portero YOLO + galería de embeddings
+├── precargar.py            # Fase 1: descarga y construye la galería
+├── .env.example            # Variables de Ajustes; ROBOFLOW_API_KEY sólo la usa precargar.py
 ├── __main__.py             # CLI opcional
-├── configuracion.py        # Rutas y selección CPU / MPS / CUDA
+├── configuracion.py        # Ajustes, AjustesDemo, AjustesPrecarga; rutas y CPU / MPS / CUDA
 ├── aplicacion/
 │   ├── runtime.py          # Flujo cámara/foto/video → modelo → resultado
 │   ├── interfaz.py         # Visualización y capturas
+│   ├── mapa.py             # Mapa 2D del embedding en vivo (PCA+LDA)
 │   ├── cobro.py            # Conteo, ticket y estabilidad
 │   └── precios.py          # Precios ficticios
+├── esquemas/               # Contratos Pydantic entre piezas
+│   ├── deteccion.py        # Instancia y Lectura de un fotograma
+│   ├── embedding.py        # Vector unitario de un pan
+│   ├── reconocimiento.py   # Vecinos y clase elegida por la galería
+│   ├── galeria.py          # Galería en disco y su manifiesto
+│   └── pan.py              # ClasePan: catálogo StrEnum de Mexican Bread
 ├── modelo/
 │   └── yolo.py             # Traducción de cajas o máscaras a instancias
+├── motor_embedding/
+│   ├── recorte.py          # Recorte compartido por ambas fases
+│   ├── encoder.py          # ResNet50 congelada
+│   ├── vecinos.py          # k-NN coseno, votación y umbral
+│   ├── precarga/
+│   │   ├── roboflow.py     # Descarga con ROBOFLOW_API_KEY
+│   │   └── construir.py    # Dataset → recortes → galería
+│   └── inferencia/
+│       └── reconocedor.py  # Portero → recorte → encoder → galería
 ├── entrenamiento/
 │   ├── datos.py            # Lectura/auditoría de datasets YOLO
 │   ├── preparacion.py      # Preparación de segmentación

@@ -45,16 +45,13 @@ El consumidor principal es:
 src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py
 ```
 
-`app.py` selecciona el modelo mediante el dataset y el tamaño:
+`app.py` es la demo del motor de embedding: usa `yolo26{tamano}_mexican-v3_seg` como portero y una galería precargada para decidir la clase. El tamaño se fija en `AjustesApp`, al inicio de `app.py` (por defecto `l`), o con `--portero.tamano`:
 
 ```bash
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py bread-v2 m
-uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py mexican-v3 s
+uv run src/semestre_vii/aprendizaje_automatico_iii/proyecto_1/app.py --portero.tamano x
 ```
 
-Sin argumentos usa `DATASET="bread-v2"` y `TAMANO="x"`, que apuntan a `yolo26x_bread-v2_det/weights/best.pt`. Ambos valores pueden ajustarse al inicio del archivo.
-
-También puede consumirse cualquier checkpoint explícitamente desde la CLI del proyecto:
+Los checkpoints `bread-v2_det` no sirven de portero, porque producen cajas y la galería se construyó con siluetas. Se consumen, como cualquier otro checkpoint, con la CLI `caja`:
 
 ```bash
 uv run python -m semestre_vii.aprendizaje_automatico_iii.proyecto_1 caja \
