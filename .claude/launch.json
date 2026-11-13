@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "musica-tutorial",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765", "--bind", "127.0.0.1", "--directory", "/private/tmp/claude-501/-Users-ferleon--claude-spares-spare-Okcnvq/cda06d14-3cd3-4eb0-a7f9-97b8dd8ace33/scratchpad/musica_tutorial"],
+      "port": 8765
+    }
+  ]
+}
