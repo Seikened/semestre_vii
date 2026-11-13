@@ -4,7 +4,7 @@ El primer entregable establece el ejecutable local y las métricas, pero **no de
 
 ## Limitaciones de medición
 
-El estimador QR usa capacidad de datos por versión ISO/IEC 18004 para nivel de corrección M, y selecciona **un solo modo** (alfanumérico si todos los caracteres caben; de lo contrario byte UTF-8), sin optimización de segmentos mixtos ni ECI. Esto aproxima el tamaño de símbolos sin generar QR físicos; la siguiente iteración debe contrastar con un codificador completo. Las rutas `/c/` o `/C/` mostradas son simuladas.
+El estimador QR usa capacidad de datos por versión ISO/IEC 18004 para nivel de corrección M, y selecciona **un solo modo** (alfanumérico si todos los caracteres caben; de lo contrario byte UTF-8), sin optimización de segmentos mixtos ni ECI. Si excede la capacidad de la versión 40, reporta valores nulos de versión y módulos. Esto aproxima el tamaño de símbolos sin generar QR físicos; la siguiente iteración debe contrastar con un codificador completo. Las rutas `/c/` o `/C/` mostradas son simuladas.
 
 ## Próxima evaluación
 

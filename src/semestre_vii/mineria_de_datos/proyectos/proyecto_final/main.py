@@ -25,10 +25,12 @@ def main() -> None:
         metrica = resultado["metricas"][nombre]
         qr = metrica["qr"]
         print(f"\n{nombre}: {enlace}")
-        print(
-            f"  {metrica['caracteres']} caracteres | {metrica['bytes_utf8']} bytes | "
+        qr_texto = (
             f"QR M v{qr['version']} ({qr['modulos']}x{qr['modulos']}, {qr['modo']})"
+            if qr["version"] is not None
+            else "QR M: fuera de capacidad"
         )
+        print(f"  {metrica['caracteres']} caracteres | {metrica['bytes_utf8']} bytes | {qr_texto}")
     print("\nRecuperación exacta (URL y QR): sí")
 
 

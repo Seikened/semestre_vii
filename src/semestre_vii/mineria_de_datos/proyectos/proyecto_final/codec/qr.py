@@ -18,8 +18,8 @@ ALFANUMERICO = frozenset("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ $%*+-./:")
 
 @dataclass(frozen=True)
 class MetricaQR:
-    version: int
-    modulos: int
+    version: int | None
+    modulos: int | None
     modo: str
 
 
@@ -34,4 +34,4 @@ def medir_qr(texto: str) -> MetricaQR:
             bits_longitud = 8 if version <= 9 else 16
         if 4 + bits_longitud + bits_carga <= 8 * palabras:
             return MetricaQR(version, 17 + 4 * version, "alfanumérico" if alfanumerico else "byte")
-    raise ValueError("Contenido demasiado grande para QR nivel M")
+    return MetricaQR(None, None, "alfanumérico" if alfanumerico else "byte")
